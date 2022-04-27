@@ -16,7 +16,86 @@
 
 
 /* Estilos GENERALES */
+body{
+  border: 3px solid purple;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+nav{
+  border: 1px solid red;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
 
+aside{
+  border: 1px solid violet;
+  background-color: #fff;
+  width: 220px;
+  overflow-y: hidden;
+  /* display: none; */
+  margin-top: 3.8%;
+  transition: 0.5s;
+}
+
+aside:hover{
+  overflow-y: auto;
+  /* display: block; */
+}
+
+.desplegar{
+  transform: translateX(-100%);
+}
+
+aside::-webkit-scrollbar{
+  width: 8px;
+}
+
+aside::-webkit-scrollbar-thumb{
+  background-color: #808080;
+  border-radius: 5px;
+}
+
+.div_menu{
+  border-bottom: 1px solid #383838;
+  padding: 10px 1px;
+  color: #000 ;
+}
+.div_menu div{
+  /* display: flex; */
+  align-items: center;
+  /* width: 100%; */
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.div_menu div:hover{
+  background-color: #303030;
+}
+
+.div_menu div span{
+  margin-left: 15px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+/* FOOTER */
+
+footer{
+  border: 1px solid blue;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
 
 /* Estilos DIVISE */
 
