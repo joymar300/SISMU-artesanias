@@ -11,8 +11,57 @@
   </head>
 
   <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <nav>
+      <section>
+        <%= link_to "Menu", id: "open-close" %>
+        <a href="#">Logo</a>
+      </section>
+      <section class="btn__salir">
+          <%= link_to "Salir", destroy_user_session_path, :method => :delete %>
+      </section>
+    </nav>
+    
+    <aside id="aside">
+      <div class="div_menu">
+        <div>
+          <a href="#">Menú</a>
+          <span>Productos</span>
+        </div>
+      </div>
+      <div class="div_menu">
+        <div>
+          <a href="#">Menú</a>
+          <span>Productos</span>
+        </div>
+      </div>
+      <div class="div_menu">
+        <div>
+          <a href="#">Menú</a>
+          <span>Productos</span>
+        </div>
+      </div>
+      <div class="div_menu">
+        <div>
+          <a href="#">Menú</a>
+          <span>Productos</span>
+        </div>
+      </div>
+      <div class="div_menu">
+        <div>
+          <a href="#">Menú</a>
+          <span>Productos</span>
+        </div>
+      </div>
+    </aside>
+
     <%= yield %>
+
+    <footer>
+      <p>version 1.1</p>
+    </footer>
+
+    <%# <script src="/application.js"></script> %>
   </body>
 </html>
