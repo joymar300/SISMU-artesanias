@@ -263,11 +263,11 @@ main {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
-  margin: 10px;
-  width: 200px;
   font-size: 30px;
   text-align: center;
-  justify-content: space-around;
+  margin: 20px;
+  /* width: 300px; */
+  /* justify-content: space-around; */
 }
 
 .grid-link {
@@ -275,6 +275,15 @@ main {
   width: 100%;
   font-size: 15px;
   cursor: pointer;
+  /* text-align: center; */
+}
+
+.span_angulo_derecho {
+  margin-bottom: 5px;
+}
+
+.minilogo_grid {
+  height: 15px;
 }
 
 
