@@ -15,10 +15,283 @@
  */
 
 
-/* Estilos GENERALES */
+/* ESTILOS GENERALES: APPLICATION */
+
+:root {
+  --width: 200px;
+  --padding: 10px;
+  --bgcolor: rgb(52, 52, 52);
+  --hovercolor: rgb(23, 23, 23);
+  --width-collapsed: 50px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-left: var(--width-collapsed);
+}
+
+.body-expanded {
+  margin-left: var(--width);
+}
+
+#sidemenu {
+  background-color: var(--bgcolor);
+  color: white;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+#sidemenu a {
+  color: white;
+  text-decoration: none;
+}
 
 
-/* Estilos DIVISE */
+/* CABECERA_MENU */
+
+#sidemenu #header_menu {
+  box-sizing: border-box;
+  border-bottom: solid 1px var(--hovercolor);
+}
+
+#sidemenu #header_menu #title_menu {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#sidemenu #header_menu #title_menu,
+#sidemenu #header_menu #menu_btn {
+  vertical-align: middle;
+}
+
+#sidemenu #header_menu #menu_btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  width: var(--width-collapsed);
+  box-sizing: border-box;
+}
+
+#sidemenu #header_menu #menu_btn:hover {
+  background-color: var(--hovercolor);
+}
+
+#sidemenu #header_menu #menu_btn .btn_hamburguesa {
+  background-color: #fff;
+  width: 100%;
+  height: 2px;
+  margin: 5px 0;
+}
+
+
+/* PERFIL_MENU */
+
+#sidemenu #perfil_menu {
+  border-bottom: solid 1px var(--hovercolor);
+  padding: var(--padding) 0;
+  text-align: center;
+}
+
+#sidemenu #perfil_menu #foto_menu {
+  box-sizing: border-box;
+  padding: var(--padding);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#sidemenu #perfil_menu #foto_menu img {
+  width: 80%;
+  border-radius: 10px;
+}
+
+
+/* ITEM_MENU */
+
+#sidemenu #menu_items {
+  overflow: hidden;
+}
+
+#sidemenu #menu_items .item_menu {
+  width: var(--width);
+}
+
+#sidemenu #menu_items .item_menu .icon_menu {
+  display: inline-block;
+}
+
+#sidemenu #menu_items .item_menu .icon_menu,
+#sidemenu #menu_items .item_menu .title_icon_menu {
+  font-size: 14px;
+  vertical-align: middle;
+  overflow: hidden;
+  display: inline-block;
+}
+
+#sidemenu #menu_items .item_menu a {
+  display: block;
+}
+
+#sidemenu #menu_items .item_menu a:hover {
+  background-color: var(--hovercolor);
+}
+
+#sidemenu #menu_items .item_menu .icon_menu {
+  box-sizing: border-box;
+  padding: var(--padding);
+  width: var(--width-collapsed);
+}
+
+#sidemenu #menu_items .item_menu .icon_menu img {
+  width: 100%;
+}
+
+#sidemenu #menu_items .item_menu .title_icon_menu {
+  padding: var(--padding) 0;
+}
+
+#sidemenu #menu_items .item_menu.separador_menu {
+  height: 1px;
+  border-bottom: solid 1px var(--hovercolor);
+  margin: 5px 0;
+}
+
+
+/* MENU EXPANDED */
+
+.menu_expanded {
+  width: var(--width);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu_expanded #header_menu #title_menu {
+  display: inline-block;
+  width: calc(100% - 50px);
+  margin-right: -5px;
+  padding: var(--padding);
+}
+
+.menu_expanded #header_menu #title_menu span {
+  width: calc(var(--width) - var(--width-collapsed) - 5px);
+  overflow: hidden;
+  padding: var(--padding);
+}
+
+.menu_expanded #perfil_menu #foto_menu {
+  width: 200px;
+}
+
+.menu_collapsed {
+  width: var(--width-collapsed);
+}
+
+.menu_collapsed #header_menu #title_menu {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* NAV */
+
+nav {
+  background-color: var(--bgcolor);
+  margin-top: -18px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.minilogo {
+  height: 50px;
+}
+
+.logo {
+  height: 50px;
+  width: 140px;
+  margin-left: -5px;
+}
+
+#sismu__central {
+  color: #fff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* SALIR */
+
+.minilogo_pequeño {
+  height: 15px;
+}
+
+.btn__salir {
+  cursor: pointer;
+  background-color: red;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.salir {
+  color: #000;
+}
+
+
+/* PESTAÑA INDEX */
+
+main {
+  border: 1px solid red;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  font-size: 30px;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.grid-link {
+  border: 1px solid red;
+  width: 100%;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+/* FOOTER */
+
+footer {
+  border: 1px solid var(--hovercolor);
+  background-color: var(--bgcolor);
+  text-align: center;
+}
+
+footer p {
+  color: #fff;
+}
+
+
+/* ESTILOS DIVISE */
 
 .login {
   margin: 0;
@@ -39,7 +312,7 @@
   top: 20%;
   left: 440px;
   opacity: 0.9;
-  box-shadow: 3px 7px 20px rgb(66, 66, 66)
+  box-shadow: 3px 7px 20px rgb(66, 66, 66);
 }
 
 .containerDevise .field {
