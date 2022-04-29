@@ -13,55 +13,93 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
+    <%# BARRA LATERAL %>
+    <div id="sidemenu" class="menu_collapsed">
+      <%# CABECERA_MENU %>
+      <div id="header_menu">
+        <div id="title_menu"><div>SISMU</div></div>
+        <div id="menu_btn">
+          <div class="btn_hamburguesa"></div>
+          <div class="btn_hamburguesa"></div>
+          <div class="btn_hamburguesa"></div>
+        </div>
+      </div>
+      <%# LOGO SISMU %>
+      <div id="perfil_menu">
+        <div id="foto_menu"><%= image_tag "minilogo_sismu" %></div>
+      </div>
+      <%# ITEMS_MENU %>
+      <div id="menu_items">
+        <div class="item_menu">
+          <a href="#">
+            <div class="icon_menu"><%= image_tag "iconos/canasta" %></div>
+            <div class="title_icon_menu"><span>Productos</span></div>
+          </a>
+        </div>
+        <div class="item_menu">
+          <a href="#">
+            <div class="icon_menu"><%= image_tag "iconos/flor" %></div>
+            <div class="title_icon_menu"><span>Materia Prima</span></div>
+          </a>
+        </div>
+        <div class="item_menu">
+          <a href="#">
+            <div class="icon_menu"><%= image_tag "iconos/incognito" %></div>
+            <div class="title_icon_menu"><span>Proveedores</span></div>
+          </a>
+        </div>
+        <div class="item_menu">
+          <a href="#">
+            <div class="icon_menu"><%= image_tag "iconos/usuarios" %></div>
+            <div class="title_icon_menu"><span>Clientes</span></div>
+          </a>
+        </div>
+        <div class="item_menu separador_menu">
+        </div>
+        <div class="item_menu">
+          <a href="#">
+            <div class="icon_menu"><%= image_tag "iconos/ajustes_outline" %></div>
+            <div class="title_icon_menu"><span>Ajustes</span></div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <%# NAV %>
     <nav>
       <section>
-        <%= link_to "Menu", id: "open-close" %>
-        <a href="#">Logo</a>
+        <%= image_tag "minilogo_sandra_munoz_artesanias", class: "minilogo" %>
+        <%= image_tag "logo_nombre_sandra_munoz_artesanias", class: "logo" %>
+      </section>
+      <section>
+        <span id="sismu__central">SISMU <i>Artesanías</i></span>
       </section>
       <section class="btn__salir">
-          <%= link_to "Salir", destroy_user_session_path, :method => :delete %>
+          <%= link_to "Salir", destroy_user_session_path, :method => :delete, class: "salir" %>
+          <%= image_tag "iconos/sign_out", class: "minilogo_pequeño salir" %>
       </section>
     </nav>
-    
-    <aside id="aside">
-      <div class="div_menu">
-        <div>
-          <a href="#">Menú</a>
-          <span>Productos</span>
-        </div>
-      </div>
-      <div class="div_menu">
-        <div>
-          <a href="#">Menú</a>
-          <span>Productos</span>
-        </div>
-      </div>
-      <div class="div_menu">
-        <div>
-          <a href="#">Menú</a>
-          <span>Productos</span>
-        </div>
-      </div>
-      <div class="div_menu">
-        <div>
-          <a href="#">Menú</a>
-          <span>Productos</span>
-        </div>
-      </div>
-      <div class="div_menu">
-        <div>
-          <a href="#">Menú</a>
-          <span>Productos</span>
-        </div>
-      </div>
-    </aside>
+
+    <%# AQUÍ APARECE EL MAIN %>
 
     <%= yield %>
 
+    <%# FOOTER %>
     <footer>
-      <p>version 1.1</p>
+      <p>Version 1.1</p>
     </footer>
 
-    <%# <script src="/application.js"></script> %>
+    <%# JAVASCRIPT %>
+    <script>
+      const btn = document.querySelector("#menu_btn");
+      const menu = document.querySelector("#sidemenu");
+      btn.addEventListener('click', e => {
+        menu.classList.toggle("menu_expanded");
+        menu.classList.toggle("menu_collapsed");
+
+        document.querySelector('body').classList.toggle('body-expanded');
+      });
+    </script>
   </body>
 </html>
