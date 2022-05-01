@@ -248,18 +248,18 @@ nav {
 
 /* PESTAÑA INDEX */
 
-main {
+/* main {
   border: 1px solid red;
-}
+} */
 
-.grid-container {
+.panelContador, .panelRegistros {
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: #2196F3;
+  background-color: grey;
   padding: 10px;
 }
 
-.grid-item {
+.panelContador__elemento {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
@@ -270,12 +270,22 @@ main {
   /* justify-content: space-around; */
 }
 
-.grid-link {
-  border: 1px solid red;
+.panelContador__icono {
   width: 100%;
   font-size: 15px;
   cursor: pointer;
   /* text-align: center; */
+}
+
+.panelRegistros__elemento {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  margin: 20px;
+  /* width: 300px; */
+  /* justify-content: space-around; */
 }
 
 .span_angulo_derecho {
