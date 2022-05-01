@@ -1,15 +1,11 @@
 Rails.application.routes.draw do
-  get 'category/index'
-  get 'category/show'
-  get 'category/edit'
-  get 'category/new'
-  get 'category/update'
-  get 'producto/index'
-  get 'producto/show'
-  get 'producto/edit'
-  get 'producto/new'
-  get 'producto/update'
+  # CATEGORIA
+  resources :categories
+  #PRODUCTO
+  resources :productos
+  #HOME
   root to: "home#index"
+  #DEVISE
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
