@@ -1,0 +1,49 @@
+:root {
+  --fondo: rgba(255, 255, 255, 0.8);
+  --borde: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.panelContador,
+.panelRegistros {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: grey;
+  padding: 10px;
+}
+
+.panelContador__elemento {
+  background-color: var(--fondo);
+  border: var(--borde);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  margin: 20px;
+  /* width: 300px; */
+  /* justify-content: space-around; */
+}
+
+.panelContador__icono {
+  width: 100%;
+  font-size: 15px;
+  cursor: pointer;
+  /* text-align: center; */
+}
+
+.panelRegistros__elemento {
+  background-color: var(--fondo);
+  border: var(--borde);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  margin: 20px;
+  /* width: 300px; */
+  /* justify-content: space-around; */
+}
+
+.span_angulo_derecho {
+  margin-bottom: 5px;
+}
+
+.minilogo_grid {
+  height: 15px;
+}
