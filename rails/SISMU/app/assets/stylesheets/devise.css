@@ -1,0 +1,61 @@
+.login {
+  margin: 0;
+  padding: 20px;
+  font-family: sans-serif;
+  display: flex;
+  /* background-size: cover; */
+  justify-content: center;
+  align-items: center;
+}
+
+.containerDevise {
+  width: 520px;
+  height: 420px;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 20px;
+  /* position: absolute;
+  top: 20%;
+  left: 440px; */
+  opacity: 0.9;
+  box-shadow: 3px 7px 20px rgb(66, 66, 66);
+}
+
+.containerDevise .field {
+  margin-top: 20px;
+  font-weight: bold;
+  display: block;
+}
+
+.containerDevise .field .field__input {
+  margin: 2px;
+  border: none;
+  border-bottom: 1px solid #000;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  font-size: 16px;
+}
+
+.containerDevise__boton {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(245, 148, 23);
+  cursor: pointer;
+  outline: none;
+  height: 40px;
+  width: 100px;
+  background: rgb(245, 148, 23);
+  border-radius: 20px;
+  color: white;
+}
+
+.containerDevise__boton:active {
+  background: red;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}

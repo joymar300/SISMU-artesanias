@@ -55,6 +55,34 @@ body {
 }
 
 
+/* NAV */
+
+nav {
+  background-color: var(--bgcolor);
+  margin-top: -18px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.minilogo {
+  height: 50px;
+}
+
+.logo {
+  height: 50px;
+  width: 140px;
+  margin-left: -5px;
+}
+
+#sismu__central {
+  color: #fff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
 /* CABECERA_MENU */
 
 #sidemenu #header_menu {
@@ -200,34 +228,6 @@ body {
 }
 
 
-/* NAV */
-
-nav {
-  background-color: var(--bgcolor);
-  margin-top: -18px;
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 10px;
-}
-
-.minilogo {
-  height: 50px;
-}
-
-.logo {
-  height: 50px;
-  width: 140px;
-  margin-left: -5px;
-}
-
-#sismu__central {
-  color: #fff;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-
 /* SALIR */
 
 .minilogo_pequeño {
@@ -246,57 +246,6 @@ nav {
 }
 
 
-/* PESTAÑA INDEX */
-
-/* main {
-  border: 1px solid red;
-} */
-
-.panelContador, .panelRegistros {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: grey;
-  padding: 10px;
-}
-
-.panelContador__elemento {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
-  margin: 20px;
-  /* width: 300px; */
-  /* justify-content: space-around; */
-}
-
-.panelContador__icono {
-  width: 100%;
-  font-size: 15px;
-  cursor: pointer;
-  /* text-align: center; */
-}
-
-.panelRegistros__elemento {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
-  margin: 20px;
-  /* width: 300px; */
-  /* justify-content: space-around; */
-}
-
-.span_angulo_derecho {
-  margin-bottom: 5px;
-}
-
-.minilogo_grid {
-  height: 15px;
-}
-
-
 /* FOOTER */
 
 footer {
@@ -307,67 +256,4 @@ footer {
 
 footer p {
   color: #fff;
-}
-
-
-/* ESTILOS DIVISE */
-
-.login {
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  background-size: cover;
-  font-family: sans-serif;
-}
-
-.containerDevise {
-  width: 520px;
-  height: 420px;
-  background: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  text-align: center;
-  border-radius: 20px;
-  position: absolute;
-  top: 20%;
-  left: 440px;
-  opacity: 0.9;
-  box-shadow: 3px 7px 20px rgb(66, 66, 66);
-}
-
-.containerDevise .field {
-  margin-top: 20px;
-  font-weight: bold;
-  display: block;
-}
-
-.containerDevise .field .field__input {
-  margin: 2px;
-  border: none;
-  border-bottom: 1px solid #000;
-  background: transparent;
-  outline: none;
-  height: 40px;
-  font-size: 16px;
-}
-
-.containerDevise__boton {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 1px solid rgb(245, 148, 23);
-  cursor: pointer;
-  outline: none;
-  height: 40px;
-  width: 100px;
-  background: rgb(245, 148, 23);
-  border-radius: 20px;
-  color: white;
-}
-
-.containerDevise__boton:active {
-  background: red;
-}
-
-a {
-  color: black;
-  text-decoration: none;
 }
