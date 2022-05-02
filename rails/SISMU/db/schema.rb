@@ -27,6 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_27_195808) do
   create_table "productos", force: :cascade do |t|
     t.string "nombre_pro"
     t.float "precio_pro"
+    t.text "imagen_pro"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
