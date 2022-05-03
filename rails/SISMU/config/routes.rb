@@ -1,8 +1,20 @@
 Rails.application.routes.draw do
+  get 'productos/index'
+  get 'productos/new'
+  get 'productos/edit'
+  get 'productos/update'
+  get 'categories/index'
+  get 'categories/new'
+  get 'categories/edit'
+  get 'categories/update'
   # CATEGORIA
-  resources :categories
+  resources :categories do
+    resources :categories_productos, module: :categories
+  end
   #PRODUCTO
-  resources :productos
+  resources :productos do
+    resources :categories_productos,module: :productos
+  end
   #HOME
   root to: "home#index"
   #DEVISE
