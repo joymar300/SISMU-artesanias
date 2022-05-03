@@ -34,10 +34,11 @@
       <%# ITEMS_MENU %>
       <div id="menu_items">
         <div class="item_menu">
-          <a href="#">
+         <%= link_to "Productos",  productos_url%>
+          <a href="producto/index.html.erb">
             <div class="icon_menu"><%= image_tag "iconos/canasta" %></div>
             <div class="title_icon_menu"><span>Productos</span></div>
-          </a>
+            <div class="title_icon_menu"><span><%# link_to "Productos", productos_path %></span></div>
         </div>
         <div class="item_menu">
           <a href="#">
