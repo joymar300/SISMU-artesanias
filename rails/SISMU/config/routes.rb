@@ -1,12 +1,5 @@
 Rails.application.routes.draw do
-  get 'productos/index'
-  get 'productos/new'
-  get 'productos/edit'
-  get 'productos/update'
-  get 'categories/index'
-  get 'categories/new'
-  get 'categories/edit'
-  get 'categories/update'
+
   # CATEGORIA
   resources :categories do
     resources :categories_productos, module: :categories

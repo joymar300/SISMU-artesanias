@@ -1,4 +1,15 @@
-<h1>Productos#index</h1>
-<p>Find me in app/views/productos/index.html.erb</p>
 
-<a href="new">Crear</a>
+<div class="izq">
+    <table>
+        <thead>
+            <tr >
+                <th class="odd" colspan="3 " >nombre del producto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%= render @productos%>
+        </tbody>
+    </table>
+</div>
+
+<a href="productos/new">Crear</a>
