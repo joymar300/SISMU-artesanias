@@ -8,13 +8,19 @@
         <%= f.label :Correo %><br />
         <%= f.email_field :email, autofocus: true, class:"field__input", autocomplete: "email" %>
         
-        <div><%= f.label :nombre, "primer nombre"%><br />
-        <%= f.text_field :nombre, autofocus: true %></div>
+        <div><%= f.label :primernombre, "primer nombre"%><br />
+        <%= f.text_field :primernombre, autofocus: true %></div>
+        
+        <div><%= f.label :segundonombre, "segundo nombre"%><br />
+        <%= f.text_field :segundonombre, autofocus: true %></div>
        
        
        
-        <div><%= f.label :apellido, "primer apellido" %><br />
-        <%= f.text_field :apellido, autofocus: true %></div>
+        <div><%= f.label :primerapellido, "primer apellido" %><br />
+        <%= f.text_field :primerapellido, autofocus: true %></div>
+        
+        <div><%= f.label :segundoapellido, "segundo apellido" %><br />
+        <%= f.text_field :segundoapellido, autofocus: true %></div>
 
         
 
