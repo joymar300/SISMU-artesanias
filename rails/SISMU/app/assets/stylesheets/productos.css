@@ -1,0 +1,11 @@
+.modal{
+    background:grey;
+    width: 40%;
+    height: 40%;
+    padding:33px;
+    min-height: 250px;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    display:none
+}
