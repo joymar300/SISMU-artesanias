@@ -43,6 +43,6 @@ class CategoriesController < ApplicationController
   private
 
     def category_params
-      params.require(:Category).permit(:nombre)
+      params.require(:Category).permit(:tipo)
     end
 end
