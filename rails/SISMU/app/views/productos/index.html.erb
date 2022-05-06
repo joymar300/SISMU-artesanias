@@ -1,15 +1,23 @@
 
-<div class="izq">
-    <table>
+<main class="container">
+<section class=" containerInfo">
+        <h1 class=" containerInfo__titulo">Productos</h1>
+        <a class=" containerInfo__boton" href="productos/new">nuevo</a>
+
+</section>
+<section>
+     <table>
         <thead>
-            <tr >
-                <th class="odd" colspan="3 " >Nombre de los producto</th>
+            <tr>
+                <th>ID</th>
+                <th>Nombre de los producto</th>
+                <th>Precios</th>
             </tr>
         </thead>
         <tbody>
             <%= render @productos%>
         </tbody>
     </table>
-</div>
+</section>
 
-<a href="productos/new">Crear</a>
+</main>
