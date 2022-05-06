@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # MATERIALES
+  resources :materials do
+    resources :materials_productos, module: :materials
+  end
 
   # CATEGORIA
   resources :categories do
@@ -7,6 +11,7 @@ Rails.application.routes.draw do
   #PRODUCTO
   resources :productos do
     resources :categories_productos,module: :productos
+    resources :materials_productos, module: :productos
   end
   #HOME
   root to: "home#index"
