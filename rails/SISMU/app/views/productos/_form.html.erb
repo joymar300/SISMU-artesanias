@@ -2,10 +2,11 @@
 <h1>Productos</h1>
 
 <%= simple_form_for @producto do |f| %>
+
   <%= f.input :nombre_pro %>
   <%= f.input :precio_pro %>
-    <%= f.input :imagen_pro %>
   <%= f.button :submit %>
+  <%= f.file_field :avatar %>
 
 <% end %>
 </div>

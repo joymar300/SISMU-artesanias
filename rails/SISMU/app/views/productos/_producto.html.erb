@@ -3,6 +3,10 @@
   <td>
     <%= link_to  producto.nombre_pro, producto_url(producto) %>
   </td>  
+<td  class="imagenproducto">
 
+    <%= image_tag producto.avatar_url if producto.avatar.present?%>
+
+</td>
 
 </tr>

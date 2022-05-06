@@ -1,4 +1,5 @@
 class ProductosController < ApplicationController
+  
   before_action :authenticate_user!
   def index
     @productos = Producto.all
@@ -43,6 +44,6 @@ class ProductosController < ApplicationController
   private
 
     def producto_params
-      params.require(:producto).permit(:nombre_pro, :precio_pro, :imagen_pro)
+      params.require(:producto).permit(:nombre_pro, :precio_pro, :imagen_pro, :avatar)
     end
 end
