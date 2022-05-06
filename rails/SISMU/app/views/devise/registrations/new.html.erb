@@ -1,49 +1,56 @@
-<main class ="containerDevise">
-    <h2>Regístrate</h2>
+<section class ="containerDevise">
+  <h2>Regístrate</h2>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
 
-    <div class="field">
-        <%= f.label :Correo %><br />
-        <%= f.email_field :email, autofocus: true, class:"field__input", autocomplete: "email" %>
-        
-        <div><%= f.label :primernombre, "primer nombre"%><br />
-        <%= f.text_field :primernombre, autofocus: true %></div>
-        
-        <div><%= f.label :segundonombre, "segundo nombre"%><br />
-        <%= f.text_field :segundonombre, autofocus: true %></div>
-       
-       
-       
-        <div><%= f.label :primerapellido, "primer apellido" %><br />
-        <%= f.text_field :primerapellido, autofocus: true %></div>
-        
-        <div><%= f.label :segundoapellido, "segundo apellido" %><br />
-        <%= f.text_field :segundoapellido, autofocus: true %></div>
+  <div class="field">
+    <div class="registroNombres">
+      <div class="registroNombres_casilla">
+        <%= f.label :primernombre, "Primer Nombre"%><br />
+        <%= f.text_field :primernombre, class:"field__input" %>
+      </div>
+      
+      <div class="registroNombres_casilla">
+        <%= f.label :segundonombre, "Segundo Nombre"%><br />
+        <%= f.text_field :segundonombre, class:"field__input" %>
+      </div>
 
-        
-
-    <div class="field">
-        <%= f.label :Contraseña %>
-        <% if @minimum_password_length %>
-        <em>(Carácter mínimo <%= @minimum_password_length %>)</em>
-        <% end %><br />
-        <%= f.password_field :password, class:"field__input", autocomplete: "new-password" %>
+      <div class="registroNombres_casilla">
+        <%= f.label :primerapellido, "Primer Apellido" %><br />
+        <%= f.text_field :primerapellido, class:"field__input" %>
+      </div>
+      
+      <div class="registroNombres_casilla">
+        <%= f.label :segundoapellido, "Segundo Apellido" %><br />
+        <%= f.text_field :segundoapellido, class:"field__input" %>
+      </div>
     </div>
 
-    <div class="field">
-        <%= f.label :confirmación_de_contraseña %><br />
-        <%= f.password_field :password_confirmation, class:"field__input", autocomplete: "new-password" %>
-    </div>
+      <%= f.label :Correo %><br />
+      <%= f.email_field :email, autofocus: true, class:"field__input", autocomplete: "email" %>
 
-    <div class="actions">
-        <%= f.submit "Regístrar", class:"containerDevise__boton" %>
-    </div>
-    <% end %>
+  <div class="field">
+      <%= f.label :Contraseña %>
+      <% if @minimum_password_length %>
+      <em>(Carácter mínimo <%= @minimum_password_length %>)</em>
+      <% end %><br />
+      <%= f.password_field :password, class:"field__input", autocomplete: "new-password" %>
+  </div>
 
-    <%= render "devise/shared/links" %>
-</main>
+  <div class="field">
+      <%= f.label :confirmación_de_contraseña %><br />
+      <%= f.password_field :password_confirmation, class:"field__input", autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+      <%= f.submit "Regístrar", class:"containerDevise__boton" %>
+  </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+  <br>
+</section>
 
 
 
