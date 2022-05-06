@@ -10,7 +10,8 @@
 
 .containerDevise {
   width: 520px;
-  height: 420px;
+  min-height: 420px;
+  max-height: auto;
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   text-align: center;
@@ -21,6 +22,22 @@
   opacity: 0.9;
   box-shadow: 3px 7px 20px rgb(66, 66, 66);
 }
+
+.registroNombres {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.registroNombres_casilla {
+  padding: 5px;
+}
+
+
+/* .passwordDevise {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
 .containerDevise .field {
   margin-top: 20px;
