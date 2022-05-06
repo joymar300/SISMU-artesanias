@@ -40,7 +40,18 @@
       Ultimás Ventas
     </div>
     <div class="panelRegistros__elemento">
-      Añadidos Recientemente
+      <h2>Añadidos Recientemente</h2>
+      <div class="izq">
+      <table>
+          <thead>
+              <tr >
+                  <th class="odd" colspan="3 " >Nombre de los producto</th>
+              </tr>
+          </thead>
+          <tbody>
+              <%= render @productos%>
+          </tbody>
+      </table>
     </div> 
   </div>
 </main>
