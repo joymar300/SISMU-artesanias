@@ -29,23 +29,17 @@
       </div>
       <%# LOGO SISMU %>
       <div id="perfil_menu">
-        <div id="foto_menu"><%= image_tag "minilogo_sismu" %></div>
+        <div id="foto_menu"><%=link_to  image_tag("minilogo_sismu"), root_path  %></div>
       </div>
       <%# ITEMS_MENU %>
       <div id="menu_items">
         <div class="item_menu">
-          <a href="productos">
-            <div class="icon_menu"><%= image_tag "iconos/canasta" %></div>
-            <div class="title_icon_menu"><span>Productos</span></div>
-            <div class="title_icon_menu"><span><%# link_to "Productos", productos_path %></span></div>
-            </a>
+          <%= link_to image_tag("iconos/canasta",class:"icon_menu" ), productos_url %>
         </div>
         <div class="item_menu">
-          <a href="materials">
-            <div class="icon_menu"><%= image_tag "iconos/flor" %></div>
-            <div class="title_icon_menu"><span>Materia Prima</span></div>
-          </a>
+          <div><%= link_to image_tag("iconos/flor",class:"icon_menu" ) ,materials_url %></div>
         </div>
+        
         <div class="item_menu">
           <a href="#">
             <div class="icon_menu"><%= image_tag "iconos/usuarios" %></div>
@@ -73,7 +67,7 @@
     <%# NAV %>
     <nav>
       <section>
-        <%= image_tag "minilogo_sandra_munoz_artesanias", class: "minilogo" %>
+        <%= link_to image_tag( "minilogo_sandra_munoz_artesanias", class: "minilogo"), root_path %>
         <%= image_tag "logo_nombre_sandra_munoz_artesanias", class: "logo" %>
       </section>
       <section>
