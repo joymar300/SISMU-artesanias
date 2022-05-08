@@ -9,3 +9,34 @@
     background-repeat:no-repeat;
     background-size: cover;
 }
+    /*TABLA DEL FORMULARIO*/
+    
+    .container  {
+        border: 1px solid red;
+    }
+    .containerInfo{
+        display: flex;
+        border: 1px solid rgb(17, 160, 29);
+    }
+
+    .containerInfo__titulo{
+        border: 1px solid black;
+
+    }  
+    .containerInfo__boton {
+        border: 1px solid black;
+        text-align: center;
+        margin-top: 40px;
+
+    
+
+    }
+    table{
+        border: 1px solid black;
+    }
+    tr, td,th{    
+    border: 1px solid black;
+    }
+    
+
+
