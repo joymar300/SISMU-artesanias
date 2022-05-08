@@ -36,6 +36,8 @@ body {
   margin-left: var(--width-collapsed);
 }
 
+/* BODY CON MENU LATERAL ABIERTO */
+
 .body-expanded {
   margin-left: var(--width);
 }
@@ -67,13 +69,9 @@ nav {
   padding-right: 10px;
 }
 
-.minilogo {
-  height: 50px;
-}
-
 .logo {
   height: 50px;
-  width: 140px;
+  width: 190px;
   margin-left: -5px;
 }
 
@@ -82,8 +80,7 @@ nav {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-
-/* CABECERA_MENU */
+/* CABECERA_MENU LATERAL */
 
 #sidemenu #header_menu {
   box-sizing: border-box;
@@ -120,7 +117,7 @@ nav {
 }
 
 
-/* PERFIL_MENU */
+/* PERFIL_MENU LATERAL */
 
 #sidemenu #perfil_menu {
   border-bottom: solid 1px var(--hovercolor);
@@ -141,7 +138,7 @@ nav {
 }
 
 
-/* ITEM_MENU */
+/* ITEM_MENU LATERAL */
 
 #sidemenu #menu_items {
   overflow: hidden;
@@ -192,7 +189,7 @@ nav {
 }
 
 
-/* MENU EXPANDED */
+/* MENU EXPANDED LATERAL */
 
 .menu_expanded {
   width: var(--width);

@@ -16,6 +16,20 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
+    <%# NAV %>
+    <nav>
+      <section>
+        <%= link_to image_tag( "minilogo_lateral_sandra_munoz_artesanias", class: "logo"), root_path %>
+      </section>
+      <section>
+        <span id="sismu__central">SISMU <i>Artesanías</i></span>
+      </section>
+      <section class="btn__salir">
+          <%= link_to "Salir", destroy_user_session_path, :method => :delete, class: "salir" %>
+          <%= image_tag "iconos/sign_out", class: "minilogo_pequeño salir" %>
+      </section>
+    </nav>
+
     <%# BARRA LATERAL %>
     <div id="sidemenu" class="menu_collapsed">
       <%# CABECERA_MENU %>
@@ -34,10 +48,14 @@
       <%# ITEMS_MENU %>
       <div id="menu_items">
         <div class="item_menu">
-          <%= link_to image_tag("iconos/canasta",class:"icon_menu" ), productos_url %>
+          <div>
+            <%= link_to image_tag("iconos/canasta", class: "icon_menu" ), productos_url%>
+            
+          </div>
+          
         </div>
         <div class="item_menu">
-          <div><%= link_to image_tag("iconos/flor",class:"icon_menu" ) ,materials_url %></div>
+          <div><%= link_to image_tag("iconos/flor", class:"icon_menu" ), materials_url %></div>
         </div>
         
         <div class="item_menu">
@@ -63,21 +81,6 @@
         </div>
       </div>
     </div>
-
-    <%# NAV %>
-    <nav>
-      <section>
-        <%= link_to image_tag( "minilogo_sandra_munoz_artesanias", class: "minilogo"), root_path %>
-        <%= image_tag "logo_nombre_sandra_munoz_artesanias", class: "logo" %>
-      </section>
-      <section>
-        <span id="sismu__central">SISMU <i>Artesanías</i></span>
-      </section>
-      <section class="btn__salir">
-          <%= link_to "Salir", destroy_user_session_path, :method => :delete, class: "salir" %>
-          <%= image_tag "iconos/sign_out", class: "minilogo_pequeño salir" %>
-      </section>
-    </nav>
 
     <%# AQUÍ APARECE EL MAIN %>
 
