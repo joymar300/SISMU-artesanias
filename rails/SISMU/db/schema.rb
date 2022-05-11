@@ -10,13 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_06_194647) do
-  create_table "categories", force: :cascade do |t|
-    t.string "tipo"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
+ActiveRecord::Schema[7.0].define(version: 2022_05_11_222152) do
   create_table "categories_productos", id: false, force: :cascade do |t|
     t.integer "category_id", null: false
     t.integer "producto_id", null: false
@@ -24,26 +18,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_06_194647) do
     t.index ["producto_id", "category_id"], name: "index_categories_productos_on_producto_id_and_category_id"
   end
 
-  create_table "materials", force: :cascade do |t|
-    t.string "tipo_material"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "materials_productos", id: false, force: :cascade do |t|
-    t.integer "material_id", null: false
-    t.integer "producto_id", null: false
-    t.index ["material_id", "producto_id"], name: "index_materials_productos_on_material_id_and_producto_id"
-    t.index ["producto_id", "material_id"], name: "index_materials_productos_on_producto_id_and_material_id"
-  end
-
   create_table "productos", force: :cascade do |t|
     t.string "nombre_pro"
-    t.float "precio_pro"
-    t.text "imagen_pro"
+    t.string "referencia_pro"
+    t.integer "precio_pro"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "avatar"
   end
 
   create_table "roles", force: :cascade do |t|
