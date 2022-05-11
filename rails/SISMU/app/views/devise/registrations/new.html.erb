@@ -5,30 +5,11 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <div class="registroNombres">
-      <div class="registroNombres_casilla">
-        <%= f.label :primernombre, "Primer Nombre"%><br />
-        <%= f.text_field :primernombre, class:"field__input" %>
-      </div>
-      
-      <div class="registroNombres_casilla">
-        <%= f.label :segundonombre, "Segundo Nombre"%><br />
-        <%= f.text_field :segundonombre, class:"field__input" %>
-      </div>
-
-      <div class="registroNombres_casilla">
-        <%= f.label :primerapellido, "Primer Apellido" %><br />
-        <%= f.text_field :primerapellido, class:"field__input" %>
-      </div>
-      
-      <div class="registroNombres_casilla">
-        <%= f.label :segundoapellido, "Segundo Apellido" %><br />
-        <%= f.text_field :segundoapellido, class:"field__input" %>
-      </div>
-    </div>
+   
 
       <%= f.label :Correo %><br />
       <%= f.email_field :email, autofocus: true, class:"field__input", autocomplete: "email" %>
+      </div>
 
   <div class="field">
       <%= f.label :Contraseña %>
