@@ -2,8 +2,10 @@
 
 one:
   nombre_pro: MyString
-  precio_pro: 1.5
+  referencia_pro: MyString
+  precio_pro: 1
 
 two:
   nombre_pro: MyString
-  precio_pro: 1.5
+  referencia_pro: MyString
+  precio_pro: 1
