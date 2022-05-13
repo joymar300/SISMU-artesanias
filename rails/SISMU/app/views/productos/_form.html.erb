@@ -5,6 +5,7 @@
   <%= f.input :referencia_pro %>
   <%= f.input :nombre_pro %>
   <%= f.input :precio_pro %>
+  <%= f.association :categories , as: :check_boxes, label_method: :tipo_categoria %>
   <%= f.button :submit %>
   
   
