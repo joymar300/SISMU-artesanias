@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_13_035705) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_13_222527) do
   create_table "categories", force: :cascade do |t|
     t.string "tipo_categoria"
     t.datetime "created_at", null: false
@@ -22,6 +22,30 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_13_035705) do
     t.integer "producto_id", null: false
     t.index ["category_id", "producto_id"], name: "index_categories_productos_on_category_id_and_producto_id"
     t.index ["producto_id", "category_id"], name: "index_categories_productos_on_producto_id_and_category_id"
+  end
+
+  create_table "client_productos", force: :cascade do |t|
+    t.string "nombre_pedido"
+    t.integer "cantidad_pedido"
+    t.integer "precio_pedido"
+    t.string "direccion_pedido"
+    t.integer "clients_id", null: false
+    t.integer "productos_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["clients_id"], name: "index_client_productos_on_clients_id"
+    t.index ["productos_id"], name: "index_client_productos_on_productos_id"
+  end
+
+  create_table "clients", force: :cascade do |t|
+    t.string "nombre_cli"
+    t.string "nombre2_cli"
+    t.string "apellido_cli"
+    t.string "apellido2_cli"
+    t.integer "tel_cli"
+    t.string "correo_cli"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "productos", force: :cascade do |t|
@@ -67,4 +91,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_13_035705) do
     t.index ["user_id"], name: "index_users_roles_on_user_id"
   end
 
+  add_foreign_key "client_productos", "clients", column: "clients_id"
+  add_foreign_key "client_productos", "productos", column: "productos_id"
 end

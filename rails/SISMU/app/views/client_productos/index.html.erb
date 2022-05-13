@@ -1,0 +1,25 @@
+
+<main class="container">
+<section class=" containerInfo">
+        <h1 class=" containerInfo__titulo">Productos</h1>
+        <a class=" containerInfo__boton" href="client_productos/new">nuevo</a>
+
+</section>
+<section>
+     <table>
+        <thead>
+            <tr>
+                <th>Referencia</th>
+                <th>Nombre de los producto</th>
+                <th>cantidad</th>
+                <th>Precios</th>
+                <th> dirreción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%= render @pedidos%>
+        </tbody>
+    </table>
+</section>
+
+</main>

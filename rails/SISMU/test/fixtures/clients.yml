@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_cli: MyString
+  nombre2_cli: MyString
+  apellido_cli: MyString
+  apellido2_cli: MyString
+  tel_cli: 1
+  correo_cli: MyString
+
+two:
+  nombre_cli: MyString
+  nombre2_cli: MyString
+  apellido_cli: MyString
+  apellido2_cli: MyString
+  tel_cli: 1
+  correo_cli: MyString
