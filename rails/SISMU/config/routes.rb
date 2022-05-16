@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   # Clientes
   resources :clients
   # MATERIALES
@@ -18,6 +19,11 @@ Rails.application.routes.draw do
   end
   # PEDIDOS CLIENTES
   resources :client_productos
+
+  resources :facturas do
+    resources :detalles, module: :facturas, only: [:create]
+  end
+
   #HOME
   root to: "home#index"
   #DEVISE

@@ -1,12 +1,14 @@
 <div>
 <h1>Clientes</h1>
 <%= simple_form_for @client do |f| %>
+    <%= f.input :cedula %>
     <%= f.input :nombre_cli %>
     <%= f.input :nombre2_cli %>
     <%= f.input :apellido_cli %>
     <%= f.input :apellido2_cli %>
     <%= f.input :tel_cli %>
     <%= f.input :correo_cli %>
+
     <%= f.button :submit %>
 
 <% end %>

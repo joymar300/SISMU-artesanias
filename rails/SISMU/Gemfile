@@ -75,3 +75,4 @@ gem 'devise'
 gem "pundit", "~> 2.2"
 gem 'simple_form'
 gem 'carrierwave', '~> 2.0'
+gem 'webpacker', '~> 5.4', '>= 5.4.3'

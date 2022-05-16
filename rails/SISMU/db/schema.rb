@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_13_222527) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_16_200409) do
   create_table "categories", force: :cascade do |t|
     t.string "tipo_categoria"
     t.datetime "created_at", null: false
@@ -24,19 +24,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_13_222527) do
     t.index ["producto_id", "category_id"], name: "index_categories_productos_on_producto_id_and_category_id"
   end
 
-  create_table "client_productos", force: :cascade do |t|
-    t.string "nombre_pedido"
-    t.integer "cantidad_pedido"
-    t.integer "precio_pedido"
-    t.string "direccion_pedido"
-    t.integer "clients_id", null: false
-    t.integer "productos_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["clients_id"], name: "index_client_productos_on_clients_id"
-    t.index ["productos_id"], name: "index_client_productos_on_productos_id"
-  end
-
   create_table "clients", force: :cascade do |t|
     t.string "nombre_cli"
     t.string "nombre2_cli"
@@ -44,14 +31,34 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_13_222527) do
     t.string "apellido2_cli"
     t.integer "tel_cli"
     t.string "correo_cli"
+    t.integer "cedula"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "detalles", force: :cascade do |t|
+    t.integer "factura_id", null: false
+    t.integer "producto_id", null: false
+    t.integer "cantidad"
+    t.decimal "valor", precision: 8, scale: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["factura_id"], name: "index_detalles_on_factura_id"
+    t.index ["producto_id"], name: "index_detalles_on_producto_id"
+  end
+
+  create_table "facturas", force: :cascade do |t|
+    t.integer "client_id", null: false
+    t.decimal "total", precision: 8, scale: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_facturas_on_client_id"
   end
 
   create_table "productos", force: :cascade do |t|
     t.string "nombre_pro"
     t.string "referencia_pro"
-    t.integer "precio_pro"
+    t.decimal "precio_pro", precision: 8, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -91,6 +98,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_13_222527) do
     t.index ["user_id"], name: "index_users_roles_on_user_id"
   end
 
-  add_foreign_key "client_productos", "clients", column: "clients_id"
-  add_foreign_key "client_productos", "productos", column: "productos_id"
+  add_foreign_key "detalles", "facturas"
+  add_foreign_key "detalles", "productos"
+  add_foreign_key "facturas", "clients"
 end

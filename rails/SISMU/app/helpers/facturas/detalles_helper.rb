@@ -1,0 +1,2 @@
+module Facturas::DetallesHelper
+end

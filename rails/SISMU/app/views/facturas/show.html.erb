@@ -1,0 +1,34 @@
+<h1>Facturas#show</h1>
+<p>Find me in app/views/facturas/show.html.erb</p>
+
+<%= @factura.id %>
+<br>
+<%= @factura.client.nombre_completo %>
+<br>
+<%= @factura.client.correo_cli %>
+
+<%= simple_form_for [@factura, @detalle] do |f| %>
+    <%= f.association :producto, label_method: :nombre_pro %>
+    <%= f.input :cantidad %>
+    <%= f.button :submit %>
+
+
+<% end %>
+
+<table>
+    <thead>
+        <tr>
+            <th>Ref</th>
+            <th>Producto</th>
+            <th>Precio uni.</th>
+            <th>cantidad</th>
+            <th>valor total</th>
+        </tr>        
+    </thead>    
+    <tbody>
+        <%= render @productos %>
+        
+    </tbody>
+</table>
+
+<%=  %>
