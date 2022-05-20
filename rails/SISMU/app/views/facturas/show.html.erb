@@ -22,20 +22,24 @@
             <th>Producto</th>
             <th>Precio uni.</th>
             <th>cantidad</th>
-            <th>valor total</th>
+            <th>Precio total</th>
         </tr>        
     </thead>    
     <tbody>
     <% @detalles.each do |detalle| %>
-      <tr>
-        <td><%= detalle.producto.referencia_pro %></td>
-        <td><%= detalle.producto.nombre_pro %></td>
-        <td><%= number_to_currency detalle.producto.precio_pro%></td>
-        <td><%= detalle.cantidad %></td>
-        <td><%= number_to_currency detalle.total %></td>
-      </tr>
+        <tr>
+            <td><%= detalle.producto.referencia_pro %></td>
+            <td><%= detalle.producto.nombre_pro %></td>
+            <td><%= number_to_currency detalle.producto.precio_pro%></td>
+            <td><%= detalle.cantidad %></td>
+            <td><%= number_to_currency detalle.total %></td>
+        </tr>
     <% end %>
-        
+    <tr>
+        <th >precio final: </th>
+        <td colspan="4"><%=number_to_currency @factura.final %></td>   
+    </tr>
+
     </tbody>
 </table>
 

@@ -40,7 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_16_200409) do
     t.integer "factura_id", null: false
     t.integer "producto_id", null: false
     t.integer "cantidad"
-    t.decimal "valor", precision: 8, scale: 2
+    t.decimal "valor", precision: 3, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["factura_id"], name: "index_detalles_on_factura_id"
@@ -49,7 +49,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_16_200409) do
 
   create_table "facturas", force: :cascade do |t|
     t.integer "client_id", null: false
-    t.decimal "total", precision: 8, scale: 2
+    t.decimal "total", precision: 3, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["client_id"], name: "index_facturas_on_client_id"
@@ -58,7 +58,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_16_200409) do
   create_table "productos", force: :cascade do |t|
     t.string "nombre_pro"
     t.string "referencia_pro"
-    t.decimal "precio_pro", precision: 8, scale: 2
+    t.decimal "precio_pro", precision: 3, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
