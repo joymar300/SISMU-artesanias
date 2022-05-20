@@ -7,7 +7,7 @@ class FacturasController < ApplicationController
   end
 
   def show
-    @productos = @factura.productos
+    @detalles = @factura.detalles
     @detalle = Detalle.new
     @total = @factura.detalles.sum(:valor)
   end
