@@ -1,0 +1,24 @@
+
+<main class="container">
+<section class=" containerInfo">
+        <h1 class=" containerInfo__titulo">Facturas</h1>
+        <a class=" containerInfo__boton" href="facturas/new">nuevo</a>
+
+</section>
+<section>
+     <table>
+        <thead>
+            <tr>
+                <th>N.factura</th>
+                <th>nombre.cli</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <%= render @facturas %>
+        </tbody>
+
+    </table>
+</section>
+
+</main>

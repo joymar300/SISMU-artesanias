@@ -1,0 +1,15 @@
+<div>
+<h1>Pedidos</h1>
+
+<%= simple_form_for @pedido do |f| %>
+    <%= f.input :nombre_pedido,label: 'referencia: ' %>
+    <%= f.association :productos, label: 'productos:' , as: :check_boxes, label_method: :nombre_pro %>
+    <%= f.input :cantidad_pedido,label: 'cantidad:  ' %>
+    <%= f.input :precio_pedido, label: 'precio total: ' %>
+    <%= f.input :direccion_pedido,label: 'dirección: ' %>
+    
+    <%= f.button :submit %>
+
+
+<% end %>
+</div>

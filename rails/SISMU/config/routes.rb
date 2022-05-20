@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+
+  # Clientes
+  resources :clients
   # MATERIALES
   resources :materials do
     resources :materials_productos, module: :materials
@@ -13,6 +17,13 @@ Rails.application.routes.draw do
     resources :categories_productos,module: :productos
     resources :materials_productos, module: :productos
   end
+  # PEDIDOS CLIENTES
+  resources :client_productos
+
+  resources :facturas do
+    resources :detalles, module: :facturas, only: [:create]
+  end
+
   #HOME
   root to: "home#index"
   #DEVISE

@@ -1,0 +1,46 @@
+<h1>Facturas#show</h1>
+<p>Find me in app/views/facturas/show.html.erb</p>
+
+<%= @factura.id %>
+<br>
+<%= @factura.client.nombre_completo %>
+<br>
+<%= @factura.client.correo_cli %>
+
+<%= simple_form_for [@factura, @detalle] do |f| %>
+    <%= f.association :producto, label_method: :nombre_pro %>
+    <%= f.input :cantidad %>
+    <%= f.button :submit %>
+
+
+<% end %>
+
+<table>
+    <thead>
+        <tr>
+            <th>Ref</th>
+            <th>Producto</th>
+            <th>Precio uni.</th>
+            <th>cantidad</th>
+            <th>Precio total</th>
+        </tr>        
+    </thead>    
+    <tbody>
+    <% @detalles.each do |detalle| %>
+        <tr>
+            <td><%= detalle.producto.referencia_pro %></td>
+            <td><%= detalle.producto.nombre_pro %></td>
+            <td><%= number_to_currency detalle.producto.precio_pro%></td>
+            <td><%= detalle.cantidad %></td>
+            <td><%= number_to_currency detalle.total %></td>
+        </tr>
+    <% end %>
+    <tr>
+        <th >precio final: </th>
+        <td colspan="4"><%=number_to_currency @factura.final %></td>   
+    </tr>
+
+    </tbody>
+</table>
+
+<%=  %>
