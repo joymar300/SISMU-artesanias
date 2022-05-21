@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'colors/index'
+  get 'colors/new'
+  get 'colors/create'
+  get 'colors/show'
 
 
   # Clientes
@@ -15,15 +19,14 @@ Rails.application.routes.draw do
   #PRODUCTO
   resources :productos do
     resources :categories_productos,module: :productos
-    resources :materials_productos, module: :productos
   end
   # PEDIDOS CLIENTES
-  resources :client_productos
-
   resources :facturas do
     resources :detalles, module: :facturas, only: [:create]
   end
-
+  #colors
+  resources :colors
+  
   #HOME
   root to: "home#index"
   #DEVISE
