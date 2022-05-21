@@ -1,17 +1,19 @@
-<h1>Facturas#show</h1>
-<p>Find me in app/views/facturas/show.html.erb</p>
+
 
 <%= @factura.id %>
 <br>
 <%= @factura.client.nombre_completo %>
 <br>
 <%= @factura.client.correo_cli %>
+<br>
+<%= @factura.client.direccion_cli%>
 
 <%= simple_form_for [@factura, @detalle] do |f| %>
-    <%= f.association :producto, label_method: :nombre_pro %>
-    <%= f.input :cantidad %>
+    <%= f.association :producto, label_method: :nombre_pro, label: "nombre del producto: " %>
+    <%= f.input :cantidad, label: "cantidad: "%>
+    <%= f.association :colors,as: :check_boxes, label_method: :tipo, label: "colores: " %>
     <%= f.button :submit %>
-
+    
 
 <% end %>
 

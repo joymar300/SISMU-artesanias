@@ -7,6 +7,6 @@
     <%= link_to   producto.nombre_pro, producto_url(producto) %>
   </td id="aw">
   <td>
-    <%= link_to (number_to_currency producto.precio_pro), producto_url(producto) %>
+    <%= link_to (number_to_currency(producto.precio_pro, unit: 'COL$')), producto_url(producto) %>
   </td>    
 </tr>

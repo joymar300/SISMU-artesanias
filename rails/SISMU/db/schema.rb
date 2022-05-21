@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_16_200409) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_21_165804) do
   create_table "categories", force: :cascade do |t|
     t.string "tipo_categoria"
     t.datetime "created_at", null: false
@@ -31,16 +31,30 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_16_200409) do
     t.string "apellido2_cli"
     t.integer "tel_cli"
     t.string "correo_cli"
-    t.integer "cedula"
+    t.string "direccion_cli"
+    t.integer "cedula_cli"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "colors", force: :cascade do |t|
+    t.string "tipo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "colors_detalles", id: false, force: :cascade do |t|
+    t.integer "color_id", null: false
+    t.integer "detalle_id", null: false
+    t.index ["color_id", "detalle_id"], name: "index_colors_detalles_on_color_id_and_detalle_id"
+    t.index ["detalle_id", "color_id"], name: "index_colors_detalles_on_detalle_id_and_color_id"
   end
 
   create_table "detalles", force: :cascade do |t|
     t.integer "factura_id", null: false
     t.integer "producto_id", null: false
     t.integer "cantidad"
-    t.decimal "valor", precision: 3, scale: 2
+    t.decimal "valor", precision: 8, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["factura_id"], name: "index_detalles_on_factura_id"
@@ -49,7 +63,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_16_200409) do
 
   create_table "facturas", force: :cascade do |t|
     t.integer "client_id", null: false
-    t.decimal "total", precision: 3, scale: 2
+    t.decimal "total", precision: 8, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["client_id"], name: "index_facturas_on_client_id"
@@ -58,7 +72,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_16_200409) do
   create_table "productos", force: :cascade do |t|
     t.string "nombre_pro"
     t.string "referencia_pro"
-    t.decimal "precio_pro", precision: 3, scale: 2
+    t.decimal "precio_pro", precision: 8, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

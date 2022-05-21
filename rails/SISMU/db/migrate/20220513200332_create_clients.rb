@@ -7,8 +7,8 @@ class CreateClients < ActiveRecord::Migration[7.0]
       t.string :apellido2_cli
       t.integer :tel_cli
       t.string :correo_cli
-      t.integer :cedula
-
+      t.string :direccion_cli
+      t.integer :cedula_cli
       t.timestamps
     end
   end
