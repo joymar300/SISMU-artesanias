@@ -22,7 +22,7 @@ class ProductosController < ApplicationController
   end
   
   def edit
-    producto = Producto.find(params[:id])
+    @producto = Producto.find(params[:id])
   end
 
 

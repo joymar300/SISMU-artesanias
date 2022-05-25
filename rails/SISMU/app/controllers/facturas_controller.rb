@@ -14,6 +14,17 @@ class FacturasController < ApplicationController
   end
 
   def edit
+    @factura = Factura.find(params[:id])
+  end
+
+
+  def update
+    @factura = Factura.find(params[:id])
+    if @factura.update(factura_params)
+      redirect_to facturas_path
+    else
+        render :edit
+    end
   end
 
   def index
@@ -28,7 +39,9 @@ class FacturasController < ApplicationController
       render :new
     end
   end
-
+def destroy 
+  @factura = Factura.find(params[:id]).destroy
+end
   private
 
   def factura_params

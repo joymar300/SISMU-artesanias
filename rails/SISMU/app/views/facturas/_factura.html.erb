@@ -10,4 +10,10 @@
 <td>
     <%= factura.client.correo_cli %>
 </td>
+
+<td><%= link_to 'Eliminar', factura,
+          data: {
+            "turbo-method": :delete,
+            
+          } %></td>
 </tr>

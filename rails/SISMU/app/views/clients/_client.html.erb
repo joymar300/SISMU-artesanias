@@ -23,5 +23,13 @@
     </td>
     <td>
         <%= link_to  client.direccion_cli %>
-    </td>     
+    </td>  
+    <td>
+    <%= link_to  'editar', edit_client_url(client) %>
+  </td>
+  <td><%= link_to 'Eliminar', client,
+              data: {
+                "turbo-method": :delete,
+                
+              } %></td>   
 </tr>

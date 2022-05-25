@@ -9,4 +9,12 @@
   <td>
     <%= link_to (number_to_currency(producto.precio_pro, unit: 'COL$')), producto_url(producto) %>
   </td>    
+  <td>
+    <%= link_to  'editar', edit_producto_url(producto) %>
+  </td>
+  <td><%= link_to 'Eliminar', producto,
+              data: {
+                "turbo-method": :delete,
+                
+              } %></td>
 </tr>

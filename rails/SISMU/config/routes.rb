@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   end
   # PEDIDOS CLIENTES
   resources :facturas do
-    resources :detalles, module: :facturas, only: [:create]
+    resources :detalles, module: :facturas, only: [:create ,:destroy]
   end
   #colors
   resources :colors
