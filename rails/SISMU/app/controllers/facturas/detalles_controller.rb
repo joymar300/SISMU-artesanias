@@ -7,7 +7,15 @@ class Facturas::DetallesController < ApplicationController
         @detalle.save!
         redirect_to factura_path(@factura)       
     end
-
+    def destroy 
+        @detalle = @factura.detalle.find(params[:id]).destroy
+        redirect_to factura_path(@factura)   
+      end
+      def destroy
+        @detalle = @factura.detalles.find(params[:id ])
+        @detalle.destroy
+        redirect_to factura_detalle_path
+      end
     private
 
     def detalle_params
