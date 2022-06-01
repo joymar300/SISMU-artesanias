@@ -10,8 +10,9 @@
 
 <%= simple_form_for [@factura, @detalle] do |f| %>
     <%= f.association :producto, label_method: :nombre_pro, label: "nombre del producto: " %>
-    <%= f.input :cantidad, label: "cantidad: "%>
+    <%= f.input :cantidad, label: "cantidad:" %>
     <%= f.association :colors,as: :check_boxes, label_method: :tipo, label: "colores: " %>
+
     <%= f.button :submit %>
     
 
@@ -20,15 +21,22 @@
 <table>
     <thead>
         <tr>
+            <th> fecha de entrega</th>
+            <td colspan="4"><%= @factura.fechafin %></td>
+        </tr>
+        <tr>
             <th>Ref</th>
             <th>Producto</th>
             <th>Precio uni.</th>
             <th>cantidad</th>
             <th>Precio total</th>
+            
         </tr>        
     </thead>    
     <tbody>
+
     <% @detalles.each do |detalle| %>
+
         <tr>
             <td><%= detalle.producto.referencia_pro %></td>
             <td><%= detalle.producto.nombre_pro %></td>

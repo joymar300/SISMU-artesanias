@@ -12,9 +12,5 @@
   <td>
     <%= link_to  'editar', edit_producto_url(producto) %>
   </td>
-  <td><%= link_to 'Eliminar', producto,
-              data: {
-                "turbo-method": :delete,
-                
-              } %></td>
+  <td><%= link_to 'Eliminar', producto, data: {"turbo-method": :delete,} %></td>
 </tr>
