@@ -7,7 +7,8 @@
 .panelRegistros {
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: grey;
+  background-color: #fff;
+  border: solid 1px red;
   padding: 10px;
 }
 
@@ -22,28 +23,46 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+
 }
 
 .panelRegistros__elemento {
   background-color: var(--fondo);
   border: var(--borde);
   padding: 20px;
-  font-size: 30px;
+  /* font-size: 30px; */
   text-align: center;
   margin: 20px;
 }
+
 
 /* .panelRegistros__elemento > table,thead,tbody,tr,td {
   
   border: 1px solid red;
 } */
 
-.panelContador__icono {
+.panelContador__icono-flor {
   width: 100%;
   height: 100%;
   font-size: 15px;
-  border: 1px solid purple;
+  /* border: 1px solid purple;  */
+ background-color: #0D1EC6; 
 }
+.panelContador__icono-derecha {
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  /* border: 1px solid purple;  */
+ background-color: #DE1E08; 
+}
+.panelContador__icono-canasta {
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  /* border: 1px solid purple;  */
+ background-color: #49AD09; 
+}
+
 .panelContador__contador {
   width: 100%;
   height: 100%;
@@ -52,6 +71,8 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 /* .span_angulo_derecho {
@@ -61,9 +82,6 @@
 
 .minilogo_grid {
   /* border: 1px solid red; */
-  height: 60px;
-}
-.minilogo_grid {
-  /* border: 1px solid red; */
-  height: 60px;
+
+  height: 80px;
 }
