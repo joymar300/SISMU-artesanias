@@ -18,13 +18,7 @@
         <%= image_tag("iconos/editar", class:"icon_accion") %>
       <% end %>
     </td>
-    <td class="centrar">
-      <%= link_to '#' do %>
-        <%= image_tag("iconos/borrar", class:"icon_accion") %>
-      <% end %>
-        <%# link_to 'Eliminar', producto_url(producto),
-          data: {
-            "turbo-method": :delete,
-          } %>
+    <td>
+        <%= button_to 'Eliminar',  producto_path(producto), method: :delete, form: {data: {turbo_confirm: '¿Estás seguro?' }} %>
     </td>
 </tr>

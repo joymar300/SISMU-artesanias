@@ -1,0 +1,27 @@
+
+<main class="container">
+<section class=" containerInfo">
+        <h1 class=" containerInfo__titulo">artesanos</h1>
+        <a class=" containerInfo__boton" href="artesanos/new">nuevo</a>
+
+</section>
+<section>
+     <table>
+        <thead>
+            <tr>
+                <th>cedula</th>
+                <th>primer nombre</th>
+                <th>segundo nombre</th>
+                <th>primer apelldio</th>
+                <th>segundo apellido</th>
+                <th>telefono</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <%= render @artesanos%>
+        </tbody>
+    </table>
+</section>
+
+</main>
