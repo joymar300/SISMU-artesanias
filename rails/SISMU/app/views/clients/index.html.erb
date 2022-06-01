@@ -1,28 +1,27 @@
-
 <main class="container">
-<section class=" containerInfo">
-        <h1 class=" containerInfo__titulo">Clientes</h1>
-        <a class=" containerInfo__boton" href="clients/new">nuevo</a>
-
-</section>
-<section>
-     <table>
-        <thead>
-            <tr>
-                <th>cedula</th>
-                <th>primer nombre</th>
-                <th>segundo nombre</th>
-                <th>primer apelldio</th>
-                <th>segundo apellido</th>
-                <th>telefono</th>
-                <th>correo</th>
-                <th>dirección</th>
-            </tr>
-        </thead>
-        <tbody>
-            <%= render @clients%>
-        </tbody>
+  <section class=" containerInfo">
+    <h1 class=" containerInfo__titulo">Clientes</h1>
+    <a class=" containerInfo__boton" href="clients/new">nuevo</a>
+  </section>
+  <section>
+    <table>
+      <thead>
+        <tr>
+          <th>Cedula</th>
+          <th>Primer Nombre</th>
+          <th>Segundo Nombre</th>
+          <th>Primer Apelldio</th>
+          <th>Segundo Apellido</th>
+          <th>Telefono</th>
+          <th>Correo</th>
+          <th>Dirección</th>
+          <th colspan="3">Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @clients%>
+      </tbody>
     </table>
-</section>
+  </section>
 
 </main>
