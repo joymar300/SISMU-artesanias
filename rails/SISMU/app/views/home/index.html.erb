@@ -61,7 +61,11 @@
           </thead>
           <tbody>
             <tr>
-              <%= render @productos%>
+                  <% @productos.each do |producto| %>
+                    <td><%= producto.referencia_pro %></td>
+                    <td><%= producto.nombre_pro %></td>
+                    <td><%= number_to_currency producto.precio_pro%></td>
+              <% end %>
             </tr>
           </tbody>
       </table>
