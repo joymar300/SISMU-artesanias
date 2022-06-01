@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   #colors
   resources :colors
   
+  resources :profiles
   #HOME
   root to: "home#index"
   #DEVISE

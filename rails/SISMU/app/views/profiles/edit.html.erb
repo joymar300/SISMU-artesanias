@@ -1,0 +1,16 @@
+  
+<%= simple_form_for @profile do |f| %>
+ 
+    <%= f.file_field :foto%>
+   
+    <%= f.input :nombre,label: 'Nombre: ' %>
+    <%= f.input :apellido,label: 'Apellido: ' %>
+    <%= f.input :direccion, label: 'Direccion: ' %>
+    <%= f.input :ciudad, label: 'Ciudad: ' %>
+    <%= f.input :estado, label: 'Estado: ' %>
+    
+    <%= f.button :submit , "Actualizar"%>
+    
+    
+  <% end %>
+  

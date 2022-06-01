@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_21_165804) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_01_194030) do
   create_table "categories", force: :cascade do |t|
     t.string "tipo_categoria"
     t.datetime "created_at", null: false
@@ -77,6 +77,19 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_21_165804) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "profiles", force: :cascade do |t|
+    t.string "foto"
+    t.string "nombre"
+    t.string "apellido"
+    t.string "direccion"
+    t.string "ciudad"
+    t.string "estado"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
   create_table "roles", force: :cascade do |t|
     t.string "name"
     t.string "resource_type"
@@ -115,4 +128,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_21_165804) do
   add_foreign_key "detalles", "facturas"
   add_foreign_key "detalles", "productos"
   add_foreign_key "facturas", "clients"
+  add_foreign_key "profiles", "users"
 end
