@@ -33,10 +33,10 @@
   margin: 20px;
 }
 
-.panelRegistros__elemento > table,thead,tbody,tr,td {
+/* .panelRegistros__elemento > table,thead,tbody,tr,td {
   
   border: 1px solid red;
-}
+} */
 
 .panelContador__icono {
   width: 100%;
@@ -54,16 +54,12 @@
   flex-direction: column;
 }
 
-.span_angulo_derecho {
-  /* margin-bottom: 5px; */
+/* .span_angulo_derecho {
+  /* margin-bottom: 5px;
   border: 1px solid red;
-}
+} */
 
-.minilogo_gridi {
-  border: 1px solid red;
-  height: 60px;
-}
 .minilogo_grid {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 60px;
 }
