@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_21_165804) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_01_050805) do
+  create_table "artesanos", force: :cascade do |t|
+    t.string "nombre"
+    t.string "snombre"
+    t.string "apellido"
+    t.string "sapellido"
+    t.integer "cedula"
+    t.integer "tel"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string "tipo_categoria"
     t.datetime "created_at", null: false
@@ -55,6 +66,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_21_165804) do
     t.integer "producto_id", null: false
     t.integer "cantidad"
     t.decimal "valor", precision: 8, scale: 2
+    t.date "fechafin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["factura_id"], name: "index_detalles_on_factura_id"
@@ -64,6 +76,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_21_165804) do
   create_table "facturas", force: :cascade do |t|
     t.integer "client_id", null: false
     t.decimal "total", precision: 8, scale: 2
+    t.date "fechafin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["client_id"], name: "index_facturas_on_client_id"

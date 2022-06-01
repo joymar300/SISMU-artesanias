@@ -1,0 +1,2 @@
+module ArtesanosHelper
+end

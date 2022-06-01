@@ -1,5 +1,6 @@
 
 <%= simple_form_for @factura do |f| %>
     <%= f.association :client, label_method: :nombre_completo %>
+    <%= f.input :fechafin, label: "fecha de entrega"%>
     <%= f.button :submit %>
 <% end %>

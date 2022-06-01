@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'artesanos/index'
+  get 'artesanos/new'
+  get 'artesanos/show'
   get 'colors/index'
   get 'colors/new'
   get 'colors/create'
@@ -27,6 +30,8 @@ Rails.application.routes.draw do
   #colors
   resources :colors
   
+  #artesanos
+  resources :artesanos
   #HOME
   root to: "home#index"
   #DEVISE

@@ -1,0 +1,13 @@
+<div>
+<h1>Clientes</h1>
+<%= simple_form_for @artesano do |f| %>
+    <%= f.input :cedula%>
+    <%= f.input :nombre %>
+    <%= f.input :snombre %>
+    <%= f.input :apellido %>
+    <%= f.input :sapellido %>
+    <%= f.input :tel %>
+    <%= f.button :submit %>
+
+<% end %>
+</div>

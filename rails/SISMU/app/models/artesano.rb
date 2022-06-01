@@ -1,0 +1,2 @@
+class Artesano < ApplicationRecord
+end
