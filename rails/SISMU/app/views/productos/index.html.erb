@@ -1,23 +1,27 @@
-
 <main class="container">
-<section class=" containerInfo">
-        <h1 class=" containerInfo__titulo">Productos</h1>
-        <a class=" containerInfo__boton" href="productos/new">nuevo</a>
-
-</section>
-<section>
-    <table>
-        <thead>
-            <tr>
-                <th>Referencia</th>
-                <th>Nombre de los producto</th>
-                <th>Precios</th>
-            </tr>
-        </thead>
-        <tbody>
-            <%= render @productos%>
-        </tbody>
-    </table>
-</section>
+    <section class="containerInfo">
+        <b> </b>
+        <h1 class="containerInfo__titulo">Productos</h1>
+        <%# <a class="containerInfo__boton" href="productos/new">Nuevo</a> %>
+        <%= link_to "productos/new" do %>
+            <span class="title_icon_menu">Nuevo</span>
+            <%= image_tag("iconos/mas", class: "icon_mas") %>
+        <% end %>
+    </section>
+    <section class="containerTable">
+        <table>
+            <thead>
+                <tr>
+                    <th>Referencia</th>
+                    <th>Nombre de los producto</th>
+                    <th>Precios</th>
+                    <th colspan="2">Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%= render @productos%>
+            </tbody>
+        </table>
+    </section>
 
 </main>
