@@ -1,9 +1,9 @@
 <main> 
   <div class="panelContador">
     <div class="panelContador__elemento">
-      <div class="panelContador__icono">
+      <div class="panelContador__icono-canasta">
         <span class="span_angulo_derecho">
-          <%= image_tag "iconos/canasta", class: "minilogo_grid" %>
+          <%= image_tag "iconos/canasta_blanco", class: "minilogo_grid" %>
         </span>
       </div>
       <div class="panelContador__contador">
@@ -15,9 +15,10 @@
     </div>
 
     <div class="panelContador__elemento">
-      <div class="panelContador__icono">
+      <div class="panelContador__icono-flor">
+      <%= image_tag "iconos/materiaPrima_blanco", class: "minilogo_grid" %>
         <span class="span_angulo_derecho">
-          <%= image_tag "iconos/flor", class: "minilogo_grid" %>
+         
         </span>
       </div>
       <div class="panelContador__contador">
@@ -29,9 +30,9 @@
     </div>
 
     <div class="panelContador__elemento">
-      <div class="panelContador__icono">
+      <div class="panelContador__icono-derecha">
         <span class="span_angulo_derecho">
-          <%= image_tag "iconos/angulo_derecho", class: "minilogo_grid" %>
+           <%= image_tag "iconos/flor_blanco", class: "minilogo_grid" %>
         </span>
       </div>
       <div class="panelContador__contador">
@@ -56,12 +57,18 @@
       <table>
           <thead>
               <tr >
-                  <th class="odd" colspan="3 " >Nombre de los producto</th>
+                  <th>Referencia</th>
+                  <th>Nombre del producto</th>
+                  <th>Precio</th>
               </tr>
           </thead>
           <tbody>
             <tr>
-              <%= render @productos%>
+                  <% @productos.each do |producto| %>
+                    <td><%= producto.referencia_pro %></td>
+                    <td><%= producto.nombre_pro %></td>
+                    <td><%= number_to_currency producto.precio_pro%></td>
+              <% end %>
             </tr>
           </tbody>
       </table>

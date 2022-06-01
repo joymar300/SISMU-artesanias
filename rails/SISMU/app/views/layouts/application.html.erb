@@ -22,7 +22,7 @@
         <%= link_to image_tag( "logo_lateral_sandra_munoz", class: "logo"), root_path %>
       </section>
       <section>
-        <span id="sismu__central">SISMU <i>Artesanías</i></span>
+        <span id="sismu__central"><span>SISMU <i>Artesanías</i></span> </span>
       </section>
       <section class="btn__salir">
           <%= link_to "Salir", destroy_user_session_path, :method => :delete, class: "salir" %>
@@ -67,6 +67,20 @@
           <%= link_to clients_url do %>
             <%= image_tag("iconos/usuarios", class: "icon_menu") %>
             <div class="title_icon_menu"><span>Clientes</span></div>
+          <% end %>
+        </div>
+
+        <div class="item_menu" title="Produccion">
+          <%= link_to productions_url do %>
+            <%= image_tag("iconos/recibo", class:"icon_menu") %>
+            <div class="title_icon_menu"><span>producción</span></div>
+          <% end %>
+        </div>
+
+        <div class="item_menu" title="artesanos">
+          <%= link_to artesanos_url do %>
+            <%= image_tag("iconos/usuarios", class: "icon_menu") %>
+            <div class="title_icon_menu"><span>artesanos</span></div>
           <% end %>
         </div>
 

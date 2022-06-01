@@ -1,0 +1,16 @@
+
+<tr>
+<td>
+    <%= link_to production.ref, production_url(production.id) %>
+</td>
+<td>
+    <%= production.created_at %>
+</td>
+
+
+<td><%= link_to 'Eliminar', production,
+          data: {
+            "turbo-method": :delete,
+            
+          } %></td>
+</tr>

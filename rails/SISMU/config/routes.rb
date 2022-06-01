@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  namespace :productions do
+    get 'dproductions/create'
+    get 'dproductions/index'
+  end
+  get 'artesanos/index'
+  get 'artesanos/new'
+  get 'artesanos/show'
   get 'colors/index'
   get 'colors/new'
   get 'colors/create'
@@ -20,14 +27,23 @@ Rails.application.routes.draw do
   resources :productos do
     resources :categories_productos,module: :productos
   end
-  # PEDIDOS CLIENTES
+  # PEDIDOS FACTURAS
   resources :facturas do
     resources :detalles, module: :facturas, only: [:create ,:destroy]
   end
   #colors
   resources :colors
-  
+
   resources :profiles
+
+  #artesanos
+  resources :artesanos
+  
+  #produccion
+  resources :productions do
+    resources :dproductions, module: :productions, only:[:create, :destroy]
+  end
+
   #HOME
   root to: "home#index"
   #DEVISE
