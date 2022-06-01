@@ -45,7 +45,7 @@ end
   private
 
   def factura_params
-    params.require(:factura).permit(:client_id)
+    params.require(:factura).permit(:client_id, :fechafin)
   end
 
   def set_factura

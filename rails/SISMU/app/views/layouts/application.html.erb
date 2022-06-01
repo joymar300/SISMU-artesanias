@@ -70,6 +70,20 @@
           <% end %>
         </div>
 
+        <div class="item_menu" title="Produccion">
+          <%= link_to productions_url do %>
+            <%= image_tag("iconos/recibo", class:"icon_menu") %>
+            <div class="title_icon_menu"><span>producción</span></div>
+          <% end %>
+        </div>
+
+        <div class="item_menu" title="artesanos">
+          <%= link_to artesanos_url do %>
+            <%= image_tag("iconos/usuarios", class: "icon_menu") %>
+            <div class="title_icon_menu"><span>artesanos</span></div>
+          <% end %>
+        </div>
+
         <%# SEPARADOR MENU %>
         <div class="item_menu separador_menu"></div>
         <%# ---- %>

@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_21_165804) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_01_202149) do
+  create_table "artesanos", force: :cascade do |t|
+    t.string "nombre"
+    t.string "snombre"
+    t.string "apellido"
+    t.string "sapellido"
+    t.integer "cedula"
+    t.integer "tel"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string "tipo_categoria"
     t.datetime "created_at", null: false
@@ -55,18 +66,38 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_21_165804) do
     t.integer "producto_id", null: false
     t.integer "cantidad"
     t.decimal "valor", precision: 8, scale: 2
+    t.date "fechafin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["factura_id"], name: "index_detalles_on_factura_id"
     t.index ["producto_id"], name: "index_detalles_on_producto_id"
   end
 
+  create_table "dproductions", force: :cascade do |t|
+    t.integer "cantidad"
+    t.integer "production_id", null: false
+    t.integer "producto_id", null: false
+    t.integer "artesano_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artesano_id"], name: "index_dproductions_on_artesano_id"
+    t.index ["production_id"], name: "index_dproductions_on_production_id"
+    t.index ["producto_id"], name: "index_dproductions_on_producto_id"
+  end
+
   create_table "facturas", force: :cascade do |t|
     t.integer "client_id", null: false
     t.decimal "total", precision: 8, scale: 2
+    t.date "fechafin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["client_id"], name: "index_facturas_on_client_id"
+  end
+
+  create_table "productions", force: :cascade do |t|
+    t.string "ref"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "productos", force: :cascade do |t|
@@ -114,5 +145,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_21_165804) do
 
   add_foreign_key "detalles", "facturas"
   add_foreign_key "detalles", "productos"
+  add_foreign_key "dproductions", "artesanos"
+  add_foreign_key "dproductions", "productions"
+  add_foreign_key "dproductions", "productos"
   add_foreign_key "facturas", "clients"
 end
