@@ -21,9 +21,5 @@
     <td>
     <%= link_to  'editar', edit_artesano_url(artesano) %>
   </td>
-  <td><%= link_to 'Eliminar', artesano,
-              data: {
-                "turbo-method": :delete,
-                
-              } %></td>   
+  <td><%= button_to 'Eliminar',  artesano_path(artesano), method: :delete, form: {data: {turbo_confirm: '¿Estás seguro?' }} %></td>   
 </tr>
