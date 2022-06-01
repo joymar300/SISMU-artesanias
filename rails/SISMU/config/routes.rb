@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :productions do
+    get 'dproductions/create'
+    get 'dproductions/index'
+  end
   get 'artesanos/index'
   get 'artesanos/new'
   get 'artesanos/show'
@@ -32,6 +36,10 @@ Rails.application.routes.draw do
   
   #artesanos
   resources :artesanos
+  #produccion
+  resources :productions do
+    resources :dproductions, module: :productions, only:[:create, :destroy]
+  end
   #HOME
   root to: "home#index"
   #DEVISE
