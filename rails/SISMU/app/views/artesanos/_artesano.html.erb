@@ -1,0 +1,25 @@
+
+<tr>
+    <td>
+        <%= link_to  artesano.cedula %>
+    </td>
+    <td>
+        <%= link_to  artesano.nombre %>
+    </td>
+    <td>
+        <%= link_to  artesano.snombre %>
+    </td>
+    <td>
+        <%= link_to  artesano.apellido %>
+    </td>
+    <td>
+        <%= link_to  artesano.sapellido %>
+    </td>
+    <td id="o">
+        <%= link_to  artesano.tel%>
+    </td id="aw"> 
+    <td>
+    <%= link_to  'editar', edit_artesano_url(artesano) %>
+  </td>
+  <td><%= button_to 'Eliminar',  artesano_path(artesano), method: :delete, form: {data: {turbo_confirm: '¿Estás seguro?' }} %></td>   
+</tr>

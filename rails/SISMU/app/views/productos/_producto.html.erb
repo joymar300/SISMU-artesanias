@@ -12,9 +12,6 @@
         <%= link_to  'editar', edit_producto_url(producto) %>
     </td>
     <td>
-        <%= link_to 'Eliminar', producto,
-        data: {
-        "turbo-method": :delete,
-        } %>
+        <%= button_to 'Eliminar',  producto_path(producto), method: :delete, form: {data: {turbo_confirm: '¿Estás seguro?' }} %>
     </td>
 </tr>
