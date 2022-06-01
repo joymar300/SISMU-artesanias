@@ -1,16 +1,20 @@
-
 <tr>
-  <td>
-    <%= link_to  producto.referencia_pro, producto_url(producto) %>
-  </td>
-  <td id="o">
-    <%= link_to   producto.nombre_pro, producto_url(producto) %>
-  </td id="aw">
-  <td>
-    <%= link_to (number_to_currency(producto.precio_pro, unit: 'COL$')), producto_url(producto) %>
-  </td>    
-  <td>
-    <%= link_to  'editar', edit_producto_url(producto) %>
-  </td>
-  <td><%= link_to 'Eliminar', producto, data: {"turbo-method": :delete,} %></td>
+    <td>
+        <%= link_to  producto.referencia_pro, producto_url(producto) %>
+    </td>
+    <td id="o">
+        <%= link_to   producto.nombre_pro, producto_url(producto) %>
+    </td id="aw">
+    <td>
+        <%= link_to (number_to_currency(producto.precio_pro, unit: 'COL$')), producto_url(producto) %>
+    </td>    
+    <td>
+        <%= link_to  'editar', edit_producto_url(producto) %>
+    </td>
+    <td>
+        <%= link_to 'Eliminar', producto,
+        data: {
+        "turbo-method": :delete,
+        } %>
+    </td>
 </tr>

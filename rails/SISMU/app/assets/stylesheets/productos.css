@@ -9,34 +9,46 @@
     background-repeat:no-repeat;
     background-size: cover;
 }
-    /*TABLA DEL FORMULARIO*/
-    
-    .container  {
-        border: 1px solid red;
-    }
-    .containerInfo{
-        display: flex;
-        border: 1px solid rgb(17, 160, 29);
-    }
+/*TABLA DEL FORMULARIO*/
 
-    .containerInfo__titulo{
-        border: 1px solid black;
+.container  {
+    border: 1px solid purple;
+    width: 80%;
+    margin: 0 auto;
+}
 
-    }  
-    .containerInfo__boton {
-        border: 1px solid black;
-        text-align: center;
-        margin-top: 40px;
+.containerInfo{
+    border: 1px solid rgb(17, 160, 29);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
-    
-
-    }
-    table{
-        border: 1px solid black;
-    }
-    tr, td,th{    
+.containerInfo__titulo{
     border: 1px solid black;
-    }
-    
+}
 
+.containerInfo__boton {
+    border: 1px solid black;
+    /* text-align: center; */
+    height: fit-content;
+}
 
+table{
+    border: 1px solid black;
+}
+
+tr, td,th{    
+    border: 1px solid black;
+}
+
+.icon_mas{
+    height: 14px;
+}
+
+.containerTable{
+    border: 1px solid red;
+    width: 90%;
+    margin: auto;
+    max-height: 400px;
+}
