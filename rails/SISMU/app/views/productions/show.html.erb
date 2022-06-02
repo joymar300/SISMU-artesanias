@@ -1,7 +1,9 @@
+
 <%= simple_form_for [@production, @dproduction] do |f| %>
     <%= f.association :producto, label_method: :nombre_pro, label: "nombre del producto: " %>
     <%= f.association :artesano, label_method: :nombre_completo, label: "nombre del artesano: " %>
     <%= f.input :cantidad, label: "cantidad:" %>
+
     <%= f.button :submit %>
     
 
@@ -19,13 +21,10 @@
             <th>Precio uni.</th>
             <th>cantidad</th>
             <th>artesano</th>
-            
-        </tr>        
+        </tr>         
     </thead>    
     <tbody>
-
     <% @dproductions.each do |dproduction| %>
-
         <tr>
             <td><%= dproduction.producto.referencia_pro %></td>
             <td><%= dproduction.producto.nombre_pro %></td>
@@ -37,10 +36,8 @@
             "turbo-method": :delete,
             
           } %></td>
+     <%end%>     
         </tr>
-    <% end %>
-
-
     </tbody>
 </table>
 
