@@ -30,9 +30,6 @@
     <%= link_to 'editar', edit_client_url(client) %>
   </td>
   <td>
-    <%= link_to 'Eliminar', client,
-      data: {
-        "turbo-method": :delete,
-      } %>
+  <%= button_to 'Eliminar',  client_path(client), method: :delete %>
   </td>   
 </tr>

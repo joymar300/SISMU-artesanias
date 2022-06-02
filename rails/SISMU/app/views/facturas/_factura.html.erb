@@ -14,9 +14,5 @@
     <%= factura.created_at %>
 </td>
 
-<td><%= link_to 'Eliminar', factura,
-          data: {
-            "turbo-method": :delete,
-            
-          } %></td>
+<td><%= button_to 'Eliminar',  factura_path(factura), method: :delete %>
 </tr>
