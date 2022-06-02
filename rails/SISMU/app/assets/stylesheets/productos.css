@@ -1,54 +1,85 @@
 .imagenproducto{
-    margin:20px auto;
-    border-radius:5px;
-    border: 1px solid #999;
-    padding:13px;
-    width:300px;
-    height:300px;
-    background-size: 50% 50%;
-    background-repeat:no-repeat;
-    background-size: cover;
+  margin:20px auto;
+  border-radius:5px;
+  border: 1px solid #999;
+  padding:13px;
+  width:300px;
+  height:300px;
+  background-size: 50% 50%;
+  background-repeat:no-repeat;
+  background-size: cover;
 }
 /*TABLA DEL FORMULARIO*/
 
 .container  {
-    border: 1px solid purple;
-    width: 80%;
-    margin: 0 auto;
+  border: 1px solid purple;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .containerInfo{
-    border: 1px solid rgb(17, 160, 29);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  border: 1px solid rgb(17, 160, 29);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .containerInfo__titulo{
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 .containerInfo__boton {
-    border: 1px solid black;
-    /* text-align: center; */
-    height: fit-content;
+  border: 1px solid black;
+  /* text-align: center; */
+  height: fit-content;
 }
 
-table{
-    border: 1px solid black;
+.icon_nuevo{
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: gold;
+}
+
+/* table{
+  border: 1px solid black;
 }
 
 tr, td,th{    
-    border: 1px solid black;
-}
+  border: 1px solid black;
+} */
 
 .icon_mas{
-    height: 14px;
+  height: 14px;
+}
+
+.icon_accion{
+  height: 20px;
 }
 
 .containerTable{
+  /* border: 1px solid red; */
+  width: 90%;
+  margin: auto;
+  max-height: 400px;
+}
+
+.containerTable>table,th,td {
+  border: 1px solid black;
+  border-spacing: 0;
+}
+
+.containerTable>table {
+  margin: auto;
+  width: 100%;
+}
+
+.centrar {
+  text-align: center;
+}
+  /* border: 1px solid red; 
     border: 1px solid red;
     width: 90%;
     margin: auto;
-    max-height: 400px;
-}
+    max-height: 400px;*/
