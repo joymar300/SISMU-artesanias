@@ -30,6 +30,6 @@
     <%= link_to 'editar', edit_client_url(client) %>
   </td>
   <td>
-  <%= button_to 'Eliminar',  client_path(client), method: :delete %>
+  <%= button_to ,'Eliminar'client_path(client), method: :delete onclick="returm confirmDelete("estas seguro")"%>
   </td>   
 </tr>

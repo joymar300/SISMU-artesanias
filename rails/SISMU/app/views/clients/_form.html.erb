@@ -1,15 +1,16 @@
-<div>
-  <h1>Clientes</h1>
-  <%= simple_form_for @client do |f| %>
-    <%= f.input :cedula_cli %>
-    <%= f.input :nombre_cli %>
-    <%= f.input :nombre2_cli %>
-    <%= f.input :apellido_cli %>
-    <%= f.input :apellido2_cli %>
-    <%= f.input :tel_cli %>
-    <%= f.input :correo_cli %>
-    <%= f.input :direccion_cli%>
-    <%= f.button :submit %>
-
-  <% end %>
+<div class="container_clientes">
+  <h1 class ="container_clientes-text">Formulario de Clientes</h1>
+  <div class="formulario_clientes">
+    <%= simple_form_for @client do |f| %> <br>
+      <%= f.input :cedula_cli, label:"Cedula" %> <br>
+      <%= f.input :nombre_cli, label:"Nombre" %><br>
+      <%= f.input :nombre2_cli,label:"Segundo Nombre"  %><br>
+      <%= f.input :apellido_cli, label:"Apellido" %> <br>
+      <%= f.input :apellido2_cli,label:"Segundo Apellido" %> <br>
+      <%= f.input :tel_cli, label:"Télefono" %> <br>
+      <%= f.input :correo_cli,label:"Correo Eléctronico" %> <br>
+      <%= f.input :direccion_cli,label:"Dirección"  %> <br>
+      <%= f.button :submit , class:"formulario_boton" %><br>
+    <% end %>
+  </div>
 </div>
