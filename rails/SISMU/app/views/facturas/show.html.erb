@@ -43,7 +43,7 @@
             <td><%= number_to_currency detalle.producto.precio_pro%></td>
             <td><%= detalle.cantidad %></td>
             <td><%= number_to_currency detalle.total %></td>
-            <td><%= button_to 'Eliminar', factura_detalle_path(@factura, detalle), method: :delete %></td>
+            <td><%= button_to image_tag("iconos/borrar", class:"icon_accion"), factura_detalle_path(@factura, detalle), method: :delete %></td>
         </tr>
     <% end %>
     <tr>

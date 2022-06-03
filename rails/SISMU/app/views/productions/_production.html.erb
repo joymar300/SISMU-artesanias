@@ -8,9 +8,9 @@
 </td>
 
 
-<td><%= link_to 'Eliminar', production,
-          data: {
-            "turbo-method": :delete,
-            
-          } %></td>
+<td class="centrar">
+<%= button_to production_path(production), method: :delete do %>
+        <%= image_tag("iconos/borrar", class:"icon_accion") %>
+    <% end %>
+</td>
 </tr>

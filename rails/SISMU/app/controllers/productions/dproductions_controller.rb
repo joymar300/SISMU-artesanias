@@ -7,15 +7,11 @@ class Productions::DproductionsController < ApplicationController
       @dproduction.save!
       redirect_to production_path(@production)       
   end
-  def destroy 
-      @dproduction = @production.dproduction.find(params[:id]).destroy
+
+  def destroy
+      @dproduction = @production.dproductions.find(params[:id]).destroy
       redirect_to production_path(@production)
-    end
-    def destroy
-      @dproduction = @production.dproductions.find(params[:id ])
-      @dproduction.destroy
-      redirect_to production_dproduction_path
-    end
+  end
   private
 
   def dproduction_params

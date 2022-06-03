@@ -29,7 +29,9 @@
   <td>
     <%= link_to 'editar', edit_client_url(client) %>
   </td>
-  <td>
-  <%= button_to ,'Eliminar'client_path(client), method: :delete onclick="returm confirmDelete("estas seguro")"%>
+  <td class="centrar">
+  <%= button_to  client_path(client), method: :delete, data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do%>
+      <%= image_tag("iconos/borrar", class:"icon_accion") %>
+  <% end %>
   </td>   
 </tr>
