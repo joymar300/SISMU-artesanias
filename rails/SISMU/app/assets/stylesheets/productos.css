@@ -12,20 +12,25 @@
 /*TABLA DEL FORMULARIO*/
 
 .container  {
-  border: 1px solid purple;
+  border: 2px solid black;
+  border-radius: 20px;
   width: 80%;
   margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow-y: scroll;
 }
 
 .containerInfo{
-  border: 1px solid rgb(17, 160, 29);
+  /* border: 1px solid rgb(17, 160, 29); */
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 .containerInfo__titulo{
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  color: #F5B041;
 }
 
 .containerInfo__boton {
