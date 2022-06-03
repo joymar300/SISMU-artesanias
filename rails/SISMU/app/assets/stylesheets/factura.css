@@ -1,0 +1,19 @@
+/* FACTURA */
+.text_factura{
+    text-align: center;
+    color: #F5B041;
+}
+
+.formulario_factura{    
+    text-align: center;
+    border: solid 1px #000;
+    border-radius: 5px;
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    box-shadow: 3px 1px 7px  black;
+}
+.factura_boton{
+    border-radius: 5px;
+    background-color: #F5B041;
+}

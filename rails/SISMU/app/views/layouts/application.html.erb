@@ -9,6 +9,7 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "devise", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "index", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "clientes", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags "reload" %>
   </head>
 
@@ -127,6 +128,18 @@
 
         document.querySelector('body').classList.toggle('body-expanded');
       });
+
+      function confirmDelete(){
+    var respuesta= confirm("estas seguro ");
+    if(respuesta== true)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
     </script>
   </body>
 </html>
