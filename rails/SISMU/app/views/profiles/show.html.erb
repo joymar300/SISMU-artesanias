@@ -1,0 +1,32 @@
+<form>
+
+image_tag("<%= @profile.foto %>")
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Nombre:</label>
+      <input type="text" class="form-control" id="inputEmail4" value="<%= @profile.nombre %>">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Apellido:</label>
+      <input type="text" class="form-control" id="inputPassword4" value="<%= @profile.apellido%>">
+    </div>
+  </div>
+  <div class="form-row">
+  <div class="form-group col-md-6">
+    <label for="inputEmail4">Direccion:</label>
+    <input type="text" class="form-control" id="inputEmail4" value="<%= @profile.direccion%>">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="inputPassword4">Ciudad:</label>
+    <input type="text" class="form-control" id="inputPassword4" value="<%= @profile.ciudad%>">
+  </div>
+</div>
+<div class="form-row">
+<div class="form-group col-md-6">
+  <label for="inputEmail4">Estado:</label>
+  <input type="text" class="form-control" id="inputEmail4" value="<%= @profile.estado %>">
+</div>
+
+ 
+ <%= link_to "Editar" , edit_profile_path(@profile)%>
+</form>

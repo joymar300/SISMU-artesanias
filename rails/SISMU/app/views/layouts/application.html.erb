@@ -51,16 +51,10 @@
       <div id="menu_items">
         <div class="item_menu" title="Productos">
           <%= link_to productos_url do %>
-            <%= image_tag("iconos/canasta", class: "icon_menu" ) %>
+            <%= image_tag("iconos/producto", class: "icon_menu" ) %>
             <div class="title_icon_menu"><span>Productos</span></div>
           <% end %>
           
-        </div>
-        <div class="item_menu" title="Facturas">
-          <%= link_to facturas_url do %>
-            <%= image_tag("iconos/recibo", class:"icon_menu") %>
-            <div class="title_icon_menu"><span>Facturas</span></div>
-          <% end %>
         </div>
 
         <div class="item_menu" title="Clientes">
@@ -70,16 +64,23 @@
           <% end %>
         </div>
 
+        <div class="item_menu" title="Facturas">
+          <%= link_to facturas_url do %>
+            <%= image_tag("iconos/recibo", class:"icon_menu") %>
+            <div class="title_icon_menu"><span>Facturas</span></div>
+          <% end %>
+        </div>
+
         <div class="item_menu" title="Produccion">
           <%= link_to productions_url do %>
-            <%= image_tag("iconos/recibo", class:"icon_menu") %>
+            <%= image_tag("iconos/canasta", class:"icon_menu") %>
             <div class="title_icon_menu"><span>producción</span></div>
           <% end %>
         </div>
 
-        <div class="item_menu" title="artesanos">
+        <div class="item_menu" title="Artesanos">
           <%= link_to artesanos_url do %>
-            <%= image_tag("iconos/usuarios", class: "icon_menu") %>
+            <%= image_tag("iconos/artesanos", class: "icon_menu") %>
             <div class="title_icon_menu"><span>artesanos</span></div>
           <% end %>
         </div>
