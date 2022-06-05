@@ -41,7 +41,6 @@ class FacturasController < ApplicationController
   end
 def destroy 
   @factura = Factura.find(params[:id]).destroy
-
   redirect_to facturas_path
 end
   private

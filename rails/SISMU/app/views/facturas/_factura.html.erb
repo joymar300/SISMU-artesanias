@@ -14,5 +14,9 @@
     <%= factura.created_at %>
 </td>
 
-<td><%= button_to 'Eliminar',  factura_path(factura), method: :delete %>
+<td class="centrar">
+    <%= button_to factura_path(factura), method: :delete do%>
+              <%= image_tag("iconos/borrar", class:"icon_accion") %>
+    <% end %>
+</td>
 </tr>

@@ -5,4 +5,7 @@ class Artesano < ApplicationRecord
     def nombre_completo
         "#{cedula}- #{nombre} #{apellido}"
     end
+    def nombre_apellido
+        "#{nombre} #{apellido}"
+    end
 end
