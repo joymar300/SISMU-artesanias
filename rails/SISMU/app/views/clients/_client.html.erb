@@ -1,5 +1,5 @@
 <tr>
-  <td>
+  <td class="centrar">
     <%= client.cedula_cli %>
   </td>
   <td>
@@ -23,15 +23,19 @@
   <td>
     <%= client.direccion_cli %>
   </td>  
-  <td>
-    <%= link_to 'Ver', edit_client_url(client) %>
-  </td>
-  <td>
-    <%= link_to 'editar', edit_client_url(client) %>
+  <td class="centrar">
+    <%= link_to client_url(client) do %>
+      <%= image_tag("iconos/ojo", class:"icon_accion") %>
+    <% end %>
   </td>
   <td class="centrar">
-  <%= button_to  client_path(client), method: :delete, data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do%>
-      <%= image_tag("iconos/borrar", class:"icon_accion") %>
+    <%= link_to edit_client_url(client) do %>
+      <%= image_tag("iconos/editar", class:"icon_accion") %>
+    <% end %>
+  </td>
+  <td class="centrar">
+    <%= button_to  client_path(client), method: :delete, class: "btn_borrar", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do%>
+    <%= image_tag("iconos/borrar", class:"icon_accion") %>
   <% end %>
   </td>   
 </tr>
