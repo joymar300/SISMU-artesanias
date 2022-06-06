@@ -15,10 +15,13 @@
   border: 2px solid black;
   border-radius: 20px;
   width: 80%;
+  /* position: absolute; */
+  /* max-height: 100px; */
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
   overflow-y: scroll;
+  overflow: hidden;
 }
 
 .containerInfo{
@@ -62,6 +65,12 @@ tr, td,th{
 .icon_accion{
   height: 20px;
 }
+
+/* .btn_borrar {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+} */
 
 .containerTable{
   /* border: 1px solid red; */

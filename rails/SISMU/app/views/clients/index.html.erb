@@ -2,7 +2,13 @@
   <section class="containerInfo">
     <b> </b>
     <h1 class="containerInfo__titulo">Clientes</h1>
-    <a class="containerInfo__boton" href="clients/new">nuevo</a>
+    <%# <a class="containerInfo__boton" href="clients/new">nuevo</a> %>
+    <div class="icon_nuevo">
+      <%= link_to "clients/new" do %>
+        <span>Nuevo</span>
+        <%= image_tag("iconos/mas", class: "icon_mas") %>
+      <% end %>
+    </div>
   </section>
   <section class="containerTable">
     <table>
@@ -11,9 +17,9 @@
           <th>Cedula</th>
           <th>Primer Nombre</th>
           <th>Segundo Nombre</th>
-          <th>Primer Apelldio</th>
+          <th>Primer Apellido</th>
           <th>Segundo Apellido</th>
-          <th>Telefono</th>
+          <th>Teléfono</th>
           <th>Correo</th>
           <th>Dirección</th>
           <th colspan="3">Acción</th>

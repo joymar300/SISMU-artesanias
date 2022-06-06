@@ -66,7 +66,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_01_202149) do
     t.integer "producto_id", null: false
     t.integer "cantidad"
     t.decimal "valor", precision: 8, scale: 2
-    t.date "fechafin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["factura_id"], name: "index_detalles_on_factura_id"
@@ -88,7 +87,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_01_202149) do
   create_table "facturas", force: :cascade do |t|
     t.integer "client_id", null: false
     t.decimal "total", precision: 8, scale: 2
-    t.date "fechafin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["client_id"], name: "index_facturas_on_client_id"

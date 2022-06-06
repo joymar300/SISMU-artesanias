@@ -3,7 +3,7 @@
     <div class="panelContador__elemento">
       <div class="panelContador__icono-canasta">
         <span class="span_angulo_derecho">
-          <%= image_tag "iconos/canasta_blanco", class: "minilogo_grid" %>
+          <%= image_tag "iconos/producto_blanco", class: "minilogo_grid" %>
         </span>
       </div>
       <div class="panelContador__contador">
@@ -16,33 +16,33 @@
 
     <div class="panelContador__elemento">
       <div class="panelContador__icono-flor">
-      <%= image_tag "iconos/materiaPrima_blanco", class: "minilogo_grid" %>
         <span class="span_angulo_derecho">
-         
+          <%= image_tag "iconos/materiaPrima_blanco", class: "minilogo_grid" %>
         </span>
       </div>
       <div class="panelContador__contador">
         <span class="span_angulo_derecho">
           <span><%= Category.count %></span>
         </span>
-        <span>Categoria</span>
+        <span>Categorias</span>
       </div>
     </div>
 
     <div class="panelContador__elemento">
       <div class="panelContador__icono-derecha">
         <span class="span_angulo_derecho">
-           <%= image_tag "iconos/flor_blanco", class: "minilogo_grid" %>
+          <%= image_tag "iconos/artesanos_blanco", class: "minilogo_grid" %>
         </span>
       </div>
       <div class="panelContador__contador">
         <span class="span_angulo_derecho">
-          <span></span>
+          <span><%= Artesano.count %></span>
         </span>
         <span>Artesanos</span>
       </div>
     </div>
   </div>
+
   <%# SEPARADOR %>
 
   <div class="panelRegistros">
@@ -63,15 +63,16 @@
               </tr>
           </thead>
           <tbody>
-            <tr>
-                  <% @productos.each do |producto| %>
-                    <td><%= producto.referencia_pro %></td>
-                    <td><%= producto.nombre_pro %></td>
-                    <td><%= number_to_currency producto.precio_pro%></td>
-              <% end %>
-            </tr>
+            <% @productos.each do |producto| %>
+              <tr>
+                  <td><%= producto.referencia_pro %></td>
+                  <td><%= producto.nombre_pro %></td>
+                  <td><%= number_to_currency producto.precio_pro%></td>
+              </tr>
+            <% end %>
           </tbody>
       </table>
     </div> 
   </div>
+  
 </main>

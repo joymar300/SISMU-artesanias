@@ -47,7 +47,7 @@ body {
 }
 
 main {
-  min-height: 74.4%;
+  min-height: 78.9%;
 }
 
 /* BODY CON MENU LATERAL ABIERTO */
@@ -251,6 +251,13 @@ nav {
   margin: 0;
 }
 
+/* ESTILOS UNICOS */
+.btn_borrar {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
 
 /* SALIR */
 
