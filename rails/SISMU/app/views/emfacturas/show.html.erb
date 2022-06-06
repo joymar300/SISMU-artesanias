@@ -1,0 +1,52 @@
+<%= @emfactura.id %>
+<br>
+<%= @emfactura.empresa.empresa_busqueda %>
+<br>
+<%= @emfactura.empresa.direccion%>
+
+<%= simple_form_for [@emfactura, @emdetalle] do |f| %>
+    <%= f.association :producto, label_method: :nombre_pro, label: "nombre del producto: " %>
+    <%= f.input :cantidad, label: "cantidad:" %>
+    <%#<%= f.association :colors,as: :check_boxes, label_method: :tipo, label: "colores: " %>
+    <%= f.button :submit %>
+    
+
+<% end %>
+
+<table>
+    <thead>
+        <tr>
+            <th> fecha de entrega</th>
+            <td colspan="4"><%= @emfactura.fechafin %></td>
+        </tr>
+        <tr>
+            <th>Ref</th>
+            <th>Producto</th>
+            <th>Precio uni.</th>
+            <th>cantidad</th>
+            <th>Precio total</th>
+            
+        </tr>        
+    </thead>    
+    <tbody>
+
+    <% @emdetalles.each do |emdetalle| %>
+
+        <tr>
+            <td><%= emdetalle.producto.referencia_pro %></td>
+            <td><%= emdetalle.producto.nombre_pro %></td>
+            <td><%= number_to_currency emdetalle.precio%></td>
+            <td><%= emdetalle.cantidad %></td>
+            <td><%= number_to_currency emdetalle.valor %></td>
+            <td><%= button_to image_tag("iconos/borrar", class:"icon_accion"), emfactura_emdetalle_path(@emfactura, emdetalle), method: :delete %></td>
+        </tr>
+    <% end %>
+    <tr>
+        <th >precio final: </th>
+        <td colspan="4"><%=number_to_currency @emfactura.final %></td>   
+    </tr>
+
+    </tbody>
+</table>
+
+<%= link_to "volver" , emfacturas_url %>

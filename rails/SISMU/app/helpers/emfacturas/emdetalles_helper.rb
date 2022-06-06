@@ -1,0 +1,2 @@
+module Emfacturas::EmdetallesHelper
+end

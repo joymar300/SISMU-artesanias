@@ -43,6 +43,6 @@ class ClientsController < ApplicationController
   private
 
     def client_params
-      params.require(:client).permit(:nombre_cli, :nombre2_cli, :apellido_cli, :apellido2_cli, :tel_cli, :correo_cli,:cedula_cli,:direccion_cli)
+      params.require(:client).permit(:id,:nombre_cli, :nombre2_cli, :apellido_cli, :apellido2_cli, :tel_cli, :correo_cli,:cedula_cli,:direccion_cli)
     end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_01_202149) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_06_201036) do
   create_table "artesanos", force: :cascade do |t|
     t.string "nombre"
     t.string "snombre"
@@ -66,6 +66,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_01_202149) do
     t.integer "producto_id", null: false
     t.integer "cantidad"
     t.decimal "valor", precision: 8, scale: 2
+    t.decimal "precio", precision: 8, scale: 2
+    t.date "fechafin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["factura_id"], name: "index_detalles_on_factura_id"
@@ -84,9 +86,39 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_01_202149) do
     t.index ["producto_id"], name: "index_dproductions_on_producto_id"
   end
 
+  create_table "emdetalles", force: :cascade do |t|
+    t.integer "cantidad"
+    t.decimal "valor"
+    t.decimal "precio"
+    t.integer "emfactura_id", null: false
+    t.integer "producto_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["emfactura_id"], name: "index_emdetalles_on_emfactura_id"
+    t.index ["producto_id"], name: "index_emdetalles_on_producto_id"
+  end
+
+  create_table "emfacturas", force: :cascade do |t|
+    t.decimal "total"
+    t.integer "empresa_id", null: false
+    t.date "fechafin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["empresa_id"], name: "index_emfacturas_on_empresa_id"
+  end
+
+  create_table "empresas", force: :cascade do |t|
+    t.string "nombre"
+    t.string "direccion"
+    t.integer "tel"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "facturas", force: :cascade do |t|
     t.integer "client_id", null: false
     t.decimal "total", precision: 8, scale: 2
+    t.date "fechafin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["client_id"], name: "index_facturas_on_client_id"
@@ -159,6 +191,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_01_202149) do
   add_foreign_key "dproductions", "artesanos"
   add_foreign_key "dproductions", "productions"
   add_foreign_key "dproductions", "productos"
+  add_foreign_key "emdetalles", "emfacturas"
+  add_foreign_key "emdetalles", "productos"
+  add_foreign_key "emfacturas", "empresas"
   add_foreign_key "facturas", "clients"
   add_foreign_key "profiles", "users"
 end

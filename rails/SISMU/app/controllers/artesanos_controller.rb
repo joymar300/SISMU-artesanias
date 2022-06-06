@@ -43,6 +43,6 @@ class ArtesanosController < ApplicationController
   private
 
     def artesano_params
-      params.require(:artesano).permit(:nombre, :snombre, :apellido, :sapellido, :tel,:cedula)
+      params.require(:artesano).permit(:id,:nombre, :snombre, :apellido, :sapellido, :tel,:cedula)
     end
 end

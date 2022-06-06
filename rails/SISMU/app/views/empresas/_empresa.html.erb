@@ -1,0 +1,29 @@
+<tr>
+  <td class="centrar">
+    <%= empresa.id %>
+  </td>
+  <td>
+    <%= empresa.nombre%>
+  </td>
+  <td>
+    <%= empresa.tel%>
+  </td>
+  <td>
+    <%= empresa.direccion%>
+  </td>  
+  <td class="centrar">
+    <%= link_to empresa_url(empresa) do %>
+      <%= image_tag("iconos/ojo", class:"icon_accion") %>
+    <% end %>
+  </td>
+  <td class="centrar">
+    <%= link_to edit_empresa_url(empresa) do %>
+      <%= image_tag("iconos/editar", class:"icon_accion") %>
+    <% end %>
+  </td>
+  <td class="centrar">
+    <%= button_to  empresa_path(empresa), method: :delete, class: "btn_borrar", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do%>
+    <%= image_tag("iconos/borrar", class:"icon_accion") %>
+  <% end %>
+  </td>   
+</tr>

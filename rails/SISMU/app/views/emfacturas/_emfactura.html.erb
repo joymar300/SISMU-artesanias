@@ -1,0 +1,19 @@
+
+<tr>
+<td>
+    <%= link_to emfactura.id, emfactura_url(emfactura.id) %>
+</td>
+
+<td>
+    <%= emfactura.empresa.nombre %>
+</td>
+<td>
+    <%= emfactura.created_at %>
+</td>
+
+<td class="centrar">
+    <%= button_to emfactura_path(emfactura), method: :delete do%>
+    <%= image_tag("iconos/borrar", class:"icon_accion") %>
+    <% end %>
+</td>
+</tr>
