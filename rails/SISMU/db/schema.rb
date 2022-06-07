@@ -66,7 +66,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_06_201036) do
     t.integer "producto_id", null: false
     t.integer "cantidad"
     t.decimal "valor", precision: 8, scale: 2
-    t.decimal "precio", precision: 8, scale: 2
     t.date "fechafin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
