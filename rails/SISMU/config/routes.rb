@@ -1,16 +1,10 @@
 Rails.application.routes.draw do
-  namespace :productions do
-    get 'dproductions/create'
-    get 'dproductions/index'
+  namespace :emfacturas do
+    get 'emdetalles/create'
   end
-  get 'artesanos/index'
-  get 'artesanos/new'
-  get 'artesanos/show'
-  get 'colors/index'
-  get 'colors/new'
-  get 'colors/create'
-  get 'colors/show'
-
+  get 'emfacturas/index'
+  get 'emfacturas/show'
+  get 'emfacturas/new'
 
   # Clientes
   resources :clients
@@ -42,6 +36,15 @@ Rails.application.routes.draw do
   #produccion
   resources :productions do
     resources :dproductions, module: :productions, only:[:create, :destroy]
+  end
+ 
+  #empresas
+  resources :empresas
+
+  #facturas empresas
+
+  resources :emfacturas do
+    resources :emdetalles, module: :emfacturas, only:[:create, :destroy]
   end
 
   #HOME

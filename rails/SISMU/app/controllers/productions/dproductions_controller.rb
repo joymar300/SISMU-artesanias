@@ -15,7 +15,7 @@ class Productions::DproductionsController < ApplicationController
   private
 
   def dproduction_params
-      params.require(:dproduction).permit(:producto_id, :cantidad, :artesano_id)
+      params.require(:dproduction).permit(:producto_id, :cantidad, :artesano_id, :color_id)
   end
 
   def set_production

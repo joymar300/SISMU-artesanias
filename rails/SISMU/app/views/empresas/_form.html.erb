@@ -1,0 +1,12 @@
+<div class="container_clientes">
+  <h1 class ="container_clientes-text">Formulario de Empresa</h1>
+  <div class="formulario_clientes">
+    <%= simple_form_for @empresa do |f| %> <br>
+      <%= f.input :id, label:"NIT" %> <br>
+      <%= f.input :nombre, label:"Nombre" %><br>
+      <%= f.input :tel, label:"Télefono" %><br>
+      <%= f.input :direccion,label:"Dirección"  %> <br>
+      <%= f.button :submit , class:"formulario_boton" %><br>
+    <% end %>
+  </div>
+</div>

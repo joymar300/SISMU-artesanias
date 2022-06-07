@@ -1,0 +1,30 @@
+<main class="container">
+  <section class="containerInfo">
+    <b> </b>
+    <h1 class="containerInfo__titulo">Empresa</h1>
+    <%# <a class="containerInfo__boton" href="clients/new">nuevo</a> %>
+    <div class="icon_nuevo">
+      <%= link_to "empresas/new" do %>
+        <span>Nuevo</span>
+        <%= image_tag("iconos/mas", class: "icon_mas") %>
+      <% end %>
+    </div>
+  </section>
+  <section class="containerTable">
+    <table>
+      <thead>
+        <tr>
+          <th>Nit</th>
+          <th>Nombre Empresa</th>
+          <th>Teléfono</th>
+          <th>Dirección</th>
+          <th colspan="3">Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @empresas%>
+      </tbody>
+    </table>
+  </section>
+
+</main>

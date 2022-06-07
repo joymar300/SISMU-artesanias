@@ -1,0 +1,26 @@
+
+<main class="container">
+<section class=" containerInfo">
+        <h1 class=" containerInfo__titulo">Facturas de las empresas</h1>
+        <a class=" containerInfo__boton" href="emfacturas/new">nuevo</a>
+
+</section>
+<section class="containerTable">
+     <table>
+        <thead>
+            <tr>
+                <th>N.factura</th>
+                <th>nombre</th>
+                <th>fecha de creación</th>
+                <th colspan="3">Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <%= render @emfacturas %>
+        </tbody>
+
+    </table>
+</section>
+
+</main>

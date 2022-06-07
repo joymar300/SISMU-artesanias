@@ -4,6 +4,6 @@ class Factura < ApplicationRecord
   has_many :productos, through: :detalles
 
   def final
-    detalles.sum(&:total)
+    detalles.sum(&:valor)
   end
 end
