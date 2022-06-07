@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_06_201036) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_07_022920) do
   create_table "artesanos", force: :cascade do |t|
     t.string "nombre"
     t.string "snombre"
@@ -59,6 +59,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_06_201036) do
     t.integer "detalle_id", null: false
     t.index ["color_id", "detalle_id"], name: "index_colors_detalles_on_color_id_and_detalle_id"
     t.index ["detalle_id", "color_id"], name: "index_colors_detalles_on_detalle_id_and_color_id"
+  end
+
+  create_table "colors_emdetalles", id: false, force: :cascade do |t|
+    t.integer "color_id", null: false
+    t.integer "emdetalle_id", null: false
   end
 
   create_table "detalles", force: :cascade do |t|

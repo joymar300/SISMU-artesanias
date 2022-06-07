@@ -7,7 +7,7 @@
 <%= simple_form_for [@emfactura, @emdetalle] do |f| %>
     <%= f.association :producto, label_method: :nombre_pro, label: "nombre del producto: " %>
     <%= f.input :cantidad, label: "cantidad:" %>
-    <%#<%= f.association :colors,as: :check_boxes, label_method: :tipo, label: "colores: " %>
+    <%= f.association :colors,as: :check_boxes, label_method: :tipo, label: "colores: " %>
     <%= f.button :submit %>
     
 
