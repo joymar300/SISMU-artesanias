@@ -5,7 +5,7 @@ class CreateDetalles < ActiveRecord::Migration[7.0]
       t.references :producto, null: false, foreign_key: true
       t.integer :cantidad
       t.decimal :valor, precision: 8, scale: 2 
-      t.decimal :precio,precision: 8, scale: 2 
+      t.decimal :precio,precision: 8, scale: 2
       t.date :fechafin
       t.timestamps
     end
