@@ -43,7 +43,7 @@
         </div>
       </div>
       <%# LOGO SISMU %>
-      <div id="perfil_menu" title="SISMU">
+      <div id="perfil_menu" title="Perfíl">
         <div id="foto_menu">
           <%=link_to image_tag("logo_completo_sandra_munoz"), root_path %>
         </div>
@@ -65,6 +65,48 @@
           <% end %>
         </div>
 
+        <div class="item_menu" title="Produccion">
+          <%= link_to productions_url do %>
+            <%= image_tag("iconos/canasta", class:"icon_menu") %>
+            <div class="title_icon_menu"><span>Producción</span></div>
+          <% end %>
+        </div>
+
+        <div class="item_menu" title="Artesanos">
+          <%= link_to artesanos_url do %>
+            <%= image_tag("iconos/artesanos", class: "icon_menu") %>
+            <div class="title_icon_menu"><span>Artesanos</span></div>
+          <% end %>
+
+        </div>
+        <div class="item_menu" title="Empresa">
+          <%= link_to empresas_url do %>
+            <%= image_tag("iconos/artesanos", class: "icon_menu") %>
+            <div class="title_icon_menu"><span>Empresas</span></div>
+          <% end %>
+        </div>
+        
+        <%# <div class="item_menu" title="Facturasss">
+          <ol title="Facturasss">
+            <li>
+              <%= link_to facturas_url do %>
+                <%# image_tag("iconos/recibo", class:"icon_menu") 
+                <div class="title_icon_menu"><span>Facturas</span></div>
+              <% end 
+            </li>
+            <li>
+              <%# link_to facturas_url do 
+                <div class="title_icon_menu"><span>Facturas</span></div>
+              <% end 
+            </li>
+            <li>
+              <%# link_to emfacturas_url do 
+                <div class="title_icon_menu"><span>Facturas Empresas</span></div>
+              <% end 
+            </li>
+          </ol>
+        </div> %>
+
         <div class="item_menu" title="Facturas">
           <%= link_to facturas_url do %>
             <%= image_tag("iconos/recibo", class:"icon_menu") %>
@@ -72,31 +114,10 @@
           <% end %>
         </div>
 
-        <div class="item_menu" title="Produccion">
-          <%= link_to productions_url do %>
-            <%= image_tag("iconos/canasta", class:"icon_menu") %>
-            <div class="title_icon_menu"><span>producción</span></div>
-          <% end %>
-        </div>
-
-        <div class="item_menu" title="Artesanos">
-          <%= link_to artesanos_url do %>
-            <%= image_tag("iconos/artesanos", class: "icon_menu") %>
-            <div class="title_icon_menu"><span>artesanos</span></div>
-          <% end %>
-
-        </div>
-        <div class="item_menu" title="Empresa">
-          <%= link_to empresas_url do %>
-            <%= image_tag("iconos/artesanos", class: "icon_menu") %>
-            <div class="title_icon_menu"><span>empresas</span></div>
-          <% end %>
-        </div>
-
         <div class="item_menu" title="factura Empresas">
           <%= link_to emfacturas_url do %>
             <%= image_tag("iconos/recibo", class: "icon_menu") %>
-            <div class="title_icon_menu"><span>facturas Empresas</span></div>
+            <div class="title_icon_menu"><span>Facturas Empresas</span></div>
           <% end %>
         </div>
 
