@@ -64,6 +64,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_07_022920) do
   create_table "colors_emdetalles", id: false, force: :cascade do |t|
     t.integer "color_id", null: false
     t.integer "emdetalle_id", null: false
+    t.index ["color_id", "emdetalle_id"], name: "index_colors_emdetalles_on_color_id_and_emdetalle_id"
+    t.index ["emdetalle_id", "color_id"], name: "index_colors_emdetalles_on_emdetalle_id_and_color_id"
   end
 
   create_table "detalles", force: :cascade do |t|
@@ -71,6 +73,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_07_022920) do
     t.integer "producto_id", null: false
     t.integer "cantidad"
     t.decimal "valor", precision: 8, scale: 2
+    t.decimal "precio", precision: 8, scale: 2
+    t.date "fechafin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["factura_id"], name: "index_detalles_on_factura_id"
@@ -121,6 +125,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_07_022920) do
   create_table "facturas", force: :cascade do |t|
     t.integer "client_id", null: false
     t.decimal "total", precision: 8, scale: 2
+    t.date "fechafin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["client_id"], name: "index_facturas_on_client_id"
