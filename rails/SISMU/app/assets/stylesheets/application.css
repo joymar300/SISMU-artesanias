@@ -47,7 +47,8 @@ body {
 }
 
 main {
-  min-height: 78.9%;
+  max-height: 100%;
+  border: 1px solid green;
 }
 
 /* BODY CON MENU LATERAL ABIERTO */
@@ -64,7 +65,19 @@ main {
   height: 100%;
   left: 0;
   top: 0;
+  overflow-y: auto;
+  /* overflow-y: hidden; */
 }
+
+#sidemenu::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+#sidemenu::-webkit-scrollbar:vertical {
+  width: 0px;
+}
+
+/* ******** */
 
 #sidemenu a {
   color: var(--color-black);
@@ -283,7 +296,10 @@ nav {
 footer {
   border: 2px solid var(--hovercolor);
   background-color: var(--bgcolor);
+  width: 99%;
   text-align: center;
+  position: absolute;
+  bottom: 0;
 }
 
 footer p {

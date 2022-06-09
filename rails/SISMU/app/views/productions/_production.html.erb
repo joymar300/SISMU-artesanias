@@ -1,16 +1,18 @@
-
 <tr>
-<td>
+  <td class="centrar">
     <%= link_to production.ref, production_url(production.id) %>
-</td>
-<td>
+  </td>
+  <td class="centrar">
     <%= production.created_at %>
-</td>
-
-
-<td class="centrar">
-<%= button_to production_path(production), method: :delete do %>
-        <%= image_tag("iconos/borrar", class:"icon_accion") %>
+  </td>
+  <td class="centrar">
+    <%= link_to production_url(production) do %>
+      <%= image_tag("iconos/ojo", class:"icon_accion") %>
     <% end %>
-</td>
+  </td>
+  <td class="centrar">
+    <%= button_to production_path(production), method: :delete, class: "btn_borrar" do %>
+      <%= image_tag("iconos/borrar", class:"icon_accion") %>
+    <% end %>
+  </td>
 </tr>

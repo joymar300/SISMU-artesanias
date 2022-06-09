@@ -13,16 +13,45 @@
 
 .container  {
   border: 2px solid black;
-  border-radius: 20px;
+  border-radius: 10px;
   width: 80%;
-  /* position: absolute; */
-  /* max-height: 100px; */
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  overflow-y: scroll;
-  overflow: hidden;
+  height: 380px;
+  margin: 50px auto;
+  /* margin-top: 50px; */
+  padding-bottom: 30px;
+  /* height: 100px; */
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+  /* overflow-y: scroll; */
+  /* overflow: hidden; */
+  overflow: auto;
 }
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.container::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.container::-webkit-scrollbar:vertical {
+  width: 0px;
+}
+
+.container::-webkit-scrollbar:horizontal {
+  height: 13px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.container::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}
+
+/* *********** */
 
 .containerInfo{
   /* border: 1px solid rgb(17, 160, 29); */
@@ -42,7 +71,11 @@
   height: fit-content;
 }
 
-.icon_nuevo{
+.icon_logo_title {
+  height: 40px;
+}
+
+.icon_nuevo {
   border: 1px solid black;
   border-radius: 10px;
   padding: 5px;
@@ -92,12 +125,6 @@ tr, td,th{
 .centrar {
   text-align: center;
 }
-  /* border: 1px solid red; 
-    border: 1px solid red;
-    width: 90%;
-    margin: auto;
-    max-height: 400px;*/
-
 
     /* CREAR PRODUCTOS */
 
@@ -112,13 +139,13 @@ tr, td,th{
       margin: auto;
       /* box-shadow: 3px 3px goldenrod, -1em 0 0.4em goldenrod; */
       /* box-shadow: 60px -16px #F5B041; */
-       box-shadow: 1px 3px 7px  black; 
-      
-       
+      box-shadow: 1px 3px 7px  black; 
     }
+
     .containerPro_text{
       color: #F5B041 ;
     }
+
     .formulario_boton {
       background-color: #F5B041;
       border-radius: 5px;

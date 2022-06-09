@@ -1,29 +1,27 @@
-
 <%= simple_form_for [@production, @dproduction] do |f| %>
-    <%= f.association :producto, label_method: :nombre_pro, label: "nombre del producto: " %>
-    <%= f.association :artesano, label_method: :nombre_completo, label: "nombre del artesano: " %>
-    <%= f.input :cantidad, label: "cantidad:" %>
+  <%= f.association :producto, label_method: :nombre_pro, label: "Nombre del Producto: " %>
+  <%= f.association :artesano, label_method: :nombre_completo, label: "Nombre del Artesano: " %>
+  <%= f.input :cantidad, label: "Cantidad:" %>
 
-    <%= f.button :submit %>
-    
-
+  <%= f.button :submit %>
 <% end %>
+<br>
 
 <table>
-    <thead>
-        <tr>
-            <th> fecha de producción</th>
-            <td colspan="4"><%= @production.created_at %></td>
-        </tr>
-        <tr>
-            <th>Ref</th>
-            <th>Producto</th>
-            <th>Precio uni.</th>
-            <th>cantidad</th>
-            <th>artesano</th>
-        </tr>         
-    </thead>    
-    <tbody>
+  <thead>
+    <tr>
+      <th> Fecha de producción</th>
+      <td colspan="4"><%= @production.created_at %></td>
+    </tr>
+    <tr>
+      <th>Ref</th>
+      <th>Producto</th>
+      <th>Precio uni.</th>
+      <th>Cantidad</th>
+      <th>Artesano</th>
+    </tr>         
+  </thead>    
+  <tbody>
     <% @dproductions.each do |dproduction| %>
         <tr>
             <td><%= dproduction.producto.referencia_pro %></td>
@@ -31,10 +29,12 @@
             <td><%= number_to_currency dproduction.producto.precio_pro%></td>
             <td><%= dproduction.cantidad %></td>
             <td><%= dproduction.artesano.nombre_completo %></td>
-            <td><%= button_to image_tag("iconos/borrar", class:"icon_accion"), production_dproduction_path(@production, dproduction), method: :delete  %></td>
-     <%end%>     
-        </tr>
-    </tbody>
+            <td>
+              <%= button_to image_tag("iconos/borrar", class:"icon_accion"), production_dproduction_path(@production, dproduction), method: :delete  %>
+            </td>
+      </tr>
+    <%end%>     
+  </tbody>
 </table>
 
 <%= link_to "volver" , productions_url %>
