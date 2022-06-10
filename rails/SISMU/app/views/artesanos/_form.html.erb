@@ -1,13 +1,20 @@
 <div>
-<h1>Nuevo Artesano</h1>
-<%= simple_form_for @artesano do |f| %>
-    <%= f.input :id, label:"cedula"%>
-    <%= f.input :nombre %>
-    <%= f.input :snombre %>
-    <%= f.input :apellido %>
-    <%= f.input :sapellido %>
-    <%= f.input :tel %>
-    <%= f.button :submit %>
-
-<% end %>
+    <h1 class="artesano_text">Nuevo Artesano</h1>
+    <div class="formulario_artesano">
+        <%= simple_form_for @artesano do |f| %> <br>
+            <%= f.label :id, "Cedula :   ", class:"input_artesano" %>
+            <%= f.input_field :id,input_html: { class: 'input_artesano' }, class:"label_artesano1" %> <br><br>
+             <%= f.label :id, "Nombre : ", class:"input_artesano" %>
+            <%= f.input_field :nombre, input_html: { class: 'input_artesano' }, class:"label_artesano2" %> <br><br>
+             <%= f.label :id, "Segundo Nombre :   ", class:"input_artesano" %>
+            <%= f.input_field :snombre, input_html: { class: 'input_artesano' }, class:"label_artesano3" %> <br><br>
+             <%= f.label :id, "Apellido :   ", class:"input_artesano" %>
+            <%= f.input_field :apellido, input_html: { class: 'input_artesano' }, class:"label_artesano2" %> <br><br>
+             <%= f.label :id, "Segundo Apellido :   ", class:"input_artesano" %>
+            <%= f.input_field :sapellido,input_html: { class: 'input_artesano' }, class:"label_artesano3" %> <br><br> 
+             <%= f.label :id, "Telefono :   ", class:"input_artesano" %>
+            <%= f.input_field :tel,input_html: { class: 'input_artesano' }, class:"label_artesano2" %> <br><br>
+            <%= f.button :submit, "Crear", class:"artesano_boton" %> 
+        <% end %>
+    </div>
 </div>
