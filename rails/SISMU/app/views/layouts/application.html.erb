@@ -10,6 +10,7 @@
     <%= stylesheet_link_tag "devise", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "index", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "clientes", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "artesano", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags "reload" %>
   </head>
 
@@ -52,7 +53,7 @@
       <div id="menu_items">
         <div class="item_menu" title="Productos">
           <%= link_to productos_url do %>
-            <%= image_tag("iconos/producto", class: "icon_menu" ) %>
+            <%= image_tag("iconos/inventario", class: "icon_menu" ) %>
             <div class="title_icon_menu"><span>Productos</span></div>
           <% end %>
           
@@ -74,14 +75,14 @@
 
         <div class="item_menu" title="Artesanos">
           <%= link_to artesanos_url do %>
-            <%= image_tag("iconos/artesanos", class: "icon_menu") %>
+            <%= image_tag("iconos/construccion", class: "icon_menu") %>
             <div class="title_icon_menu"><span>Artesanos</span></div>
           <% end %>
 
         </div>
         <div class="item_menu" title="Empresa">
           <%= link_to empresas_url do %>
-            <%= image_tag("iconos/artesanos", class: "icon_menu") %>
+            <%= image_tag("iconos/empresa", class: "icon_menu") %>
             <div class="title_icon_menu"><span>Empresas</span></div>
           <% end %>
         </div>
@@ -107,19 +108,20 @@
           </ol>
         </div> %>
 
-        <div class="item_menu" title="Facturas">
-          <%= link_to facturas_url do %>
-            <%= image_tag("iconos/recibo", class:"icon_menu") %>
-            <div class="title_icon_menu"><span>Facturas</span></div>
-          <% end %>
-        </div>
-
         <div class="item_menu" title="factura Empresas">
           <%= link_to emfacturas_url do %>
             <%= image_tag("iconos/recibo", class: "icon_menu") %>
             <div class="title_icon_menu"><span>Facturas Empresas</span></div>
           <% end %>
         </div>
+
+        <div class="item_menu" title="Facturas">
+          <%= link_to facturas_url do %>
+            <%= image_tag("iconos/factura", class:"icon_menu") %>
+            <div class="title_icon_menu"><span>Facturas</span></div>
+          <% end %>
+        </div>
+
 
         <%# SEPARADOR MENU %>
         <div class="item_menu separador_menu"></div>

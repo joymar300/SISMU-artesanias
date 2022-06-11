@@ -2,15 +2,16 @@
   <h1 class ="container_clientes-text">Formulario de Clientes</h1>
   <div class="formulario_clientes">
     <%= simple_form_for @client do |f| %> <br>
-      <%= f.input :id, label:"Cedula" %> <br>
-      <%= f.input :nombre_cli, label:"Nombre" %><br>
-      <%= f.input :nombre2_cli,label:"Segundo Nombre"  %><br>
-      <%= f.input :apellido_cli, label:"Apellido" %> <br>
-      <%= f.input :apellido2_cli,label:"Segundo Apellido" %> <br>
-      <%= f.input :tel_cli, label:"Télefono" %> <br>
-      <%= f.input :correo_cli,label:"Correo Eléctronico" %> <br>
-      <%= f.input :direccion_cli,label:"Dirección"  %> <br>
-      <%= f.button :submit , class:"formulario_boton" %><br>
+      <%= f.input :id, label:"Cedula :",input_html: { class: 'input_clientes' }%> <br>
+      <%= f.input :nombre_cli, label:"Nombre :", input_html: { class: 'input_clientes' } %><br>
+      <%= f.input :nombre2_cli,label:"Segundo  Nombre :", input_html: { class: 'input_clientes2' }  %><br>
+      <%= f.input :apellido_cli, label:"Apellido :", input_html: { class: 'input_clientes' } %> <br>
+      <%= f.input :apellido2_cli,label:"Segundo Apellido :", input_html: { class: 'input_clientes2' } %> <br>
+      <%= f.input :tel_cli, label:"Télefono :", input_html: { class: 'input_clientes' } %> <br>
+      <%= f.input :correo_cli,label:"Correo Eléctronico :", input_html: { class: 'input_clientes2' } %> <br>
+      <%= f.input :direccion_cli,label:"Dirección :", input_html: { class: 'input_clientes' } %> <br>
+      <%= f.button :submit,"Crear", class:"formulario_boton", input_html: { class: 'input_clientes' } %><br>
     <% end %>
   </div>
 </div>
+

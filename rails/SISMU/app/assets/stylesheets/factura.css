@@ -6,12 +6,11 @@
 
 .formulario_factura{    
     text-align: center;
-    border: solid 1px #000;
     border-radius: 5px;
     width: 400px;
     height: 200px;
     margin: auto;
-    box-shadow: 3px 1px 7px  black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 .factura_boton{
     border-radius: 5px;
