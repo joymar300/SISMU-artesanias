@@ -8,5 +8,9 @@ class Producto < ApplicationRecord
     has_many :production, through: :productions
     has_many :emdetalles, dependent: :destroy
     has_many :emfactura, through: :emdetalles
+    validates :referencia_pro, :nombre_pro, :precio_pro ,presence: {:message => "requeridos"}
+    validates :referencia_pro, uniqueness: {:message => "referencia unica"}
+    validates :referencia_pro, :precio_pro ,numericality: {:message => "numericos"
+    }
 
 end
