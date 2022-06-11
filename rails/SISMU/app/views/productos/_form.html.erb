@@ -4,8 +4,8 @@
   <div class="formulario">
       <%= simple_form_for @producto do |f| %> <br>
         <%= f.input :referencia_pro,label: 'referencia: ' %> <br>
-        <%= f.input :nombre_pro,label: 'nombre del producto: ' %> <br>
-        <%= f.input :precio_pro, label: 'precio: ' %> <br>
+        <%= f.input :nombre_pro,label: 'nombre del producto: ' %> <br> 
+        <%= f.input :precio_pro, label: 'precio: ' %> <br> 
         <%= f.association :categories, label: 'Categoria:' , as: :check_boxes, label_method: :tipo_categoria %> 
         <div><%= f.button :submit, class: "formulario_boton" %></div>
         <br>
