@@ -1,0 +1,32 @@
+.artesano_text{
+    text-align: center;
+    color: #F5B041;
+}
+.formulario_artesano{
+    text-align: center;
+    /* border:  solid 1px black; */
+    width: 470px ;
+    height:  360px;
+    margin-left: 33%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+}
+.input_artesano{
+    margin-left: 30px;
+}
+.label_artesano2{
+    margin-left: 100px;
+
+}
+.label_artesano3{
+    margin-left: 25px;
+    
+}
+.label_artesano1{
+    margin-left: 105px;
+}
+.artesano_boton{
+    background-color: #F5B041;
+    border-radius: 5px;
+    text-align: center;
+}
