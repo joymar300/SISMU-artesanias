@@ -1,4 +1,16 @@
 <div class="div_show">
-  
-  <%= render @producto %>
+  <table>
+    <tr>
+      <td>Referencia</td>
+      <td><%= @producto.referencia_pro %></td>
+    </tr>
+    <tr>
+      <td>Nombre</td>
+      <td><%= @producto.nombre_pro %></td>
+    </tr>
+    <tr>
+      <td>Precio</td>
+      <td><%= number_to_currency @producto.precio_pro%></td>
+    </tr>
+  </table>
 </div>

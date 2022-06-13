@@ -46,7 +46,8 @@
       <%# LOGO SISMU %>
       <div id="perfil_menu" title="Perfíl">
         <div id="foto_menu">
-          <%=link_to image_tag("logo_completo_sandra_munoz"), root_path %>
+          <%#link_to image_tag("<%= @profile.foto "), profiles_path(@profile) %>
+          <%=link_to image_tag("logo_completo_sandra_munoz"), profiles_path(@profile) %>
         </div>
       </div>
       <%# ITEMS_MENU %>

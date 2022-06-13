@@ -8,11 +8,16 @@
   <td>
     <%= number_to_currency(producto.precio_pro, unit: 'COL$') %>
   </td> 
+  
+<%
+=begin%>
   <td class="centrar">
     <%= link_to producto_url(producto) do %>
       <%= image_tag("iconos/ojo", class:"icon_accion") %>
     <% end %>
   </td>
+<%
+=end%>
   <td class="centrar">
     <%= link_to edit_producto_url(producto) do %>
       <%= image_tag("iconos/editar", class:"icon_accion") %>
