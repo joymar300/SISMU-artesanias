@@ -3,7 +3,6 @@ class ProductosController < ApplicationController
   before_action :authenticate_user!
   def index
     @productos = Producto.all
-
   end
   def show
     @producto = Producto.find(params[:id])
