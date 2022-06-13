@@ -12,6 +12,7 @@ end
 def update
     @profile= Profile.find(params[:id])
     if @profile.update(profile_params)
+      flash[:alert] = "Se actualizo correctamente."
       redirect_to profile_path(@profile)
     else
         render :edit
@@ -23,6 +24,6 @@ def set_profile
 @profile = (current_user.profile ||= Profile.create)
 end
 def profile_params
-params.require(:profile).permit(:foto, :nombre, :apellido , :ciudad , :estado, :direccion)
+params.require(:profile).permit(:foto, :nombre, :apellido , :ciudad , :estado, :direccion ,:avatar)
 end
 end

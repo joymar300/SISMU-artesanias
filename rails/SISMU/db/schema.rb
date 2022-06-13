@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_07_022920) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_13_214853) do
   create_table "artesanos", force: :cascade do |t|
     t.string "nombre"
     t.string "snombre"
@@ -155,6 +155,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_07_022920) do
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 

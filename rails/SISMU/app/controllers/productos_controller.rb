@@ -15,6 +15,7 @@ class ProductosController < ApplicationController
   def create
     @producto = Producto.new(producto_params)
     if @producto.save 
+      flash[:alert] = "Se creo correctamente."
       redirect_to productos_path
     else
       render :new

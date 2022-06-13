@@ -33,6 +33,7 @@ class EmfacturasController < ApplicationController
   def create
     @emfactura = Emfactura.new(emfactura_params)
     if @emfactura.save
+      flash[:alert] = "Se creo correctamente."
       redirect_to emfactura_path(@emfactura)
     else
       render :new

@@ -1,6 +1,5 @@
 <form>
-
-image_tag("<%= @profile.foto %>")
+<%=image_tag @profile.avatar.url if @profile.avatar.present? %>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Nombre:</label>
