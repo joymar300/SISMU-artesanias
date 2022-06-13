@@ -6,4 +6,5 @@ class Factura < ApplicationRecord
   def final
     detalles.sum(&:valor)
   end
+  
 end
