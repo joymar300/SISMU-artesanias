@@ -14,6 +14,7 @@ class MaterialsController < ApplicationController
   def create
     @material = Material.new(material_params)
     if @material.save 
+      flash[:alert] = "Se creo correctamente."
       redirect_to materials_path
     else
       render :new

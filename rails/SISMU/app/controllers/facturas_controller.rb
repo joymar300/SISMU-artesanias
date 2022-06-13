@@ -34,6 +34,7 @@ class FacturasController < ApplicationController
   def create
     @factura = Factura.new(factura_params)
     if @factura.save
+      flash[:alert] = "Se creo correctamente."
       redirect_to factura_path(@factura)
     else
       render :new

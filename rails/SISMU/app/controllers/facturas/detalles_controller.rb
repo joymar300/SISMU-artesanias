@@ -4,7 +4,7 @@ class Facturas::DetallesController < ApplicationController
 
     def create
         @detalle = @factura.detalles.new(detalle_params)
-        @detalle.save!
+        @detalle.save
         redirect_to factura_path(@factura)       
     end
     def destroy 

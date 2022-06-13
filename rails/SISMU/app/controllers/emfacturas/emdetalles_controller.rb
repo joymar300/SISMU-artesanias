@@ -4,7 +4,7 @@ class Emfacturas::EmdetallesController < ApplicationController
 
   def create
       @emdetalle = @emfactura.emdetalles.new(emdetalle_params)
-      @emdetalle.save!
+      @emdetalle.save
       redirect_to emfactura_path(@emfactura)       
   end
   def destroy 

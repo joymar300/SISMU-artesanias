@@ -4,7 +4,7 @@ class Productions::DproductionsController < ApplicationController
 
   def create
       @dproduction = @production.dproductions.new(dproduction_params)
-      @dproduction.save!
+      @dproduction.save
       redirect_to production_path(@production)       
   end
 
