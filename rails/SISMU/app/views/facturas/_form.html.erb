@@ -1,7 +1,8 @@
 <div class="formulario_factura">
     <%= simple_form_for @factura do |f| %><br>
         <%= f.association :client, label_method: :nombre_completo %><br>
-        <%= f.input :fechafin, label: "fecha de entrega"%><br>
-        <%= f.button :submit, class:"factura_boton" %><br>
+        <%= f.label :fechafin, "Fecha de entrega", class: 'label_factura'%>
+         <%= f.input_field :fechafin, class: 'input_factura'%><br><br>
+        <%= f.button :submit, "Crear Factura", class:"factura_boton" %><br>
     <% end %>
 </div>
