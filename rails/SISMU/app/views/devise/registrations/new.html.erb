@@ -1,56 +1,36 @@
-<section class ="containerDevise">
-  <h2>Regístrate</h2>
+<main class ="devise">
+    <h2>Regístrate</h2>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <div class="registroNombres">
-      <div class="registroNombres_casilla">
-        <%= f.label :primernombre, "Primer Nombre"%><br />
-        <%= f.text_field :primernombre, class:"field__input" %>
-      </div>
-      
-      <div class="registroNombres_casilla">
-        <%= f.label :segundonombre, "Segundo Nombre"%><br />
-        <%= f.text_field :segundonombre, class:"field__input" %>
-      </div>
-
-      <div class="registroNombres_casilla">
-        <%= f.label :primerapellido, "Primer Apellido" %><br />
-        <%= f.text_field :primerapellido, class:"field__input" %>
-      </div>
-      
-      <div class="registroNombres_casilla">
-        <%= f.label :segundoapellido, "Segundo Apellido" %><br />
-        <%= f.text_field :segundoapellido, class:"field__input" %>
-      </div>
+    <div>
+         <%= f.email_field :email, autofocus: true, class:"input", autocomplete: "email", placeholder: "Correo electronico"%>
     </div>
 
-      <%= f.label :Correo %><br />
-      <%= f.email_field :email, autofocus: true, class:"field__input", autocomplete: "email" %>
+    <div>
+        <% if @minimum_password_length %>
+        <% end %>
+        <%= f.password_field :password, class:"input", autocomplete: "new-password", placeholder: "Contraseña (mínimo 6 carácteres)" %>
+    </div>
 
-  <div class="field">
-      <%= f.label :Contraseña %>
-      <% if @minimum_password_length %>
-      <em>(Carácter mínimo <%= @minimum_password_length %>)</em>
-      <% end %><br />
-      <%= f.password_field :password, class:"field__input", autocomplete: "new-password" %>
-  </div>
+    <div>
+        <%= f.password_field :password_confirmation, class:"input", autocomplete: "new-password", placeholder: "Confirmar contraseña" %>
+    </div>
 
-  <div class="field">
-      <%= f.label :confirmación_de_contraseña %><br />
-      <%= f.password_field :password_confirmation, class:"field__input", autocomplete: "new-password" %>
-  </div>
+    <div class="actions">
+        <%= f.submit "Regístrar", class:"buttom" %>
+    </div>
+    <% end %>
 
-  <div class="actions">
-      <%= f.submit "Regístrar", class:"containerDevise__boton" %>
-  </div>
-  <% end %>
+    <div class="prueba">
+        <%= render "devise/shared/links" %>
+    </div>
+</main>
 
-  <%= render "devise/shared/links" %>
-  <br>
-</section>
+<footer class= "footer"> 
+        <p>Version 1.2</p>
+</footer>
 
 
 
