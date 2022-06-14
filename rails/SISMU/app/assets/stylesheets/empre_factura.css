@@ -1,10 +1,9 @@
-/* FACTURA */
-.text_factura{
+.text_factura-empresa{
     text-align: center;
     color: #F5B041;
 }
 
-.formulario_factura{    
+.formulario_factura-empresa{    
     text-align: center;
     border-radius: 5px;
     width: 400px;
@@ -12,11 +11,11 @@
     margin: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
-.factura_boton{
+.factura_boton-empresa{
     border-radius: 5px;
     background-color: #F5B041;
 }
-.label_factura{
+.label_factura-empresa{
     /* border: solid 1px blue; */
     display: block;
 }

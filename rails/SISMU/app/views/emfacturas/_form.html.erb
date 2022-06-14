@@ -1,7 +1,8 @@
-<div class="formulario_factura">
+<div class="text_factura-empresa"><h1>Factura de la Empresa</h1></div>
+<div class="formulario_factura-empresa">
     <%= simple_form_for @emfactura do |f| %><br>
         <%= f.association :empresa, label_method: :empresa_busqueda %><br>
-        <%= f.input :fechafin, label: "fecha de entrega"%><br>
+        <%= f.input :fechafin, label: "Fecha de entrega", label_html: { class: 'label_factura-empresa' }%><br>
         <%= f.button :submit, class:"factura_boton" %><br>
     <% end %>
 </div>
