@@ -4,12 +4,28 @@
     <%= simple_form_for @empresa do |f| %> <br><br>
       <%= f.label :id,"NIT : ", class: 'label_empresa1' %>
        <%= f.input_field :id, class: 'input_empresa1' %> <br><br>
+        <% if @empresa.errors[:id].any? %>
+          <span class="text-danger"><%= @empresa.errors[:id].first %></span>
+          <br>
+        <% end %>
       <%= f.label :nombre, "Nombre : ", class: 'label_empresa2'%>
       <%= f.input_field :nombre, class: 'input_empresa2'%><br><br>
+        <% if @empresa.errors[:nombre].any? %>
+          <span class="text-danger"><%= @empresa.errors[:nombre].first %></span>
+          <br>
+        <% end %>
       <%= f.label :tel, "Télefono : ", class: 'label_empresa2' %>
        <%= f.input_field :tel, class: 'input_empresa2'%><br><br>
+        <% if @empresa.errors[:tel].any? %>
+          <span class="text-danger"><%= @empresa.errors[:tel].first %></span>
+          <br>
+        <% end %>
       <%= f.label :direccion, "Dirección : ", class: 'label_empresa2'%>
        <%= f.input_field :direccion, class: 'input_empresa2'%> <br><br>
+        <% if @empresa.errors[:direccion].any? %>
+          <span class="text-danger"><%= @empresa.errors[:direccion].first %></span>
+          <br>
+        <% end %>
       <%= f.button :submit , class:"formulario_boton" %><br>
     <% end %>
   </div>

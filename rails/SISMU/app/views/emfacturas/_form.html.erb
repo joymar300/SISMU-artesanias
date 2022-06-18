@@ -3,6 +3,10 @@
     <%= simple_form_for @emfactura do |f| %><br>
         <%= f.association :empresa, label_method: :empresa_busqueda %><br>
         <%= f.input :fechafin, label: "Fecha de entrega", label_html: { class: 'label_factura-empresa' }%><br>
+        <% if @emfactura.errors[:fechafin].any? %>
+          <span class="text-danger"><%= @emfactura.errors[:fechafin].first %></span>
+          <br>
+        <% end %>
         <%= f.button :submit, class:"factura_boton" %><br>
     <% end %>
 </div>

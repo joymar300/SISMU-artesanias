@@ -11,6 +11,10 @@
 <%= simple_form_for [@factura, @detalle] do |f| %>
     <%= f.association :producto, label_method: :nombre_pro, label: "nombre del producto: " %>
     <%= f.input :cantidad, label: "cantidad:" %>
+        <% if @detalle.errors[:cantidad].any? %>
+          <span class="text-danger"><%= @detalle.errors[:cantidad].first %></span>
+          <br>
+        <% end %>
     <%= f.association :colors,as: :check_boxes, label_method: :tipo, label: "colores: " %>
 
     <%= f.button :submit %>

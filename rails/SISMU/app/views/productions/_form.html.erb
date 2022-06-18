@@ -1,4 +1,8 @@
 <%= simple_form_for @production do |f| %>
     <%= f.input :ref, label: "escriba el nombre de referencia"%>
+        <% if @production.errors[:ref].any? %>
+          <span class="text-danger"><%= @production.errors[:ref].first %></span>
+          <br>
+        <% end %>
     <%= f.button :submit %>
 <% end %>

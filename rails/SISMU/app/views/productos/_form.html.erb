@@ -3,12 +3,28 @@
   <h1 class="containerPro_text" >Crear Productos</h1>
   <div class="formulario">
       <%= simple_form_for @producto do |f| %> <br>
-        <%= f.label :referencia_pro, 'Referencia: ', class: 'left' %> <br>
+
+        <%= f.label :referencia_pro, 'Referencia: ', class: 'left', required: true %> <br>
         <%= f.input_field :referencia_pro %> <br>
+        <% if @producto.errors[:referencia_pro].any? %>
+          <span class="text-danger"><%= @producto.errors[:referencia_pro].first %></span>
+          <br>
+        <% end %>
+
         <%= f.label :nombre_pro,'Nombre del producto: ' %> <br>
         <%= f.input_field :nombre_pro %> <br>
+        <% if @producto.errors[:nombre_pro].any? %>
+          <span class="text-danger"><%= @producto.errors[:nombre_pro].first %></span>
+          <br>
+        <% end %>
+
         <%= f.label :precio_pro, 'Precio del producto: ' %> <br>
         <%= f.input_field :precio_pro %> <br>
+        <% if @producto.errors[:precio_pro].any? %>
+          <span class="text-danger"><%= @producto.errors[:precio_pro].first %></span>
+          <br>
+        <% end %>
+
         <%= f.association :categories, label: 'Categoria:' , as: :check_boxes, label_method: :tipo_categoria %> 
         <div><%= f.button :submit, 'Actualizar', class: "formulario_boton" %></div>
         <br>

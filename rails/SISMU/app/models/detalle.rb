@@ -2,6 +2,8 @@ class Detalle < ApplicationRecord
   belongs_to :factura
   belongs_to :producto
   has_and_belongs_to_many :colors
+  validates_associated :producto
+  validates :cantidad, presence: {:message => "inserte una cantidad"}
   before_save :total
   before_save :guardar_pasado
   def total

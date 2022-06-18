@@ -154,3 +154,15 @@ tr, td,th{
   background-color: #F5B041;
   border-radius: 5px;
 }
+.text-danger{
+  border: 1px solid;
+  padding:10px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:13px;
+  text-align:center;
+  width:auto;
+  color: white;
+  background-color: red;
+}
