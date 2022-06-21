@@ -1,13 +1,15 @@
-<div style=" margin: auto ; padding: 10px; width: 535px;">
-  <h1 class="containerPro_text" style=" text-align: center;" >Crear Produccion</h1>
-  <div style="border-radius: 10px;  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); padding: 5px;" >
-<%= simple_form_for @production do |f| %>
-    <%= f.input :ref, label: "escriba el nombre de referencia"%>
-    <% if @production.errors[:ref].any? %>
-    <span class="text-danger"><%= @production.errors[:ref].first %></span>
-    <br>
-  <% end %>
-   <p style="text-align: center"><%= f.button :submit,   "Crear Produccion" %></p> 
-<% end %>
-</div>
+<div class="containerProds">
+  <h1 class="containerProds-text">Crear Producción</h1>
+  <div class="formularioProds">
+    <%= simple_form_for @production do |f| %> <br> 
+      <%= f.label :ref, "Nombre de referencia"%> <br>
+      <%= f.input_field :ref, class: "input_produccion" %>
+      <% if @production.errors[:ref].any? %>
+        <span class="text-danger"><%= @production.errors[:ref].first %></span>
+      <% end %>
+        <br><br>
+      <%= f.button :submit, "Crear Producción" %>
+      <br>
+    <% end %>
+  </div>
 </div>

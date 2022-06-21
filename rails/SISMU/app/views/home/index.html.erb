@@ -1,9 +1,9 @@
 <main class="main_index"> 
   <div class="panelContador">
     <div class="panelContador__elemento">
-      <div class="panelContador__icono-canasta">
+      <div class="panelContador__icono-producto">
         <span class="span_angulo_derecho">
-          <%= image_tag "iconos/producto_blanco", class: "minilogo_grid" %>
+          <%= image_tag "iconos/lista_blanca", class: "minilogo_grid" %>
         </span>
       </div>
       <div class="panelContador__contador">
@@ -15,7 +15,7 @@
     </div>
 
     <div class="panelContador__elemento">
-      <div class="panelContador__icono-flor">
+      <div class="panelContador__icono-categoria">
         <span class="span_angulo_derecho">
           <%= image_tag "iconos/materiaPrima_blanco", class: "minilogo_grid" %>
         </span>
@@ -29,7 +29,20 @@
     </div>
 
     <div class="panelContador__elemento">
-      <div class="panelContador__icono-derecha">
+      <div class="panelContador__icono-cliente">
+        <span class="span_angulo_derecho">
+          <%= image_tag "iconos/usuarios", class: "minilogo_grid" %>
+        </span>
+      </div>
+      <div class="panelContador__contador">
+        <span class="span_angulo_derecho">
+          <span><%= Client.count %></span>
+        </span>
+        <span>Clientes</span>
+      </div>
+    </div>
+    <div class="panelContador__elemento">
+      <div class="panelContador__icono-artesano">
         <span class="span_angulo_derecho">
           <%= image_tag "iconos/artesanos_blanco", class: "minilogo_grid" %>
         </span>

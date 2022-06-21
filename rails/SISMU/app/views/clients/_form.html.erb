@@ -3,54 +3,57 @@
   <div class="formulario_clientes">
     <%= simple_form_for @client do |f| %> <br>
       <%= f.label :id, "Cedula:"%>
-      <%= f.input_field :id, class: 'input_clientes'%> <br> <br>
+      <%= f.input_field :id, class: 'input_clientes'%> <br>
       <% if @client.errors[:id].any? %>
         <span class="text-danger"><%= @client.errors[:id].first %></span>
-        <br>
       <% end %>
+      <br>
 
       <%= f.label :nombre_cli,"Nombre:"%>
-      <%= f.input_field :nombre_cli, class: 'input_clientes' %><br><br>
+      <%= f.input_field :nombre_cli, class: 'input_clientes' %> <br>
       <% if @client.errors[:nombre_cli].any? %>
         <span class="text-danger"><%= @client.errors[:nombre_cli].first %></span>
-        <br>
       <% end %>
+      <br>
 
       <%= f.label :nombre2_cli,"Segundo Nombre:"%>
-      <%= f.input_field :nombre2_cli,  class: 'input_clientes2'   %><br><br>
+      <%= f.input_field :nombre2_cli,  class: 'input_clientes2' %>
+      <br><br>
 
       <%= f.label :apellido_cli,"Apellido:" %> 
-      <%= f.input_field :apellido_cli, class: 'input_clientes' %> <br><br>
+      <%= f.input_field :apellido_cli, class: 'input_clientes' %> <br>
       <% if @client.errors[:apellido_cli].any? %>
         <span class="text-danger"><%= @client.errors[:apellido_cli].first %></span>
-        <br>
       <% end %>
+      <br>
 
       <%= f.label :apellido2_cli,"Segundo Apellido:"%> 
-      <%= f.input_field :apellido2_cli,class: 'input_clientes2' %> <br><br>
+      <%= f.input_field :apellido2_cli,class: 'input_clientes2' %>
+      <br><br>
 
       <%= f.label :tel_cli,"Télefono:" %> 
-      <%= f.input_field :tel_cli, class: 'input_clientes'%> <br><br>
+      <%= f.input_field :tel_cli, class: 'input_clientes'%> <br>
       <% if @client.errors[:tel_cli].any? %>
         <span class="text-danger"><%= @client.errors[:tel_cli].first %></span>
-        <br>
       <% end %>
+      <br>
 
       <%= f.label :correo_cli,"Correo Eléctronico:"%> 
-      <%= f.input_field :correo_cli, class: 'input_clientes2'%> <br><br>
+      <%= f.input_field :correo_cli, class: 'input_clientes2'%> <br>
       <% if @client.errors[:correo_cli].any? %>
         <span class="text-danger"><%= @client.errors[:correo_cli].first %></span>
-        <br>
       <% end %>
+      <br>
 
       <%= f.label :direccion_cli,"Dirección:"%>
-      <%= f.input_field :direccion_cli,class: 'input_clientes' %> <br><br>
+      <%= f.input_field :direccion_cli,class: 'input_clientes' %> <br>
       <% if @client.errors[:direccion_cli].any? %>
         <span class="text-danger"><%= @client.errors[:direccion_cli].first %></span>
-        <br>
       <% end %>
+      <br>
 
-      <%= f.button :submit,"Crear", class:"formulario_boton"%><br>
+      <%= f.button :submit,"Crear", class:"formulario_boton"%>
+      <br><br>
     <% end %>
   </div>
 </div>

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   # Clientes
   resources :clients
+
   # MATERIALES
   resources :materials do
     resources :materials_productos, module: :materials
@@ -17,14 +18,17 @@ Rails.application.routes.draw do
   resources :categories do
     resources :categories_productos, module: :categories
   end
+
   #PRODUCTO
   resources :productos do
     resources :categories_productos,module: :productos
   end
+
   # PEDIDOS FACTURAS
   resources :facturas do
     resources :detalles, module: :facturas, only: [:create ,:destroy]
   end
+  
   #colors
   resources :colors
 
@@ -49,6 +53,7 @@ Rails.application.routes.draw do
 
   #HOME
   root to: "home#index"
+  
   #DEVISE
   devise_for :users, controllers: {
     sessions: 'users/sessions'
