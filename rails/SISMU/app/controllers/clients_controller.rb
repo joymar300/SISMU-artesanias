@@ -1,7 +1,15 @@
 class ClientsController < ApplicationController
   before_action :authenticate_user!
   def index
+  
+    @q = params[:q]
     @clients = Client.all
+    if @q
+    
+      @clients = Client.where(:nombre_cli => @q )
+    else
+      @productos = Producto.all
+    end
   end
   def show
     @client = Client.find(params[:id])

@@ -26,7 +26,14 @@ class ProductionsController < ApplicationController
   end
 
   def index
+    
+    @q = params[:q]
     @productions = Production.all()
+    if @q
+      @productions = Production.where(:ref => @q )
+    else
+      @productions = Production.all()
+    end
   end
 
   def create
