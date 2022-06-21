@@ -5,7 +5,7 @@
 
 .panelContador {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25%, 2fr));
   background-color: #fff;
   /* border: solid 1px red; */
   padding: 10px;
@@ -37,7 +37,7 @@
 
 .panelRegistros__elemento {
   background-color: var(--fondo);
-  border: var(--borde);
+
   padding: 20px;
   /* font-size: 30px; */
   text-align: center;
@@ -57,6 +57,9 @@
   /* border: 1px solid purple;  */
  background-color: #49AD09;
 }
+#pro{
+  border: 1px solid #49AD09;
+}
 
 .panelContador__icono-categoria {
   width: 100%;
@@ -66,12 +69,16 @@
  background-color: #8b0dc6;
 }
 
+
 .panelContador__icono-cliente {
   width: 100%;
   height: 100%;
   font-size: 15px;
   /* border: 1px solid purple;  */
  background-color: #0D1EC6;
+}
+#cli{
+  border: 1px solid #0D1EC6;
 }
 
 .panelContador__icono-artesano {
@@ -80,6 +87,9 @@
   font-size: 15px;
   /* border: 1px solid purple;  */
   background-color: #DE1E08;
+}
+#art{
+  border: 1px solid #DE1E08;
 }
 
 .panelContador__contador {

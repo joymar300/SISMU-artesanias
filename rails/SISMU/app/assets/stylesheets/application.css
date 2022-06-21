@@ -288,12 +288,12 @@ nav {
 .section_login {
   display: flex;
   align-items: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .section_login>button {
   margin-right: 20px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 /* SALIR */
