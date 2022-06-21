@@ -34,7 +34,6 @@
           <%=link_to image_tag("iconos/usuario", class:"minilogo_pequeño"), profiles_path(@profile), title: "Perfíl" %>
           <span><%=link_to "Perfíl", profiles_path(@profile), title: "Perfíl" %></span>
         </button>
-        
 
         <section class="btn__salir">
           <%= link_to "Salir", destroy_user_session_path, :method => :delete, class: "salir" %>
@@ -56,14 +55,6 @@
           <div class="btn_hamburguesa"></div>
           <div class="btn_hamburguesa"></div>
           <div class="btn_hamburguesa"></div>
-        </div>
-      </div>
-      <%# LOGO SISMU %>
-      <div id="perfil_menu" title="Perfíl">
-        <div id="foto_menu">
-          <%#link_to image_tag("<%= @profile.foto "), profiles_path(@profile) %>
-          <%=link_to image_tag("logo_completo_sandra_munoz"), profiles_path(@profile) %>
-          <%# image_tag @profile.avatar.url if @profile.avatar.present? %>
         </div>
       </div>
       <%# ITEMS_MENU %>

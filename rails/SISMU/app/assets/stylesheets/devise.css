@@ -55,37 +55,26 @@ html {
   box-sizing: inherit; 
 }
 
-body {
-  font-size: 16px; /*1rem = 10px*/
-  /* background-repeat: no-repeat; */
-  /* background-position: 70%; */
-  background-image: url("img/pexels-julia-volk-6118897");
-  background-size:cover;
-  /* background-position:center; */
-  /* animation: slider 10s infinite alternate; */
-}
-
-/* @keyframes slider {
-  from {
-    background-size: 9a00px;
-    background-position: lef bottom;
-  }
-  to {
-    background-size: 1920px;
-    background-position: right center;
-  }
-} */
-
-.devise {
-  /* background-image: url("img/pexels-ksu&eli-8681052");
-  background-size:cover;
-  background-position:center; */
+.main_devise {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  font-size: 16px; /*1rem = 10px*/
+  background-image: url("img/pexels-julia-volk-6118897");
+  background-size:cover;
+}
+
+.devise {
+  margin: auto;
   border: none;
-  width: 50rem;
-  height: 45rem;
+  min-width: 35%;
+  min-height: 300px;
   box-shadow: 3px 7px 20px rgb(66, 66, 66);
   border-radius: 20px;
   background-color: #fff;
@@ -131,13 +120,11 @@ body {
 }
 
 
-
-
 /* inputs, labels and buttoms*/
 
 .devise .input {
   font-family: var(--fuentePrincipal);
-  margin-left: 5rem;
+  margin: 5rem;
   margin-top: 2rem;
   margin-bottom: 3rem;
   border: none;
@@ -157,9 +144,10 @@ body {
 
 .devise .buttom {
   font-family: var(--fuentePrincipal);
-  margin-left: 5rem;
+  /* margin-left: 5rem;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 20px; */
+  margin: 20px auto 20px 50px;
   border: 1px solid rgb(245, 176, 23);
   cursor: pointer;
   outline: none;
@@ -203,6 +191,7 @@ body {
 
 .devise .prueba {
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .footer {
@@ -215,3 +204,20 @@ body {
 .probar {
   display: block;
 }
+
+/* @media (max-width: 505px) {
+  .devise {
+    margin: auto;
+    min-width: 100%;
+    min-height: 300px;
+  }
+  .devise .input {
+    margin-left: 3rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .devise .input {
+    margin-left: 1rem;
+  }
+} */
