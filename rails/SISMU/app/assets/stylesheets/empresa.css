@@ -1,15 +1,17 @@
 .container_empresa{
     text-align: center;
+    margin-top: -100px;
 }
 .container_empresa-text{
     color: #F5B041;
 }
 .formulario_empresa{
     width: 400px;
-    height:290px;
+    padding: 20px;
     margin: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     border-radius: 20px;
+    
 }
 .formulario_boton{
     background-color: #F5B041;

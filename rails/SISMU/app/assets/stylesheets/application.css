@@ -26,7 +26,7 @@
   --bgcolor: rgb(52, 52, 52);
   --hovercolor: rgb(23, 23, 23);
   --width-collapsed: 50px;
-  --color: #fff; */
+  --color: #fff; 
 
     /* COLORES MODO LIGHT */
     --width: 200px;
@@ -345,5 +345,5 @@ footer {
 } */
 
 footer p {
-  color: var(--color);
+  color: var(--fondoMain);
 }
