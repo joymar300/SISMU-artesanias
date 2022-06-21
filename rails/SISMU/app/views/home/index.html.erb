@@ -1,12 +1,12 @@
 <main class="main_index"> 
   <div class="panelContador">
     <div class="panelContador__elemento">
-      <div class="panelContador__icono-canasta">
+      <div class="panelContador__icono-producto">
         <span class="span_angulo_derecho">
-          <%= image_tag "iconos/producto_blanco", class: "minilogo_grid" %>
+          <%= image_tag "iconos/lista_blanca", class: "minilogo_grid" %>
         </span>
       </div>
-      <div class="panelContador__contador">
+      <div class="panelContador__contador"  id="pro">
         <span class="span_angulo_derecho">
           <span><%= Producto.count %></span>
         </span>
@@ -14,13 +14,13 @@
       </div>
     </div>
 
-    <div class="panelContador__elemento">
-      <div class="panelContador__icono-flor">
+    <div class="panelContador__elemento" >
+      <div class="panelContador__icono-categoria">
         <span class="span_angulo_derecho">
           <%= image_tag "iconos/materiaPrima_blanco", class: "minilogo_grid" %>
         </span>
       </div>
-      <div class="panelContador__contador">
+      <div class="panelContador__contador" id="cat">
         <span class="span_angulo_derecho">
           <span><%= Category.count %></span>
         </span>
@@ -28,13 +28,26 @@
       </div>
     </div>
 
+    <div class="panelContador__elemento" >
+      <div class="panelContador__icono-cliente">
+        <span class="span_angulo_derecho">
+          <%= image_tag "iconos/usuarios", class: "minilogo_grid" %>
+        </span>
+      </div>
+      <div class="panelContador__contador" id="cli">
+        <span class="span_angulo_derecho">
+          <span><%= Client.count %></span>
+        </span>
+        <span>Clientes</span>
+      </div>
+    </div>
     <div class="panelContador__elemento">
-      <div class="panelContador__icono-derecha">
+      <div class="panelContador__icono-artesano">
         <span class="span_angulo_derecho">
           <%= image_tag "iconos/artesanos_blanco", class: "minilogo_grid" %>
         </span>
       </div>
-      <div class="panelContador__contador">
+      <div class="panelContador__contador" id="art">
         <span class="span_angulo_derecho">
           <span><%= Artesano.count %></span>
         </span>
@@ -46,14 +59,8 @@
   <%# SEPARADOR %>
 
   <div class="panelRegistros">
-    <div class="panelRegistros__elemento">
-      Productos Más Vendidos
-    </div>
-    <div class="panelRegistros__elemento">
-      Ultimás Ventas
-    </div>
-    <div class="panelRegistros__elemento">
-      Añadidos Recientemente
+    <div class="panelRegistros__elemento" id="pro">
+      <h4>Productos Añadidos Recientemente</h4>
       <table>
           <thead>
               <tr >
@@ -71,6 +78,51 @@
               </tr>
             <% end %>
           </tbody>
+      </table>
+    </div>
+    <div class="panelRegistros__elemento" id="cli">
+      <h4>Clientes Añadidos Recientemente</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Cedula</th>
+            <th>Primer Nombre</th>
+            <th>Primer Apelldio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @clients.each do |client| %>
+              <tr>
+                <td><%= client.id %> </td> 
+                <td><%= client.nombre_cli %></td> 
+                <td><%= client.apellido_cli %></td> 
+              </tr>
+            <% end %>
+         
+        </tbody>
+      </table>
+    </div>
+    <div class="panelRegistros__elemento" id="art">
+      <h4>Artesanos Añadidos Recientemente</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Cedula</th>
+            <th>Primer Nombre</th>
+            <th>Primer Apelldio</th>
+       
+          </tr>
+        </thead>
+        <tbody>
+          <% @artesanos.each do |artesano| %>
+              <tr>
+                <td><%= artesano.id %></td> 
+                <td><%= artesano.nombre %></td> 
+                <td><%= artesano.apellido %></td> 
+              </tr>
+            <% end %>
+         
+        </tbody>
       </table>
     </div> 
   </div>

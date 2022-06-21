@@ -28,7 +28,15 @@ class FacturasController < ApplicationController
   end
 
   def index
+   
+    @q = params[:q]
     @facturas = Factura.all()
+    if @q
+
+      @facturas = Factura.where(:id => @q )
+    else
+      @facturas = Factura.all()
+    end
   end
 
   def create

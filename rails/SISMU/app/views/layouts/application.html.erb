@@ -30,11 +30,10 @@
         <span id="sismu__central"><span>SISMU <i>Artesanías</i></span> </span>
       </section>
       <section class="section_login">
-        <button>
+        <button class="btn__login">
           <%=link_to image_tag("iconos/usuario", class:"minilogo_pequeño"), profiles_path(@profile), title: "Perfíl" %>
           <span><%=link_to "Perfíl", profiles_path(@profile), title: "Perfíl" %></span>
         </button>
-        
 
         <section class="btn__salir">
           <%= link_to "Salir", destroy_user_session_path, :method => :delete, class: "salir" %>
@@ -43,8 +42,10 @@
       </section>
     </nav>
     
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="centrar">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
 
 
     <%# BARRA LATERAL %>
@@ -58,19 +59,11 @@
           <div class="btn_hamburguesa"></div>
         </div>
       </div>
-      <%# LOGO SISMU %>
-      <div id="perfil_menu" title="Perfíl">
-        <div id="foto_menu">
-          <%#link_to image_tag("<%= @profile.foto "), profiles_path(@profile) %>
-          <%=link_to image_tag("logo_completo_sandra_munoz"), profiles_path(@profile) %>
-          <%# image_tag @profile.avatar.url if @profile.avatar.present? %>
-        </div>
-      </div>
       <%# ITEMS_MENU %>
       <div id="menu_items">
         <div class="item_menu" title="Inicio">
           <%= link_to root_path do %>
-            <%= image_tag("iconos/home_outline", class: "icon_menu" ) %>
+            <%= image_tag("iconos/home_blanco", class: "icon_menu" ) %>
             <div class="title_icon_menu"><span>Inicio</span></div>
           <% end %>
         </div>
@@ -84,77 +77,56 @@
 
         <div class="item_menu" title="Clientes">
           <%= link_to clients_url do %>
-            <%= image_tag("iconos/usuarios", class: "icon_menu") %>
+            <%= image_tag("iconos/usuario_blanco", class: "icon_menu") %>
             <div class="title_icon_menu"><span>Clientes</span></div>
-          <% end %>
-        </div>
-
-        <div class="item_menu" title="Produccion">
-          <%= link_to productions_url do %>
-            <%= image_tag("iconos/canasta", class:"icon_menu") %>
-            <div class="title_icon_menu"><span>Producción</span></div>
           <% end %>
         </div>
 
         <div class="item_menu" title="Artesanos">
           <%= link_to artesanos_url do %>
-            <%= image_tag("iconos/construccion", class: "icon_menu") %>
+            <%= image_tag("iconos/manos", class: "icon_menu") %>
             <div class="title_icon_menu"><span>Artesanos</span></div>
           <% end %>
-
         </div>
+
+        <div class="item_menu" title="Produccion">
+          <%= link_to productions_url do %>
+            <%= image_tag("iconos/canasta_blanco", class:"icon_menu") %>
+            <div class="title_icon_menu"><span>Producción</span></div>
+          <% end %>
+        </div>
+
         <div class="item_menu" title="Empresa">
           <%= link_to empresas_url do %>
-            <%= image_tag("iconos/empresa", class: "icon_menu") %>
+            <%= image_tag("iconos/edificio", class: "icon_menu") %>
             <div class="title_icon_menu"><span>Empresas</span></div>
           <% end %>
         </div>
-        
-        <%# <div class="item_menu" title="Facturasss">
-          <ol title="Facturasss">
-            <li>
-              <%= link_to facturas_url do %>
-                <%# image_tag("iconos/recibo", class:"icon_menu") 
-                <div class="title_icon_menu"><span>Facturas</span></div>
-              <% end 
-            </li>
-            <li>
-              <%# link_to facturas_url do 
-                <div class="title_icon_menu"><span>Facturas</span></div>
-              <% end 
-            </li>
-            <li>
-              <%# link_to emfacturas_url do 
-                <div class="title_icon_menu"><span>Facturas Empresas</span></div>
-              <% end 
-            </li>
-          </ol>
-        </div> %>
 
-        <div class="item_menu" title="factura Empresas">
+        <div class="item_menu" title="Factura Empresas">
           <%= link_to emfacturas_url do %>
-            <%= image_tag("iconos/recibo", class: "icon_menu") %>
+            <%= image_tag("iconos/recibo_blanco", class: "icon_menu") %>
             <div class="title_icon_menu"><span>Facturas Empresas</span></div>
           <% end %>
         </div>
 
         <div class="item_menu" title="Facturas">
           <%= link_to facturas_url do %>
-            <%= image_tag("iconos/factura", class:"icon_menu") %>
+            <%= image_tag("iconos/factura_gris", class:"icon_menu") %>
             <div class="title_icon_menu"><span>Facturas</span></div>
           <% end %>
         </div>
 
         <div class="item_menu" title="Ajustes">
           <%= link_to "#" do %>
-            <%= image_tag("iconos/ajustes_outline", class: "icon_menu") %>
+            <%= image_tag("iconos/ajuste_blanco", class: "icon_menu") %>
             <div class="title_icon_menu"><span>Ajustes</span></div>
           <% end %>
         </div>
 
         <div class="item_menu" title="Información">
           <%= link_to "https://paginawebgusdav.000webhostapp.com/documentacion", target: "_blank" do %>
-            <%= image_tag("iconos/info", class:"icon_menu") %>
+            <%= image_tag("iconos/informacion_blanco", class:"icon_menu") %>
             <div class="title_icon_menu"><span>Información</span></div>
           <% end %>
         </div>
@@ -167,7 +139,7 @@
 
     <%# FOOTER %>
     <footer>
-      <p>Version 1.1</p>
+      <p>Inventario web Version 1.2</p>
     </footer>
 
     <%# JAVASCRIPT %>

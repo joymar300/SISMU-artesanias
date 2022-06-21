@@ -1,7 +1,15 @@
 class ArtesanosController < ApplicationController
   before_action :authenticate_user!
   def index
-    @artesanos = Artesano.all
+   
+    @q = params[:q]
+    @artesanos = Artesano.all()
+    if @q
+    
+      @artesanos = Artesano.where(:nombre => @q )
+    else
+      @artesanos = Artesano.all()
+    end
   end
   def show
     @artesano = Artesano.find(params[:id])

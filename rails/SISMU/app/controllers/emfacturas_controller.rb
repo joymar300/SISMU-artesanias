@@ -27,7 +27,15 @@ class EmfacturasController < ApplicationController
   end
 
   def index
+
+    @q = params[:q]
     @emfacturas = Emfactura.all()
+    if @q
+
+      @emfacturas = Emfactura.where(:id => @q )
+    else
+      @emfacturas = Emfactura.all()
+    end
   end
 
   def create

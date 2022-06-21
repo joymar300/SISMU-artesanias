@@ -1,43 +1,50 @@
 .container_clientes{
-    text-align: center;
-}
-.container_clientes-text{
-    color: #F5B041;
-}
-.formulario_clientes{
-    width: 480px;
-    height:450px;
-    margin: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-    border-radius: 20px;
-}
-.formulario_boton{
-    background-color: #F5B041;
-    border-radius: 4px;
-}
-.segundo_nombre{
-   border: solid 1px red;
-}
-.segundo_apellido{
-    color: #F5B041;
+  text-align: center;
+  margin: -80px auto 50px auto;
 }
 
+.container_clientes-text{
+  color: #F5B041;
+  margin-top: 40px;
+}
+
+.formulario_clientes{
+  background-color: #fff;
+  width: 480px;
+  min-height:450px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  margin-top: -15px;
+  margin-bottom: -35px;
+}
+
+.formulario_boton{
+  background-color: #F5B041;
+  border-radius: 4px;
+}
+
+.segundo_nombre{
+  border: solid 1px red;
+}
+
+.segundo_apellido{
+  color: #F5B041;
+}
 
 .formulario_clientes .input_clientes {
-     
-    margin-left: 80px;
+  margin-left: 80px;
 }
-
 
 .formulario_clientes .input_clientes1 {
-     border: 1px solid blue; 
-    margin-left: 4px;
+  border: 1px solid blue; 
+  margin-left: 4px;
 }
+
 .input_clientes1{
-    margin-left:85px;
-    
+  margin-left:85px; 
 }
+
 .label_cliente1{
-    margin-left:10px;
-    
+  margin-left:10px;
 }

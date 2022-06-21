@@ -1,0 +1,26 @@
+
+.containerProds{
+  text-align: center;
+  margin: -700px auto 50px auto;
+
+}
+
+.formularioProds{
+  background-color: #fff;
+  border-radius: 10px;
+  width: 280px;
+  min-height: 100px;
+  margin: auto;
+  padding: 10px;
+  /* box-shadow: 3px 3px goldenrod, -1em 0 0.4em goldenrod; */
+  /* box-shadow: 60px -16px #F5B041; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.containerProds_text{
+  color: #F5B041;
+}
+
+.input_produccion {
+  margin: 10px;
+}
