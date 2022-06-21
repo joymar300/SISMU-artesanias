@@ -63,9 +63,10 @@ body {
 
 .main_index {
   /* max-height: 100%; */
-  /* border: 1px solid green; */
+  /* border: 1px solid green;  */
+  margin-top: 0%;
   /* margin: -50px auto 50px auto; */
-  margin-top: -5%;
+  /* margin-top: -5%; */
 }
 
 /* BODY CON MENU LATERAL ABIERTO */
@@ -156,11 +157,12 @@ nav {
 }
 
 #sidemenu #header_menu #menu_btn:hover {
-  background-color: var(--hovercolor);
+  background-color: var(--colorOscuro);
 }
 
 #sidemenu #header_menu #menu_btn .btn_hamburguesa {
-  background-color: #ffa500;
+  /* background-color: #ffa500; */
+  background-color: #fff;
   width: 100%;
   height: 2px;
   margin: 5px 0;
@@ -217,7 +219,7 @@ nav {
 }
 
 #sidemenu #menu_items .item_menu a:hover {
-  background-color: var(--hovercolor);
+  background-color: var(--colorOscuro);
 }
 
 #sidemenu #menu_items .item_menu .icon_menu {
@@ -285,6 +287,8 @@ nav {
   cursor: pointer;
 }
 
+/* LOGIN */
+
 .section_login {
   display: flex;
   align-items: center;
@@ -302,22 +306,36 @@ nav {
   height: 15px;
 }
 
+.btn__login {
+  cursor: pointer;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+.btn__login:hover {background-color: rgb(173, 166, 166)}
+
+.btn__login:active {
+  background-color: rgb(224, 201, 201);
+  box-shadow: 0 5px rgb(122, 120, 120);
+  transform: translateY(3px);
+}
 .btn__salir {
   cursor: pointer;
   background-color: red;
   padding: 5px;
   border-radius: 5px;
-  border: 2px solid #000;
+  border: 1px solid #000;
 }
 
-.btn__salir:hover {background-color: rgb(235, 102, 102)}
+.btn__salir:hover {background-color: rgb(172, 13, 13)}
 
 .btn__salir:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
+  background-color: red;
+  box-shadow: 0 5px rgb(192, 47, 47);
   transform: translateY(3px);
 }
-
 
 .salir {
   color: #000;

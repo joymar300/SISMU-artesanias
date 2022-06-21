@@ -201,6 +201,10 @@ html {
   border: none;
 }
 
+.footer>p {
+  color: #000;
+}
+
 .probar {
   display: block;
 }
