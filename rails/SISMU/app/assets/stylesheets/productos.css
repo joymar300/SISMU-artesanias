@@ -153,6 +153,22 @@ tr, td,th{
   /* box-shadow: 60px -16px #F5B041; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
+.formulario_profile{
+  background-color: #fff;
+  text-align: center;
+  /* padding: 10px; */
+  border-radius: 10px;
+  width: 400px;
+  min-height: 320px;
+  margin: auto;
+  /* box-shadow: 3px 3px goldenrod, -1em 0 0.4em goldenrod; */
+  /* box-shadow: 60px -16px #F5B041; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.imagen_profile {
+  margin: auto;
+}
 
 .containerPro_text{
   color: #F5B041;

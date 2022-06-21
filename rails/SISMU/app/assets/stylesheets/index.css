@@ -5,7 +5,7 @@
 
 .panelContador {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25%, 2fr));
+  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
   background-color: #fff;
   /* border: solid 1px red; */
   padding: 10px;
