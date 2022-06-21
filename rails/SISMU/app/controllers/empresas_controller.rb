@@ -1,7 +1,15 @@
 class EmpresasController < ApplicationController
   before_action :authenticate_user!
   def index
+   
+    @q = params[:q]
     @empresas = Empresa.all
+    if @q
+     
+      @empresas = Empresa.where(:nombre => @q )
+    else
+      @empresas = Empresa.all
+    end
   end
   def show
     @empresa = Empresa.find(params[:id])
