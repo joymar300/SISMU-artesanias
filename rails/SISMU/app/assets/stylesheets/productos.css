@@ -14,9 +14,10 @@
 .container  {
   border: 2px solid black;
   border-radius: 10px;
+  background-color: #fff;
   width: 80%;
   height: 380px;
-  margin: 50px auto;
+  margin: -50px auto 50px auto;
   /* margin-top: 50px; */
   padding-bottom: 30px;
   /* height: 100px; */
@@ -58,6 +59,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.form_input {
+  border: 1px solid red;
+  width: 100px;
 }
 
 .containerInfo__titulo{
@@ -134,9 +140,11 @@ tr, td,th{
 
 .containerPro{
   text-align: center;
+  margin: -50px auto 50px auto;
+
 }
 .formulario{
-
+  background-color: #fff;
   border-radius: 10px;
   width: 280px;
   height: 320px;
@@ -166,3 +174,44 @@ tr, td,th{
   color: white;
   background-color: red;
 }
+/* ***CREAR*** */
+
+/* BUSCADOR */
+
+.container-4{
+  /* overflow: hidden; */
+  width: 200px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  /* border: 0.5px solid black; */
+}
+
+.container-4 input#search{
+  width: 200px;
+  height: 35px;
+  background: #fff;
+  /* border: none; */
+  font-size: 10pt;
+  float: left;
+  color: #000;
+  padding-left: 45px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.container-4 .icon{
+  position: absolute;
+  /* top: 50%; */
+  margin-left: 8px;
+  margin-top: 5px;
+  z-index: 1;
+  height: 15px;
+}
+
+.container-4 input#search:hover, .container-1 input#search:focus, .container-1 input#search:active{
+  outline:none;
+  background: #d3d2d2;
+}
+/* ********** */

@@ -1,9 +1,9 @@
 .login {
   margin: 0;
-  padding: 20px;
+  /* padding: 20px; */
   font-family: sans-serif;
-  display: flex;
   /* background-size: cover; */
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -32,46 +32,6 @@
   padding: 5px;
 }
 
-
-/* .passwordDevise {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-.containerDevise .field {
-  margin-top: 20px;
-  font-weight: bold;
-  display: block;
-}
-
-.containerDevise .field .field__input {
-  margin: 2px;
-  border: none;
-  border-bottom: 1px solid #000;
-  background: transparent;
-  outline: none;
-  height: 40px;
-  font-size: 16px;
-}
-
-.containerDevise__boton {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 1px solid rgb(245, 148, 23);
-  cursor: pointer;
-  outline: none;
-  height: 40px;
-  width: 100px;
-  background: rgb(245, 148, 23);
-  border-radius: 20px;
-  color: white;
-}
-
-.containerDevise__boton:active {
-  background: red;
-}
-
 a {
   color: black;
   text-decoration: none;
@@ -97,11 +57,46 @@ html {
 
 body {
   font-size: 16px; /*1rem = 10px*/
+  /* background-repeat: no-repeat; */
+  /* background-position: 70%; */
+  background-image: url("img/pexels-julia-volk-6118897");
+  background-size:cover;
+  /* background-position:center; */
+  /* animation: slider 10s infinite alternate; */
+}
+
+/* @keyframes slider {
+  from {
+    background-size: 9a00px;
+    background-position: lef bottom;
+  }
+  to {
+    background-size: 1920px;
+    background-position: right center;
+  }
+} */
+
+.devise {
+  /* background-image: url("img/pexels-ksu&eli-8681052");
+  background-size:cover;
+  background-position:center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  width: 50rem;
+  height: 45rem;
+  box-shadow: 3px 7px 20px rgb(66, 66, 66);
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.fondo_image {
+  position: relative;
 }
 
 .devise h1, h2, h3, h4, h5, h6, p{
   font-family: var(--fuentePrincipal);
-
 }
 
 .devise p, li {
@@ -135,14 +130,6 @@ body {
   font-size: 2rem;
 }
 
-.devise {
-  border: none;
-  width: 50rem;
-  height: 45rem;
-  box-shadow: 3px 7px 20px rgb(66, 66, 66);
-  border-radius: 20px;
-  
-}
 
 
 
@@ -220,6 +207,9 @@ body {
 
 .footer {
   margin-top: 5rem;
+  height: 50px;
+  background-color: #fff;
+  border: none;
 }
 
 .probar {

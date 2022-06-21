@@ -1,23 +1,24 @@
 <main class = "devise">
+  <%# image_tag("img/embroidery-g521ac67c6_1920", class: "fondo_image") %>
     <h2>Iniciar Sesión</h2>
 
-     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
     <div class="">
         <%= f.label :correo_Electronico, class: "label"  %><br />
         <%= f.email_field :email, autofocus: true, class:"input", autocomplete: "email", placeholder: "Ingresar Correo" %>
     </div>
 
-     <div class="">
+    <div class="">
         <%= f.label :contraseña, class: "label" %><br />
         <%= f.password_field :password, class:"input", autocomplete: "current-password", placeholder: "Ingresar Contraseña" %>
     </div>
 
     <% if devise_mapping.rememberable? %>
-        <div>
+      <div>
         <%= f.check_box :remember_me, class: "recordar" %>
         <%= f.label :Recordar, class:"label__recordar" %>
-        </div>
+      </div>
     <% end %>
 
     <div class="">
@@ -26,10 +27,10 @@
     <% end %>
 
     <div class="prueba">
-         <%= render "devise/shared/links" %>
+        <%= render "devise/shared/links" %>
     </div>
 </main>
 
 <footer class= "footer"> 
-        <p>Version 1.2</p>
+  <p>Inventariado Web Version 1.2</p>
 </footer>
