@@ -10,6 +10,7 @@
           <span class="text-danger"><%= @producto.errors[:referencia_pro].first %></span>
           <br>
         <% end %>
+        <br>
 
         <%= f.label :nombre_pro,'Nombre del producto: ' %> <br>
         <%= f.input_field :nombre_pro %> <br>
@@ -17,6 +18,7 @@
           <span class="text-danger"><%= @producto.errors[:nombre_pro].first %></span>
           <br>
         <% end %>
+        <br>
 
         <%= f.label :precio_pro, 'Precio del producto: ' %> <br>
         <%= f.input_field :precio_pro %> <br>
@@ -24,9 +26,11 @@
           <span class="text-danger"><%= @producto.errors[:precio_pro].first %></span>
           <br>
         <% end %>
+        <br>
 
         <%= f.association :categories, label: 'Categoria:' , as: :check_boxes, label_method: :tipo_categoria %> 
-        <div><%= f.button :submit, 'Actualizar', class: "formulario_boton" %></div>
+        <br>
+        <div><%= f.button :submit, 'Crear', class: "formulario_boton" %></div>
         <br>
       <% end %>
   </div>

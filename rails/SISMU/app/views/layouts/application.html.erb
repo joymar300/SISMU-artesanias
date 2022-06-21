@@ -14,7 +14,7 @@
     <%= stylesheet_link_tag "clientes", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "artesano", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "empresa", "data-turbo-track": "reload" %>
-     <%= stylesheet_link_tag "empre_factura", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "empre_factura", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags "reload" %>
   </head>
 
@@ -29,9 +29,17 @@
       <section>
         <span id="sismu__central"><span>SISMU <i>Artesanías</i></span> </span>
       </section>
-      <section class="btn__salir">
+      <section class="section_login">
+        <button>
+          <%=link_to image_tag("iconos/usuario", class:"minilogo_pequeño"), profiles_path(@profile), title: "Perfíl" %>
+          <span><%=link_to "Perfíl", profiles_path(@profile), title: "Perfíl" %></span>
+        </button>
+        
+
+        <section class="btn__salir">
           <%= link_to "Salir", destroy_user_session_path, :method => :delete, class: "salir" %>
           <%= image_tag "iconos/sign_out", class: "minilogo_pequeño salir" %>
+        </section>
       </section>
     </nav>
     
@@ -55,16 +63,23 @@
         <div id="foto_menu">
           <%#link_to image_tag("<%= @profile.foto "), profiles_path(@profile) %>
           <%=link_to image_tag("logo_completo_sandra_munoz"), profiles_path(@profile) %>
+          <%# image_tag @profile.avatar.url if @profile.avatar.present? %>
         </div>
       </div>
       <%# ITEMS_MENU %>
       <div id="menu_items">
+        <div class="item_menu" title="Inicio">
+          <%= link_to root_path do %>
+            <%= image_tag("iconos/home_outline", class: "icon_menu" ) %>
+            <div class="title_icon_menu"><span>Inicio</span></div>
+          <% end %>
+        </div>
+
         <div class="item_menu" title="Productos">
           <%= link_to productos_url do %>
-            <%= image_tag("iconos/inventario", class: "icon_menu" ) %>
+            <%= image_tag("iconos/lista_blanca", class: "icon_menu" ) %>
             <div class="title_icon_menu"><span>Productos</span></div>
           <% end %>
-          
         </div>
 
         <div class="item_menu" title="Clientes">
@@ -130,11 +145,6 @@
           <% end %>
         </div>
 
-
-        <%# SEPARADOR MENU %>
-        <div class="item_menu separador_menu"></div>
-        <%# ---- %>
-
         <div class="item_menu" title="Ajustes">
           <%= link_to "#" do %>
             <%= image_tag("iconos/ajustes_outline", class: "icon_menu") %>
@@ -142,12 +152,8 @@
           <% end %>
         </div>
 
-        <%# SEPARADOR MENU %>
-        <div class="item_menu separador_menu"></div>
-        <%# ---- %>
-
         <div class="item_menu" title="Información">
-          <%= link_to "#" do %>
+          <%= link_to "https://paginawebgusdav.000webhostapp.com/documentacion", target: "_blank" do %>
             <%= image_tag("iconos/info", class:"icon_menu") %>
             <div class="title_icon_menu"><span>Información</span></div>
           <% end %>
