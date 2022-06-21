@@ -141,8 +141,8 @@ tr, td,th{
 .containerPro{
   text-align: center;
   margin: -50px auto 50px auto;
-
 }
+
 .formulario{
   background-color: #fff;
   border-radius: 10px;
@@ -155,7 +155,7 @@ tr, td,th{
 }
 
 .containerPro_text{
-  color: #F5B041 ;
+  color: #F5B041;
 }
 
 .formulario_boton {
