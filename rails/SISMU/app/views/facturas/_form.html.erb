@@ -1,8 +1,11 @@
 <div class="formulario_factura">
-    <%= simple_form_for @factura do |f| %><br>
-        <%= f.association :client, label_method: :nombre_completo %><br>
-        <%= f.label :fechafin, "Fecha de entrega", class: 'label_factura'%>
-         <%= f.input_field :fechafin, class: 'input_factura'%><br><br>
-        <%= f.button :submit, "Crear Factura", class:"factura_boton" %><br>
-    <% end %>
+  <%= simple_form_for @factura do |f| %><br>
+    <span class="span_cliente">
+      <%= f.label :client, "Cliente:" %>
+      <%= f.association :client, label_html: { hidden: true }, label_method: :nombre_completo, error: "Seleccionar" %><br>
+    </span>
+    <%= f.label :fechafin, "Fecha de entrega", class: 'label_factura'%>
+    <%= f.input_field :fechafin, class: 'input_factura'%><br><br>
+    <%= f.button :submit, "Crear Factura", class:"factura_boton" %><br>
+  <% end %>
 </div>

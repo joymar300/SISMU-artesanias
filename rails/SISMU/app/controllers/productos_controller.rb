@@ -2,7 +2,14 @@ class ProductosController < ApplicationController
   
   before_action :authenticate_user!
   def index
+    @q = params[:q]
     @productos = Producto.all
+    if @q
+      # @productos = Producto.where(:referencia_pro => @q )
+      @productos = Producto.where(:nombre_pro => @q )
+    else
+      @productos = Producto.all
+    end
   end
   def show
     @producto = Producto.find(params[:id])

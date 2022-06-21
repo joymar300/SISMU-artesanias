@@ -1,35 +1,38 @@
 <main class ="devise">
-    <h2>Regístrate</h2>
+  <h2>Regístrate</h2>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
 
-    <div>
-         <%= f.email_field :email, autofocus: true, class:"input", autocomplete: "email", placeholder: "Correo electronico"%>
-    </div>
+  <div>
+    <%= f.label :correo_Electronico, class: "label"  %><br />
+    <%= f.email_field :email, autofocus: true, class:"input", autocomplete: "email", placeholder: "Correo electronico" %>
+  </div>
 
-    <div>
-        <% if @minimum_password_length %>
-        <% end %>
-        <%= f.password_field :password, class:"input", autocomplete: "new-password", placeholder: "Contraseña (mínimo 6 carácteres)" %>
-    </div>
-
-    <div>
-        <%= f.password_field :password_confirmation, class:"input", autocomplete: "new-password", placeholder: "Confirmar contraseña" %>
-    </div>
-
-    <div class="actions">
-        <%= f.submit "Regístrar", class:"buttom" %>
-    </div>
+  <div>
+    <% if @minimum_password_length %>
     <% end %>
+    <%= f.label :contraseña, class: "label"  %><br />
+    <%= f.password_field :password, class:"input", autocomplete: "new-password", placeholder: "Contraseña (mínimo 6 carácteres)" %>
+  </div>
 
-    <div class="prueba">
-        <%= render "devise/shared/links" %>
-    </div>
+  <div>
+    <%= f.label :confirmar_contraseña, class: "label"  %><br />
+      <%= f.password_field :password_confirmation, class:"input", autocomplete: "new-password", placeholder: "Confirmar contraseña" %>
+  </div>
+
+  <div class="actions">
+      <%= f.submit "Regístrar", class:"buttom" %>
+  </div>
+  <% end %>
+
+  <div class="prueba">
+      <%= render "devise/shared/links" %>
+  </div>
 </main>
 
 <footer class= "footer"> 
-        <p>Version 1.2</p>
+  <p>Inventariado Web Version 1.2</p>
 </footer>
 
 

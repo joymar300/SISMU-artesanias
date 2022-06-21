@@ -1,19 +1,24 @@
-<section class="containerDevise passwordDevise">
+<main class="devise">
   <h2>Recuperar contraseña</h2>
 
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="field">
-      <%= f.label :Correo %><br />
-      <%= f.email_field :email, autofocus: true, class:"field__input", autocomplete: "email" %>
+      <%= f.label :Correo, class: "label"  %><br />
+      <%= f.email_field :email, autofocus: true, class:"input", autocomplete: "email", placeholder: "Correo electrónico" %>
     </div>
 
     <div class="actions">
-      <%= f.submit "Recuperar", class:"containerDevise__boton" %>
+      <%= f.submit "Recuperar", class:"buttom" %>
     </div>
   <% end %>
 
-  <%= render "devise/shared/links" %>
+  <div class="prueba">
+    <%= render "devise/shared/links" %>
+  </div>  
   <br>
-</section>
+</main>
+<footer class= "footer"> 
+  <p>Inventariado Web Version 1.2</p>
+</footer>

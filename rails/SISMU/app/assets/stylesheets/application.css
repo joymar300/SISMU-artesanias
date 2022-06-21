@@ -18,20 +18,28 @@
 /* ESTILOS GENERALES: APPLICATION */
 
 :root {
+
   /* COLORES MODO DARK */
+
 /*   --width: 200px;
   --padding: 10px;
   --bgcolor: rgb(52, 52, 52);
   --hovercolor: rgb(23, 23, 23);
   --width-collapsed: 50px;
   --color: #fff; */
+
     /* COLORES MODO LIGHT */
     --width: 200px;
     --padding: 10px;
-    --bgcolor: rgb(235, 235, 235);
+    /* --bgcolor: rgb(235, 235, 235); */
+    --bgcolor: #303030;
     --hovercolor: #F5B041;
     --width-collapsed: 50px;
-    --color: #ffa500;
+    /* --colorOscuro: #c40505; */
+    --fondoMain: #EBF0F4;
+    --colorOscuro: #eb7f26;
+    --colorMedio: #fabc0b;
+    --colorBajo: #ffb109;
     --color-black: #000;
 
     --fuentePrincipal: 'Open Sans';
@@ -39,6 +47,7 @@
 
 body {
   /* font-family: Arial, Helvetica, sans-serif; */
+  background-color: var(--fondoMain);
   font-family: var(--fuentePrincipal);
   font-size: 18px;
   position: absolute;
@@ -47,11 +56,16 @@ body {
   right: 0;
   left: 0;
   margin-left: var(--width-collapsed);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-main {
-  max-height: 100%;
+.main_index {
+  /* max-height: 100%; */
   border: 1px solid green;
+  /* margin: -50px auto 50px auto; */
+  margin-top: -22%;
 }
 
 /* BODY CON MENU LATERAL ABIERTO */
@@ -91,9 +105,9 @@ main {
 /* NAV */
 
 nav {
-  background-color: var(--bgcolor);
+  background-color: var(--colorOscuro);
   border: 1px solid var(--hovercolor);
-  margin-top: -18px;
+  /* margin-top: -18px; */
   height: 50px;
   display: flex;
   justify-content: space-between;
@@ -109,15 +123,9 @@ nav {
 }
 
 #sismu__central {
-  color: var(--color);
+  color: #fff;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 25px;
- 
-}
-#sismu__central>span {
-  text-shadow: 0 0 30px red;
-  
-  
 }
 
 /* CABECERA_MENU LATERAL */
@@ -131,6 +139,7 @@ nav {
 #sidemenu #header_menu #title_menu {
   box-sizing: border-box;
   overflow: hidden;
+  color: #fff;
 }
 
 #sidemenu #header_menu #title_menu,
@@ -223,6 +232,7 @@ nav {
 
 #sidemenu #menu_items .item_menu .title_icon_menu {
   padding: var(--padding) 0;
+  color: #fff;
 }
 
 #sidemenu #menu_items .item_menu.separador_menu {
@@ -275,6 +285,17 @@ nav {
   cursor: pointer;
 }
 
+.section_login {
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.section_login>button {
+  margin-right: 20px;
+  border: 1px solid red;
+}
+
 /* SALIR */
 
 .minilogo_pequeño {
@@ -289,6 +310,14 @@ nav {
   border: 2px solid #000;
 }
 
+.btn__salir:hover {background-color: rgb(235, 102, 102)}
+
+.btn__salir:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(3px);
+}
+
 
 .salir {
   color: #000;
@@ -300,11 +329,20 @@ nav {
 footer {
   border: 2px solid var(--hovercolor);
   background-color: var(--bgcolor);
-  width: 99.6%;
+  width: 100%;
   text-align: center;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: end; */
 }
+
+/* body>footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+} */
 
 footer p {
   color: var(--color);

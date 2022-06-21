@@ -4,13 +4,15 @@
     color: #F5B041;
 }
 
-.formulario_factura{    
-    text-align: center;
-    border-radius: 5px;
-    width: 400px;
-    height: 200px;
-    margin: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+.formulario_factura{ 
+  background-color: #fff;   
+  text-align: center;
+  border-radius: 5px;
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  margin-top: 0%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 .factura_boton{
     border-radius: 5px;
@@ -19,4 +21,16 @@
 .label_factura{
     /* border: solid 1px blue; */
     display: block;
+}
+
+.span_cliente {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.error{
+  color: red;
+  font-weight: bold;
 }
