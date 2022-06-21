@@ -5,9 +5,9 @@
 
 .panelContador {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   background-color: #fff;
-  border: solid 1px red;
+  /* border: solid 1px red; */
   padding: 10px;
   margin: 20px;
 }
@@ -16,19 +16,19 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
   background-color: #fff;
-  border: solid 1px red;
+  /* border: solid 1px red; */
   padding: 10px;
   margin: 20px;
 }
 
 .panelContador__elemento {
   background-color: var(--fondo);
-  border: var(--borde);
-  padding: 20px;
+  /* border: var(--borde); */
+  /* padding: 20px; */
   font-size: 30px;
   text-align: center;
   margin: 20px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -46,30 +46,40 @@
 
 
 /* .panelRegistros__elemento > table,thead,tbody,tr,td {
-  
+
   border: 1px solid red;
 } */
 
-.panelContador__icono-flor {
+.panelContador__icono-producto {
   width: 100%;
   height: 100%;
   font-size: 15px;
   /* border: 1px solid purple;  */
- background-color: #0D1EC6; 
+ background-color: #49AD09;
 }
-.panelContador__icono-derecha {
+
+.panelContador__icono-categoria {
   width: 100%;
   height: 100%;
   font-size: 15px;
   /* border: 1px solid purple;  */
- background-color: #DE1E08; 
+ background-color: #8b0dc6;
 }
-.panelContador__icono-canasta {
+
+.panelContador__icono-cliente {
   width: 100%;
   height: 100%;
   font-size: 15px;
   /* border: 1px solid purple;  */
- background-color: #49AD09; 
+ background-color: #0D1EC6;
+}
+
+.panelContador__icono-artesano {
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  /* border: 1px solid purple;  */
+  background-color: #DE1E08;
 }
 
 .panelContador__contador {

@@ -1,8 +1,16 @@
-<%= simple_form_for @production do |f| %>
-    <%= f.input :ref, label: "escriba el nombre de referencia"%>
-        <% if @production.errors[:ref].any? %>
-          <span class="text-danger"><%= @production.errors[:ref].first %></span>
-          <br>
-        <% end %>
-    <%= f.button :submit %>
-<% end %>
+
+<div class="containerProds">
+  <h1 class="containerProds-text">Crear Producción</h1>
+  <div class="formularioProds">
+    <%= simple_form_for @production do |f| %> <br> 
+      <%= f.label :ref, "Nombre de referencia"%> <br>
+      <%= f.input_field :ref, class: "input_produccion" %>
+      <% if @production.errors[:ref].any? %>
+        <span class="text-danger"><%= @production.errors[:ref].first %></span>
+      <% end %>
+        <br><br>
+      <%= f.button :submit, "Crear Producción" %>
+      <br>
+    <% end %>
+  </div>
+</div>
