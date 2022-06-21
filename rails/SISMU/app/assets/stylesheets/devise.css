@@ -60,10 +60,12 @@ body {
   /* background-repeat: no-repeat; */
   /* background-position: 70%; */
   background-image: url("img/pexels-julia-volk-6118897");
-  animation: slider 10s infinite alternate;
+  background-size:cover;
+  /* background-position:center; */
+  /* animation: slider 10s infinite alternate; */
 }
 
-@keyframes slider {
+/* @keyframes slider {
   from {
     background-size: 9a00px;
     background-position: lef bottom;
@@ -72,10 +74,12 @@ body {
     background-size: 1920px;
     background-position: right center;
   }
-}
+} */
 
 .devise {
-  background-image: url("img/pexels-ksu&eli-8681052");
+  /* background-image: url("img/pexels-ksu&eli-8681052");
+  background-size:cover;
+  background-position:center; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
