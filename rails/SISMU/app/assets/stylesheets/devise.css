@@ -55,7 +55,8 @@ html {
   box-sizing: inherit; 
 }
 
-.main_devise {
+.background_devise {
+  height: 80rem;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -118,6 +119,19 @@ html {
 .devise h3 {
   font-size: 2rem;
 }
+
+
+/* logo  */
+
+.devise .avatar {
+  height: 18%;
+  border-radius: 80%;
+  position: relative;
+  display:block;
+  margin:auto;
+}
+
+
 
 
 /* inputs, labels and buttoms*/
@@ -191,8 +205,18 @@ html {
 
 .devise .prueba {
   text-align: center;
-  margin-bottom: 10px;
+  margin-top: 15px;
 }
+
+.devise {
+  height: 55rem;
+}
+
+
+
+/* footer */
+
+
 
 .footer {
   margin-top: 5rem;
