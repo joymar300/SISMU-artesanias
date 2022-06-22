@@ -36,6 +36,7 @@ class EmfacturasController < ApplicationController
     else
       @emfacturas = Emfactura.all()
     end
+    @emfacturas = Emfactura.paginate(:page => params[:page], :per_page => 2)
   end
 
   def create

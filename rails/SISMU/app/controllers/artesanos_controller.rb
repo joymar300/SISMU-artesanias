@@ -10,6 +10,7 @@ class ArtesanosController < ApplicationController
     else
       @artesanos = Artesano.all()
     end
+    @artesanos = Artesano.paginate(:page => params[:page], :per_page => 2)
   end
   def show
     @artesano = Artesano.find(params[:id])

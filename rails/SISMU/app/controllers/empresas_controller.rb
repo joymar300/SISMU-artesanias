@@ -10,7 +10,9 @@ class EmpresasController < ApplicationController
     else
       @empresas = Empresa.all
     end
+    @empresas = Empresa.paginate(:page => params[:page], :per_page => 2)
   end
+
   def show
     @empresa = Empresa.find(params[:id])
   end
