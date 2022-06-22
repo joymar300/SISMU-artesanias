@@ -34,6 +34,7 @@ class ProductionsController < ApplicationController
     else
       @productions = Production.all()
     end
+    @productions = Production.paginate(:page => params[:page], :per_page => 2)
   end
 
   def create
