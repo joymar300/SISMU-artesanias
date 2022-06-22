@@ -124,7 +124,7 @@
   width: 100%;
 }
 
-@media (min-width: 1080px) {
+@media (max-width: 1080px) {
   .panelContador {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(75rem, 1fr));
@@ -158,7 +158,6 @@
     /* padding: 2rem; */
     border-radius: 1rem;
 
-   
   }
   
 }
