@@ -37,6 +37,7 @@ class FacturasController < ApplicationController
     else
       @facturas = Factura.all()
     end
+    @facturas = Factura.paginate(:page => params[:page], :per_page => 2)
   end
 
   def create
