@@ -40,15 +40,23 @@
   </section>
   
 
-    <div class="digg_pagination">
+    <%
+=begin%>
+ <div class="digg_pagination">
       <%= will_paginate(@productos,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0) %>
     </div>
+ 
+<%
+=end%>
 
 
-<!-- 
-    <span class="page_info">
+    <%
+=begin%>
+ <span class="page_info">
       <%= page_entries_info(@productos) %>
-    </span> -->
+    </span>  
+<%
+=end%>
 
 
 
