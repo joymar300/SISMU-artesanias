@@ -12,4 +12,7 @@ class Producto < ApplicationRecord
     validates :referencia_pro, uniqueness: {:message => "Referencia en uso"}
     # validates :referencia_pro, :precio_pro ,numericality: {:message => "numericos"}
 
+    def buscar_producto
+        "#{referencia_pro}- #{nombre_pro}"
+    end
 end

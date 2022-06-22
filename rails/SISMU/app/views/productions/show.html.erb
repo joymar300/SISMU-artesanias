@@ -1,8 +1,7 @@
 <%= simple_form_for [@production, @dproduction] do |f| %>
-  <%= f.association :producto, label_method: :nombre_pro, label: "Nombre del Producto: " %>
+  <%= f.association :producto, label_method: :buscar_producto, label: "Nombre del Producto: " %>
   <%= f.association :artesano, label_method: :nombre_completo, label: "Nombre del Artesano: " %>
-  <%= f.input :cantidad, label: "Cantidad:" %>
-
+  <%= f.input :cantidad, label: "Cantidad:" , error: "requerido"%>
   <%= f.button :submit %>
 <% end %>
 <br>
