@@ -1,8 +1,10 @@
-<div class="main_devise">
+<div class="background_devise">
   <main class = "devise">
     <%# image_tag("img/embroidery-g521ac67c6_1920", class: "fondo_image") %>
+      <%= image_tag "logo_sandra_munoz", class: "avatar" %>
+      
       <h2>Iniciar Sesión</h2>
-
+  
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
       <div class="">
