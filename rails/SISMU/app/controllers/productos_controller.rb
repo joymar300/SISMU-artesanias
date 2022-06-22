@@ -10,7 +10,7 @@ class ProductosController < ApplicationController
     else
       @productos = Producto.all
     end
-    @productos = Producto.paginate(:page => params[:page], :per_page => 2)
+    # @productos = Producto.paginate(:page => params[:page], :per_page => 2)
  
   end
   def show
