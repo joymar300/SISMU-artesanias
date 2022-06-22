@@ -9,7 +9,7 @@
 <%= @factura.client.direccion_cli%>
 
 <%= simple_form_for [@factura, @detalle] do |f| %>
-    <%= f.association :producto, label_method: :nombre_pro, label: "nombre del producto: " %>
+    <%= f.association :producto, label_method: :buscar_producto, label: "nombre del producto: " %>
     <%= f.input :cantidad, label: "cantidad:" %>
         <% if @detalle.errors[:cantidad].any? %>
           <span class="text-danger"><%= @detalle.errors[:cantidad].first %></span>

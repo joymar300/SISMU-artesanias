@@ -2,11 +2,8 @@
   <h1 class="containerProds-text">Crear Producción</h1>
   <div class="formularioProds">
     <%= simple_form_for @production do |f| %> <br> 
-      <%= f.label :ref, "Nombre de referencia"%> <br>
-      <%= f.input_field :ref, class: "input_produccion" %>
-      <% if @production.errors[:ref].any? %>
-        <span class="text-danger"><%= @production.errors[:ref].first %></span>
-      <% end %>
+      <%= f.label :created_at, "Fecha en que se ingresaron los productos"%> <br>
+      <%= f.input_field :created_at, class: "input_produccion" %>
         <br><br>
       <%= f.button :submit, "Crear Producción" %>
       <br>

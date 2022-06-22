@@ -4,6 +4,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
 has_one_attached :avatar
 
 after_commit :add_default_avatar, on: %i[create update]
@@ -13,6 +14,8 @@ def avatar_thumbnail
   else
 "/default_profile.jpg"
   end
+
+   
 end
 
 private 

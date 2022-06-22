@@ -1,24 +1,27 @@
 <main class="container">
   <section class="containerInfo">
-    <%# image_tag("iconos/producto", class: "icon_logo_title") %>
-    <%# <form class="container-4">
-      <input name="q" <%= @q  id="search" placeholder="Buscar..." >
-      <button type="submit"> <%= image_tag("iconos/buscar", class: "icon") </button>
-    </form> %>
-    <div class="box">
-      <form class="container-4">
-        <span class="icon"><%= image_tag("iconos/buscar", class:"icon") %></span>
-        <input name="q" <%= @q %> type="search" id="search" placeholder="Buscar..." />
-      </form>
-    </div>
-    <h1 class="containerInfo__titulo">Productos</h1>
-    <%# <a class="containerInfo__boton" href="productos/new">Nuevo</a> %>
-    <div class="icon_nuevo">
-      <%= link_to "productos/new" do %>
-        <span>Nuevo</span>
-        <%= image_tag("iconos/mas", class: "icon_mas") %>
-      <% end %>
-    </div>
+    <%# image_tag("iconos/producto", class: "icon_logo_title" ) %>
+      <%# <form class="container-4">
+        <input name="q" <%=@q id="search" placeholder="Buscar...">
+        <button type="submit">
+          <%= image_tag("iconos/buscar", class: "icon" ) </button>
+            </form> %>
+            <div class="box">
+              <form class="container-4">
+                <span class="icon">
+                  <%= image_tag("iconos/buscar", class:"icon") %>
+                </span>
+                <input name="q" <%=@q %> type="search" id="search" placeholder="Buscar..." />
+              </form>
+            </div>
+            <h1 class="containerInfo__titulo">Productos</h1>
+            <%# <a class="containerInfo__boton" href="productos/new">Nuevo</a> %>
+              <div class="icon_nuevo">
+                <%= link_to "productos/new" do %>
+                  <span>Nuevo</span>
+                  <%= image_tag("iconos/mas", class: "icon_mas" ) %>
+                    <% end %>
+              </div>
   </section>
   <section class="containerTable">
     <table>
@@ -35,5 +38,26 @@
       </tbody>
     </table>
   </section>
+  
+
+    <%
+=begin%>
+ <div class="digg_pagination">
+      <%= will_paginate(@productos,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0) %>
+    </div>
+ 
+<%
+=end%>
+
+
+    <%
+=begin%>
+ <span class="page_info">
+      <%= page_entries_info(@productos) %>
+    </span>  
+<%
+=end%>
+
+
 
 </main>

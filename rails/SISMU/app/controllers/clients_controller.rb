@@ -8,8 +8,9 @@ class ClientsController < ApplicationController
     
       @clients = Client.where(:nombre_cli => @q )
     else
-      @productos = Producto.all
+      @clients = Client.all
     end
+    @clients = Client.paginate(:page => params[:page], :per_page => 2)
   end
   def show
     @client = Client.find(params[:id])

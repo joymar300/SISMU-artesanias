@@ -7,7 +7,7 @@
         <input name="q" <%= @q %> type="search" id="search" placeholder="Buscar..." />
       </form>
     </div>
-    <h1 class=" containerInfo__titulo">Producción</h1>
+    <h1 class=" containerInfo__titulo">Producción del día</h1>
     <%# <a class=" containerInfo__boton" href="productions/new">nuevo</a> %>
     <div class="icon_nuevo">
       <%= link_to "productions/new" do %>
@@ -31,5 +31,7 @@
       </tbody>
     </table>
   </section>
-
+  <div class="digg_pagination">
+    <%= will_paginate(@productions,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0) %>
+  </div>
 </main>

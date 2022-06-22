@@ -31,5 +31,7 @@
       </tbody>
     </table>
   </section>
-
+  <div class="digg_pagination">
+    <%= will_paginate(@emfacturas,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0) %>
+  </div>
 </main>
