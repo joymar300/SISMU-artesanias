@@ -30,27 +30,20 @@
         <span id="sismu__central"><span>SISMU <i>Artesanías</i></span> </span>
       </section>
       <section class="section_login">
-        <div id="header">
-          <ul class="nav">
-        
-            <li> <img style="height: 20px; width: 20px;" 
-
-              <%=  image_tag(current_user.avatar_thumbnail)%>>
-
-            
+        <div id="header_select">
+          <ul class="nav_select">
+            <li> <%= image_tag(current_user.avatar_thumbnail, class:"img_perfil") %>
               <ul>
                 <li><%= link_to "edit", edit_user_registration_path %></li>
                 <li>
                   <!-- <section class="btn__salir"> -->
                   <%= link_to "Salir", destroy_user_session_path, :method => :delete, class: "salir" %>
                   <!-- <%= image_tag "iconos/sign_out", class: "minilogo_pequeño salir" %> -->
-                <!-- </section> -->
-              
-              </li>
+                  <!-- </section> -->
+                </li>
               </ul> 
           </ul>
         </div>
-
       </section>
     </nav>
     

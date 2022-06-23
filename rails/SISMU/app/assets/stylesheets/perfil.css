@@ -1,0 +1,96 @@
+/* .main_perfil {
+  display: flex;
+  flex-direction: column;
+  column-span: all;
+}
+ */
+
+/* DERECHA */
+.perfil_derecho {
+  margin: 2% auto auto 2%;
+  border: none;
+  min-width: 30%;
+  max-width: 50%;
+  min-height: 300px;
+  /* box-shadow: 3px 7px 20px rgb(66, 66, 66); */
+  border: 1px solid red;
+  /* background-color: #fff; */
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+}
+
+.verPerfil {
+  margin: auto;
+  border: none;
+  min-height: 300px;
+  /* box-shadow: 3px 7px 20px rgb(66, 66, 66); */
+  border: 1 px solid red ; 
+  /* width: 200px; 
+  height: 300px; */
+  border: 1px solid red;
+  /* background-color: #fff; */
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+}
+
+.btn_select {
+  min-width: 100%;
+}
+
+.centrar_perfil {
+  text-align: center;
+  /* min-width: 100%; */
+  border: 1px solid blue;
+}
+
+/* IZQUIEDA */
+
+.formulario_perfil {
+  /* margin: auto; */
+  margin: 2% 2% auto auto;
+  border: none;
+  min-width: 40%;
+  max-width: 50%;
+  min-height: 100%;
+  /* box-shadow: 3px 7px 20px rgb(66, 66, 66); */
+  border: 1px solid red;
+  /* background-color: #fff; */
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+}
+
+.formulario_perfil_1 {
+  /* margin: auto; */
+  border: none;
+  min-width: 100%;
+  /* max-width: 38%; */
+  min-height: 15%;
+  box-shadow: 3px 7px 20px rgb(66, 66, 66);
+  border-radius: 20px;
+  background-color: #fff;
+  margin-bottom: 2%;
+}
+.formulario_perfil_2 {
+  /* margin: 0 auto; */
+  margin-bottom: 2%;
+  border: none;
+  min-width: 100%;
+  max-width: 38%;
+  min-height: 15%;
+  box-shadow: 3px 7px 20px rgb(66, 66, 66);
+  border-radius: 20px;
+  background-color: #fff;
+}
+.cancelCuenta {
+  /* margin: auto; */
+  border: none;
+  min-width: 100%;
+  max-width: 38%;
+  min-height: 5%;
+  box-shadow: 3px 7px 20px rgb(66, 66, 66);
+  border-radius: 20px;
+  background-color: #fff;
+}
