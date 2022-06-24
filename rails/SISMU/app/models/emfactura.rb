@@ -7,5 +7,11 @@ class Emfactura < ApplicationRecord
   def final
     emdetalles.sum(&:valor)
   end
+  def iva
+    self.final*0.19
+  end
+  def final_total
+    self.final + self.iva
+  end
   
 end

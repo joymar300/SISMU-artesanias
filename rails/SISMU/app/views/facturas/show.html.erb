@@ -50,9 +50,18 @@
         </tr>
     <% end %>
     <tr>
-        <th >precio final: </th>
+        <th >precio subtotal: </th>
         <td colspan="4"><%=number_to_currency @factura.final %></td>   
     </tr>
+        <tr>
+        <th >Impuesto por iva: </th>
+        <td colspan="4"><%=number_to_currency @factura.iva %></td>   
+    </tr>
+        <tr>
+        <th >precio final: </th>
+        <td colspan="4"><%=number_to_currency @factura.final_total %></td>   
+    </tr>
+
 
     </tbody>
 </table>
