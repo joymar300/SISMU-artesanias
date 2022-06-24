@@ -368,23 +368,24 @@ footer p {
   color: var(--fondoMain);
 }
 
- /* estilos del menu de perfil */
- * {
+ /* ESTILOS DEL MENU PERFÍL */
+/*  * {
   margin:0px;
   padding:0px;
-}
+} */
 
 #header_select {
   /* margin:auto; */
-  width:500px;
+  border: 1px solid red;
+  width: 100px;
   /* font-family:Arial, Helvetica, sans-serif; */
 }
 
 /* SELECT PERFIL */
 
 .img_perfil {
-  height: 20px;
-  width: 20px;
+  height: 40px;
+  /* width: 20px; */
 }
 
 ul, ol {
@@ -392,7 +393,7 @@ ul, ol {
 }
 
 .nav_select > li {
-  float:left;
+  float: left;
 }
 
 .nav_select li a {
