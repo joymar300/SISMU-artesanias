@@ -374,52 +374,62 @@ footer p {
   padding:0px;
 }
 
-#header {
-  margin:auto;
+#header_select {
+  /* margin:auto; */
   width:500px;
-  font-family:Arial, Helvetica, sans-serif;
+  /* font-family:Arial, Helvetica, sans-serif; */
+}
+
+/* SELECT PERFIL */
+
+.img_perfil {
+  height: 20px;
+  width: 20px;
 }
 
 ul, ol {
   list-style:none;
 }
 
-.nav > li {
+.nav_select > li {
   float:left;
 }
 
-.nav li a {
+.nav_select li a {
   background-color: #fff;
-  color:#000;
-  text-decoration:none;
-  padding:10px 12px;
-  display:block;
+  color: #000;
+  text-decoration: none;
+  padding: 10px 12px;
+  display: block;
 }
 
-.nav li a:hover {
-  background-color:#fdf0f0;
+.nav_select li a:hover {
+  background-color: #fdf0f0;
 }
 
-.nav li ul {
+.nav_select li ul {
   display:none;
   position:absolute;
+  right: 5;
+  /* margin-top: 30%; */
+  /* margin-right: 50px; */
   min-width:140px;
 }
 
-.nav li:hover > ul {
+.nav_select li:hover > ul {
   display:block;
 }
 
-.nav li ul li {
+.nav_select li ul li {
   position:relative;
 }
 
-.nav li ul li ul {
-  right:-140px;
-  top:0px;
+.nav_select li ul li ul {
+  right: -140px;
+  top: 0px;
 }
 
-
+/* .... */
 
 
 /* estilos del paginate */
