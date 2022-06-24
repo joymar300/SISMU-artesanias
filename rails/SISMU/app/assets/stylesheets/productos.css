@@ -231,3 +231,39 @@ tr, td,th{
   background: #d3d2d2;
 }
 /* ********** */
+
+
+/* nuevos estilos  */
+
+.productosTable {
+  width: 80rem;
+  
+}
+
+.productosTable table {
+  background-color: white;
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.productosTable th, td {
+  padding: 5.5px;
+}
+
+
+.productosTable thead {
+  text-align: center;
+  color: white;
+  background-color: #246355;
+  border-bottom: solid 5px #0f362d;
+}
+
+.productosTable tr:nth-child(even){
+  background-color: #ddd;
+}
+
+.productosTable tr:hover td {
+  background-color: #369681;
+  color: white;
+}
