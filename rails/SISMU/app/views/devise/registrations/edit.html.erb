@@ -1,64 +1,92 @@
 <div class="perfil_derecho">
   <div class="volver_perfil">
-    <button>
+    <button class="btn_back">
       <%= link_to "Volver", :back %>
     </button>
   </div>
-  <h2>Imagen</h2>
-  <div class="centrar_perfil">
-    <%= image_tag(resource.avatar_thumbnail) if resource.avatar.attached? %>
+  <%# <h2>Imagen</h2> %>
+  <div class="div_foto_perfil">
+    <%= image_tag(resource.avatar_thumbnail, class: "foto_perfil") if resource.avatar.attached? %>
   </div>
   <div class="centrar_perfil">
-    <%= @user.primernombre %>
-    <%= @user.segundonombre %>
-    <%= @user.primerapellido %>
-    <%= @user.segundoapellido %>
+    <h3>
+      <%= @user.primernombre %>
+      <%= @user.segundonombre %>
+      <%= @user.primerapellido %>
+      <%= @user.segundoapellido %>
+    </h3>
   </div>
+  <%# INICIO FORMULARIO %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <div class="div_select_foto">
+      <%= f.file_field :avatar, class: "select_foto" %><br />
+    </div>
 </div>
 
 <div class="formulario_perfil">
+  <%# PERFIL 1 %>
   <div class="formulario_perfil_1">
-  <h2>Editar <%= resource_name.to_s.humanize %></h2>
+    <h2>Editar <%= resource_name.to_s.humanize %></h2>
   
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-      <div class="field">
-        <%= f.file_field :avatar %><br />
+    <div class="row_perfil">
+      <div class="col-25">
+        <%= f.label :email, "Correo", class: "label_form" %>
       </div>
-
-      <div class="field">
-        <%= f.label :email, "Correo" %>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <div class="col-75">
+        <%= f.email_field :email, autocomplete: "email", class: "input_form", :disabled => true %>
       </div>
-      <div class="field">
-        <%= f.label :primernombre, "Primer Nombre" %>
-        <%= f.text_field :primernombre, autofocus: true %>
+    </div>
+    <div class="row_perfil">
+      <div class="col-25">
+        <%= f.label :primernombre, "Primer Nombre", class: "label_form" %>
       </div>
-      <div class="field">
-        <%= f.label :segundonombre, "Segundo Nombre" %>
-        <%= f.text_field :segundonombre, autofocus: true %>
+      <div class="col-75">
+        <%= f.text_field :primernombre, autofocus: true, class: "input_form" %>
       </div>
-      <div class="field">
-        <%= f.label :primerapellido, "Primer Apellido" %>
-        <%= f.text_field :primerapellido, autofocus: true %>
+    </div>
+    <div class="row_perfil">
+      <div class="col-25">
+        <%= f.label :segundonombre, "Segundo Nombre", class: "label_form" %>
       </div>
-      <div class="field">
-        <%= f.label :segundoapellido, "Segundo Apellido" %>
-        <%= f.text_field :segundoapellido, autofocus: true %>
+      <div class="col-75">
+        <%= f.text_field :segundonombre, autofocus: true, class: "input_form" %>
       </div>
-
-      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <div>Esperando confirmación para: <%= resource.unconfirmed_email %></div>
-      <% end %>
+    </div>
+    <div class="row_perfil">
+      <div class="col-25">
+        <%= f.label :primerapellido, "Primer Apellido", class: "label_form" %>
+      </div>
+      <div class="col-75">
+        <%= f.text_field :primerapellido, autofocus: true, class: "input_form" %>
+      </div>
+    </div>
+    <div class="row_perfil">
+      <div class="col-25">
+        <%= f.label :segundoapellido, "Segundo Apellido", class: "label_form" %>
+      </div>
+      <div class="col-75">
+        <%= f.text_field :segundoapellido, autofocus: true, class: "input_form" %>
+      </div>
     </div>
 
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Esperando confirmación para: <%= resource.unconfirmed_email %></div>
+    <% end %>
+  </div>
+
+    <%# PERFIL 2 %>
     <div class="formulario_perfil_2">
       <h2>Cambiar contraseña</h2>
-      <div class="field">
+      <div class="row_perfil">
         <h6><i>(Déjalo en blanco si no quieres cambiarlo)</i></h6>
-        <%= f.label :password, "Contraseña" %>
-        <%= f.password_field :password, autocomplete: "new-password" %>
+        <div class="col-25">
+          <%= f.label :password, "Contraseña", class: "label_form" %>
+        </div>
+        <div class="col-75">
+          <%= f.password_field :password, autocomplete: "new-password", class: "input_form" %>
+        </div>
         <h6>
           <% if @minimum_password_length %>
             <em><%= @minimum_password_length %> carácteres mínimos</em>
@@ -66,19 +94,31 @@
         </h6>
       </div>
 
-      <div class="field">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      <div class="row_perfil">
+        <div class="col-25">
+          <%= f.label :password_confirmation, "Confirmar contraseña", class: "label_form" %>
+        </div>
+        <div class="col-75">
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input_form" %>
+        </div>
       </div>
 
-      <div class="field">
+    </div>
+
+    <div class="confirmCuenta">
+      <h2>Confirmar cambios</h2>
+
+      <div class="row_perfil">
         <h6><i>(Necesitamos su contraseña actual para confirmar sus cambios)</i></h6>
-        <%= f.label :current_password, "Contraseña actual" %>
-        <%= f.password_field :current_password, autocomplete: "current-password" %>
+        <div class="col-25">
+          <%= f.label :current_password, "Contraseña actual", class: "label_form" %>
+        </div>
+        <div class="col-75">
+          <%= f.password_field :current_password, autocomplete: "current-password", class: "input_form" %>
+        </div>
       </div>
-
-      <div class="actions">
-        <%= f.submit "Actualizar" %>
+      <div class="centrar">
+        <%= f.submit "Actualizar", class: "btn_actualizar" %>
       </div>
     </div>
 
@@ -89,5 +129,6 @@
         <%# button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
       </p>
     </div>
+  <%# FIN FORMULARIO %>
   <% end %>
 </div>
