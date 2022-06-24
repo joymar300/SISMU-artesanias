@@ -1,31 +1,22 @@
 <tr>
-  <td data-label="Referencia", class="centrar">
-    <%= producto.referencia_pro%>
+  <td data-label="Referencia", class="centrar blue">
+    <%= producto.referencia_pro %>
   </td>
-  <td data-label="Nombre del producto" id="o">
+  <td data-label="Nombre del producto" id="o" class="blue">
     <%= producto.nombre_pro%>
   </td id="aw">
-  <td data-label= "Precio">
-    <%= number_to_currency(producto.precio_pro, unit: 'COL$') %>
+  <td data-label= "Precio" class="blue">
+    <%= number_to_currency(producto.precio_pro, unit: 'COL$', class: "black") %>
   </td> 
   
-<%
-=begin%>
-  <td class="centrar">
-    <%= link_to producto_url(producto) do %>
-      <%= image_tag("iconos/ojo", class:"icon_accion") %>
-    <% end %>
-  </td>
-<%
-=end%>
-  <td data-label="Accion" class="botones">
+  <td data-label="Accion" class="botones blue">
     <%= link_to edit_producto_url(producto) do %>
       <%# image_tag("iconos/editar", class:"icon_accion") %>
       <button class="editar">Editar</button>
     <% end %>
     <%= button_to producto_path(producto), method: :delete, class: "btn_borrar", form: {data: {turbo_confirm: '¿Estás seguro?' }} do %>
       <%# image_tag("iconos/borrar", class:"icon_accion") %>
-       <button class="eliminar">Eliminar</button>
+      <button class="eliminar">Eliminar</button>
     <% end %>
   </td>
   <%

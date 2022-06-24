@@ -1,36 +1,19 @@
 <main class="container sombra">
   <section class="productos">
-    <%# image_tag("iconos/producto", class: "icon_logo_title" ) %>
-      <%# <form class="container-4">
-        <input name="q" <%=@q id="search" placeholder="Buscar...">
-        <button type="submit">
-          <%= image_tag("iconos/buscar", class: "icon" ) </button>
-            </form> %>
-            <div class="box">
-              <form class="container-4">
-                <span class="icon">
-                  <%= image_tag("iconos/buscar", class:"icon") %>
-                </span>
-                <input name="q" <%=@q %> type="search" id="search" placeholder="Buscar..." />
-              </form>
-            </div>
-            <h1 class="productos__titulo">Productos</h1>
-            <%# <a class="containerInfo__boton" href="productos/new">Nuevo</a> %>
-              <div class="productos__nuevo">
-                <%= link_to "productos/new" do %>
-                  <p>Nuevo</p>
-                  
-                  
-                  <%# image_tag("iconos/mas", class: "icon_mas" ) %>
-                    <% end %>
-              </div>
-
-              <%
-=begin%>
- <span>Nuevo</span> 
-<%
-=end%>
-              
+    <div class="box">
+      <form class="container-4">
+        <span class="icon">
+          <%= image_tag("iconos/buscar", class:"icon") %>
+        </span>
+        <input name="q" <%=@q %> type="search" id="search" placeholder="Buscar..." />
+      </form>
+    </div>
+    <h1 class="productos__titulo">Productos</h1>
+    <div class="productos__nuevo">
+      <%= link_to "productos/new" do %>
+        <p>Nuevo</p>
+      <% end %>
+    </div>
   </section>
   <%
 =begin%>
