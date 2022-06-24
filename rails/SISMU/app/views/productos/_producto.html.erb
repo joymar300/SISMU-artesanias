@@ -1,11 +1,11 @@
 <tr>
-  <td class="centrar">
+  <td data-label="Referencia", class="centrar">
     <%= producto.referencia_pro%>
   </td>
-  <td id="o">
+  <td data-label="Nombre del producto" id="o">
     <%= producto.nombre_pro%>
   </td id="aw">
-  <td>
+  <td data-label= "Precio">
     <%= number_to_currency(producto.precio_pro, unit: 'COL$') %>
   </td> 
   
@@ -18,14 +18,24 @@
   </td>
 <%
 =end%>
-  <td class="centrar">
+  <td data-label="Accion" class="botones">
     <%= link_to edit_producto_url(producto) do %>
-      <%= image_tag("iconos/editar", class:"icon_accion") %>
+      <%# image_tag("iconos/editar", class:"icon_accion") %>
+      <button class="editar">Editar</button>
     <% end %>
-  </td>
-  <td class="centrar">
     <%= button_to producto_path(producto), method: :delete, class: "btn_borrar", form: {data: {turbo_confirm: '¿Estás seguro?' }} do %>
-      <%= image_tag("iconos/borrar", class:"icon_accion") %>
+      <%# image_tag("iconos/borrar", class:"icon_accion") %>
+       <button class="eliminar">Eliminar</button>
     <% end %>
   </td>
+  <%
+=begin%>
+ <td class="accion">
+    <%= button_to producto_path(producto), method: :delete, class: "btn_borrar", form: {data: {turbo_confirm: '¿Estás seguro?' }} do %>
+      <%# image_tag("iconos/borrar", class:"icon_accion") %>
+      <p>Borrar</p>
+    <% end %>
+  </td> 
+<%
+=end%>
 </tr>

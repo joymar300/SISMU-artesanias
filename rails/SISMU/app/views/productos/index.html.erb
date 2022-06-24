@@ -1,5 +1,5 @@
-<main class="container">
-  <section class="containerInfo">
+<main class="container sombra">
+  <section class="productos">
     <%# image_tag("iconos/producto", class: "icon_logo_title" ) %>
       <%# <form class="container-4">
         <input name="q" <%=@q id="search" placeholder="Buscar...">
@@ -14,16 +14,47 @@
                 <input name="q" <%=@q %> type="search" id="search" placeholder="Buscar..." />
               </form>
             </div>
-            <h1 class="containerInfo__titulo">Productos</h1>
+            <h1 class="productos__titulo">Productos</h1>
             <%# <a class="containerInfo__boton" href="productos/new">Nuevo</a> %>
-              <div class="icon_nuevo">
+              <div class="productos__nuevo">
                 <%= link_to "productos/new" do %>
-                  <span>Nuevo</span>
-                  <%= image_tag("iconos/mas", class: "icon_mas" ) %>
+                  <p>Nuevo</p>
+                  
+                  
+                  <%# image_tag("iconos/mas", class: "icon_mas" ) %>
                     <% end %>
               </div>
+
+              <%
+=begin%>
+ <span>Nuevo</span> 
+<%
+=end%>
+              
   </section>
-  <section class="containerTable">
+  <%
+=begin%>
+ <section class="containerTable">
+    <table>
+      <thead>
+        <tr>
+          <th>Referencia</th>
+          <th>Nombre del producto</th>
+          <th>Precio</th>
+          <th colspan="3">Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @productos%>
+      </tbody>
+    </table>
+  </section> 
+<%
+=end%>
+
+
+
+ <section class= "productosTable">
     <table>
       <thead>
         <tr>
@@ -38,7 +69,7 @@
       </tbody>
     </table>
   </section>
-  
+   
 
     <%
 =begin%>
