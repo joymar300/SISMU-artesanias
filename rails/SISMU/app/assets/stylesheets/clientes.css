@@ -48,3 +48,89 @@
 .label_cliente1{
   margin-left:10px;
 }
+
+
+/* nuevos estilos v2 */
+.clientes__titulo{
+  /* border: 1px solid black; */
+  color: #D00909;
+  font-size: 3.2rem; 
+}
+
+
+/* tabla */
+
+.clientesTable {
+  font-size: 16px; /*1rem = 10px*/
+  margin: 0;
+  padding: 2rem;
+  font-family: sans-serif;
+  
+  
+}
+
+.clientesTable table {
+  width: 100%;
+  border-collapse: collapse;
+  /* background-color: white;
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%; */
+}
+
+.clientesTable th, td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  
+  text-align: center;
+  /* padding: 5.5px;
+  border: none; */
+}
+
+.clientesTable th {
+  border: 1px solid #C82727;
+  background-color: #D00909;;
+  color: #fff;
+}
+
+.clientesTable td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.clientesTable tr:nth-child(even){
+  background-color: #F5F5F5;
+}
+
+
+
+
+
+
+/* botones  */
+
+
+.clientes__nuevo {
+  width: 8rem;
+  height: 4rem;
+  border: 1px solid #9E0C0C;;
+  border-radius: 6px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #C41414;
+}
+
+.clientes__nuevo:active {
+  width: 8rem;
+  height: 4rem;
+  border: 3px solid #C82727;
+  border-radius: 6px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #C11D1D;
+}
+
+.clientes__nuevo:hover {
+  background-color: #9E0B0B;
+}
+

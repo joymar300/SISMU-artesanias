@@ -1,4 +1,5 @@
 <main class="container sombra">
+
   <section class="productos">
     <div class="box">
       <%= form_tag productos_path, :method => 'get' do %>
@@ -15,25 +16,7 @@
       <% end %>
     </div>
   </section>
-  <%
-=begin%>
- <section class="containerTable">
-    <table>
-      <thead>
-        <tr>
-          <th>Referencia</th>
-          <th>Nombre del producto</th>
-          <th>Precio</th>
-          <th colspan="3">Acción</th>
-        </tr>
-      </thead>
-      <tbody>
-        <%= render @productos%>
-      </tbody>
-    </table>
-  </section> 
-<%
-=end%>
+ 
 
 
 
@@ -58,11 +41,6 @@
 
 
  
-
-
-
-
-
 
 
 </main>
