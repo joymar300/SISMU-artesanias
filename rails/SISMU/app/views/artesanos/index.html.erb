@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <main class="container sombra">
     <section class="productos">
         <div class="box">
@@ -14,6 +15,28 @@
             <% end %>
         </div>
     </section>
+=======
+<main class="container">
+  <section class=" containerInfo">
+    <%#image_tag("iconos/construccion", class: "icon_logo_title") %>
+    <div class="box">
+      <%= form_tag artesanos_path, :method => 'get' do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Buscar", :id => nil  %>
+      </p>
+    <% end %>
+    </div>
+    <h1 class=" containerInfo__titulo">Artesanos</h1>
+    <%# <a class=" containerInfo__boton" href="artesanos/new">Nuevo</a> %>
+    <div class="icon_nuevo">
+      <%= link_to "artesanos/new" do %>
+        <span>Nuevo</span>
+        <%= image_tag("iconos/mas", class: "icon_mas") %>
+      <% end %>
+    </div>
+  </section>
+>>>>>>> c89ac09fd3b1236e7e0de584e4d0bac1065503e0
 
     <section class="artesanosTable">
         <table>

@@ -15,4 +15,12 @@ class Producto < ApplicationRecord
     def buscar_producto
         "#{referencia_pro}- #{nombre_pro}"
     end
+
+    def self.search(search)
+        if search
+          where( ["referencia_pro LIKE  ? or nombre_pro LIKE ? ", "%#{search}%","%#{search}%"]  )
+        else
+            unscoped
+        end
+      end
 end

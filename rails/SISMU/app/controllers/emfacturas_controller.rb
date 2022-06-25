@@ -28,15 +28,9 @@ class EmfacturasController < ApplicationController
 
   def index
 
-    @q = params[:q]
-    @emfacturas = Emfactura.all()
-    if @q
 
-      @emfacturas = Emfactura.where(:id => @q )
-    else
-      @emfacturas = Emfactura.all()
-    end
-    @emfacturas = Emfactura.paginate(:page => params[:page], :per_page => 2)
+    @emfacturas = Emfactura.all()
+    @emfacturas = Emfactura.search(params[:search]).paginate(:per_page => 2, :page => params[:page])
   end
 
   def create

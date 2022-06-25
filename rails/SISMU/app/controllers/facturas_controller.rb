@@ -29,15 +29,9 @@ class FacturasController < ApplicationController
 
   def index
    
-    @q = params[:q]
-    @facturas = Factura.all()
-    if @q
 
-      @facturas = Factura.where(:id => @q )
-    else
-      @facturas = Factura.all()
-    end
-    @facturas = Factura.paginate(:page => params[:page], :per_page => 2)
+    @facturas = Factura.all()
+    @facturas = Factura.search(params[:search]).paginate(:per_page => 2, :page => params[:page])
   end
 
   def create

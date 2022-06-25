@@ -1,10 +1,11 @@
 <main class="container sombra">
     <section class="productos">
             <div class="box">
-                <form class="container-4">
-                    <span class="icon"><%= image_tag("iconos/buscar", class:"icon") %></span>
-                    <input name="q" <%= @q %> type="search" id="search" placeholder="Buscar..." />
-                </form>
+                <%= form_tag productions_path, :method => 'get' do %>
+                <p>
+                    <%= text_field_tag :search, params[:search] %>
+                    <%= submit_tag "Buscar", :ref => nil  %>
+                </p>
             </div>
             <h1 class="produccion__titulo">Producción del día</h1>
          
@@ -30,12 +31,8 @@
         </table>
   </section>
 
-
-  <%
-=begin%>
- <div class="digg_pagination">
+  <div class="digg_pagination">
     <%= will_paginate(@productions,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0) %>
   </div> 
-<%
-=end%>
+
 </main>

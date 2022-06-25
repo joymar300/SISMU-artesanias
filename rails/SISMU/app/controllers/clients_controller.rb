@@ -1,16 +1,9 @@
 class ClientsController < ApplicationController
   before_action :authenticate_user!
   def index
-  
-    @q = params[:q]
     @clients = Client.all
-    if @q
-    
-      @clients = Client.where(:nombre_cli => @q )
-    else
-      @clients = Client.all
-    end
-    @clients = Client.paginate(:page => params[:page], :per_page => 2)
+   
+    @clients = Client.search(params[:search]).paginate(:per_page => 2, :page => params[:page])
   end
   def show
     @client = Client.find(params[:id])
