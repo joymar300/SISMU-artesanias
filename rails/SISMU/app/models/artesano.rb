@@ -12,6 +12,12 @@ class Artesano < ApplicationRecord
     def nombre_apellido
         "#{nombre} #{apellido}"
     end
-   
+    def self.search(search)
+        if search
+          where( ["id LIKE  ? or nombre LIKE ? ", "%#{search}%","%#{search}%"]  )
+        else
+            unscoped
+        end
+      end
 
 end

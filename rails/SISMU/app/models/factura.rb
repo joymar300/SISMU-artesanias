@@ -12,4 +12,11 @@ class Factura < ApplicationRecord
   def final_total
     self.final + self.iva
   end
+  def self.search(search)
+    if search
+      where( ["id LIKE  ?  ", "%#{search}%"]  )
+    else
+        unscoped
+    end
+  end
 end

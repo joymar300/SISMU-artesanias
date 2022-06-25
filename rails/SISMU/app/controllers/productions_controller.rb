@@ -1,7 +1,13 @@
 class ProductionsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_production, only: [:show]
+  def index
+    
 
+    @productions = Production.all
+    @productions = Production.search(params[:search]).paginate(:per_page => 2, :page => params[:page])
+   
+  end
   def new
     @production = Production.new
   end
@@ -25,17 +31,7 @@ class ProductionsController < ApplicationController
     end
   end
 
-  def index
-    
-    @q = params[:q]
-    @productions = Production.all()
-    if @q
-      @productions = Production.where(:ref => @q )
-    else
-      @productions = Production.all()
-    end
-    @productions = Production.paginate(:page => params[:page], :per_page => 2)
-  end
+  
 
   def create
     @production = Production.new(production_params)

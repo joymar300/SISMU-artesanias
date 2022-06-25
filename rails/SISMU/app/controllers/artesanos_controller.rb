@@ -2,15 +2,10 @@ class ArtesanosController < ApplicationController
   before_action :authenticate_user!
   def index
    
-    @q = params[:q]
+  
     @artesanos = Artesano.all()
-    if @q
-    
-      @artesanos = Artesano.where(:nombre => @q )
-    else
-      @artesanos = Artesano.all()
-    end
-    @artesanos = Artesano.paginate(:page => params[:page], :per_page => 2)
+   
+    @artesanos = Artesano.search(params[:search]).paginate(:per_page => 2, :page => params[:page])
   end
   def show
     @artesano = Artesano.find(params[:id])

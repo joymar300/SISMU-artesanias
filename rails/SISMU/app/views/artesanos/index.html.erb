@@ -2,10 +2,12 @@
   <section class=" containerInfo">
     <%#image_tag("iconos/construccion", class: "icon_logo_title") %>
     <div class="box">
-      <form class="container-4">
-        <span class="icon"><%= image_tag("iconos/buscar", class:"icon") %></span>
-        <input name="q" <%= @q %> type="search" id="search" placeholder="Buscar..." />
-      </form>
+      <%= form_tag artesanos_path, :method => 'get' do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Buscar", :id => nil  %>
+      </p>
+    <% end %>
     </div>
     <h1 class=" containerInfo__titulo">Artesanos</h1>
     <%# <a class=" containerInfo__boton" href="artesanos/new">Nuevo</a> %>
