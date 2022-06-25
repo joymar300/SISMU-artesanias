@@ -2,15 +2,10 @@ class EmpresasController < ApplicationController
   before_action :authenticate_user!
   def index
    
-    @q = params[:q]
+
     @empresas = Empresa.all
-    if @q
      
-      @empresas = Empresa.where(:nombre => @q )
-    else
-      @empresas = Empresa.all
-    end
-    @empresas = Empresa.paginate(:page => params[:page], :per_page => 2)
+    @empresas = Empresa.search(params[:search]).paginate(:per_page => 2, :page => params[:page])
   end
 
   def show

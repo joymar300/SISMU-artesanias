@@ -1,10 +1,12 @@
 <main class="container sombra">
     <section class="productos">
         <div class="box">
-            <form class="container-4">
-                <span class="icon"><%= image_tag("iconos/buscar", class:"icon") %></span>
-                <input name="q" <%= @q %> type="search" id="search" placeholder="Buscar..." />
-            </form>
+            <%= form_tag clients_path, :method => 'get' do %>
+            <p>
+              <%= text_field_tag :search, params[:search] %>
+              <%= submit_tag "Buscar", :id => nil  %>
+            </p>
+          <% end %>
         </div>
         <h1 class="clientes__titulo">Clientes</h1>
         <div class="clientes__nuevo">
@@ -35,11 +37,9 @@
         </table>
     </section>
 
-  <%
-=begin%>
- <div class="digg_pagination">
-    <%# will_paginate(@clients,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0) %>
-  </div> 
-<%
-=end%>
+
+    <div class="digg_pagination">
+        <%= will_paginate(@productos,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0) %>
+      </div>
+
 </main>
