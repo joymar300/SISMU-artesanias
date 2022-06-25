@@ -1,6 +1,6 @@
 <tr>
   <td class="centrar">
-    <%= link_to factura.id, factura_url(factura.id) %>
+    <%= factura.id %>
   </td>
   <td>
     <%= factura.client.nombre_completo %>
@@ -12,9 +12,13 @@
     <%= factura.created_at %>
   </td>
 
-  <td class="centrar">
-    <%= button_to factura_path(factura), method: :delete do%>
-      <%= image_tag("iconos/borrar", class:"icon_accion") %>
+  <td class="botones">
+    <%= link_to factura_url(factura.id) do %>
+       <button class="ver">Ver</button>
+    <% end %>
+  
+    <%= button_to factura_path(factura), method: :delete, class: "btn_borrar" do%>
+      <button class="eliminar">Eliminar</button>
     <% end %>
   </td>
 </tr>
