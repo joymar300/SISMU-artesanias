@@ -1,30 +1,34 @@
 <tr>
-  <td class="centrar">
-      <%= link_to artesano.id %>
-  </td>
-  <td>
-      <%= link_to artesano.nombre %>
-  </td>
-  <td>
-      <%= link_to artesano.snombre %>
-  </td>
-  <td>
-      <%= link_to artesano.apellido %>
-  </td>
-  <td>
-      <%= link_to artesano.sapellido %>
-  </td>
-  <td id="o" class="centrar">
-      <%= link_to artesano.tel%>
-  </td id="aw">
-  <td class="centrar">
-    <%= link_to edit_artesano_url(artesano) do %>
-      <%= image_tag("iconos/editar", class:"icon_accion") %>
-    <% end %>
-  </td>
-  <td class="centrar">
-    <%= button_to artesano_path(artesano), method: :delete, class: "btn_borrar", form: {data: {turbo_confirm: '¿Estás seguro?' }} do %>
-      <%= image_tag("iconos/borrar", class:"icon_accion") %>
-    <% end %>
-  </td>
+    <td data-label="Cedula" class="centrar seaWater">
+        <%= link_to artesano.id %>
+    </td>
+
+    <td data-label="Primer Nombre" class="centrar seaWater">
+        <%= link_to artesano.nombre %>
+    </td>
+
+    <td data-label="Primer Apellido" class="centrar seaWater">
+        <%= link_to artesano.apellido %>
+    </td>
+
+
+    <td class="botones">
+       <%= link_to artesano_url(artesano) do %>
+        <button class="ver">Ver</button>
+        <% end %>
+
+      <%= link_to edit_artesano_url(artesano) do %>
+        <button class="editar">Editar</button>
+      <% end %>
+
+      <%= button_to artesano_path(artesano), method: :delete, class: "btn_borrar", form: {data: {turbo_confirm: '¿Estás seguro?' }} do %>
+          <button class="eliminar">Eliminar</button>
+      <% end %>
+
+    </td>
+
+
 </tr>
+
+
+

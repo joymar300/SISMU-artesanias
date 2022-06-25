@@ -1,41 +1,42 @@
-<main class="container">
-  <section class=" containerInfo">
-    <%#image_tag("iconos/construccion", class: "icon_logo_title") %>
-    <div class="box">
-      <form class="container-4">
-        <span class="icon"><%= image_tag("iconos/buscar", class:"icon") %></span>
-        <input name="q" <%= @q %> type="search" id="search" placeholder="Buscar..." />
-      </form>
-    </div>
-    <h1 class=" containerInfo__titulo">Artesanos</h1>
-    <%# <a class=" containerInfo__boton" href="artesanos/new">Nuevo</a> %>
-    <div class="icon_nuevo">
-      <%= link_to "artesanos/new" do %>
-        <span>Nuevo</span>
-        <%= image_tag("iconos/mas", class: "icon_mas") %>
-      <% end %>
-    </div>
-  </section>
+<main class="container sombra">
+    <section class="productos">
+        <div class="box">
+            <form class="container-4">
+                <span class="icon"><%= image_tag("iconos/buscar", class:"icon") %></span>
+                <input name="q" <%= @q %> type="search" id="search" placeholder="Buscar..." />
+            </form>
+        </div>
+        <h1 class="artesanos__titulo">Artesanos</h1>
+        <%# <a class=" containerInfo__boton" href="artesanos/new">Nuevo</a> %>
+        <div class="artesanos__nuevo">
+            <%= link_to "artesanos/new" do %>
+                <p>Nuevo</p>
+            <% end %>
+        </div>
+    </section>
 
-  <section class="containerTable">
-    <table>
-      <thead>
-        <tr>
-          <th>Cedula</th>
-          <th>Primer Nombre</th>
-          <th>Segundo Nombre</th>
-          <th>Primer Apelldio</th>
-          <th>Segundo Apellido</th>
-          <th>Telefono</th>
-          <th colspan="3">Acción</th>
-        </tr>
-      </thead>
-      <tbody>
-        <%= render @artesanos%>
-      </tbody>
-    </table>
-  </section>
-  <div class="digg_pagination">
+    <section class="artesanosTable">
+        <table>
+            <thead>
+                <tr>
+                <th>Cedula</th>
+                <th>Primer Nombre</th>
+                <th>Primer Apelldio</th>
+                <th colspan="3">Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%= render @artesanos%>
+            </tbody>
+        </table>
+    </section>
+
+
+  <%
+=begin%>
+ <div class="digg_pagination">
     <%= will_paginate(@artesanos,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0) %>
-  </div>
+  </div> 
+<%
+=end%>
 </main>

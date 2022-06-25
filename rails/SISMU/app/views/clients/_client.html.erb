@@ -1,19 +1,19 @@
 <tr>
-    <td data-label="Cedula" class="centrar">
+    <td data-label="Cedula" class="centrar red">
         <%= client.id %>
     </td>
-    <td data-label="Primer Nombre">
+    <td data-label="Primer Nombre" class="centrar red">
         <%= client.nombre_cli %>
     </td>
     
-    <td data-label="Primer Apellido">
+    <td data-label="Primer Apellido" class="centrar red">
         <%= client.apellido_cli %>
     </td>
   
    
-    <td data-label="Accion" class="botones">
+    <td data-label="Accion" class="botones red">
         <%= link_to client_url(client) do %>
-        <%= image_tag("iconos/ojo", class:"icon_accion") %>
+        <button class="ver">Ver</button>
         <% end %>
         <%= link_to edit_client_url(client) do %>
         <button class="editar">Editar</button>

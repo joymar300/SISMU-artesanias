@@ -1,18 +1,16 @@
 <tr>
-  <td class="centrar">
+  <td data-label="N° Referencia" class="centrar">
     <%= link_to production.id, production_url(production.id) %>
   </td>
-  <td class="centrar">
+  <td data-label="Fecha de producción"  class="centrar">
     <%= production.created_at %>
   </td>
-  <td class="centrar">
+  <td data-label="Acción" class="botones">
     <%= link_to production_url(production) do %>
-      <%= image_tag("iconos/ojo", class:"icon_accion") %>
+        <button class="ver">Ver</button>
     <% end %>
-  </td>
-  <td class="centrar">
     <%= button_to production_path(production), method: :delete, class: "btn_borrar" do %>
-      <%= image_tag("iconos/borrar", class:"icon_accion") %>
+       <button class="eliminar">Eliminar</button>
     <% end %>
   </td>
 </tr>
