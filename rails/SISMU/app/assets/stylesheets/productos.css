@@ -257,19 +257,13 @@ html {
 .productosTable table {
   width: 100%;
   border-collapse: collapse;
-  /* background-color: white;
-  text-align: left;
-  border-collapse: collapse;
-  width: 100%; */
 }
 
 .productosTable th, td {
   border: 1px solid #ddd;
-  padding: 12px 15px;
-  
+  padding: 12px 15px; 
   text-align: center;
-  /* padding: 5.5px;
-  border: none; */
+
 }
 
 .productosTable th {
@@ -279,7 +273,6 @@ html {
 }
 
 .productos__titulo{
-  /* border: 1px solid black; */
   color: #1070dd;
   font-size: 3.2rem; 
 }
@@ -290,14 +283,8 @@ html {
 }
 
 .productosTable tr:nth-child(even){
-  /* background-color: #EFEFEF; */
   background-color: #F5F5F5;
 }
-
-/* .productosTable tr:hover td {
-  background-color: #9EC4EC;
-} */
-
 
 
 /* botones  */
@@ -380,6 +367,31 @@ html {
   color: #fff;
   background-color: #E1223A;
   border: 3px solid #F4818E;
+}
+
+
+.ver {
+    border-radius: 3px;
+    height: 3rem;
+    width: 7.5rem;
+    cursor: pointer;
+    background-color: #2FAF48;
+    border: 1px solid #26A53F;
+    color: #fff;
+}
+
+.ver:hover{
+  background-color: #2E9E44;
+}
+
+.ver:active{
+  border-radius: 3px;
+  height: 3rem;
+  width: 7.5rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: #2B903F;
+  border: 3px solid #7FDB90;
 }
 
 /* tabla responsive  */

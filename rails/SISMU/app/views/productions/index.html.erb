@@ -1,39 +1,39 @@
-<main class="container">
-  <section class=" containerInfo">
-    <%# image_tag("iconos/canasta", class: "icon_logo_title") %>
-    <div class="box">
-      <%= form_tag productions_path, :method => 'get' do %>
-      <p>
-        <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "Buscar", :ref => nil  %>
-      </p>
-    <% end %>
-    </div>
-    <h1 class=" containerInfo__titulo">Producción del día</h1>
-    <%# <a class=" containerInfo__boton" href="productions/new">nuevo</a> %>
-    <div class="icon_nuevo">
-      <%= link_to "productions/new" do %>
-        <span>Nuevo</span>
-        <%= image_tag("iconos/mas", class: "icon_mas") %>
-      <% end %>
-    </div>
+<main class="container sombra">
+    <section class="productos">
+            <div class="box">
+                <%= form_tag productions_path, :method => 'get' do %>
+                <p>
+                    <%= text_field_tag :search, params[:search] %>
+                    <%= submit_tag "Buscar", :ref => nil  %>
+                </p>
+                <% end %>
+            </div>
+            <h1 class="produccion__titulo">Producción del día</h1>
+         
+            <div class="produccion__nuevo">
+                <%= link_to "productions/new" do %>
+                    <p>Nuevo</p>
+                <% end %>
+            </div>
+    </section>
+
+  <section class="produccionTable">
+        <table>
+            <thead>
+                <tr>
+                <th>N° Referencia</th>
+                <th>Fecha de producción</th>
+                <th colspan="2">Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%= render @productions %>
+            </tbody>
+        </table>
   </section>
 
-  <section class="containerTable">
-    <table>
-      <thead>
-        <tr>
-          <th>N° Referencia</th>
-          <th>Fecha de producción</th>
-          <th colspan="2">Acción</th>
-        </tr>
-      </thead>
-      <tbody>
-        <%= render @productions %>
-      </tbody>
-    </table>
-  </section>
   <div class="digg_pagination">
     <%= will_paginate(@productions,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0) %>
-  </div>
+  </div> 
+
 </main>

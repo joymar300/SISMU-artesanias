@@ -1,2 +1,41 @@
-<h1>Artesanos#show</h1>
-<p>Find me in app/views/artesanos/show.html.erb</p>
+<section class="artesanosTable">
+        <table>
+            <thead>
+                    <tr>
+                    <th>Cedula</th>
+                    <th>Primer Nombre</th>
+                    <th>Segundo Nombre</th>
+                    <th>Primer Apellido</th>
+                    <th>Segundo Apellido</th>
+                    <th>Telefono</th>
+                    </tr>
+            </thead>
+            <tbody>
+               <tr>
+                    <td data-label="Cedula" class="centrar">
+                        <%= link_to @artesano.id %>
+                    </td>
+
+                    <td data-label="Primer Nombre">
+                        <%= link_to @artesano.nombre %>
+                    </td>
+
+                    <td data-label="Segundo Nombre">
+                        <%= link_to @artesano.snombre %>
+                    </td>
+                    
+                    <td data-label="Primer Apellido">
+                        <%= link_to @artesano.apellido %>
+                    </td>
+
+                    <td data-label="Segundo Apellido">
+                        <%= link_to @artesano.sapellido %>
+                    </td>
+
+                    <td data-label="Telefono" class="centrar">
+                        <%= link_to @artesano.tel%>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>

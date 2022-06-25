@@ -34,3 +34,139 @@
     border-radius: 5px;
     text-align: center;
 }
+
+/* nuevos estilos v1.2 */
+
+.artesanosTable {
+    font-size: 16px; /*1rem = 10px*/
+    margin: 0;
+    padding: 2rem;
+    font-family: sans-serif;
+    
+    
+  }
+  
+  .artesanosTable table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .artesanosTable th, td {
+    border: 1px solid #ddd;
+    padding: 12px 15px; 
+    text-align: center;
+  
+  }
+  
+  .artesanosTable th {
+    border: 1px solid #04B7A4;
+    background-color: #009C8C ;
+    color: #fff;
+  }
+  
+  
+  .artesanosTable td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .artesanosTable tr:nth-child(even){
+    background-color: #F5F5F5;
+  }
+
+  .artesanos__titulo{
+    color: #009C8C;
+    font-size: 3.2rem; 
+  }
+
+
+/* botones */
+
+.artesanos__nuevo {
+    width: 8rem;
+    height: 4rem;
+    border: 1px solid #009C8C ;;
+    border-radius: 6px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #04B7A4;
+    
+  }
+  
+  .artesanos__nuevo:active {
+    width: 8rem;
+    height: 4rem;
+    border: 3px solid #6FDDD1;
+    border-radius: 6px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #159184;
+  }
+  
+  .artesanos__nuevo:hover {
+    background-color: #119F90;
+  }
+
+
+  /* tabla responsive  */
+
+@media(max-width: 740px){
+  .productos {
+    display: block;
+    width: 100%;
+  }
+
+  .artesanosTable table {
+    display: none;
+  }
+
+  .artesanosTable th {
+    display: none;
+  }
+
+  .artesanosTable table, tbody, tr, td, th {
+    display: block;
+    width: 100%;
+  }
+
+  .artesanosTable tr {
+    margin-bottom: 15px;
+  }
+
+  .artesanosTable td {
+    text-align: right;
+    padding-left: 50%;
+    text-align: right;
+    position: relative;
+  }
+
+  .artesanosTable td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+
+  }
+
+  .artesanosTable tr:hover td {
+    background-color: #ffffff;
+    color: #000;
+  }
+
+  .artesanosTable tr:nth-child(even){
+    /* background-color: #EFEFEF; */
+    background-color: #F5F5F5;
+  }
+
+  .seaWater {
+    color: #159184;
+  }
+
+  .black {
+    color: #000;
+  }
+}
