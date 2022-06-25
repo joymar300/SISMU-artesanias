@@ -1,41 +1,25 @@
 <tr>
-  <td class="centrar">
-    <%= client.id %>
-  </td>
-  <td>
-    <%= client.nombre_cli %>
-  </td>
-  <td>
-    <%= client.nombre2_cli %>
-  </td>
-  <td>
-    <%= client.apellido_cli %>
-  </td>
-  <td>
-    <%= client.apellido2_cli %>
-  </td>
-  <td id="o" class="centrar">
-    <%= client.tel_cli%>
-  </td id="aw">
-  <td>
-    <%= client.correo_cli %>
-  </td>
-  <td>
-    <%= client.direccion_cli %>
-  </td>  
-  <td class="centrar">
-    <%= link_to client_url(client) do %>
-      <%= image_tag("iconos/ojo", class:"icon_accion") %>
-    <% end %>
-  </td>
-  <td class="centrar">
-    <%= link_to edit_client_url(client) do %>
-      <%= image_tag("iconos/editar", class:"icon_accion") %>
-    <% end %>
-  </td>
-  <td class="centrar">
-    <%= button_to  client_path(client), method: :delete, class: "btn_borrar", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do%>
-    <%= image_tag("iconos/borrar", class:"icon_accion") %>
-  <% end %>
-  </td>   
+    <td data-label="Cedula" class="centrar">
+        <%= client.id %>
+    </td>
+    <td data-label="Primer Nombre">
+        <%= client.nombre_cli %>
+    </td>
+    
+    <td data-label="Primer Apellido">
+        <%= client.apellido_cli %>
+    </td>
+  
+   
+    <td data-label="Accion" class="botones">
+        <%= link_to client_url(client) do %>
+        <%= image_tag("iconos/ojo", class:"icon_accion") %>
+        <% end %>
+        <%= link_to edit_client_url(client) do %>
+        <button class="editar">Editar</button>
+        <% end %>
+        <%= button_to  client_path(client), method: :delete, class: "btn_borrar", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do%>
+        <button class="eliminar">Eliminar</button>
+        <% end %>
+    </td>
 </tr>

@@ -1,43 +1,23 @@
 <main class="container sombra">
-  <section class="productos">
-    <div class="box">
-      <form class="container-4">
-        <span class="icon">
-          <%= image_tag("iconos/buscar", class:"icon") %>
-        </span>
-        <input name="q" <%=@q %> type="search" id="search" placeholder="Buscar..." />
-      </form>
-    </div>
-    <h1 class="productos__titulo">Productos</h1>
-    <div class="productos__nuevo">
-      <%= link_to "productos/new" do %>
-        <p>Nuevo</p>
-      <% end %>
-    </div>
-  </section>
-  <%
-=begin%>
- <section class="containerTable">
-    <table>
-      <thead>
-        <tr>
-          <th>Referencia</th>
-          <th>Nombre del producto</th>
-          <th>Precio</th>
-          <th colspan="3">Acción</th>
-        </tr>
-      </thead>
-      <tbody>
-        <%= render @productos%>
-      </tbody>
-    </table>
-  </section> 
-<%
-=end%>
+    <section class="productos">
+        <div class="box">
+            <form class="container-4">
+                <span class="icon">
+                <%= image_tag("iconos/buscar", class:"icon") %>
+                </span>
+                <input name="q" <%=@q %> type="search" id="search" placeholder="Buscar..." />
+            </form>
+        </div>
 
-
-
- <section class= "productosTable">
+        <h1 class="productos__titulo">Productos</h1>
+        <div class="productos__nuevo">
+            <%= link_to "productos/new" do %>
+            <p>Nuevo</p>
+            <% end %>
+        </div>    
+    </section>
+    
+    <section class= "productosTable">
     <table>
       <thead>
         <tr>
@@ -54,24 +34,25 @@
   </section>
    
 
+ 
+ 
     <%
 =begin%>
  <div class="digg_pagination">
-      <%= will_paginate(@productos,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0) %>
-    </div>
- 
+        <%= will_paginate(@producto,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0) %>
+    </div>  
 <%
 =end%>
 
 
-    <%
+ 
+
+<%
 =begin%>
- <span class="page_info">
-      <%= page_entries_info(@productos) %>
+    <span class="page_info">
+        <%= page_entries_info(@productos) %>
     </span>  
 <%
 =end%>
-
-
 
 </main>
