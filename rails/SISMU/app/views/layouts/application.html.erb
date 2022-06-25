@@ -30,7 +30,15 @@
         <span id="sismu__central"><span>SISMU <i>Artesanías</i></span> </span>
       </section>
       <section class="section_login">
-        <div id="header_select">
+      <select id="country" name="country">
+        <option value="australia"><%= image_tag(current_user.avatar_thumbnail, class:"img_perfil") %>Imagen</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
+        
+        <%
+=begin%>
+ <div id="header_select">
           <ul class="nav_select">
             <li> <%= image_tag(current_user.avatar_thumbnail, class:"img_perfil") %>
               <ul>
@@ -43,7 +51,9 @@
                 </li>
               </ul> 
           </ul>
-        </div>
+        </div> 
+<%
+=end%>
       </section>
     </nav>
     

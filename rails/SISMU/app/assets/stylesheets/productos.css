@@ -91,6 +91,7 @@ html {
   /* border: 1px solid black; */
   color: #1070dd;
   font-size: 3.2rem; 
+  width: 200px;
 }
 
 
@@ -288,15 +289,14 @@ html {
   border: 1px solid #ddd;
 }
 
-
 .productosTable tr:nth-child(even){
   /* background-color: #EFEFEF; */
   background-color: #F5F5F5;
 }
 
-.productosTable tr:hover td {
-  /* background-color: #9EC4EC; */
-}
+/* .productosTable tr:hover td {
+  background-color: #9EC4EC;
+} */
 
 
 
@@ -384,7 +384,12 @@ html {
 
 /* tabla responsive  */
 
-@media(max-width: 500px){
+@media(max-width: 740px){
+  .productos {
+    display: block;
+    width: 100%;
+  }
+
   .productosTable table {
     display: none;
   }
@@ -429,5 +434,13 @@ html {
   .productosTable tr:nth-child(even){
     /* background-color: #EFEFEF; */
     background-color: #F5F5F5;
+  }
+
+  .blue {
+    color: #1070dd;
+  }
+
+  .black {
+    color: #000;
   }
 }
