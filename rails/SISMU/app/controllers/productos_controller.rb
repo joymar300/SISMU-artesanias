@@ -2,17 +2,10 @@ class ProductosController < ApplicationController
   
   before_action :authenticate_user!
   def index
-    @q = params[:q]
     @productos = Producto.all
-    if @q
-      # @productos = Producto.where(:referencia_pro => @q )
-      @productos = Producto.where(:nombre_pro => @q )
-    else
-      @productos = Producto.all
-    end
-    # @productos = Producto.paginate(:page => params[:page], :per_page => 2)
- 
-  end
+
+    @productos = Producto.search(params[:search]).paginate(:per_page => 2, :page => params[:page])
+   end
   def show
     @producto = Producto.find(params[:id])
   end
