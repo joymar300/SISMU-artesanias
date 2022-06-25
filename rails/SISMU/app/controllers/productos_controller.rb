@@ -4,7 +4,7 @@ class ProductosController < ApplicationController
   def index
     @productos = Producto.all
 
-    @productos = Producto.search(params[:search]).paginate(:per_page => 2, :page => params[:page])
+    @productos = Producto.search(params[:search]).paginate(:per_page => 6, :page => params[:page])
    end
   def show
     @producto = Producto.find(params[:id])
