@@ -1,11 +1,12 @@
-<<<<<<< HEAD
 <main class="container sombra">
     <section class="productos">
         <div class="box">
-            <form class="container-4">
-                <span class="icon"><%= image_tag("iconos/buscar", class:"icon") %></span>
-                <input name="q" <%= @q %> type="search" id="search" placeholder="Buscar..." />
-            </form>
+            <%= form_tag artesanos_path, :method => 'get' do %>
+              <p>
+                <%= text_field_tag :search, params[:search] %>
+                <%= submit_tag "Buscar", :id => nil  %>
+              </p>
+            <% end %>
         </div>
         <h1 class="artesanos__titulo">Artesanos</h1>
         <%# <a class=" containerInfo__boton" href="artesanos/new">Nuevo</a> %>
@@ -15,28 +16,6 @@
             <% end %>
         </div>
     </section>
-=======
-<main class="container">
-  <section class=" containerInfo">
-    <%#image_tag("iconos/construccion", class: "icon_logo_title") %>
-    <div class="box">
-      <%= form_tag artesanos_path, :method => 'get' do %>
-      <p>
-        <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "Buscar", :id => nil  %>
-      </p>
-    <% end %>
-    </div>
-    <h1 class=" containerInfo__titulo">Artesanos</h1>
-    <%# <a class=" containerInfo__boton" href="artesanos/new">Nuevo</a> %>
-    <div class="icon_nuevo">
-      <%= link_to "artesanos/new" do %>
-        <span>Nuevo</span>
-        <%= image_tag("iconos/mas", class: "icon_mas") %>
-      <% end %>
-    </div>
-  </section>
->>>>>>> c89ac09fd3b1236e7e0de584e4d0bac1065503e0
 
     <section class="artesanosTable">
         <table>
@@ -54,12 +33,8 @@
         </table>
     </section>
 
-
-  <%
-=begin%>
- <div class="digg_pagination">
+  <div class="digg_pagination">
     <%= will_paginate(@artesanos,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0) %>
   </div> 
-<%
-=end%>
+
 </main>
