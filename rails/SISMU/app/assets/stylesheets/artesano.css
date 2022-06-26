@@ -1,7 +1,15 @@
- .container-artesano{
+:root {
+  --aguaMarinaOscuro: #009C8C;
+  --aguaMarinaFuerteHover: #119F90;
+  --aguaMarinaFuerte1: #159184;
+  --aguaMarinaMedio: #04B7A4;
+  --aguaMarinaClaro: #6FDDD1;
+}
+
+.container-artesano{
     text-align: center;
     margin-top: -150px;
- }
+}
 .artesano_text{
     text-align: center;
     color: #F5B041;
@@ -38,46 +46,47 @@
 /* nuevos estilos v1.2 */
 
 .artesanosTable {
-    font-size: 16px; /*1rem = 10px*/
-    margin: 0;
-    padding: 2rem;
-    font-family: sans-serif;
-    
-    
-  }
-  
-  .artesanosTable table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .artesanosTable th, td {
-    border: 1px solid #ddd;
-    padding: 12px 15px; 
-    text-align: center;
-  
-  }
-  
-  .artesanosTable th {
-    border: 1px solid #04B7A4;
-    background-color: #009C8C ;
-    color: #fff;
-  }
-  
-  
-  .artesanosTable td {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-  }
-  
-  .artesanosTable tr:nth-child(even){
-    background-color: #F5F5F5;
-  }
+  font-size: 16px; /*1rem = 10px*/
+  margin: 0;
+  padding: 2rem;
+  font-family: sans-serif;
+}
 
-  .artesanos__titulo{
-    color: #009C8C;
-    font-size: 3.2rem; 
-  }
+.artesanosTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.artesanosTable th, td {
+  border: 1px solid #ddd;
+  padding: 12px 15px; 
+  text-align: center;
+
+}
+
+.artesanosTable th {
+  border: 1px solid #04B7A4;
+  background-color: var(--aguaMarinaOscuro) ;
+  color: #fff;
+}
+
+
+.artesanosTable td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.artesanosTable tr:nth-child(even){
+  background-color: #F5F5F5;
+}
+
+.artesanos__titulo{
+  /* border: 1px solid red; */
+  color: var(--aguaMarinaOscuro);
+  font-size: 3.2rem;
+  width: 200px;
+  margin-left: -150px;
+}
 
 
 /* botones */
@@ -86,11 +95,11 @@
     font-weight: bold;
     width: 8rem;
     height: 4rem;
-    border: 1px solid #009C8C ;;
+    border: 1px solid var(--aguaMarinaOscuro) ;;
     border-radius: 6px;
     padding: 5px;
     cursor: pointer;
-    background-color: #04B7A4;
+    background-color: var(--aguaMarinaMedio);
     
   }
   
@@ -98,21 +107,98 @@
     font-weight: bold;
     width: 8rem;
     height: 4rem;
-    border: 3px solid #6FDDD1;
+    border: 3px solid var(--aguaMarinaClaro);
     border-radius: 6px;
     padding: 5px;
     cursor: pointer;
-    background-color: #159184;
+    background-color: var(--aguaMarinaFuerte1);
   }
   
   .artesanos__nuevo:hover {
-    background-color: #119F90;
+    background-color: var(--aguaMarinaFuerteHover);
   }
 
+/* BUSCADOR  */
 
-  /* tabla responsive  */
+.buscador_artesanos {
+  /* height: 10rem; */
+  /* width: 280px; */
+  min-width: 300px;
+  max-width: 300px;
+}
+
+.logoBuscar_artesanos {
+  height: 3rem;
+}
+
+.prueba_artesanos input {
+  outline: none;
+  box-sizing: border-box;
+  height: 40px;
+  width: 0;
+  padding: 0 20px;
+  color: #000;
+  border-radius: 50px;
+  font-size: 20px;
+  border: 1px solid var(--aguaMarinaFuerte1);
+  transition: all .7s ease;
+  float: left;
+  margin-top: 10px;
+}
+
+.prueba_artesanos::placeholder {
+  color: gray;
+
+}
+
+.btn_buscar_artesanos {
+  /* position: absolute; */
+  /* margin-left: 50rem; */
+  /* right: 0;
+  top: 0; */
+  width: 60px;
+  height: 60px;
+  /* background-color: #D50000; */
+  background-color: var(--aguaMarinaMedio);
+  line-height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  float: left;
+  position: relative;
+  left: -50px;
+}
+
+.btn_buscar_artesanos img {
+  margin-top: 1.5rem;
+  font-size: 25px;
+  line-height: 80px;
+  transition: all .7s ease;
+}
+
+.prueba_artesanos:hover input {
+  width: 78%;
+} 
+
+.prueba_artesanos:hover .logoBuscar_artesanos{
+  transform: rotate(-360deg);
+}
+
+.btn_buscar_artesanos:hover {
+  /* background: #cc0000; */
+  background-color: var(--aguaMarinaFuerteHover);
+}
+
+/* ******* */
+
+
+  /* RESPOSIVE  */
 
 @media(max-width: 740px){
+  .artesanos__titulo{
+    margin-left: 0px;
+  }
+
   .productos {
     display: block;
     width: 100%;

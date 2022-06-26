@@ -46,7 +46,6 @@
   border: 1px solid #ddd;
   padding: 12px 15px; 
   text-align: center;
-
 }
 
 .produccionTable th {
@@ -58,7 +57,10 @@
 
 .produccion__titulo{
   color: #7D4AC6;
-  font-size: 3.2rem; 
+  font-size: 3.2rem;
+  /* border: 1px solid red; */
+  width: 300px;
+  margin-left: -150px;
 }
 
 .produccionTable td {
@@ -71,7 +73,7 @@
 }
 
 
-/* botones  */
+/* BOTONES  */
 
 .produccion__nuevo {
   font-weight: bold;
@@ -99,11 +101,98 @@
 .produccion__nuevo:hover {
   background-color: #7E50C1;
 }
+/* ******** */
+
+/* BUSCADOR  */
+
+:root {
+  --moradoOscuro: #7647B9;
+  --moradoOscuroHover: #7E50C1;
+  --moradoFuerte1: #7D4AC6;
+  --moradoFuerte2: #8E58DC;
+  --moradoMedio: #7C59B0;
+  --moradoClaro: #A78DCD;
+}
+
+.buscador_productions {
+  /* height: 10rem; */
+  /* width: 280px; */
+  min-width: 300px;
+  max-width: 300px;
+}
+
+.logoBuscar_productions {
+  height: 3rem;
+}
+
+.prueba_productions input {
+  outline: none;
+  box-sizing: border-box;
+  height: 40px;
+  width: 0;
+  padding: 0 20px;
+  color: #000;
+  border-radius: 50px;
+  font-size: 20px;
+  border: 1px solid var(--moradoFuerte1);
+  transition: all .7s ease;
+  float: left;
+  margin-top: 10px;
+}
+
+.prueba_productions::placeholder {
+  color: gray;
+}
+
+.btn_buscar_productions {
+  /* position: absolute; */
+  /* margin-left: 50rem; */
+  /* right: 0;
+  top: 0; */
+  width: 60px;
+  height: 60px;
+  /* background-color: #D50000; */
+  background-color: var(--moradoMedio);
+  line-height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  float: left;
+  position: relative;
+  left: -50px;
+}
+
+.btn_buscar_productions img {
+  margin-top: 1.5rem;
+  font-size: 25px;
+  line-height: 80px;
+  transition: all .7s ease;
+}
+
+.prueba_productions:hover input {
+  width: 78%;
+} 
+
+.prueba_productions:hover .logoBuscar_productions{
+  transform: rotate(-360deg);
+}
+
+.btn_buscar_productions:hover {
+  /* background: #cc0000; */
+  background-color: var(--moradoOscuroHover);
+}
+
+/* ******* */
 
 
-/* tabla responsive  */
+/* RESPONSIVE  */
 
 @media(max-width: 740px){
+  .produccion__titulo{
+    margin-left: 0px;
+    max-width: 200px;
+  }
+
   .productos {
     display: block;
     width: 100%;
