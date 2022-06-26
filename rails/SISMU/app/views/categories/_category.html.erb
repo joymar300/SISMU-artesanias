@@ -1,0 +1,27 @@
+<tr>
+  <td data-label="Referencia", class="centrar blue">
+    <%= category.tipo_categoria %>
+  </td>
+
+  
+  <td data-label="Accion" class="botones blue">
+    <%= link_to edit_category_url(category) do %>
+      <%# image_tag("iconos/editar", class:"icon_accion") %>
+      <button class="editar">Editar</button>
+    <% end %>
+    <%= button_to category_path(category), method: :delete, class: "btn_borrar", form: {data: {turbo_confirm: '¿Estás seguro?' }} do %>
+      <%# image_tag("iconos/borrar", class:"icon_accion") %>
+      <button class="eliminar">Eliminar</button>
+    <% end %>
+  </td>
+  <%
+=begin%>
+ <td class="accion">
+    <%= button_to category_path(category), method: :delete, class: "btn_borrar", form: {data: {turbo_confirm: '¿Estás seguro?' }} do %>
+      <%# image_tag("iconos/borrar", class:"icon_accion") %>
+      <p>Borrar</p>
+    <% end %>
+  </td> 
+<%
+=end%>
+</tr>

@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  get 'configs/index'
+  get 'configs/new'
   namespace :emfacturas do
     get 'emdetalles/create'
   end
+
   get 'emfacturas/index'
   get 'emfacturas/show'
   get 'emfacturas/new'
@@ -50,7 +53,8 @@ Rails.application.routes.draw do
   resources :emfacturas do
     resources :emdetalles, module: :emfacturas, only:[:create, :destroy]
   end
-
+  #configuración
+  resources :configs
   #HOME
   root to: "home#index"
   

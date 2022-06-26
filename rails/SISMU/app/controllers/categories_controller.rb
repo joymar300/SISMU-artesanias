@@ -12,10 +12,10 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.new(Category_params)
+    @category = Category.new(category_params)
     if @category.save 
       flash[:alert] = "Se creo correctamente."
-      redirect_to categorys_path
+      redirect_to categories_path
     else
       render :new
     end
@@ -29,21 +29,21 @@ class CategoriesController < ApplicationController
   def update
     @category = Category.find(params[:id])
     if @category.update(Category_params)
-      redirect_to categorys_path
+      redirect_to categories_path
     else
         render :edit
     end
   end
 
   def destroy
-    @category = category.find(params[:id]).destroy
-    redirect_to categorys_path
+    @category = Category.find(params[:id]).destroy
+    redirect_to categories_path
 
   end
 
   private
 
     def category_params
-      params.require(:Category).permit(:tipo)
+      params.require(:category).permit(:tipo_categoria)
     end
 end

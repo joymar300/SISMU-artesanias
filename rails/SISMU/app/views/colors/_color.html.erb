@@ -1,0 +1,27 @@
+<tr>
+  <td data-label="Referencia", class="centrar blue">
+    <%= color.tipo %>
+  </td>
+
+  
+  <td data-label="Accion" class="botones blue">
+    <%= link_to edit_color_url(color) do %>
+      <%# image_tag("iconos/editar", class:"icon_accion") %>
+      <button class="editar">Editar</button>
+    <% end %>
+    <%= button_to color_path(color), method: :delete, class: "btn_borrar", form: {data: {turbo_confirm: '¿Estás seguro?' }} do %>
+      <%# image_tag("iconos/borrar", class:"icon_accion") %>
+      <button class="eliminar">Eliminar</button>
+    <% end %>
+  </td>
+  <%
+=begin%>
+ <td class="accion">
+    <%= button_to color_path(color), method: :delete, class: "btn_borrar", form: {data: {turbo_confirm: '¿Estás seguro?' }} do %>
+      <%# image_tag("iconos/borrar", class:"icon_accion") %>
+      <p>Borrar</p>
+    <% end %>
+  </td> 
+<%
+=end%>
+</tr>
