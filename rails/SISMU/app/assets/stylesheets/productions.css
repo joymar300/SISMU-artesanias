@@ -74,6 +74,7 @@
 /* botones  */
 
 .produccion__nuevo {
+  font-weight: bold;
   width: 8rem;
   height: 4rem;
   border: 1px solid #7647B9;;
@@ -85,6 +86,7 @@
 }
 
 .produccion__nuevo:active {
+  font-weight: bold;
   width: 8rem;
   height: 4rem;
   border: 3px solid #A78DCD;
@@ -99,6 +101,68 @@
 }
 
 
+/* tabla responsive  */
+
+@media(max-width: 740px){
+  .productos {
+    display: block;
+    width: 100%;
+  }
+
+  .produccionTable table {
+    display: none;
+  }
+
+  .produccionTable th {
+    display: none;
+  }
+
+  .produccionTable table, tbody, tr, td, th {
+    display: block;
+    width: 100%;
+  }
+
+  .produccionTable tr {
+    margin-bottom: 15px;
+  }
+
+  .produccionTable td {
+    text-align: right;
+    padding-left: 50%;
+    text-align: right;
+    position: relative;
+  }
+
+  .produccionTable td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+
+  }
+
+  .produccionTable tr:hover td {
+    background-color: #ffffff;
+    color: #000;
+  }
+
+  .produccionTable tr:nth-child(even){
+    /* background-color: #EFEFEF; */
+    background-color: #F5F5F5;
+  }
+
+  .pupple {
+    color: #7C59B0;
+  }
+
+  .black {
+    color: #000;
+  }
+}
 
 
 /* 895BCB */

@@ -34,11 +34,6 @@ html {
 }
 
 
-
-
-
-
-
 /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
 
 .container::-webkit-scrollbar {
@@ -88,7 +83,6 @@ html {
 }
 
 .productos__titulo{
-  /* border: 1px solid black; */
   color: #1070dd;
   font-size: 3.2rem; 
   width: 200px;
@@ -115,28 +109,11 @@ html {
   height: 20px;
 }
 
-/* .btn_borrar {
+.btn_borrar {
   padding: 0;
   border: none;
   background-color: transparent;
-} */
-
-/* .containerTable{
-  border: 1px solid red;
-  width: 90%;
-  margin: auto;
-  max-height: 400px;
-} */
-
-/* .containerTable>table,th,td {
-  border: 1px solid black;
-  border-spacing: 0;
-} */
-
-/* .containerTable>table {
-  margin: auto;
-  width: 100%;
-} */
+}
 
 .centrar {
   text-align: center;
@@ -159,20 +136,14 @@ html {
   width: 280px;
   min-height: 320px;
   margin: auto;
-  /* box-shadow: 3px 3px goldenrod, -1em 0 0.4em goldenrod; */
-  /* box-shadow: 60px -16px #F5B041; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 .formulario_profile{
   background-color: #fff;
   text-align: center;
-  /* padding: 10px; */
   border-radius: 10px;
   width: 400px;
   min-height: 320px;
-  margin: auto;
-  /* box-shadow: 3px 3px goldenrod, -1em 0 0.4em goldenrod; */
-  /* box-shadow: 60px -16px #F5B041; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
@@ -189,8 +160,6 @@ html {
   border-radius: 5px;
 }
 .text-danger{
-  /* border: 1px solid; */
-  /* padding:10px; */
   background-repeat: no-repeat;
   background-position: 10px center;
   font-family:Arial, Helvetica, sans-serif;
@@ -198,48 +167,12 @@ html {
   text-align:center;
   width:auto;
   color: red;
-  /* background-color: red; */
 }
 /* ***CREAR*** */
 
 /* BUSCADOR */
 
-.container-4{
-  /* overflow: hidden; */
-  width: 200px;
-  vertical-align: middle;
-  white-space: nowrap;
-  position: relative;
-  /* border: 0.5px solid black; */
-}
 
-.container-4 input#search{
-  width: 200px;
-  height: 35px;
-  background: #fff;
-  /* border: none; */
-  font-size: 10pt;
-  float: left;
-  color: #000;
-  padding-left: 45px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-
-.container-4 .icon{
-  position: absolute;
-  /* top: 50%; */
-  margin-left: 8px;
-  margin-top: 5px;
-  z-index: 1;
-  height: 15px;
-}
-
-.container-4 input#search:hover, .container-1 input#search:focus, .container-1 input#search:active{
-  outline:none;
-  background: #d3d2d2;
-}
 /* ********** */
 
 
@@ -296,6 +229,7 @@ html {
 }
 
 .productos__nuevo {
+  font-weight: bold;
   width: 8rem;
   height: 4rem;
   border: 1px solid #147CF0;;
@@ -307,6 +241,7 @@ html {
 }
 
 .productos__nuevo:active {
+  font-weight: bold;
   width: 8rem;
   height: 4rem;
   border: 3px solid #84BDFC;
@@ -456,3 +391,79 @@ html {
     color: #000;
   }
 }
+
+
+/* buscador  */
+
+/* .buscador {
+  height: 10rem;
+  width: 250px;
+  
+}
+
+.logoBuscar {
+  height: 3rem;
+
+}
+
+.prueba {
+  position: absolute;
+  left: 23%;
+  top: 27%; 
+  transform: translate(-50%,-50%);
+  padding: 10px;
+} 
+
+.prueba input {
+  outline: none;
+  box-sizing: border-box;
+  height: 40px;
+  width: 0;
+  padding: 0 20px;
+  color: #000;
+  border-radius: 50px;
+  font-size: 20px;
+  border: 1px solid #D50000;
+  transition: all .7s ease;
+}
+
+.prueba::placeholder {
+  color: gray;
+
+}
+
+
+.btn {
+  position: absolute;
+  margin-left: 50rem;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #D50000;
+  line-height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn img {
+  margin-top: 1.5rem;
+  font-size: 25px;
+  line-height: 80px;
+  transition: all .7s ease;
+}
+
+.prueba:hover input {
+  width: 350px;
+} 
+
+.prueba:hover .logoBuscar{
+  transform: rotate(-360deg);
+}
+
+.btn:hover {
+  background: #cc0000;
+}
+
+ */

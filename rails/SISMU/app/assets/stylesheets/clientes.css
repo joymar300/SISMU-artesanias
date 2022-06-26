@@ -102,6 +102,8 @@
   background-color: #F5F5F5;
 }
 
+/* tabla  show  */
+
 
 
 
@@ -111,6 +113,7 @@
 
 
 .clientes__nuevo {
+  font-weight: bold;
   width: 8rem;
   height: 4rem;
   border: 1px solid #9E0C0C;;
@@ -121,6 +124,7 @@
 }
 
 .clientes__nuevo:active {
+  font-weight: bold;
   width: 8rem;
   height: 4rem;
   border: 3px solid #C82727;

@@ -1,29 +1,27 @@
 <tr>
-  <td class="centrar">
-    <%= empresa.id %>
-  </td>
-  <td>
-    <%= empresa.nombre%>
-  </td>
-  <td class="centrar">
-    <%= empresa.tel%>
-  </td>
-  <td>
-    <%= empresa.direccion%>
-  </td>  
-  <td class="centrar">
-    <%= link_to empresa_url(empresa) do %>
-      <%= image_tag("iconos/ojo", class:"icon_accion") %>
-    <% end %>
-  </td>
-  <td class="centrar">
-    <%= link_to edit_empresa_url(empresa) do %>
-      <%= image_tag("iconos/editar", class:"icon_accion") %>
-    <% end %>
-  </td>
-  <td class="centrar">
-    <%= button_to  empresa_path(empresa), method: :delete, class: "btn_borrar", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do%>
-    <%= image_tag("iconos/borrar", class:"icon_accion") %>
-  <% end %>
-  </td>   
+    <td data-label="NIT" class="centrar green">
+        <%= empresa.id %>
+    </td>
+
+    <td data-label="Nombre" class="centrar green">
+        <%= empresa.nombre%>
+    </td>
+
+    <td data-label="Telefono" class="centrar green">
+        <%= empresa.tel%>
+    </td>
+
+    <td data-label="Direccion" class="centrar green">
+        <%= empresa.direccion%>
+    </td>  
+
+    <td data-label="Accion" class="botones green">
+        <%= link_to edit_empresa_url(empresa) do %>
+        <button class="editar">Editar</button>
+        <% end %>
+
+        <%= button_to  empresa_path(empresa), method: :delete, class: "btn_borrar", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do%>
+        <button class="eliminar">Eliminar</button>
+        <% end %>
+    </td>
 </tr>
