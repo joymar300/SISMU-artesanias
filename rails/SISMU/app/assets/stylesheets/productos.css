@@ -1,12 +1,19 @@
-/* principales */
+/* PRINCIPALES */
 
-html {
-  font-size: 62.5%; /*Para utilizar rem*/
-  
+:root {
+  --azulFuerte1: #1070dd;
+  --azulFuerte2: #1068CA;
+  --azulMedio: #147CF0;
+  --azulClaro: #84BDFC;
 }
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /*Para utilizar rem*/
+  
 }
 
 .sombra{
@@ -83,12 +90,12 @@ html {
 }
 
 .productos__titulo{
+  /* border: 1px solid red; */
   color: #1070dd;
   font-size: 3.2rem; 
   width: 200px;
+  margin-left: -150px;
 }
-
-
 
 .containerInfo__boton {
   border: 1px solid black;
@@ -168,23 +175,15 @@ html {
   width:auto;
   color: red;
 }
-/* ***CREAR*** */
+/* ****** */
 
-/* BUSCADOR */
-
-
-/* ********** */
-
-
-/* nuevos estilos  */
+/* NUEVOS ESTILOS  */
 
 .productosTable {
   font-size: 16px; /*1rem = 10px*/
   margin: 0;
   padding: 2rem;
   font-family: sans-serif;
-  
-  
 }
 
 .productosTable table {
@@ -200,13 +199,13 @@ html {
 }
 
 .productosTable th {
-  border: 1px solid #84BDFC;
-  background-color: #1070dd;
+  border: 1px solid var(--azulClaro);
+  background-color: var(--azulFuerte1);
   color: #fff;
 }
 
 .productos__titulo{
-  color: #1070dd;
+  color: var(--azulFuerte1);
   font-size: 3.2rem; 
 }
 
@@ -232,11 +231,11 @@ html {
   font-weight: bold;
   width: 8rem;
   height: 4rem;
-  border: 1px solid #147CF0;;
+  border: 1px solid var(--azulMedio);;
   border-radius: 6px;
   padding: 5px;
   cursor: pointer;
-  background-color: #147CF0;
+  background-color: var(--azulMedio);
   
 }
 
@@ -248,11 +247,11 @@ html {
   border-radius: 6px;
   padding: 5px;
   cursor: pointer;
-  background-color: #1070dd;
+  background-color: var(--azulFuerte1);
 }
 
 .productos__nuevo:hover {
-  background-color: #1068CA;
+  background-color: var(--azulFuerte2);
 }
 
 .editar {
@@ -329,9 +328,84 @@ html {
   border: 3px solid #7FDB90;
 }
 
-/* tabla responsive  */
+/* BUSCADOR  */
+
+.buscador {
+  /* height: 10rem; */
+  /* width: 280px; */
+  min-width: 300px;
+  max-width: 300px;
+}
+
+.logoBuscar {
+  height: 3rem;
+}
+
+.prueba input {
+  outline: none;
+  box-sizing: border-box;
+  height: 40px;
+  width: 0;
+  padding: 0 20px;
+  color: #000;
+  border-radius: 50px;
+  font-size: 20px;
+  border: 1px solid var(--azulFuerte1);
+  transition: all .7s ease;
+  float: left;
+  margin-top: 10px;
+}
+
+.prueba::placeholder {
+  color: gray;
+
+}
+
+.btn_buscar {
+  /* position: absolute; */
+  /* margin-left: 50rem; */
+  /* right: 0;
+  top: 0; */
+  width: 60px;
+  height: 60px;
+  /* background-color: #D50000; */
+  background-color: var(--azulMedio);
+  line-height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  float: left;
+  position: relative;
+  left: -50px;
+}
+
+.btn_buscar img {
+  margin-top: 1.5rem;
+  font-size: 25px;
+  line-height: 80px;
+  transition: all .7s ease;
+}
+
+.prueba:hover input {
+  width: 78%;
+} 
+
+.prueba:hover .logoBuscar{
+  transform: rotate(-360deg);
+}
+
+.btn_buscar:hover {
+  /* background: #cc0000; */
+  background-color: var(--azulFuerte2);
+}
+
+/* RESPONSIVE  */
 
 @media(max-width: 740px){
+  .productos__titulo{
+    margin-left: 0px;
+  }
+
   .productos {
     display: block;
     width: 100%;
@@ -392,78 +466,8 @@ html {
   }
 }
 
-
-/* buscador  */
-
-/* .buscador {
-  height: 10rem;
-  width: 250px;
-  
-}
-
-.logoBuscar {
-  height: 3rem;
-
-}
-
-.prueba {
-  position: absolute;
-  left: 23%;
-  top: 27%; 
-  transform: translate(-50%,-50%);
-  padding: 10px;
-} 
-
-.prueba input {
-  outline: none;
-  box-sizing: border-box;
-  height: 40px;
-  width: 0;
-  padding: 0 20px;
-  color: #000;
-  border-radius: 50px;
-  font-size: 20px;
-  border: 1px solid #D50000;
-  transition: all .7s ease;
-}
-
-.prueba::placeholder {
-  color: gray;
-
-}
-
-
-.btn {
-  position: absolute;
-  margin-left: 50rem;
-  right: 0;
-  top: 0;
-  width: 60px;
-  height: 60px;
-  background-color: #D50000;
-  line-height: 60px;
-  border-radius: 50%;
-  text-align: center;
-  cursor: pointer;
-}
-
-.btn img {
-  margin-top: 1.5rem;
-  font-size: 25px;
-  line-height: 80px;
-  transition: all .7s ease;
-}
-
-.prueba:hover input {
-  width: 350px;
-} 
-
-.prueba:hover .logoBuscar{
-  transform: rotate(-360deg);
-}
-
-.btn:hover {
-  background: #cc0000;
-}
-
- */
+/* .productosTable th {
+  border: 1px solid #84BDFC;
+  background-color: #1070dd;
+  color: #fff;
+} */

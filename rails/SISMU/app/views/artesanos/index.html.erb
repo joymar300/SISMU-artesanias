@@ -1,13 +1,27 @@
 <main class="container sombra">
     <section class="productos">
-        <div class="box">
-            <%= form_tag artesanos_path, :method => 'get' do %>
+        <%# <div class="box">
+            <%= form_tag artesanos_path, :method => 'get' do %
               <p>
-                <%= text_field_tag :search, params[:search] %>
-                <%= submit_tag "Buscar", :id => nil  %>
+                <%= text_field_tag :search, params[:search] %
+                <%= submit_tag "Buscar", :id => nil  %
               </p>
+            <% end %
+        </div> %>
+
+        <div class="buscador_artesanos">
+          <div class="prueba_artesanos">
+            <%= form_tag artesanos_path, :method => 'get' do %>
+              <%= text_field_tag :search, params[:search], placeholder: "Buscar"%>
+              <div class="btn_buscar_artesanos">
+                <button class="btn_borrar">
+                  <%= image_tag "iconos/buscar_blanco", :referencia_pro => nil, class: "logoBuscar_artesanos" %>
+                </button>
+              </div>
             <% end %>
+          </div>
         </div>
+
         <h1 class="artesanos__titulo">Artesanos</h1>
         <%# <a class=" containerInfo__boton" href="artesanos/new">Nuevo</a> %>
         <div class="artesanos__nuevo">
