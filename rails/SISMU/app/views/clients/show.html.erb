@@ -1,47 +1,56 @@
-    <section class="clientesTable">
-        <table>
-            <thead>
-                    <tr>
-                    <th>Cedula</th>
-                    <th>Primer Nombre</th>
-                    <th>Segundo Nombre</th>
-                    <th>Primer Apellido</th>
-                    <th>Segundo Apellido</th>
-                    <th>Telefono</th>
-                    <th>Correo</th>
-                    <th>Direccion</th>
-                    </tr>
-            </thead>
-            <tbody>
-               <tr>
-                    <td data-label="Cedula" class="centrar">
-                        <%= @client.id %>
-                    </td>
-                    <td data-label="Primer Nombre">
-                        <%= @client.nombre_cli %>
-                    </td>
-                     <td data-label="Segundo Nombre">
-                        <%= @client.nombre2_cli %>
-                    </td>
-                    <td data-label="Primer Apellido">
-                        <%= @client.apellido_cli %>
-                    </td>
-                    <td data-label="Segundo Apellido">
-                        <%= @client.apellido2_cli %>
-                    </td>
-                    <td data-label="Telefono">
-                        <%= @client.tel_cli %>
-                    </td>
-                    <td data-label="Correo">
-                        <%= @client.correo_cli %>
-                    </td>
-                    <td data-label="Direccion">
-                        <%= @client.direccion_cli %>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<main class= "containerShow sombra">
+    <h1>Información Cliente</h1>
+
+    <section class= "informacionClientes">
+        <div>
+             <label>Cedula</label>
+             <input type="text" value="<%= @client.id %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+         <div>
+             <label>Primer Nombre</label>
+             <input type="text" value="<%= @client.nombre_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
     </section>
+
+    <section class= "informacionClientes">
+        <div>
+             <label>Telefono</label>
+             <input type="text" value="<%= @client.tel_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+         <div>
+             <label>Segundo Nombre</label>
+             <input type="text" value="<%= @client.nombre2_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+    </section>
+
+    <section class= "informacionClientes">
+        <div>
+             <label>Correo Electronico</label>
+             <input type="text" value="<%= @client.correo_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+         <div>
+             <label>Primer Apellido</label>
+             <input type="text" value="<%= @client.apellido_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+    </section>
+    
+    <section class= "informacionClientes">
+        <div>
+             <label>Direccion</label>
+             <input type="text" value="<%= @client.direccion_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+         <div>
+             <label>Segundo Apellido</label>
+             <input type="text" value="<%= @client.apellido2_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+    </section>
+
+    <section class="botonVolver"><%= link_to "Volver", clients_url, class: "volver" %></section>
+    
+    
+   
+
+</main>
 
 
 
