@@ -1,21 +1,20 @@
 <tr>
-  <td class="centrar">
-    <%= link_to emfactura.id, emfactura_url(emfactura.id) %>
-  </td>
-  <td>
-    <%= emfactura.empresa.nombre %>
-  </td>
-  <td class="centrar">
-    <%= emfactura.created_at %>
-  </td>
-  <td class="centrar">
-    <%= link_to emfactura_url(emfactura) do %>
-      <%= image_tag("iconos/ojo", class:"icon_accion") %>
-    <% end %>
-  </td>
-  <td class="centrar">
-    <%= button_to emfactura_path(emfactura), method: :delete, class: "btn_borrar", form: {data: {turbo_confirm: '¿Estás seguro?' }} do %>
-      <%= image_tag("iconos/borrar", class:"icon_accion") %>
-    <% end %>
-  </td>
+    <td data-label="N° Factura" class="centrar green">
+        <%= emfactura.id %>
+    </td>
+    <td data-label="Nombre" class="centrar green">
+        <%= emfactura.empresa.nombre %>
+    </td>
+    <td data-label="Fecha" class="centrar green">
+        <%= emfactura.created_at %>
+    </td>
+    <td data-label="Accion" class="botones green">
+        <%= link_to emfactura_url(emfactura) do %>
+             <button class="ver">Ver</button>
+        <% end %>
+
+         <%= button_to emfactura_path(emfactura), method: :delete, class: "btn_borrar", form: {data: {turbo_confirm: '¿Estás seguro?' }} do %>
+             <button class="eliminar">Eliminar</button>
+        <% end %>
+    </td>
 </tr>

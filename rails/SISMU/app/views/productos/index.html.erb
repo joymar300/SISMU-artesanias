@@ -2,10 +2,10 @@
     <section class="productos">
         <div class="box">
             <%= form_tag productos_path, :method => 'get' do %>
-              <p>
-                <%= text_field_tag :search, params[:search] %>
-                <%= submit_tag "Buscar", :referencia_pro => nil  %>
-              </p>
+                <p>
+                    <%= text_field_tag :search, params[:search], placeholder: "Buscar"%>
+                    <%= submit_tag "Buscar", :referencia_pro => nil %>
+                </p>
             <% end %>
         </div>
         <h1 class="productos__titulo">Productos</h1>

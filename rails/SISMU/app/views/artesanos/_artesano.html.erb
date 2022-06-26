@@ -1,18 +1,18 @@
 <tr>
     <td data-label="Cedula" class="centrar seaWater">
-        <%= link_to artesano.id %>
+        <%= artesano.id %>
     </td>
 
     <td data-label="Primer Nombre" class="centrar seaWater">
-        <%= link_to artesano.nombre %>
+        <%= artesano.nombre %>
     </td>
 
     <td data-label="Primer Apellido" class="centrar seaWater">
-        <%= link_to artesano.apellido %>
+        <%= artesano.apellido %>
     </td>
 
 
-    <td class="botones">
+    <td data-label="Accion" class="botones seaWater">
        <%= link_to artesano_url(artesano) do %>
         <button class="ver">Ver</button>
         <% end %>

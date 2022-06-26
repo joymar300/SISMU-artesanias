@@ -83,6 +83,7 @@
 /* botones */
 
 .artesanos__nuevo {
+    font-weight: bold;
     width: 8rem;
     height: 4rem;
     border: 1px solid #009C8C ;;
@@ -94,6 +95,7 @@
   }
   
   .artesanos__nuevo:active {
+    font-weight: bold;
     width: 8rem;
     height: 4rem;
     border: 3px solid #6FDDD1;

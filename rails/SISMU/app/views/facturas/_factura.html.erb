@@ -1,18 +1,18 @@
 <tr>
-  <td class="centrar">
+  <td data-label="N° Factura" class="centrar red">
     <%= factura.id %>
   </td>
-  <td>
+  <td data-label="Nombre" class="centrar red">
     <%= factura.client.nombre_completo %>
   </td>
-  <td>
+  <td data-label="Correo" class="centrar red">
     <%= factura.client.correo_cli %>
   </td>
-  <td>
+  <td data-label="Fecha" class="centrar red">
     <%= factura.created_at %>
   </td>
 
-  <td class="botones">
+  <td data-label="Accion" class="botones red">
     <%= link_to factura_url(factura.id) do %>
        <button class="ver">Ver</button>
     <% end %>
