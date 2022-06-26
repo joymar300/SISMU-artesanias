@@ -30,17 +30,15 @@
         <span id="sismu__central"><span>SISMU <i>Artesanías</i></span> </span>
       </section>
       <section class="section_login">
-      <select id="country" name="country">
-        <option value="australia"><%= image_tag(current_user.avatar_thumbnail, class:"img_perfil") %>Imagen</option>
+      <%# <select id="country" name="country">
+        <option value="australia"><%= image_tag(current_user.avatar_thumbnail, class:"img_perfil") Imagen</option>
         <option value="canada">Canada</option>
         <option value="usa">USA</option>
-      </select>
+      </select> %>
         
-        <%
-=begin%>
- <div id="header_select">
-          <ul class="nav_select">
-            <li> <%= image_tag(current_user.avatar_thumbnail, class:"img_perfil") %>
+        <div id="header_select">
+          <ul class="ul_select">
+            <li class="li_select"> <%= image_tag(current_user.avatar_thumbnail, class:"img_perfil") %>
               <ul>
                 <li><%= link_to "edit", edit_user_registration_path %></li>
                 <li>
@@ -52,8 +50,6 @@
               </ul> 
           </ul>
         </div> 
-<%
-=end%>
       </section>
     </nav>
     
@@ -90,11 +86,43 @@
           <% end %>
         </div>
 
-        <div class="item_menu" title="Clientes">
-          <%= link_to clients_url do %>
-            <%= image_tag("iconos/usuario_blanco", class: "icon_menu") %>
-            <div class="title_icon_menu"><span>Clientes</span></div>
-          <% end %>
+        <div class="nav_select">
+          <div class="item_menu" title="Clientes">
+            <%= link_to clients_url do %>
+              <%= image_tag("iconos/usuarios_blanco", class: "icon_menu") %>
+              <div class="title_icon_menu"><span>Clientes</span></div>
+            <% end %>
+          </div>
+
+          <div class="item_menu" title="Facturas">
+            <%= link_to facturas_url do %>
+              <%= image_tag("iconos/factura_gris", class:"icon_menu") %>
+              <div class="title_icon_menu"><span>Facturas</span></div>
+            <% end %>
+          </div>
+          
+          <%# <div class="collapse in" id="myContent">
+            <ul class="nav">
+              <li>
+                <a href="#">
+                  <svg class="lnr lnr-star"><use xlink:href="#lnr-star"></use></svg>
+                  Favourites
+                </a>
+              </li>
+              <li class="active">
+                <a href="#">
+                  <svg class="lnr lnr-eye"><use xlink:href="#lnr-eye"></use></svg>
+                  Following
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="lnr lnr-tag"><use xlink:href="#lnr-tag"></use></svg>
+                  Lists
+                </a>
+              </li>
+            </ul>
+          </div> %>
         </div>
 
         <div class="item_menu" title="Artesanos">
@@ -122,13 +150,6 @@
           <%= link_to emfacturas_url do %>
             <%= image_tag("iconos/recibo_blanco", class: "icon_menu") %>
             <div class="title_icon_menu"><span>Facturas Empresas</span></div>
-          <% end %>
-        </div>
-
-        <div class="item_menu" title="Facturas">
-          <%= link_to facturas_url do %>
-            <%= image_tag("iconos/factura_gris", class:"icon_menu") %>
-            <div class="title_icon_menu"><span>Facturas</span></div>
           <% end %>
         </div>
 

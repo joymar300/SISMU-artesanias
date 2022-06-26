@@ -1,14 +1,28 @@
 <main class="container sombra">
     <section class="productos">
         <%# image_tag("iconos/empresa", class: "icon_logo_title") %>
-        <div class="box">
-            <%= form_tag empresas_path, :method => 'get' do %>
+        <%# <div class="box">
+            <%= form_tag empresas_path, :method => 'get' do %
                 <p>
-                    <%= text_field_tag :search, params[:search] %>
-                    <%= submit_tag "Buscar", :id => nil  %>
+                    <%= text_field_tag :search, params[:search] %
+                    <%= submit_tag "Buscar", :id => nil  %
                 </p>
+            <% end %
+        </div> %>
+
+        <div class="buscador_empresas">
+          <div class="prueba_empresas">
+            <%= form_tag empresas_path, :method => 'get' do %>
+              <%= text_field_tag :search, params[:search], placeholder: "Buscar"%>
+              <div class="btn_buscar_empresas">
+                <button class="btn_borrar">
+                  <%= image_tag "iconos/buscar_blanco", :referencia_pro => nil, class: "logoBuscar_empresas" %>
+                </button>
+              </div>
             <% end %>
+          </div>
         </div>
+
         <h1 class="empresas__titulo">Empresa</h1>
         <div class="empresas__nuevo">
             <%= link_to "empresas/new" do %>

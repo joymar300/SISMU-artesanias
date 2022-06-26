@@ -1,35 +1,48 @@
 <main class="container sombra">
-    <section class="productos">
-            <div class="box">
-                <%= form_tag productions_path, :method => 'get' do %>
-                <p>
-                    <%= text_field_tag :search, params[:search] %>
-                    <%= submit_tag "Buscar", :ref => nil  %>
-                </p>
-                <% end %>
-            </div>
-            <h1 class="produccion__titulo">Producción del día</h1>
-         
-            <div class="produccion__nuevo">
-                <%= link_to "productions/new" do %>
-                    <p>Nuevo</p>
-                <% end %>
-            </div>
-    </section>
+  <section class="productos">
+    <%# <div class="box">
+      <%= form_tag productions_path, :method => 'get' do %
+      <p>
+        <%= text_field_tag :search, params[:search] %
+        <%= submit_tag "Buscar", :ref => nil  %
+      </p>
+      <% end %
+    </div> %>
+
+    <div class="buscador_productions">
+      <div class="prueba_productions">
+        <%= form_tag productions_path, :method => 'get' do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Buscar"%>
+          <div class="btn_buscar_productions">
+            <button class="btn_borrar">
+              <%= image_tag "iconos/buscar_blanco", :referencia_pro => nil, class: "logoBuscar_productions" %>
+            </button>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <h1 class="produccion__titulo">Producción del día</h1>
+    <div class="produccion__nuevo">
+      <%= link_to "productions/new" do %>
+        <p>Nuevo</p>
+      <% end %>
+    </div>
+  </section>
 
   <section class="produccionTable">
-        <table>
-            <thead>
-                <tr>
-                <th>N° Referencia</th>
-                <th>Fecha de producción</th>
-                <th colspan="2">Acción</th>
-                </tr>
-            </thead>
-            <tbody>
-                <%= render @productions %>
-            </tbody>
-        </table>
+    <table>
+      <thead>
+        <tr>
+        <th>N° Referencia</th>
+        <th>Fecha de producción</th>
+        <th colspan="2">Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @productions %>
+      </tbody>
+    </table>
   </section>
 
   <div class="digg_pagination">

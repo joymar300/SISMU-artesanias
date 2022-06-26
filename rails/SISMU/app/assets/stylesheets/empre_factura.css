@@ -1,3 +1,10 @@
+.emfacturas__titulo{
+  color: #0EC002;
+  font-size: 3.2rem;
+  width: 500px;
+  margin-left: -150px;
+}
+
 .text_factura-empresa{
     text-align: center;
     color: #F5B041;
@@ -18,4 +25,11 @@
 .label_factura-empresa{
     /* border: solid 1px blue; */
     display: block;
+}
+
+@media(max-width: 740px){
+  .emfacturas__titulo{
+    margin-left: 0px;
+    max-width: 200px;
+  }
 }

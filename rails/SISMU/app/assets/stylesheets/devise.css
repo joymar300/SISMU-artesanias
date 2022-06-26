@@ -132,6 +132,13 @@ html {
   margin:auto;
 }
 
+.centrar_nombre_perfil {
+  text-align: center;
+  padding: 20px;
+  /* min-width: 100%; */
+  /* border: 1px solid blue; */
+}
+
 
 
 
