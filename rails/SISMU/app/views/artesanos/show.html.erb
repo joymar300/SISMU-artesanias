@@ -1,4 +1,6 @@
-<section class="artesanosTable">
+<%
+=begin%>
+ <section class="artesanosTable">
         <table>
             <thead>
                     <tr>
@@ -17,25 +19,73 @@
                     </td>
 
                     <td data-label="Primer Nombre">
-                        <%= link_to @artesano.nombre %>
+                      
                     </td>
 
                     <td data-label="Segundo Nombre">
-                        <%= link_to @artesano.snombre %>
+                       
                     </td>
                     
                     <td data-label="Primer Apellido">
-                        <%= link_to @artesano.apellido %>
+                        
                     </td>
 
                     <td data-label="Segundo Apellido">
-                        <%= link_to @artesano.sapellido %>
+                   
                     </td>
 
                     <td data-label="Telefono" class="centrar">
-                        <%= link_to @artesano.tel%>
+                       
                     </td>
                 </tr>
             </tbody>
         </table>
+    </section> 
+<%
+=end%>
+
+
+
+<main class="artesanosShow sombra">
+
+     <h1>Información Artesano</h1>
+
+
+     <section class= "informacionClientes">
+        <div>
+             <label>Cedula</label>
+             <input type="text" value="<%= @artesano.id %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+        <div>
+             <label>Telefono</label>
+             <input type="text" value="<%= @artesano.tel%>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+        
     </section>
+
+    <section class= "informacionClientes">
+        <div>
+             <label>Primer Nombre</label>
+             <input type="text" value="<%= @artesano.nombre %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+        <div>
+             <label>Segundo Nombre</label>
+             <input type="text" value="<%= @artesano.snombre %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+    </section>
+
+    <section class= "informacionClientes">
+        <div>
+             <label>Primer Apellido</label>
+             <input type="text" value="<%= @artesano.apellido %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+         <div>
+             <label>Segundo Apellido</label>
+             <input type="text" value="<%= @artesano.sapellido %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+    </section>
+
+    <section class="botonVolver"><%= link_to "Volver", artesanos_url, class: "volver" %></section>
+
+</main>
+    

@@ -291,7 +291,7 @@
                                                     /* vista show */                                    
 
 
-.containerShow  {
+.clientesShow  {
   font-size: 16px; /*1rem = 10px*/
   border-radius: 10px;
   background-color: #fff;
@@ -304,7 +304,7 @@
 }
 
 
-.containerShow h1 {
+.clientesShow h1 {
   margin-left: 1rem;
   font-family: sans-serif;
   color: #C11D1D;
@@ -356,25 +356,25 @@
   color: white;
   width: 20rem;
   height: 4rem;
-  border: 1px solid #9E0C0C;;
+  border: 1px solid var(--rojoOscuro);
   border-radius: 6px;
   padding: 10px;
   cursor: pointer;
-  background-color: #C41414;
+  background-color: var(--rojoFuerte2);
 }
 
 .volver:active {
   width: 20rem;
   height: 4rem;
-  border: 3px solid #C82727;
+  border: 3px solid var(--rojoClaro);
   border-radius: 6px;
   padding: 10px;
   cursor: pointer;
-  background-color: #C11D1D;
+  background-color: var(--rojoMedio);
 }
 
 .volver:hover {
-  background-color: #9E0B0B;
+  background-color: var(--rojoOscuroHover);
 }
 
 .botonVolver{
