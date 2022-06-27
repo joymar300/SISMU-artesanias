@@ -3,7 +3,7 @@ class ClientsController < ApplicationController
   def index
     @clients = Client.all
    
-    @clients = Client.search(params[:search]).paginate(:per_page => 6, :page => params[:page])
+    @clients = Client.search(params[:search]).paginate(:per_page => 10, :page => params[:page])
   end
   def show
     @client = Client.find(params[:id])

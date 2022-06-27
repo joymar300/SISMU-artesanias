@@ -31,7 +31,7 @@ class FacturasController < ApplicationController
    
 
     @facturas = Factura.all()
-    @facturas = Factura.search(params[:search]).paginate(:per_page => 6, :page => params[:page])
+    @facturas = Factura.search(params[:search]).paginate(:per_page => 10, :page => params[:page])
   end
 
   def create
