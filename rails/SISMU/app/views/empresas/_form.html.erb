@@ -26,6 +26,18 @@
           <span class="text-danger"><%= @empresa.errors[:direccion].first %></span>
           <br>
         <% end %>
+        <%= f.label :correo, "Correo : ", class: 'label_empresa2'%>
+        <%= f.email_field :correo, class: 'input_empresa2'%> <br><br>
+        <% if @empresa.errors[:correo].any? %>
+          <span class="text-danger"><%= @empresa.errors[:direccion].first %></span>
+          <br>
+        <% end %>
+        <%= f.label :ciudad, "Ciudad : ", class: 'label_empresa2'%>
+        <%= f.input_field :ciudad, class: 'input_empresa2'%> <br><br>
+        <% if @empresa.errors[:ciudad].any? %>
+          <span class="text-danger"><%= @empresa.errors[:direccion].first %></span>
+          <br>
+        <% end %>
       <%= f.button :submit , class:"formulario_boton" %><br>
     <% end %>
   </div>
