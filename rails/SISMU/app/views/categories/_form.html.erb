@@ -1,0 +1,19 @@
+
+<div class="containerPro">
+  <h1 class="containerPro_text" >Crear colors</h1>
+  <div class="formulario">
+      <%= simple_form_for @category do |f| %> <br>
+
+        <%= f.label :tipo_categoria, 'ecriba la categoria: ', class: 'left', required: true %> <br>
+        <%= f.input_field :tipo_categoria %> <br>
+        <% if @category.errors[:tipo_categoria].any? %>
+          <span class="text-danger"><%= @category.errors[:tipo_categoria].first %></span>
+          <br>
+        <% end %>
+        <br>
+        <br>
+        <div><%= f.button :submit, 'Crear', class: "formulario_boton" %></div>
+        <br>
+      <% end %>
+  </div>
+</div>
