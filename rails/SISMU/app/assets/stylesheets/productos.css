@@ -465,6 +465,9 @@ html {
   }
 }
 
+.white{
+  color: white;
+}
 /* .productosTable th {
   border: 1px solid #84BDFC;
   background-color: #1070dd;

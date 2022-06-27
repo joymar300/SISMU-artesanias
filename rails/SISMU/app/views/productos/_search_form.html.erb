@@ -1,0 +1,7 @@
+<%= search_form_for @q, url: url_for(controller: 'productos', action: 'index') do |f| %>
+
+  <%= f.label :nombre_pro %>
+  <%= f.search_field :nombre_pro %>
+
+  <%= f.submit %>
+<% end %>

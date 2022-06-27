@@ -2,9 +2,14 @@ class ProductosController < ApplicationController
   
   before_action :authenticate_user!
   def index
-    @productos = Producto.all
-
-    @productos = Producto.search(params[:search]).paginate(:per_page => 6, :page => params[:page])
+    @productos= Producto.all
+    @q = Producto.ransack(params[:q])
+    
+    @productos = if params[:q]
+       @q.result(distinct: true).paginate(:per_page => 6, :page => params[:page])  
+      else
+      Producto.search(params[:search]).paginate(:per_page => 6, :page => params[:page])
+      end
    end
   def show
     @producto = Producto.find(params[:id])
