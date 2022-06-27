@@ -44,6 +44,11 @@
             <td><%= detalle.producto.referencia_pro %></td>
             <td><%= detalle.producto.nombre_pro %></td>
             <td><%= number_to_currency detalle.precio%></td>
+            <td >
+                <% detalle.colors.each do |d| %>
+                    <%= d.tipo%>
+                <%end%>
+            </td> 
             <td><%= detalle.cantidad %></td>
             <td><%= number_to_currency detalle.valor %></td>
             <td><%= button_to image_tag("iconos/borrar", class:"icon_accion"), factura_detalle_path(@factura, detalle), method: :delete %></td>
