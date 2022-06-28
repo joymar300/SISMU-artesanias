@@ -4,6 +4,7 @@ class ArtesanosController < ApplicationController
    
   
     @artesanos = Artesano.all()
+    authorize @artesanos
     @q = Artesano.ransack(params[:q])
     
     @artesanos= if params[:q]

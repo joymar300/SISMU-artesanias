@@ -29,6 +29,7 @@ class FacturasController < ApplicationController
 
   def index
     @facturas = Factura.all()
+    authorize @facturas
     @q = Factura.ransack(params[:q])
     
     @facturas = if params[:q]

@@ -5,6 +5,7 @@ class ProductionsController < ApplicationController
     
 
     @productions = Production.all
+    authorize @productions
     @q = Production.ransack(params[:q])
     
     @productions = if params[:q]

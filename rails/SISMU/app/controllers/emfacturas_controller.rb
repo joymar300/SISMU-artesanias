@@ -30,6 +30,7 @@ class EmfacturasController < ApplicationController
 
 
     @emfacturas = Emfactura.all()
+    authorize @emfacturas
     @q = Emfactura.ransack(params[:q])
     
     @emfacturas = if params[:q]

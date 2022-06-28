@@ -3,6 +3,7 @@ class EmpresasController < ApplicationController
   def index
   
     @empresas = Empresa.all
+    authorize @empresas
     @q = Empresa.ransack(params[:q])
     
     @empresas= if params[:q]
