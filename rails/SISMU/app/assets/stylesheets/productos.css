@@ -5,6 +5,7 @@
   --azulFuerte2: #1068CA;
   --azulMedio: #147CF0;
   --azulClaro: #84BDFC;
+  --blanco: #fff;
 }
 
 * {
@@ -33,6 +34,10 @@ html {
   border-radius: 10px;
   background-color: #fff;
   width: 90%;
+
+
+  min-height: 500px;
+
   margin: 0px auto 50px auto;
   margin-top: 50px;
   padding-bottom: 30px;
@@ -220,12 +225,11 @@ html {
   font-weight: bold;
   width: 8rem;
   height: 4rem;
-  border: 1px solid var(--azulMedio);;
+  border: 1px solid var(--azulMedio);
   border-radius: 6px;
   padding: 5px;
   cursor: pointer;
   background-color: var(--azulMedio);
-  
 }
 
 .productos__nuevo:active {
