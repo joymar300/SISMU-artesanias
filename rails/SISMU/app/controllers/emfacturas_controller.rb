@@ -9,7 +9,7 @@ class EmfacturasController < ApplicationController
 
   def show
     @emdetalles = @emfactura.emdetalles
-    authorize @emdetalle
+    authorize @emfactura
     @emdetalle = Emdetalle.new
     @total = @emfactura.emdetalles.sum(:valor)
   end
