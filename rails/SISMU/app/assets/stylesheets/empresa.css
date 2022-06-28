@@ -118,15 +118,15 @@ html {
   font-weight: bold;
   width: 8rem;
   height: 4rem;
-  border: 3px solid #56F74B;
+  border: 3px solid  var(--verdeClaro);
   border-radius: 6px;
   padding: 5px;
   cursor: pointer;
-  background-color: #0F7B08;
+  background-color: var(--verdeOscuro);
 }
 
 .empresas__nuevo:hover {
-  background-color: #15A70B;
+  background-color: var(--verdeOscuroHover);
 }
 
 /* ******** */
@@ -270,6 +270,69 @@ html {
     color: #000;
   }
 }
+
+                                                   /* vista show */                                    
+
+
+.empresasShow  {
+  font-size: 16px; /*1rem = 10px*/
+  border-radius: 10px;
+  background-color: #fff;
+  width: 95%;
+  height: 65rem;
+  margin: 0px auto 50px auto;
+  margin-top: 50px;
+  padding-bottom: 30px;
+  overflow: auto;
+}
+
+
+.empresasShow h1 {
+  margin-left: 1rem;
+  font-family: sans-serif;
+  color: var(--verdeFuerte2)
+}
+
+
+
+/* botones*/
+
+.volver {
+  text-align: center;
+  margin-top: 5rem;
+  margin-left: 1rem;
+  color: white;
+  width: 20rem;
+  height: 4rem;
+  border: 1px solid #119708;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #19C70D;
+}
+
+.volver:active {
+  width: 20rem;
+  height: 4rem;
+  border: 3px solid  var(--verdeClaro);
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: var(--verdeOscuro);
+}
+
+.volver:hover {
+  background-color: var(--verdeOscuroHover);
+}
+
+.botonVolver{
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+
 
 
                                               /* vistas new and edit */

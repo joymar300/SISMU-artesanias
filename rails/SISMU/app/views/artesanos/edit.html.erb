@@ -2,12 +2,12 @@
 <main class = "artesanosNew sombra">
 
     <section class="botonVolverNew"><%= link_to "Volver", artesanos_url, class: "volverNew" %></section>
-    <h1>Registrar Artesano</h1>
+    <h1>Editar Artesano</h1>
 
     <section class="informacionNew">
         <div>
-            <%= f.label :id, "Cedula ", class:"input_artesano" %>
-            <%= f.input_field :id, class: 'input_artesano' , class:"label_artesano1" %>
+            <%= f.label :id, "Cedula "%>
+            <%= f.input_field :id, :disabled => true%>
             <% if @artesano.errors[:id].any? %>
                 <p class="text-danger"><%= @artesano.errors[:id].first %></p>
             <% end %>
@@ -16,8 +16,8 @@
       
     <section class="informacionNew">
         <div>
-            <%= f.label :id, "Nombre ", class:"input_artesano" %>
-            <%= f.input_field :nombre, class: 'input_artesano' , class:"label_artesano2" %>
+            <%= f.label :id, "Nombre " %>
+            <%= f.input_field :nombre %>
             <% if @artesano.errors[:nombre].any? %>
                 <p class="text-danger"><%= @artesano.errors[:nombre].first %></p>
             <% end %>
@@ -26,15 +26,15 @@
           
     <section class="informacionNew">
         <div>
-            <%= f.label :id, "Segundo Nombre ", class:"input_artesano" %>
-            <%= f.input_field :snombre,class: 'input_artesano' , class:"label_artesano3" %>
+            <%= f.label :id, "Segundo Nombre "%>
+            <%= f.input_field :snombre %>
         </div>
     </section>
 
     <section class="informacionNew">
         <div>
-            <%= f.label :id, "Apellido ", class:"input_artesano" %>
-            <%= f.input_field :apellido, class: 'input_artesano' , class:"label_artesano2" %>
+            <%= f.label :id, "Apellido "%>
+            <%= f.input_field :apellido %>
             <% if @artesano.errors[:apellido].any? %>
                 <p class="text-danger"><%= @artesano.errors[:apellido].first %></p>
             <% end %>
@@ -44,15 +44,15 @@
 
     <section class="informacionNew">
         <div>
-            <%= f.label :id, "Segundo Apellido ", class:"input_artesano" %>
-            <%= f.input_field :sapellido, class: 'input_artesano' , class:"label_artesano3" %>
+            <%= f.label :id, "Segundo Apellido "%>
+            <%= f.input_field :sapellido%>
         </div>
     </section>
 
     <section class="informacionNew">
         <div>
-            <%= f.label :id, "Telefono ", class:"input_artesano" %>
-            <%= f.input_field :tel, class: 'input_artesano', class:"label_artesano2" %>
+            <%= f.label :id, "Telefono " %>
+            <%= f.input_field :tel %>
         </div>
     </section>
         

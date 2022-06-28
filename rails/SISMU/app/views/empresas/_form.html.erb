@@ -1,44 +1,72 @@
-<div class="container_empresa">
-  <h1 class ="container_empresa-text">Formulario de Empresa</h1>
-  <div class="formulario_empresa">
-    <%= simple_form_for @empresa do |f| %> <br><br>
-      <%= f.label :id,"NIT : ", class: 'label_empresa1' %>
-       <%= f.input_field :id, class: 'input_empresa1' %> <br><br>
-        <% if @empresa.errors[:id].any? %>
-          <span class="text-danger"><%= @empresa.errors[:id].first %></span>
-          <br>
-        <% end %>
-      <%= f.label :nombre, "Nombre : ", class: 'label_empresa2'%>
-      <%= f.input_field :nombre, class: 'input_empresa2'%><br><br>
-        <% if @empresa.errors[:nombre].any? %>
-          <span class="text-danger"><%= @empresa.errors[:nombre].first %></span>
-          <br>
-        <% end %>
-      <%= f.label :tel, "Télefono : ", class: 'label_empresa2' %>
-       <%= f.input_field :tel, class: 'input_empresa2'%><br><br>
-        <% if @empresa.errors[:tel].any? %>
-          <span class="text-danger"><%= @empresa.errors[:tel].first %></span>
-          <br>
-        <% end %>
-      <%= f.label :direccion, "Dirección : ", class: 'label_empresa2'%>
-       <%= f.input_field :direccion, class: 'input_empresa2'%> <br><br>
-        <% if @empresa.errors[:direccion].any? %>
-          <span class="text-danger"><%= @empresa.errors[:direccion].first %></span>
-          <br>
-        <% end %>
-        <%= f.label :correo, "Correo : ", class: 'label_empresa2'%>
-        <%= f.email_field :correo, class: 'input_empresa2'%> <br><br>
-        <% if @empresa.errors[:correo].any? %>
-          <span class="text-danger"><%= @empresa.errors[:direccion].first %></span>
-          <br>
-        <% end %>
-        <%= f.label :ciudad, "Ciudad : ", class: 'label_empresa2'%>
-        <%= f.input_field :ciudad, class: 'input_empresa2'%> <br><br>
-        <% if @empresa.errors[:ciudad].any? %>
-          <span class="text-danger"><%= @empresa.errors[:direccion].first %></span>
-          <br>
-        <% end %>
-      <%= f.button :submit , class:"formulario_boton" %><br>
-    <% end %>
-  </div>
-</div>
+<%= simple_form_for @empresa do |f| %> 
+<main class = "empresasNew sombra">
+
+    <section class="botonVolverNew"><%= link_to "Volver", empresas_url, class: "volverNew" %></section>
+    <h1>Editar Empresa</h1>
+
+
+    <section class="informacionNew">
+        <div>
+            <%= f.label :id,"NIT "%>
+            <%= f.input_field :id %>
+            <% if @empresa.errors[:id].any? %>
+                <p class="text-danger"><%= @empresa.errors[:id].first %></p>
+            <% end %>
+        </div>
+    </section>
+
+    <section class="informacionNew">
+        <div>
+            <%= f.label :nombre, "Nombre "%>
+            <%= f.input_field :nombre  %>
+            <% if @empresa.errors[:nombre].any? %>
+                <p class="text-danger"><%= @empresa.errors[:nombre].first %></p>
+            <% end %>
+        </div>
+    </section>
+
+    <section class="informacionNew">
+        <div>
+            <%= f.label :tel, "Télefono " %>
+            <%= f.input_field :tel  %>
+            <% if @empresa.errors[:tel].any? %>
+                <p class="text-danger"><%= @empresa.errors[:tel].first %></p>
+            <% end %>
+        </div>
+    </section>
+
+
+    <section class="informacionNew">
+        <div>
+            <%= f.label :direccion, "Dirección "%>
+            <%= f.input_field :direccion  %>
+            <% if @empresa.errors[:direccion].any? %>
+                <p class="text-danger"><%= @empresa.errors[:direccion].first %></p>
+            <% end %>
+        </div>
+    </section>
+
+    <section class="informacionNew">
+        <div>
+            <%= f.label :correo, "Correo "%>
+            <%= f.email_field :correo%>
+            <% if @empresa.errors[:correo].any? %>
+                <p class="text-danger"><%= @empresa.errors[:direccion].first %></p>
+            <% end %>
+        </div>
+    </section>
+
+     <section class="informacionNew">
+        <div>       
+            <%= f.label :ciudad, "Ciudad "%>
+            <%= f.input_field :ciudad%> 
+            <% if @empresa.errors[:ciudad].any? %>
+                <p class="text-danger"><%= @empresa.errors[:direccion].first %></p>
+            <% end %>
+    </section>
+ 
+    <section class="botonesNew">
+           <%= f.button :submit, 'Crear' , class:"crearEmpresas" %>
+    </section> 
+ </main>
+<% end %>

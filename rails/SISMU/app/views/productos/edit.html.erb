@@ -8,7 +8,7 @@
           <section class="informacionNew">
             <div>
                 <%= f.label :referencia_pro, 'Referencia: ', class: 'left', required: true %> <br>
-                <%= f.input_field :referencia_pro %> <br>
+                <%= f.input_field :referencia_pro, :disabled => true %> <br>
                 <% if @producto.errors[:referencia_pro].any? %>
                     <p class="text-danger"><%= @producto.errors[:referencia_pro].first %></p>
                 <% end %>
