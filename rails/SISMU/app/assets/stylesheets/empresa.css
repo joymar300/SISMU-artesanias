@@ -35,8 +35,17 @@ html {
     
 }
 .formulario_boton{
-    background-color: #F5B041;
+   
     border-radius: 4px;
+    font-weight: bold;
+    color: #fff;
+    width: 20rem;
+    height: 4rem;
+    border: 1px solid var(--azulMedio);
+    border-radius: 6px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: var(--azulMedio);
 }
 .input_empresa1{
     margin-left: 10px;

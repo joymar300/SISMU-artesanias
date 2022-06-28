@@ -2,19 +2,19 @@
 <main class = "empresasNew sombra">
 
     <section class="botonVolverNew"><%= link_to "Volver", empresas_url, class: "volverNew" %></section>
-    <h1>Registrar Empresa</h1>
+    <h1>Editar Empresa</h1>
 
 
     <section class="informacionNew">
         <div>
-            <%= f.label :id,"NIT "%>
+            <%= f.label :id,"Número de Identificación Tributaria(NIT) "%>
             <%= f.input_field :id, :disabled => true %>
             <% if @empresa.errors[:id].any? %>
                 <p class="text-danger"><%= @empresa.errors[:id].first %></p>
             <% end %>
         </div>
     </section>
-
+    
     <section class="informacionNew">
         <div>
             <%= f.label :nombre, "Nombre "%>

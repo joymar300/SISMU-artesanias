@@ -66,6 +66,12 @@ a {
   background-image: url("img/pexels-julia-volk-6118897");
   background-size:cover;
 }
+#error_explanation{
+  width: 100%  !important;
+  font-size: 8px  !important;
+  padding: 20px  !important;
+  color: red !important;
+}
 
 .devise {
   margin: auto;
