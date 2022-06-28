@@ -26,7 +26,7 @@ class ClientsController < ApplicationController
   def create
     @client = Client.new(client_params)
     if @client.save 
-     
+      flash[:notice] = "Se creo correctamente."
       redirect_to clients_path
     else
       render :new

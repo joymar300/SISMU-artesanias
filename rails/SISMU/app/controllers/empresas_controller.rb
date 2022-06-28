@@ -27,7 +27,7 @@ class EmpresasController < ApplicationController
   def create
     @empresa = Empresa.new(empresa_params)
     if @empresa.save 
-      flash[:alert] = "Se creo correctamente."
+      flash[:notice] = "Se creo correctamente."
       redirect_to empresas_path
     else
       render :new

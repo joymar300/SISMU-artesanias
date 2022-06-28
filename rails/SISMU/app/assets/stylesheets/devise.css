@@ -68,21 +68,23 @@ a {
 }
 #error_explanation{
   width: 100%  !important;
-  font-size: 8px  !important;
+  font-size: 12px  !important;
   padding: 20px  !important;
   color: red !important;
 }
 
 .devise {
   margin: auto;
+  margin-top: 50px;
   border: none;
   min-width: 35%;
   /* max-width: 35%; */
-  min-height: 325px;
-  max-height: 550px;
+    /* min-height: 325px; */
+  /* max-height: 550px; */
   box-shadow: 3px 7px 20px rgb(66, 66, 66);
   border-radius: 20px;
   background-color: #fff;
+  margin-bottom: 60px;
 }
 
 .fondo_image {
@@ -128,7 +130,7 @@ a {
 /* logo  */
 
 .devise .avatar {
-  height: 18%;
+  height: 12%;
   border-radius: 80%;
   position: relative;
   display:block;

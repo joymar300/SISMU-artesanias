@@ -27,6 +27,7 @@ class ArtesanosController < ApplicationController
   def create
     @artesano = Artesano.new(artesano_params)
     if @artesano.save
+      flash[:notice] = "Se creo correctamente."
       redirect_to artesanos_path
     else
       render :new
