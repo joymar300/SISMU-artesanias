@@ -5,7 +5,7 @@ class ArtesanosController < ApplicationController
   
     @artesanos = Artesano.all()
    
-    @artesanos = Artesano.search(params[:search]).paginate(:per_page => 10, :page => params[:page])
+    @artesanos = Artesano.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
   end
   def show
     @artesano = Artesano.find(params[:id])

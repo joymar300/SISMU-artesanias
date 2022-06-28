@@ -6,9 +6,9 @@ class ProductosController < ApplicationController
     @q = Producto.ransack(params[:q])
     
     @productos = if params[:q]
-       @q.result(distinct: true).paginate(:per_page => 6, :page => params[:page])  
+       @q.result(distinct: true).paginate(:per_page => 20, :page => params[:page])  
       else
-      Producto.search(params[:search]).paginate(:per_page => 6, :page => params[:page])
+      Producto.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
       end
    end
   def show

@@ -5,7 +5,7 @@ class EmpresasController < ApplicationController
 
     @empresas = Empresa.all
      
-    @empresas = Empresa.search(params[:search]).paginate(:per_page => 10, :page => params[:page])
+    @empresas = Empresa.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
   end
 
   def show

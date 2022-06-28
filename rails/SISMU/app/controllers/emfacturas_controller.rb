@@ -30,7 +30,7 @@ class EmfacturasController < ApplicationController
 
 
     @emfacturas = Emfactura.all()
-    @emfacturas = Emfactura.search(params[:search]).paginate(:per_page => 10, :page => params[:page])
+    @emfacturas = Emfactura.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
   end
 
   def create

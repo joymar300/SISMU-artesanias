@@ -272,3 +272,57 @@ html {
 }
 
 
+                                              /* vistas new and edit */
+
+
+/* formulario */
+
+
+.empresasNew {
+  font-size: 16px; /*1rem = 10px*/
+  border-radius: 10px;
+  background-color: #fff;
+  width: 95%;
+  margin: 0px auto 50px auto;
+  margin-top: 50px;
+  padding-bottom: 30px;
+  overflow: auto;
+}
+
+.empresasNew h1 {
+  text-align: center;
+  margin-left: 1rem;
+  font-family: sans-serif;
+  color: #19C70D;
+}
+
+/* botones  */
+
+
+.crearEmpresas {
+  font-weight: bold;
+  color: #fff;
+  width: 20rem;
+  height: 4rem;
+  border: 1px solid #119708;
+  border-radius: 6px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #19C70D;
+}
+
+.crearEmpresas:active {
+  width: 20rem;
+  height: 4rem;
+  border: 3px solid #56F74B;
+  border-radius: 6px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #0F7B08;
+}
+
+.crearEmpresas:hover {
+  background-color: #15A70B;
+}
+
+

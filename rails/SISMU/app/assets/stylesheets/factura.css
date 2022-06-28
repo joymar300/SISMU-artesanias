@@ -1,10 +1,10 @@
 /* FACTURA */
-.text_factura{
+/* .text_factura{
     text-align: center;
     color: #F5B041;
-}
+} */
 
-.formulario_factura{ 
+/* .formulario_factura{ 
   background-color: #fff;   
   text-align: center;
   border-radius: 5px;
@@ -19,7 +19,7 @@
     background-color: #F5B041;
 }
 .label_factura{
-    /* border: solid 1px blue; */
+
     display: block;
 }
 
@@ -28,9 +28,20 @@
   flex-wrap: nowrap;
   justify-content: center;
   padding: 20px;
-}
+} */
 
 .error{
+  font-family: sans-serif;
   color: red;
-  font-weight: bold;
+  text-align: center;
+}
+
+.errorShow p{
+  border: 1px solid black;
+}
+
+
+.fechaFacturaNew select {
+  margin-left: 1rem;
+
 }
