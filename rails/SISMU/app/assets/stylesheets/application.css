@@ -513,6 +513,12 @@ footer p {
   color: var(--fondoMain);
 }
 
+/* @media (max-width: 1080px) {
+  footer {
+    height: 70px;
+  }
+} */
+
 /* .... */
 
 
