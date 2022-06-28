@@ -14,10 +14,13 @@ class ClientsController < ApplicationController
   
   def show
     @client = Client.find(params[:id])
+    authorize @client
   end
   
   def new
     @client = Client.new
+    authorize @client
+
   end
 
   def create
@@ -32,6 +35,7 @@ class ClientsController < ApplicationController
   
   def edit
     @client = Client.find(params[:id])
+    authorize @client
   end
 
 

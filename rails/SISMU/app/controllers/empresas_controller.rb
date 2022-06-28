@@ -16,10 +16,12 @@ class EmpresasController < ApplicationController
 
   def show
     @empresa = Empresa.find(params[:id])
+    authorize @empresa
   end
   
   def new
     @empresa = Empresa.new
+    authorize @empresa
   end
 
   def create
@@ -34,6 +36,7 @@ class EmpresasController < ApplicationController
   
   def edit
     @empresa = Empresa.find(params[:id])
+    authorize @empresa
   end
 
 

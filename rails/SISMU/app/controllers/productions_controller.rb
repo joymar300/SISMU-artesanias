@@ -19,15 +19,18 @@ class ProductionsController < ApplicationController
   end
   def new
     @production = Production.new
+    authorize @production
   end
 
   def show
     @dproductions = @production.dproductions
+    authorize @production
     @dproduction = Dproduction.new
   end
 
   def edit
     @production = Production.find(params[:id])
+    authorize @production
   end
 
 

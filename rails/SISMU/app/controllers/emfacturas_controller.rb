@@ -4,16 +4,19 @@ class EmfacturasController < ApplicationController
 
   def new
     @emfactura = Emfactura.new
+    authorize @emfactura
   end
 
   def show
     @emdetalles = @emfactura.emdetalles
+    authorize @emdetalle
     @emdetalle = Emdetalle.new
     @total = @emfactura.emdetalles.sum(:valor)
   end
 
   def edit
     @emfactura = Emfactura.find(params[:id])
+    authorize @emdetalle
   end
 
 

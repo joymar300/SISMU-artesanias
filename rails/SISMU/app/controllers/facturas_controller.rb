@@ -4,10 +4,12 @@ class FacturasController < ApplicationController
 
   def new
     @factura = Factura.new
+    authorize @factura
   end
 
   def show
     @detalles = @factura.detalles
+    authorize @factura
     @detalle = Detalle.new
     @color = Color.new
     @total = @factura.detalles.sum(:valor)
@@ -15,6 +17,7 @@ class FacturasController < ApplicationController
 
   def edit
     @factura = Factura.find(params[:id])
+    authorize @factura
   end
 
 

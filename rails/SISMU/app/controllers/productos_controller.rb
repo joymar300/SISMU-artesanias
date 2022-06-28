@@ -14,10 +14,12 @@ class ProductosController < ApplicationController
    end
   def show
     @producto = Producto.find(params[:id])
+    authorize @producto
   end
   
   def new
     @producto = Producto.new
+    authorize @producto
   end
 
   def create
@@ -32,6 +34,7 @@ class ProductosController < ApplicationController
   
   def edit
     @producto = Producto.find(params[:id])
+    authorize @producto
   end
 
 
