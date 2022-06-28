@@ -6,11 +6,12 @@ class ClientsController < ApplicationController
     @q = Client.ransack(params[:q])
     
     @clients = if params[:q]
-       @q.result(distinct: true).paginate(:per_page => 6, :page => params[:page])  
+       @q.result(distinct: true).paginate(:per_page => 20, :page => params[:page])  
       else
-        Client.search(params[:search]).paginate(:per_page => 6, :page => params[:page])
+        Client.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
       end
   end
+  
   def show
     @client = Client.find(params[:id])
   end

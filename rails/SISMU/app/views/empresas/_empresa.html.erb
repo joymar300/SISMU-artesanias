@@ -7,21 +7,11 @@
         <%= empresa.nombre%>
     </td>
 
-    <td data-label="Telefono" class="centrar green">
-        <%= empresa.tel%>
-    </td>
-
-    <td data-label="Direccion" class="centrar green">
-        <%= empresa.direccion%>
-    </td> 
-    <td data-label="Correo" class="centrar green">
-        <%= empresa.correo %>
-    </td>
-    <td data-label="Ciudad" class="centrar green">
-        <%= empresa.ciudad %>
-    </td>    
-
     <td data-label="Accion" class="botones green">
+        <%= link_to empresa_url(empresa) do %>
+        <button class="ver">Ver</button>
+        <% end %>
+
         <%= link_to edit_empresa_url(empresa) do %>
         <button class="editar">Editar</button>
         <% end %>

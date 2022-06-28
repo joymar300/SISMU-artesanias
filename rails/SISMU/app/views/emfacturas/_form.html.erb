@@ -1,12 +1,30 @@
-<div class="text_factura-empresa"><h1>Factura de la Empresa</h1></div>
-<div class="formulario_factura-empresa">
-    <%= simple_form_for @emfactura do |f| %><br>
-        <%= f.association :empresa, label_method: :empresa_busqueda %><br>
-        <%= f.input :fechafin, label: "Fecha de entrega", label_html: { class: 'label_factura-empresa' }%><br>
-        <% if @emfactura.errors[:fechafin].any? %>
-          <span class="text-danger"><%= @emfactura.errors[:fechafin].first %></span>
-          <br>
-        <% end %>
-        <%= f.button :submit, class:"factura_boton" %><br>
-    <% end %>
-</div>
+<%= simple_form_for @emfactura do |f| %>
+<main class="empresasNew sombra">
+
+    <section class="botonVolverNew"><%= link_to "Volver", emfacturas_url, class: "volverNew" %></section>
+    <h1>Registrar Factura Para Empresa</h1>
+
+    
+     <section class="informacionNew">
+         <div>
+            <%= f.association :empresa, label_method: :empresa_busqueda %><br>
+            <%= f.input :fechafin, label: "Fecha de entrega"%><br>
+            <% if @emfactura.errors[:fechafin].any? %>
+                <p class="text-danger"><%= @emfactura.errors[:fechafin].first %></p>
+            <% end %>
+        </div>
+    </section>
+
+    <section class="botonesNew">
+            <%= f.button :submit, 'Crear', class:"crearEmpresas" %>
+    </section>    
+
+
+        
+
+    
+
+
+
+</main>
+<% end %>

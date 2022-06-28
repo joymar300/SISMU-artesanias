@@ -5,7 +5,7 @@
   margin-left: -150px;
 }
 
-.text_factura-empresa{
+/* .text_factura-empresa{
     text-align: center;
     color: #F5B041;
 }
@@ -23,13 +23,12 @@
     background-color: #F5B041;
 }
 .label_factura-empresa{
-    /* border: solid 1px blue; */
     display: block;
-}
+} */
 
-@media(max-width: 740px){
+/* @media(max-width: 740px){
   .emfacturas__titulo{
     margin-left: 0px;
     max-width: 200px;
   }
-}
+} */

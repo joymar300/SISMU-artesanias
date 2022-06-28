@@ -34,7 +34,10 @@ html {
   border-radius: 10px;
   background-color: #fff;
   width: 90%;
+
+
   min-height: 500px;
+
   margin: 0px auto 50px auto;
   margin-top: 50px;
   padding-bottom: 30px;
@@ -85,26 +88,24 @@ html {
 
 }
 
-.form_input {
+/* .form_input {
   border: 1px solid red;
   width: 100px;
-}
+} */
 
 .productos__titulo{
-  /* border: 1px solid red; */
   color: #1070dd;
   font-size: 3.2rem; 
   width: 200px;
   margin-left: -150px;
 }
 
-.containerInfo__boton {
+/* .containerInfo__boton {
   border: 1px solid black;
-  /* text-align: center; */
   height: fit-content;
-}
+} */
 
-.icon_logo_title {
+/* .icon_logo_title {
   height: 40px;
 }
 
@@ -115,7 +116,7 @@ html {
 
 .icon_accion{
   height: 20px;
-}
+} */
 
 .btn_borrar {
   padding: 0;
@@ -133,7 +134,7 @@ html {
 
 /* CREAR PRODUCTOS */
 
-.containerPro{
+/* .containerPro{
   text-align: center;
   margin: -80px auto 50px auto;
 }
@@ -166,16 +167,8 @@ html {
 .formulario_boton {
   background-color: #F5B041;
   border-radius: 5px;
-}
-.text-danger{
-  background-repeat: no-repeat;
-  background-position: 10px center;
-  font-family:Arial, Helvetica, sans-serif;
-  font-size:13px;
-  text-align:center;
-  width:auto;
-  color: red;
-}
+} */
+
 /* ****** */
 
 /* NUEVOS ESTILOS  */
@@ -474,3 +467,189 @@ html {
   background-color: #1070dd;
   color: #fff;
 } */
+
+                                              /* vistas new and edit */
+
+
+/* formulario */
+
+
+.productosNew {
+  font-size: 16px; /*1rem = 10px*/
+  border-radius: 10px;
+  background-color: #fff;
+  width: 95%;
+  margin: 0px auto 50px auto;
+  margin-top: 50px;
+  padding-bottom: 30px;
+  overflow: auto;
+}
+
+.productosNew h1 {
+  text-align: center;
+  margin-left: 1rem;
+  font-family: sans-serif;
+  color: var(--azulMedio);
+}
+
+
+.informacionNew {
+  margin-top: 5px;
+  justify-content: center;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+
+
+.informacionNew label {
+  font-family: sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.informacionNew div {
+  width: 50%;
+  padding: 10px;
+
+}
+
+
+.informacionNew input{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-family: sans-serif;
+  border: 1px solid #9AA399;
+  color: #424442;
+  height: 5rem;
+  width: 55rem;
+}
+
+.informacionNew select{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-family: sans-serif;
+  border: 1px solid #9AA399;
+  color: #424442;
+  height: 5rem;
+  width: 55rem;
+}
+
+.text-danger{
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:13px;
+  text-align: center;
+  width:auto;
+  color: red;
+}
+
+
+/* selector */
+
+.selectorNew input{
+  padding-left: 5rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  font-family: sans-serif;
+  border: 1px solid #9AA399;
+  color: #424442;
+  margin-left: 5rem;
+}
+
+.selectorNew label {
+
+  font-family: sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.selectorNew {
+  margin-left: 30rem;
+  margin-right: 30rem;
+  margin-top: 5px;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 5rem;
+
+}
+
+
+
+
+/* botones */
+
+.botonesNew {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+
+.crearProductos {
+  font-weight: bold;
+  color: #fff;
+  width: 20rem;
+  height: 4rem;
+  border: 1px solid var(--azulMedio);
+  border-radius: 6px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: var(--azulMedio);
+}
+
+.crearProductos:active {
+  width: 20rem;
+  height: 4rem;
+  border: 3px solid #84BDFC;
+  border-radius: 6px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: var(--azulFuerte1);
+}
+
+.crearProductos:hover {
+  background-color: var(--azulFuerte2);
+}
+
+
+.volverNew {
+  margin-top: 15px;
+  margin-right: 50px;
+  text-align: center;
+  color: #fff;
+  width: 8rem;
+  height: 3rem;
+  border: 1px solid var(--rojoOscuro);;
+  border-radius: 6px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: var(--rojoFuerte2);
+
+}
+
+.volverNew:active {
+  color: #fff;
+  border: 3px solid var(--rojoClaro);
+  background-color: var(--rojoMedio);
+
+}
+
+.volverNew:hover {
+  background-color: var(--rojoOscuroHover);
+
+}
+  
+.botonVolverNew {
+  display: flex;
+  justify-content: end;
+}

@@ -29,13 +29,14 @@ class FacturasController < ApplicationController
 
   def index
     @facturas = Factura.all()
+
     authorize @facturas
     @q = Factura.ransack(params[:q])
     
     @facturas = if params[:q]
-       @q.result(distinct: true).paginate(:per_page => 6, :page => params[:page])  
+       @q.result(distinct: true).paginate(:per_page => 20, :page => params[:page])  
       else
-        Factura.search(params[:search]).paginate(:per_page => 6, :page => params[:page]) 
+        Factura.search(params[:search]).paginate(:per_page => 20, :page => params[:page]) 
       end
 
   end

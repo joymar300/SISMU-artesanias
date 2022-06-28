@@ -1,60 +1,88 @@
-<div class="container_clientes">
-  <h1 class ="container_clientes-text">Formulario de Clientes</h1>
-  <div class="formulario_clientes">
-    <%= simple_form_for @client do |f| %> <br>
-      <%= f.label :id, "Cedula:"%>
-      <%= f.input_field :id, class: 'input_clientes'%> <br>
-      <% if @client.errors[:id].any? %>
-        <span class="text-danger"><%= @client.errors[:id].first %></span>
-      <% end %>
-      <br>
+<%= simple_form_for @client do |f| %> 
+<main class="clientesNew sombra">
 
-      <%= f.label :nombre_cli,"Nombre:"%>
-      <%= f.input_field :nombre_cli, class: 'input_clientes' %> <br>
-      <% if @client.errors[:nombre_cli].any? %>
-        <span class="text-danger"><%= @client.errors[:nombre_cli].first %></span>
-      <% end %>
-      <br>
+    <section class="botonVolverNew"><%= link_to "Volver", clients_url, class: "volverNew" %></section>
+    <h1>Registrar Cliente</h1>
 
-      <%= f.label :nombre2_cli,"Segundo Nombre:"%>
-      <%= f.input_field :nombre2_cli,  class: 'input_clientes2' %>
-      <br><br>
 
-      <%= f.label :apellido_cli,"Apellido:" %> 
-      <%= f.input_field :apellido_cli, class: 'input_clientes' %> <br>
-      <% if @client.errors[:apellido_cli].any? %>
-        <span class="text-danger"><%= @client.errors[:apellido_cli].first %></span>
-      <% end %>
-      <br>
+    <section class="informacionNew">
+         <div>
+            <%= f.label :id, "Cedula"%>
+            <%= f.input_field :id, class: 'input_clientes'%>
+            <% if @client.errors[:id].any? %>
+                <p class="text-danger"><%= @client.errors[:id].first %></p>
+             <% end %>
+        </div>
+    </section>
 
-      <%= f.label :apellido2_cli,"Segundo Apellido:"%> 
-      <%= f.input_field :apellido2_cli,class: 'input_clientes2' %>
-      <br><br>
+      <section class="informacionNew">
+         <div>
+            <%= f.label :nombre_cli,"Nombre "%>
+            <%= f.input_field :nombre_cli, class: 'input_clientes' %>
+            <% if @client.errors[:nombre_cli].any? %>
+                <p class="text-danger"><%= @client.errors[:nombre_cli].first %></p>
+            <% end %>
+        </div>
+    </section>
 
-      <%= f.label :tel_cli,"Télefono:" %> 
-      <%= f.input_field :tel_cli, class: 'input_clientes'%> <br>
-      <% if @client.errors[:tel_cli].any? %>
-        <span class="text-danger"><%= @client.errors[:tel_cli].first %></span>
-      <% end %>
-      <br>
+     <section class="informacionNew">
+        <div>      
+            <%= f.label :nombre2_cli,"Segundo Nombre "%>
+            <%= f.input_field :nombre2_cli,  class: 'input_clientes2' %>
+         </div>
+    </section>
 
-      <%= f.label :correo_cli,"Correo Eléctronico:"%> 
-      <%= f.input_field :correo_cli, class: 'input_clientes2'%> <br>
-      <% if @client.errors[:correo_cli].any? %>
-        <span class="text-danger"><%= @client.errors[:correo_cli].first %></span>
-      <% end %>
-      <br>
+     <section class="informacionNew">
+        <div>      
+            <%= f.label :apellido_cli,"Apellido " %> 
+            <%= f.input_field :apellido_cli, class: 'input_clientes' %>
+            <% if @client.errors[:apellido_cli].any? %>
+                <p class="text-danger"><%= @client.errors[:apellido_cli].first %></p>
+            <% end %>
+        </div>
+    </section>
 
-      <%= f.label :direccion_cli,"Dirección:"%>
-      <%= f.input_field :direccion_cli,class: 'input_clientes' %> <br>
-      <% if @client.errors[:direccion_cli].any? %>
-        <span class="text-danger"><%= @client.errors[:direccion_cli].first %></span>
-      <% end %>
-      <br>
+    <section class="informacionNew">
+        <div>      
+            <%= f.label :apellido2_cli,"Segundo Apellido "%> 
+            <%= f.input_field :apellido2_cli,class: 'input_clientes2' %>
+        </div>
+    </section>
 
-      <%= f.button :submit,"Crear", class:"formulario_boton"%>
-      <br><br>
-    <% end %>
-  </div>
-</div>
+    <section class="informacionNew">
+        <div>      
+            <%= f.label :tel_cli,"Télefono " %> 
+            <%= f.input_field :tel_cli, class: 'input_clientes'%>
+            <% if @client.errors[:tel_cli].any? %>
+                <p class="text-danger"><%= @client.errors[:tel_cli].first %></p>
+            <% end %>
+        </div>
+    </section>
 
+     <section class="informacionNew">
+        <div>      
+            <%= f.label :correo_cli,"Correo Eléctronico "%> 
+            <%= f.input_field :correo_cli, class: 'input_clientes2'%>
+            <% if @client.errors[:correo_cli].any? %>
+                <p class="text-danger"><%= @client.errors[:correo_cli].first %></p>
+            <% end %>
+        </div>
+    </section>
+
+     <section class="informacionNew">
+        <div>      
+            <%= f.label :direccion_cli,"Dirección "%>
+            <%= f.input_field :direccion_cli,class: 'input_clientes' %>
+            <% if @client.errors[:direccion_cli].any? %>
+                <p class="text-danger"><%= @client.errors[:direccion_cli].first%> </p>
+            <% end %>
+        </div>
+    </section>
+                
+         
+    <section class="botonesNew">
+        <%= f.button :submit,"Crear", class:"crearClientes"%>
+    </section>    
+
+</main>
+<% end %>

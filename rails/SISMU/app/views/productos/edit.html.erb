@@ -1,36 +1,51 @@
-<div class="containerPro">
-  <h1 class="containerPro_text" >Editar Producto</h1>
-  <div class="formulario">
-      <%= simple_form_for @producto do |f| %> <br>
+<%= simple_form_for @producto do |f| %> <br>
+    <main class= "productosNew sombra">
 
-        <%= f.label :referencia_pro, 'Referencia: ', class: 'left', required: true %> <br>
-        <%= f.input_field :referencia_pro %> <br>
-        <% if @producto.errors[:referencia_pro].any? %>
-          <span class="text-danger"><%= @producto.errors[:referencia_pro].first %></span>
-          <br>
-        <% end %>
-        <br>
+        <section class="botonVolverNew"><%= link_to "Volver", productos_url, class: "volverNew" %></section>
 
-        <%= f.label :nombre_pro,'Nombre del producto: ' %> <br>
-        <%= f.input_field :nombre_pro %> <br>
-        <% if @producto.errors[:nombre_pro].any? %>
-          <span class="text-danger"><%= @producto.errors[:nombre_pro].first %></span>
-          <br>
-        <% end %>
-        <br>
+         <h1>Editar Producto</h1>
 
-        <%= f.label :precio_pro, 'Precio del producto: ' %> <br>
-        <%= f.input_field :precio_pro %> <br>
-        <% if @producto.errors[:precio_pro].any? %>
-          <span class="text-danger"><%= @producto.errors[:precio_pro].first %></span>
-          <br>
-        <% end %>
-        <br>
+          <section class="informacionNew">
+            <div>
+                <%= f.label :referencia_pro, 'Referencia: ', class: 'left', required: true %> <br>
+                <%= f.input_field :referencia_pro, :disabled => true %> <br>
+                <% if @producto.errors[:referencia_pro].any? %>
+                    <p class="text-danger"><%= @producto.errors[:referencia_pro].first %></p>
+                <% end %>
+            </div>
+        </section>
 
-        <%= f.association :categories, label: 'Categoria:' , as: :check_boxes, label_method: :tipo_categoria %> 
-        <br>
-        <div><%= f.button :submit, 'Actualizar', class: "formulario_boton" %></div>
-        <br>
-      <% end %>
-  </div>
-</div>
+         <section class="informacionNew">
+            <div>    
+                <%= f.label :nombre_pro,'Nombre del producto: ' %> <br>
+                <%= f.input_field :nombre_pro %> <br>
+                <% if @producto.errors[:nombre_pro].any? %>
+                    <p class="text-danger"><%= @producto.errors[:nombre_pro].first %></p>
+                <% end %>
+            </div>
+        </section>
+
+        <section class="informacionNew">
+            <div>    
+                <%= f.label :precio_pro, 'Precio del producto: ' %> <br>
+                <%= f.input_field :precio_pro %> <br>
+                <% if @producto.errors[:precio_pro].any? %>
+                    <p class="text-danger"><%= @producto.errors[:precio_pro].first %></p>
+                <% end %>
+            </div>
+        </section>
+
+        
+        <section class="selectorNew sombra">
+            <div>
+                <%= f.association :categories, label: 'Categorias:  ' , as: :check_boxes, label_method: :tipo_categoria %> 
+            </div>
+        </section> 
+
+               
+        <section class="botonesNew">
+            <%= f.button :submit, 'Actualizar', class: "crearProductos" %>
+        </section>    
+   
+    </main>
+<% end %>

@@ -7,9 +7,9 @@ class EmpresasController < ApplicationController
     @q = Empresa.ransack(params[:q])
     
     @empresas= if params[:q]
-       @q.result(distinct: true).paginate(:per_page => 6, :page => params[:page])  
+       @q.result(distinct: true).paginate(:per_page => 20, :page => params[:page])  
       else
-        Empresa.search(params[:search]).paginate(:per_page => 6, :page => params[:page])
+        Empresa.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
       end
      
   end

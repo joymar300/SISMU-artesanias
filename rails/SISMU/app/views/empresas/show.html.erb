@@ -1,1 +1,43 @@
-<%= render @empresa %>
+<main class= "empresasShow sombra">
+    <h1>Información Empresa</h1>
+
+    <section class= "informacionClientes">
+        <div>
+             <label>NIT</label>
+             <input type="text" value="<%= @empresa.id %>%>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+         <div>
+             <label>Nombre De La Empresa</label>
+             <input type="text" value="<%= @empresa.nombre %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+    </section>
+
+    <section class= "informacionClientes">
+        <div>
+             <label>Telefono</label>
+             <input type="text" value="<%= @empresa.tel %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+         <div>
+             <label>Dirección</label>
+             <input type="text" value="<%= @empresa.direccion %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+    </section>
+
+    <section class= "informacionClientes">
+        <div>
+             <label>Correo Electronico</label>
+             <input type="text" value="<%= @empresa.correo %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+         <div>
+             <label>Ciudad</label>
+             <input type="text" value="<%= @empresa.ciudad %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+    </section>
+    
+
+    <section class="botonVolver"><%= link_to "Volver", empresas_url, class: "volver" %></section>
+    
+    
+   
+
+</main>

@@ -6,7 +6,7 @@
   --aguaMarinaClaro: #6FDDD1;
 }
 
-.container-artesano{
+/* .container-artesano{
     text-align: center;
     margin-top: -150px;
 }
@@ -16,7 +16,7 @@
 }
 .formulario_artesano{
     text-align: center;
-    /* border:  solid 1px black; */
+
     width: 470px ;
     padding: 10px;
     margin-left: 33%;
@@ -41,7 +41,7 @@
     background-color: #F5B041;
     border-radius: 5px;
     text-align: center;
-}
+} */
 
 /* nuevos estilos v1.2 */
 
@@ -317,5 +317,62 @@
 .botonVolver{
   display: flex;
   justify-content: center;
+}
+
+
+                                             /* vistas new and edit */
+
+
+/* formulario */
+
+
+.artesanosNew {
+  font-size: 16px; /*1rem = 10px*/
+  border-radius: 10px;
+  background-color: #fff;
+  width: 95%;
+  margin: 0px auto 50px auto;
+  margin-top: 50px;
+  padding-bottom: 30px;
+  overflow: auto;
+}
+
+.artesanosNew h1 {
+  text-align: center;
+  margin-left: 1rem;
+  font-family: sans-serif;
+  color: var(--aguaMarinaMedio)
+}
+
+
+
+
+/* botones  */
+
+
+.crearArtesanos{
+  font-weight: bold;
+  color: #fff;
+  width: 20rem;
+  height: 4rem;
+  border: 1px solid var(--aguaMarinaOscuro);
+  border-radius: 6px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: var(--aguaMarinaMedio);
+}
+
+.crearArtesanos:active {
+  width: 20rem;
+  height: 4rem;
+  border: 3px solid var(--aguaMarinaClaro);
+  border-radius: 6px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: var(--aguaMarinaFuerte1);
+}
+
+.crearArtesanos:hover {
+  background-color: var(--aguaMarinaFuerteHover);
 }
 

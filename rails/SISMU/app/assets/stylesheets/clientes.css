@@ -7,7 +7,7 @@
   --rojoClaro: #C82727;
 }
 
-.container_clientes{
+/* .container_clientes{
   text-align: center;
   margin: -80px auto 50px auto;
 }
@@ -48,20 +48,19 @@
 .formulario_clientes .input_clientes1 {
   border: 1px solid blue; 
   margin-left: 4px;
-}
+} */
 
-.input_clientes1{
-  margin-left:85px; 
-}
+/* .input_clientes1{
+  cursor: none;
+} */
 
-.label_cliente1{
+/* .label_cliente1{
   margin-left:10px;
-}
+} */
 
 
 /* nuevos estilos v2 */
 .clientes__titulo{
-  /* border: 1px solid black; */
   color: var(--rojoFuerte1);
   font-size: 3.2rem; 
   width: 200px;
@@ -307,7 +306,7 @@
 .clientesShow h1 {
   margin-left: 1rem;
   font-family: sans-serif;
-  color: #C11D1D;
+  color: var(--rojoMedio)
 }
 
 .informacionClientes {
@@ -381,3 +380,63 @@
   display: flex;
   justify-content: center;
 }
+
+
+
+                                              /* vistas new and edit */
+
+
+/* formulario */
+
+
+.clientesNew {
+  font-size: 16px; /*1rem = 10px*/
+  border-radius: 10px;
+  background-color: #fff;
+  width: 95%;
+  margin: 0px auto 50px auto;
+  margin-top: 50px;
+  padding-bottom: 30px;
+  overflow: auto;
+}
+
+.clientesNew h1 {
+  text-align: center;
+  margin-left: 1rem;
+  font-family: sans-serif;
+  color: var(--rojoFuerte1)
+}
+
+
+
+
+/* botones  */
+
+
+
+.crearClientes {
+  font-weight: bold;
+  color: #fff;
+  width: 20rem;
+  height: 4rem;
+  border: 1px solid var(--rojoOscuro);
+  border-radius: 6px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: var(--rojoFuerte2);
+}
+
+.crearClientes:active {
+  width: 20rem;
+  height: 4rem;
+  border: 3px solid var(--rojoClaro);
+  border-radius: 6px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: var(--rojoMedio);
+}
+
+.crearClientes:hover {
+  background-color: var(--rojoOscuroHover);
+}
+
