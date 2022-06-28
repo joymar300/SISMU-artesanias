@@ -16,10 +16,12 @@ class ArtesanosController < ApplicationController
   end
   def show
     @artesano = Artesano.find(params[:id])
+    authorize @artesano
   end
   
   def new
     @artesano = Artesano.new
+    authorize @artesano
   end
 
   def create
@@ -33,6 +35,7 @@ class ArtesanosController < ApplicationController
   
   def edit
     @artesano = Artesano.find(params[:id])
+    authorize @artesano
   end
 
 
