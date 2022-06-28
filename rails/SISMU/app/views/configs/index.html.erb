@@ -1,3 +1,17 @@
-<%= link_to "agregar categorias", categories_url %>
-<br>
-<%= link_to "agregar colores", colors_url %>
+<div class="container_config">
+  <h1 id="h1_config">Configuración</h1>
+  <div class="addInfo">
+    <h3 id="h3_config">Información Adicional</h3>
+    <div class="options">
+      <div class="options1">
+        <b>Categorias: </b>
+        <%= link_to "Agregar", categories_url, class: "btn_cat" %>
+      </div>
+      <br>
+      <div class="options2">
+        <b>Colores: </b>
+        <%= link_to "Agregar", colors_url, class: "btn_col" %>
+      </div>
+    </div>
+  </div>
+</div>

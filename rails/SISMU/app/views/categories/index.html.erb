@@ -1,25 +1,38 @@
 <main class="container sombra">
-    <section class="productos">
-        <h1 class="productos__titulo">Categorias</h1>
-        <div class="productos__nuevo">
-            <%= link_to "categories/new" do %>
-            <p>Nuevo</p>
-            <% end %>
-        </div>    
-    </section>
+  <section class="productos">
+    <div class="buscador_client">
+      <div class="prueba_client">
+        <%= form_tag clients_path, :method => 'get' do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Buscar"%>
+          <div class="btn_buscar_client">
+            <button class="btn_borrar">
+              <%= image_tag "iconos/buscar_blanco", :referencia_pro => nil, class: "logoBuscar_client" %>
+            </button>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <h1 class="clientes__titulo">Categorias</h1>
+    <div class="clientes__nuevo">
+      <%= link_to "categories/new" do %>
+        <p>Nuevo</p>
+      <% end %>
+    </div>    
+  </section>
     
-    <section class= "productosTable">
-      <table>
-        <thead>
-          <tr>
-            <th>categorias</th>
-            <th colspan="3">Acción</th>
-          </tr>
-        </thead>
-        <tbody>
-          <%= render @categories  %>
-        </tbody>
-      </table>
+  <section class= "clientesTable">
+    <table>
+      <thead>
+        <tr>
+          <th>Categoria</th>
+          <th colspan="3">Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @categories  %>
+      </tbody>
+    </table>
   </section>
 
 </main>

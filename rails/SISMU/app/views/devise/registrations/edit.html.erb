@@ -1,134 +1,136 @@
-<div class="perfil_derecho">
-  <div class="volver_perfil">
-    <button class="btn_back">
-      <%= link_to "Volver", :back %>
-    </button>
+<div class="container_perfil">
+    <div class="volver_perfil">
+      <button class="btn_back">
+        <%= link_to "Volver", :back %>
+      </button>
+    </div>
+  <div class="perfil_izquierdo sombra">
+    <h2 id="h2">Imagen</h2>
+    <div class="div_foto_perfil">
+      <%= image_tag(resource.avatar_thumbnail, class: "foto_perfil") if resource.avatar.attached? %>
+    </div>
+    <div class="centrar_nombre_perfil">
+      <h3>
+        <%= @user.primernombre %>
+        <%= @user.segundonombre %>
+        <%= @user.primerapellido %>
+        <%= @user.segundoapellido %>
+      </h3>
+    </div>
+    <%# INICIO FORMULARIO %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <div class="div_select_foto">
+        <%= f.file_field :avatar, class: "select_foto" %><br />
+      </div>
   </div>
-  <%# <h2>Imagen</h2> %>
-  <div class="div_foto_perfil">
-    <%= image_tag(resource.avatar_thumbnail, class: "foto_perfil") if resource.avatar.attached? %>
-  </div>
-  <div class="centrar_nombre_perfil">
-    <h3>
-      <%= @user.primernombre %>
-      <%= @user.segundonombre %>
-      <%= @user.primerapellido %>
-      <%= @user.segundoapellido %>
-    </h3>
-  </div>
-  <%# INICIO FORMULARIO %>
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <div class="div_select_foto">
-      <%= f.file_field :avatar, class: "select_foto" %><br />
-    </div>
-</div>
 
-<div class="formulario_perfil">
-  <%# PERFIL 1 %>
-  <div class="formulario_perfil_1">
-    <h2>Editar <%= resource_name.to_s.humanize %></h2>
-  
-    <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="formulario_perfil">
+    <%# PERFIL 1 %>
+    <div class="formulario_perfil_1 sombra">
+      <h2 id="h2">Editar <%= resource_name.to_s.humanize %></h2>
+    
+      <%= render "devise/shared/error_messages", resource: resource %>
 
-    <div class="row_perfil">
-      <div class="col-25">
-        <%= f.label :email, "Correo", class: "label_form" %>
+      <div class="row_perfil">
+        <div class="col-25">
+          <%= f.label :email, "Correo", class: "label_form" %>
+        </div>
+        <div class="col-75">
+          <%= f.email_field :email, autocomplete: "email", class: "input_form", :disabled => true %>
+        </div>
       </div>
-      <div class="col-75">
-        <%= f.email_field :email, autocomplete: "email", class: "input_form", :disabled => true %>
+      <div class="row_perfil">
+        <div class="col-25">
+          <%= f.label :primernombre, "Primer Nombre", class: "label_form" %>
+        </div>
+        <div class="col-75">
+          <%= f.text_field :primernombre, autofocus: true, class: "input_form" %>
+        </div>
       </div>
-    </div>
-    <div class="row_perfil">
-      <div class="col-25">
-        <%= f.label :primernombre, "Primer Nombre", class: "label_form" %>
+      <div class="row_perfil">
+        <div class="col-25">
+          <%= f.label :segundonombre, "Segundo Nombre", class: "label_form" %>
+        </div>
+        <div class="col-75">
+          <%= f.text_field :segundonombre, autofocus: true, class: "input_form" %>
+        </div>
       </div>
-      <div class="col-75">
-        <%= f.text_field :primernombre, autofocus: true, class: "input_form" %>
+      <div class="row_perfil">
+        <div class="col-25">
+          <%= f.label :primerapellido, "Primer Apellido", class: "label_form" %>
+        </div>
+        <div class="col-75">
+          <%= f.text_field :primerapellido, autofocus: true, class: "input_form" %>
+        </div>
       </div>
-    </div>
-    <div class="row_perfil">
-      <div class="col-25">
-        <%= f.label :segundonombre, "Segundo Nombre", class: "label_form" %>
+      <div class="row_perfil">
+        <div class="col-25">
+          <%= f.label :segundoapellido, "Segundo Apellido", class: "label_form" %>
+        </div>
+        <div class="col-75">
+          <%= f.text_field :segundoapellido, autofocus: true, class: "input_form" %>
+        </div>
       </div>
-      <div class="col-75">
-        <%= f.text_field :segundonombre, autofocus: true, class: "input_form" %>
-      </div>
-    </div>
-    <div class="row_perfil">
-      <div class="col-25">
-        <%= f.label :primerapellido, "Primer Apellido", class: "label_form" %>
-      </div>
-      <div class="col-75">
-        <%= f.text_field :primerapellido, autofocus: true, class: "input_form" %>
-      </div>
-    </div>
-    <div class="row_perfil">
-      <div class="col-25">
-        <%= f.label :segundoapellido, "Segundo Apellido", class: "label_form" %>
-      </div>
-      <div class="col-75">
-        <%= f.text_field :segundoapellido, autofocus: true, class: "input_form" %>
-      </div>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Esperando confirmación para: <%= resource.unconfirmed_email %></div>
+      <% end %>
     </div>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div>Esperando confirmación para: <%= resource.unconfirmed_email %></div>
+      <%# PERFIL 2 %>
+      <div class="formulario_perfil_2 sombra">
+        <h2 id="h2">Cambiar contraseña</h2>
+        <div class="row_perfil">
+          <h6><i>(Déjalo en blanco si no quieres cambiarlo)</i></h6>
+          <div class="col-25">
+            <%= f.label :password, "Contraseña", class: "label_form" %>
+          </div>
+          <div class="col-75">
+            <%= f.password_field :password, autocomplete: "new-password", class: "input_form" %>
+          </div>
+          <h6>
+            <% if @minimum_password_length %>
+              <em><%= @minimum_password_length %> carácteres mínimos</em>
+            <% end %>
+          </h6>
+        </div>
+
+        <div class="row_perfil">
+          <div class="col-25">
+            <%= f.label :password_confirmation, "Confirmar contraseña", class: "label_form" %>
+          </div>
+          <div class="col-75">
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input_form" %>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="confirmCuenta sombra">
+        <h2 id="h2">Confirmar cambios</h2>
+
+        <div class="row_perfil">
+          <h6><i>(Necesitamos su contraseña actual para confirmar sus cambios)</i></h6>
+          <div class="col-25">
+            <%= f.label :current_password, "Contraseña actual", class: "label_form" %>
+          </div>
+          <div class="col-75">
+            <%= f.password_field :current_password, autocomplete: "current-password", class: "input_form" %>
+          </div>
+        </div>
+        <div class="centrar">
+          <%= f.submit "Actualizar", class: "btn_actualizar" %>
+        </div>
+      </div>
+
+      <div class="cancelCuenta sombra">
+        <h3 id="h2">Cancelar mi cuenta</h3>
+
+        <p>¿Insatisfecho? 
+        </p>
+          <%# button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+      </div>
+    <%# FIN FORMULARIO %>
     <% end %>
   </div>
-
-    <%# PERFIL 2 %>
-    <div class="formulario_perfil_2">
-      <h2>Cambiar contraseña</h2>
-      <div class="row_perfil">
-        <h6><i>(Déjalo en blanco si no quieres cambiarlo)</i></h6>
-        <div class="col-25">
-          <%= f.label :password, "Contraseña", class: "label_form" %>
-        </div>
-        <div class="col-75">
-          <%= f.password_field :password, autocomplete: "new-password", class: "input_form" %>
-        </div>
-        <h6>
-          <% if @minimum_password_length %>
-            <em><%= @minimum_password_length %> carácteres mínimos</em>
-          <% end %>
-        </h6>
-      </div>
-
-      <div class="row_perfil">
-        <div class="col-25">
-          <%= f.label :password_confirmation, "Confirmar contraseña", class: "label_form" %>
-        </div>
-        <div class="col-75">
-          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input_form" %>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="confirmCuenta">
-      <h2>Confirmar cambios</h2>
-
-      <div class="row_perfil">
-        <h6><i>(Necesitamos su contraseña actual para confirmar sus cambios)</i></h6>
-        <div class="col-25">
-          <%= f.label :current_password, "Contraseña actual", class: "label_form" %>
-        </div>
-        <div class="col-75">
-          <%= f.password_field :current_password, autocomplete: "current-password", class: "input_form" %>
-        </div>
-      </div>
-      <div class="centrar">
-        <%= f.submit "Actualizar", class: "btn_actualizar" %>
-      </div>
-    </div>
-
-    <div class="cancelCuenta">
-      <h3>Cancelar mi cuenta</h3>
-
-      <p>¿Insatisfecho? 
-        <%# button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
-      </p>
-    </div>
-  <%# FIN FORMULARIO %>
-  <% end %>
 </div>
