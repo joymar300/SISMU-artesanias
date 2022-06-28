@@ -34,10 +34,10 @@
         <table>
             <thead>
                 <tr>
-                <th>Cedula</th>
-                <th>Primer Nombre</th>
+                <th><%= sort_link(@q, :id,"Cedula", default_order: :asc, class:"white") %></th>
+                <th><%= sort_link(@q, :nombre_cli,"Primer Nombre", default_order: :asc, class:"white") %></th>
                 
-                <th>Primer Apellido</th>
+                <th><%= sort_link(@q, :apellido_cli,"Primer Apellido", default_order: :asc, class:"white") %></th>
                 
          
                 
