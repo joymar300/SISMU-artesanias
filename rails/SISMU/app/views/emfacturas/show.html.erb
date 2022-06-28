@@ -1,66 +1,81 @@
-<%= @emfactura.id %>
-<br>
-<%= @emfactura.empresa.empresa_busqueda %>
-<br>
-<%= @emfactura.empresa.direccion%>
+<div class="container_facturas_empre">
+	<div class="volver_facturas">
+    <button class="btn_back">
+      <%= link_to "volver", emfacturas_url %>
+    </button>
+  </div>
 
-<%= simple_form_for [@emfactura, @emdetalle] do |f| %>
-    <%= f.association :producto, label_method: :buscar_producto, label: "nombre del producto: " %>
-    <%= f.input :cantidad, label: "cantidad:" %>
-    <%= f.association :colors,as: :check_boxes, label_method: :tipo, label: "colores: " %>
-    <%= f.button :submit %>
-    
+	<div class="facturas_izquierdo sombra">
+		<h2 id="h2">Datos Empresas</h2>
+    <b>Id: </b>
+		<%= @emfactura.id %>
+		<br>
+    <b>Nombre: </b>
+		<%= @emfactura.empresa.empresa_busqueda %>
+		<br>
+    <b>Dirección: </b>
+		<%= @emfactura.empresa.direccion%>
+	</div>
 
-<% end %>
+	<div class="formulario_facturas">
+		<div class="formulario_facturas_1 sombra">
+			<h2 id="h2">Datos Productos</h2>
+			<%= simple_form_for [@emfactura, @emdetalle] do |f| %>
+					<%= f.association :producto, label_method: :buscar_producto, label: "nombre del producto: " %>
+					<%= f.input :cantidad, label: "cantidad:" %>
+					<%= f.association :colors, as: :check_boxes, label_method: :tipo, label: "colores: " %>
+					<%= f.button :submit %>
+			<% end %>
+		</div>
 
-<table>
-    <thead>
-        <tr>
-            <th> fecha de entrega</th>
-            <td colspan="4"><%= @emfactura.fechafin %></td>
-        </tr>
-        <tr>
-            <th>Ref</th>
-            <th>Producto</th>
-            <th>Precio uni.</th>
-            <th>color</th>
-            <th>cantidad</th>
-            <th>Precio total</th>
-            
-        </tr>        
-    </thead>    
-    <tbody>
+		<div class="formulario_facturas_1 sombra">
+			<table>
+					<thead>
+							<tr>
+									<th> fecha de entrega</th>
+									<td colspan="4"><%= @emfactura.fechafin %></td>
+							</tr>
+							<tr>
+									<th>Ref</th>
+									<th>Producto</th>
+									<th>color</th>
+									<th>Precio uni.</th>
+									<th>cantidad</th>
+									<th>Precio total</th>
+									
+							</tr>        
+					</thead>    
+					<tbody>
+						<% @emdetalles.each do |emdetalle| %>
 
-    <% @emdetalles.each do |emdetalle| %>
-
-        <tr>
-            <td><%= emdetalle.producto.referencia_pro %></td>
-            <td><%= emdetalle.producto.nombre_pro %></td>
-            <td >
-                <% emdetalle.colors.each do |d| %>
-                    <%= d.tipo%>
-                <%end%>
-            </td>
-            <td><%= number_to_currency emdetalle.precio%></td>
-            <td><%= emdetalle.cantidad %></td>
-            <td><%= number_to_currency emdetalle.valor %></td>
-            <td><%= button_to image_tag("iconos/borrar", class:"icon_accion"), emfactura_emdetalle_path(@emfactura, emdetalle), method: :delete %></td>
-        </tr>
-    <% end %>
-    <tr>
-        <th >precio subtotal: </th>
-        <td colspan="4"><%=number_to_currency @emfactura.final%></td>   
-    </tr>
-    <tr>
-        <th >Impuesto por iva: </th>
-        <td colspan="4"><%=number_to_currency @emfactura.iva %></td>   
-    </tr>
-        <tr>
-        <th >precio final: </th>
-        <td colspan="4"><%=number_to_currency @emfactura.final_total %></td>   
-    </tr>
-
-    </tbody>
-</table>
-
-<%= link_to "volver" , emfacturas_url %>
+								<tr>
+										<td><%= emdetalle.producto.referencia_pro %></td>
+										<td><%= emdetalle.producto.nombre_pro %></td>
+										<td >
+												<% emdetalle.colors.each do |d| %>
+														<%= d.tipo%>
+												<%end%>
+										</td>
+										<td><%= number_to_currency emdetalle.precio%></td>
+										<td><%= emdetalle.cantidad %></td>
+										<td><%= number_to_currency emdetalle.valor %></td>
+										<td><%= button_to image_tag("iconos/borrar", class:"icon_accion"), emfactura_emdetalle_path(@emfactura, emdetalle), method: :delete %></td>
+								</tr>
+						<% end %>
+						<tr>
+								<th >precio subtotal: </th>
+								<td colspan="4"><%=number_to_currency @emfactura.final%></td>   
+						</tr>
+						<tr>
+								<th >Impuesto por iva: </th>
+								<td colspan="4"><%=number_to_currency @emfactura.iva %></td>   
+						</tr>
+								<tr>
+								<th >precio final: </th>
+								<td colspan="4"><%=number_to_currency @emfactura.final_total %></td>   
+						</tr>
+					</tbody>
+			</table>
+		</div>
+	</div>
+</div>

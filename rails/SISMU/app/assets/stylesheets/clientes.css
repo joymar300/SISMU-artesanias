@@ -295,7 +295,7 @@
   border-radius: 10px;
   background-color: #fff;
   width: 95%;
-  height: 65rem;
+  /* height: 65rem; */
   margin: 0px auto 50px auto;
   margin-top: 50px;
   padding-bottom: 30px;
@@ -315,8 +315,6 @@
   display: -ms-flex;
   display: -webkit-flex;
   display: flex;
-
-
 }
 
 .informacionClientes label {
@@ -341,14 +339,14 @@
   background-color: rgb(241, 241, 241);
   color: #9AA399;
   height: 5rem;
-  width: 55rem;
+  width: 100%;
   cursor: not-allowed;
 }
 
 
 /* botones*/
 
-.volver {
+.clientesShow .volver {
   text-align: center;
   margin-top: 5rem;
   margin-left: 1rem;
@@ -362,7 +360,7 @@
   background-color: var(--rojoFuerte2);
 }
 
-.volver:active {
+.clientesShow .volver:active {
   width: 20rem;
   height: 4rem;
   border: 3px solid var(--rojoClaro);
@@ -372,13 +370,14 @@
   background-color: var(--rojoMedio);
 }
 
-.volver:hover {
+.clientesShow .volver:hover {
   background-color: var(--rojoOscuroHover);
 }
 
 .botonVolver{
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+  margin: 30px 43%;
 }
 
 
@@ -440,3 +439,18 @@
   background-color: var(--rojoOscuroHover);
 }
 
+@media (max-width: 1080px) {
+  .informacionClientes {
+    margin-top: 5px;
+    justify-content: space-between;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+  }
+  .informacionClientes div {
+    width: 100%;
+    padding: 10px;
+  
+  }
+}

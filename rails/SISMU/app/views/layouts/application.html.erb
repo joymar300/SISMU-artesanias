@@ -86,6 +86,13 @@
           <% end %>
         </div>
 
+        <div class="item_menu" title="Artesanos">
+          <%= link_to artesanos_url do %>
+            <%= image_tag("iconos/manos", class: "icon_menu") %>
+            <div class="title_icon_menu"><span>Artesanos</span></div>
+          <% end %>
+        </div>
+
         <div class="nav_select">
           <div class="item_menu" title="Clientes">
             <%= link_to clients_url do %>
@@ -123,13 +130,6 @@
               </li>
             </ul>
           </div> %>
-        </div>
-
-        <div class="item_menu" title="Artesanos">
-          <%= link_to artesanos_url do %>
-            <%= image_tag("iconos/manos", class: "icon_menu") %>
-            <div class="title_icon_menu"><span>Artesanos</span></div>
-          <% end %>
         </div>
 
         <div class="item_menu" title="Produccion">
@@ -174,7 +174,7 @@
     <%= yield %>
 
     <%# FOOTER %>
-    <footer class="foot">
+    <footer>
       <p>Inventario web Version 1.2</p>
     </footer>
 
