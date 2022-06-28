@@ -13,7 +13,13 @@
 
     <td data-label="Direccion" class="centrar green">
         <%= empresa.direccion%>
-    </td>  
+    </td> 
+    <td data-label="Correo" class="centrar green">
+        <%= empresa.correo %>
+    </td>
+    <td data-label="Ciudad" class="centrar green">
+        <%= empresa.ciudad %>
+    </td>    
 
     <td data-label="Accion" class="botones green">
         <%= link_to edit_empresa_url(empresa) do %>
