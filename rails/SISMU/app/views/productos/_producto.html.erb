@@ -6,11 +6,15 @@
     <%= producto.nombre_pro%>
   </td id="aw">
 
-  <td data-label= "Precio" class="blue">
+  <%
+=begin%>
+ <td data-label= "Precio" class="blue">
     <% producto.categories.each do |c| %>
       <%= c.tipo_categoria%>
     <%end%>
-  </td> 
+  </td>  
+<%
+=end%>
   <td data-label= "Precio" class="blue">
     <%= number_to_currency(producto.precio_pro, unit: 'COL$', class: "black") %>
   </td> 

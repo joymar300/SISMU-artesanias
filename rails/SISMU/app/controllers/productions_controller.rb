@@ -5,7 +5,14 @@ class ProductionsController < ApplicationController
     
 
     @productions = Production.all
-    @productions = Production.search(params[:search]).paginate(:per_page => 6, :page => params[:page])
+    @q = Production.ransack(params[:q])
+    
+    @productions = if params[:q]
+        @q.result(distinct: true).paginate(:per_page => 6, :page => params[:page])  
+      else
+        Production.search(params[:search]).paginate(:per_page => 6, :page => params[:page])
+      end
+
    
   end
   def new

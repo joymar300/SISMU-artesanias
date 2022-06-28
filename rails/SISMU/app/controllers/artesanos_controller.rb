@@ -4,8 +4,15 @@ class ArtesanosController < ApplicationController
    
   
     @artesanos = Artesano.all()
-   
-    @artesanos = Artesano.search(params[:search]).paginate(:per_page => 6, :page => params[:page])
+    @q = Artesano.ransack(params[:q])
+    
+    @artesanos= if params[:q]
+       @q.result(distinct: true).paginate(:per_page => 6, :page => params[:page])  
+      else
+        Artesano.search(params[:search]).paginate(:per_page => 6, :page => params[:page])
+      end
+
+    
   end
   def show
     @artesano = Artesano.find(params[:id])
