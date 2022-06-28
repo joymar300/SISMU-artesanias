@@ -1,75 +1,93 @@
+<div class="container_perfil">
+  <div class="volver_perfil">
+    <button class="btn_back">
+      <%= link_to "volver" , facturas_url %>
+    </button>
+  </div>
+
+  <div class="perfil_izquierdo sombra">
+    <h2 id="h2">Datos Cliente</h2>
+    <b>Id: </b>
+    <%= @factura.id %>
+    <br>
+    <b>Nombre: </b>
+    <%= @factura.client.nombre_completo %>
+    <br>
+    <b>Correo: </b>
+    <%= @factura.client.correo_cli %>
+    <br>
+    <b>Dirección: </b>
+    <%= @factura.client.direccion_cli%>
+  </div>
+
+  <div class="formulario_perfil">
+    <div class="formulario_perfil_1 sombra">
+    <h2 id="h2">Datos Producto</h2>
+      <%= simple_form_for [@factura, @detalle] do |f| %>
+          <%= f.association :producto, label_method: :buscar_producto, label: "nombre del producto: " %>
+          <%= f.input :cantidad, label: "cantidad:" %>
+              <% if @detalle.errors[:cantidad].any? %>
+                <span class="text-danger"><%= @detalle.errors[:cantidad].first %></span>
+                <br>
+              <% end %>
+          <%= f.association :colors,as: :check_boxes, label_method: :tipo, label: "colores: " %>
+
+          <%= f.button :submit %>
+          
+      <% end %>
+    </div>
+
+    <div class="formulario_perfil_1 sombra">
+      <table>
+          <thead>
+              <tr>
+                  <th> fecha de entrega</th>
+                  <td colspan="4"><%= @factura.fechafin %></td>
+              </tr>
+              <tr>
+                  <th>Ref</th>
+                  <th>Producto</th>
+                  <th>color</th>
+                  <th>Precio uni.</th>
+                  <th>cantidad</th>
+                  <th>Precio total</th>
+                  
+              </tr>        
+          </thead>    
+          <tbody>
+
+          <% @detalles.each do |detalle| %>
+
+              <tr>
+                  <td><%= detalle.producto.referencia_pro %></td>
+                  <td><%= detalle.producto.nombre_pro %></td>
+                  <td><%= number_to_currency detalle.precio%></td>
+                  <td >
+                      <% detalle.colors.each do |d| %>
+                          <%= d.tipo%>
+                      <%end%>
+                  </td> 
+                  <td><%= detalle.cantidad %></td>
+                  <td><%= number_to_currency detalle.valor %></td>
+                  <td><%= button_to image_tag("iconos/borrar", class:"icon_accion"), factura_detalle_path(@factura, detalle), method: :delete %></td>
+              </tr>
+          <% end %>
+          <tr>
+              <th >precio subtotal: </th>
+              <td colspan="4"><%=number_to_currency @factura.final %></td>   
+          </tr>
+              <tr>
+              <th >Impuesto por iva: </th>
+              <td colspan="4"><%=number_to_currency @factura.iva %></td>   
+          </tr>
+              <tr>
+              <th >precio final: </th>
+              <td colspan="4"><%=number_to_currency @factura.final_total %></td>   
+          </tr>
 
 
-<%= @factura.id %>
-<br>
-<%= @factura.client.nombre_completo %>
-<br>
-<%= @factura.client.correo_cli %>
-<br>
-<%= @factura.client.direccion_cli%>
-
-<%= simple_form_for [@factura, @detalle] do |f| %>
-    <%= f.association :producto, label_method: :buscar_producto, label: "nombre del producto: " %>
-    <%= f.input :cantidad, label: "cantidad:" %>
-        <% if @detalle.errors[:cantidad].any? %>
-          <span class="text-danger"><%= @detalle.errors[:cantidad].first %></span>
-          <br>
-        <% end %>
-    <%= f.association :colors,as: :check_boxes, label_method: :tipo, label: "colores: " %>
-
-    <%= f.button :submit %>
-    
-<% end %>
-
-<table>
-    <thead>
-        <tr>
-            <th> fecha de entrega</th>
-            <td colspan="4"><%= @factura.fechafin %></td>
-        </tr>
-        <tr>
-            <th>Ref</th>
-            <th>Producto</th>
-            <th>color</th>
-            <th>Precio uni.</th>
-            <th>cantidad</th>
-            <th>Precio total</th>
-            
-        </tr>        
-    </thead>    
-    <tbody>
-
-    <% @detalles.each do |detalle| %>
-
-        <tr>
-            <td><%= detalle.producto.referencia_pro %></td>
-            <td><%= detalle.producto.nombre_pro %></td>
-            <td><%= number_to_currency detalle.precio%></td>
-            <td >
-                <% detalle.colors.each do |d| %>
-                    <%= d.tipo%>
-                <%end%>
-            </td> 
-            <td><%= detalle.cantidad %></td>
-            <td><%= number_to_currency detalle.valor %></td>
-            <td><%= button_to image_tag("iconos/borrar", class:"icon_accion"), factura_detalle_path(@factura, detalle), method: :delete %></td>
-        </tr>
-    <% end %>
-    <tr>
-        <th >precio subtotal: </th>
-        <td colspan="4"><%=number_to_currency @factura.final %></td>   
-    </tr>
-        <tr>
-        <th >Impuesto por iva: </th>
-        <td colspan="4"><%=number_to_currency @factura.iva %></td>   
-    </tr>
-        <tr>
-        <th >precio final: </th>
-        <td colspan="4"><%=number_to_currency @factura.final_total %></td>   
-    </tr>
-
-
-    </tbody>
-</table>
-
-<%= link_to "volver" , facturas_url %>
+          </tbody>
+      </table>
+    </div>
+  </div>
+</div>
