@@ -1,11 +1,17 @@
 class EmpresasController < ApplicationController
   before_action :authenticate_user!
   def index
-   
-
+  
     @empresas = Empresa.all
+    authorize @empresas
+    @q = Empresa.ransack(params[:q])
+    
+    @empresas= if params[:q]
+       @q.result(distinct: true).paginate(:per_page => 20, :page => params[:page])  
+      else
+        Empresa.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
+      end
      
-    @empresas = Empresa.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
   end
 
   def show

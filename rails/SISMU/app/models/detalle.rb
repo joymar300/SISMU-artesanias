@@ -1,7 +1,7 @@
 class Detalle < ApplicationRecord
   belongs_to :factura
   belongs_to :producto
-  has_and_belongs_to_many :colors
+  has_and_belongs_to_many :colors, dependent: :destroy
   validates_associated :producto
   validates :cantidad, presence: {:message => "inserte una cantidad"}, numericality: { greater_than: 0}
   before_save :total

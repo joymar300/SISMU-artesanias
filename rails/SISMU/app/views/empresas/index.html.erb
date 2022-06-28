@@ -34,8 +34,12 @@
         <table>
             <thead>
                 <tr>
-                <th>Nit</th>
-                <th>Nombre Empresa</th>
+                <th><%= sort_link(@q, :id,"Nit", default_order: :asc, class:"white") %></th>
+                <th><%= sort_link(@q, :nombre,"Nombre Empresa ", default_order: :asc, class:"white") %></th>
+                <th>Teléfono</th>
+                <th>Dirección</th>
+                <th>Corrreo</th>
+                <th><%= sort_link(@q, :ciudad,"Ciudad", default_order: :asc, class:"white") %></th>
                 <th colspan="3">Acción</th>
                 </tr>
             </thead>

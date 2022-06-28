@@ -3,6 +3,7 @@ class ProductosController < ApplicationController
   before_action :authenticate_user!
   def index
     @productos= Producto.all
+    authorize @productos
     @q = Producto.ransack(params[:q])
     
     @productos = if params[:q]

@@ -30,7 +30,16 @@ class EmfacturasController < ApplicationController
 
 
     @emfacturas = Emfactura.all()
-    @emfacturas = Emfactura.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
+
+    authorize @emfacturas
+    @q = Emfactura.ransack(params[:q])
+    
+    @emfacturas = if params[:q]
+       @q.result(distinct: true).paginate(:per_page => 20, :page => params[:page])  
+      else
+        Emfactura.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
+      end
+
   end
 
   def create
