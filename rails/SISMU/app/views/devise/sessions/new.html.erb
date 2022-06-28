@@ -1,7 +1,7 @@
 <div class="background_devise">
-  <main class = "devise">
+  <main class="devise">
     <%# image_tag("img/embroidery-g521ac67c6_1920", class: "fondo_image") %>
-      <%= image_tag "logo_sandra_munoz", class: "avatar" %>
+    <%= image_tag "logo_sandra_munoz", class: "avatar" %>
       
       <h2>Iniciar Sesión</h2>
   
@@ -17,12 +17,12 @@
           <%= f.password_field :password, class:"input", autocomplete: "current-password", placeholder: "Ingresar Contraseña" %>
       </div>
 
-      <% if devise_mapping.rememberable? %>
-        <div>
+      <div class="centrar">
+        <% if devise_mapping.rememberable? %>
           <%= f.check_box :remember_me, class: "recordar" %>
           <%= f.label :Recordar, class:"label__recordar" %>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
 
       <div class="">
           <%= f.submit "Iniciar", class:"buttom" %>
