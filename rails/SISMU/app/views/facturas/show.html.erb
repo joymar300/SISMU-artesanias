@@ -42,7 +42,7 @@
           <thead>
               <tr>
                   <th> fecha de entrega</th>
-                  <td colspan="4"><%= @factura.fechafin %></td>
+                  <td colspan="5"><%= @factura.fechafin %></td>
               </tr>
               <tr>
                   <th>Ref</th>
@@ -74,15 +74,15 @@
           <% end %>
           <tr>
               <th >precio subtotal: </th>
-              <td colspan="4"><%=number_to_currency @factura.final %></td>   
+              <td colspan="5"><%=number_to_currency @factura.final %></td>   
           </tr>
               <tr>
               <th >Impuesto por iva: </th>
-              <td colspan="4"><%=number_to_currency @factura.iva %></td>   
+              <td colspan="5"><%=number_to_currency @factura.iva %></td>   
           </tr>
               <tr>
               <th >precio final: </th>
-              <td colspan="4"><%=number_to_currency @factura.final_total %></td>   
+              <td colspan="5"><%=number_to_currency @factura.final_total %></td>   
           </tr>
 
 

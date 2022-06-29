@@ -25,7 +25,7 @@ class ProductosController < ApplicationController
   def create
     @producto = Producto.new(producto_params)
     if @producto.save 
-      flash[:alert] = "Se creo correctamente."
+      flash[:notice] = "Se creo correctamente."
       redirect_to productos_path
     else
       render :new
@@ -41,6 +41,7 @@ class ProductosController < ApplicationController
   def update
     @producto = Producto.find(params[:id])
     if @producto.update(producto_params)
+      flash[:notice] = "Se actualizó correctamente."
       redirect_to productos_path
     else
         render :edit

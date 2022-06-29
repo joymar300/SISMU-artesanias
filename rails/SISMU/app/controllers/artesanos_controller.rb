@@ -27,6 +27,7 @@ class ArtesanosController < ApplicationController
   def create
     @artesano = Artesano.new(artesano_params)
     if @artesano.save
+      flash[:notice] = "Se creó correctamente."
       redirect_to artesanos_path
     else
       render :new
@@ -42,6 +43,7 @@ class ArtesanosController < ApplicationController
   def update
     @artesano = Artesano.find(params[:id])
     if @artesano.update(artesano_params)
+      flash[:notice] = "Se actualizó correctamente."
       redirect_to artesanos_path
     else
         render :edit

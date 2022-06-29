@@ -23,6 +23,7 @@ class EmfacturasController < ApplicationController
   def update
     @emfactura = Emfactura.find(params[:id])
     if @emfactura.update(emfactura_params)
+      flash[:notice] = "Se actualizó correctamente."
       redirect_to emfacturas_path
     else
         render :edit
@@ -48,7 +49,7 @@ class EmfacturasController < ApplicationController
   def create
     @emfactura = Emfactura.new(emfactura_params)
     if @emfactura.save
-      flash[:alert] = "Se creo correctamente."
+      flash[:notice] = "Se creo correctamente."
       redirect_to emfactura_path(@emfactura)
     else
       render :new
