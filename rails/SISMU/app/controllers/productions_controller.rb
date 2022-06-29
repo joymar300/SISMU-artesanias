@@ -37,6 +37,7 @@ class ProductionsController < ApplicationController
   def update
     @production = Production.find(params[:id])
     if @production.update(production_params)
+      flash[:notice] = "Se actualizó correctamente."
       redirect_to productions_path
     else
         render :edit
@@ -48,7 +49,7 @@ class ProductionsController < ApplicationController
   def create
     @production = Production.new(production_params)
     if @production.save
-      flash[:alert] = "Se creo correctamente."
+      flash[:notice] = "Se creo correctamente."
       redirect_to production_path(@production)
     else
       render :new

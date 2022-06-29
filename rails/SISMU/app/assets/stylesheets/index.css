@@ -13,8 +13,10 @@
 }
 
 .panelRegistros {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr)); */
+  display: flex;
+  justify-content: space-between;
   background-color: #fff;
   /* border: solid 1px red; */
   padding: 10px;

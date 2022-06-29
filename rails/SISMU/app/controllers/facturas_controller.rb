@@ -24,6 +24,7 @@ class FacturasController < ApplicationController
   def update
     @factura = Factura.find(params[:id])
     if @factura.update(factura_params)
+      flash[:notice] = "Se actualizó correctamente."
       redirect_to facturas_path
     else
         render :edit
@@ -32,7 +33,7 @@ class FacturasController < ApplicationController
 
   def index
     @facturas = Factura.all()
-
+    
     authorize @facturas
     @q = Factura.ransack(params[:q])
     
@@ -47,7 +48,7 @@ class FacturasController < ApplicationController
   def create
     @factura = Factura.new(factura_params)
     if @factura.save
-      flash[:alert] = "Se creo correctamente."
+      flash[:notice] = "Se creo correctamente."
       redirect_to factura_path(@factura)
     else
       render :new

@@ -27,7 +27,7 @@ class EmpresasController < ApplicationController
   def create
     @empresa = Empresa.new(empresa_params)
     if @empresa.save 
-      flash[:alert] = "Se creo correctamente."
+      flash[:notice] = "Se creo correctamente."
       redirect_to empresas_path
     else
       render :new
@@ -43,6 +43,7 @@ class EmpresasController < ApplicationController
   def update
     @empresa = Empresa.find(params[:id])
     if @empresa.update(empresa_params)
+      flash[:notice] = "Se actualizó correctamente."
       redirect_to empresas_path
     else
         render :edit

@@ -26,7 +26,7 @@ class ClientsController < ApplicationController
   def create
     @client = Client.new(client_params)
     if @client.save 
-     
+      flash[:notice] = "Se creó correctamente."
       redirect_to clients_path
     else
       render :new
@@ -42,6 +42,7 @@ class ClientsController < ApplicationController
   def update
     @client = Client.find(params[:id])
     if @client.update(client_params)
+      flash[:notice] = "Se actualizó correctamente."
       redirect_to clients_path
     else
         render :edit
