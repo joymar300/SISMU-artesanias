@@ -48,7 +48,7 @@ class ProductionsController < ApplicationController
   def create
     @production = Production.new(production_params)
     if @production.save
-      flash[:notice] = "Se creo correctamente."
+      flash[:alert] = "Se creo correctamente."
       redirect_to production_path(@production)
     else
       render :new
