@@ -1,11 +1,11 @@
-<div class="container_perfil">
-  <div class="volver_perfil">
+<div class="container_facturas">
+  <div class="volver_facturas">
     <button class="btn_back">
       <%= link_to "volver" , facturas_url %>
     </button>
   </div>
 
-  <div class="perfil_izquierdo sombra">
+  <div class="facturas_izquierdo sombra">
     <h2 id="h2">Datos Cliente</h2>
     <b>Id: </b>
     <%= @factura.id %>
@@ -20,9 +20,9 @@
     <%= @factura.client.direccion_cli%>
   </div>
 
-  <div class="formulario_perfil">
-    <div class="formulario_perfil_1 sombra">
-    <h2 id="h2">Datos Producto</h2>
+  <div class="formulario_facturas">
+    <div class="formulario_facturas_1 sombra">
+      <h2 id="h2">Datos Producto</h2>
       <%= simple_form_for [@factura, @detalle] do |f| %>
           <%= f.association :producto, label_method: :buscar_producto, label: "nombre del producto: " %>
           <%= f.input :cantidad, label: "cantidad:" %>
@@ -37,7 +37,7 @@
       <% end %>
     </div>
 
-    <div class="formulario_perfil_1 sombra">
+    <div class="formulario_facturas_1 sombra">
       <table>
           <thead>
               <tr>
@@ -47,8 +47,8 @@
               <tr>
                   <th>Ref</th>
                   <th>Producto</th>
-                  <th>color</th>
                   <th>Precio uni.</th>
+                  <th>color</th>
                   <th>cantidad</th>
                   <th>Precio total</th>
                   
