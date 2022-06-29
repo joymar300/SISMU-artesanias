@@ -55,7 +55,7 @@ a {
   margin-left: -50px;
   position: absolute;
   top: 0;
-  bottom: 0;
+  /* bottom: 0; */
   right: 0;
   left: 0;
   display: flex;
@@ -63,7 +63,7 @@ a {
   justify-content: space-between;
   align-items: center;
   font-size: 16px; /*1rem = 10px*/
-  background-image: url("img/pexels-julia-volk-6118897");
+  background-image: url("img/pexels-julia-volk-6118897"); 
   background-size:cover;
 }
 #error_explanation{
@@ -87,6 +87,7 @@ a {
   border-radius: 20px;
   background-color: #fff;
   margin-bottom: 60px;
+  z-index: 2;
 }
 
 .fondo_image {

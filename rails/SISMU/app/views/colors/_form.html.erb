@@ -1,19 +1,29 @@
 
-<div class="containerPro">
-  <h1 class="containerPro_text" >Crear colors</h1>
-  <div class="formulario">
-      <%= simple_form_for @color do |f| %> <br>
 
-        <%= f.label :tipo, 'tipo de color: ', class: 'left', required: true %> <br>
-        <%= f.input_field :tipo %> <br>
-        <% if @color.errors[:tipo].any? %>
-          <span class="text-danger"><%= @color.errors[:tipo].first %></span>
-          <br>
-        <% end %>
+
+<%= simple_form_for @color do |f| %> <br>
+<main class="productosNew sombra">
+  <section class="botonVolverNew"><%= link_to "Volver", colors_url, class: "volverNew" %></section>
+  <h1>Crear color</h1>
+
+   <section  class="informacionNew">
+      <div>
+           <%= f.label :tipo,  'escriba el color', required: true %>
+           <%= f.input_field :tipo %> 
+            <% if @color.errors[:tipo].any? %>
+            <p class="text-danger"><%= @color.errors[:tipo].first %> </p>
+           <% end %>
+      </div>
+  </section>
+   <section> 
+        <div class="botonesNew "><%= f.button :submit, 'Crear', class: "formulario_boton" %></div>
         <br>
-        <br>
-        <div><%= f.button :submit, 'Crear', class: "formulario_boton" %></div>
-        <br>
-      <% end %>
-  </div>
-</div>
+   
+   </section>
+
+</main>
+  <% end %>
+
+
+
+
