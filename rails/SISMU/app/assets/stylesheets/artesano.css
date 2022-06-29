@@ -191,6 +191,120 @@
 
 /* ******* */
 
+ /* VISTA SHOW */  
+
+
+ .artesanosShow  {
+  font-size: 16px; /*1rem = 10px*/
+  border-radius: 10px;
+  background-color: #fff;
+  width: 95%;
+  height: 65rem;
+  margin: 0px auto 50px auto;
+  /* margin-top: 50px; */
+  padding-bottom: 30px;
+  overflow: auto;
+}
+
+
+.artesanosShow h1 {
+  margin-left: 1rem;
+  font-family: sans-serif;
+  color: var(--aguaMarinaMedio);
+}
+
+/* BOTONES*/
+
+.artesanosShow .volver {
+  text-align: center;
+  /* margin-top: 5rem; */
+  margin-left: 1rem;
+  color: white;
+  width: 20rem;
+  height: 4rem;
+  border: 1px solid var(--aguaMarinaOscuro) ;;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: var(--aguaMarinaMedio);
+}
+
+.artesanosShow .volver:active {
+  width: 20rem;
+  height: 4rem;
+  border: 3px solid var(--aguaMarinaClaro);
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: var(--aguaMarinaFuerte1);
+}
+
+.artesanosShow .volver:hover {
+  background-color: var(--aguaMarinaFuerteHover);
+}
+
+.botonVolver{
+  display: flex;
+  justify-content: center;
+}
+
+
+ /* VISTAS NEW Y EDIT */
+
+
+/* FORMULARIO */
+
+
+.artesanosNew {
+  font-size: 16px; /*1rem = 10px*/
+  border-radius: 10px;
+  background-color: #fff;
+  width: 95%;
+  margin: 0px auto 50px auto;
+  /* margin-top: 50px; */
+  padding-bottom: 30px;
+  overflow: auto;
+}
+
+.artesanosNew h1 {
+  text-align: center;
+  margin-left: 1rem;
+  font-family: sans-serif;
+  color: var(--aguaMarinaMedio)
+}
+
+
+
+
+/* BOTONES  */
+
+
+.crearArtesanos{
+  font-weight: bold;
+  color: #fff;
+  width: 20rem;
+  height: 4rem;
+  border: 1px solid var(--aguaMarinaOscuro);
+  border-radius: 6px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: var(--aguaMarinaMedio);
+}
+
+.crearArtesanos:active {
+  width: 20rem;
+  height: 4rem;
+  border: 3px solid var(--aguaMarinaClaro);
+  border-radius: 6px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: var(--aguaMarinaFuerte1);
+}
+
+.crearArtesanos:hover {
+  background-color: var(--aguaMarinaFuerteHover);
+}
+
 
   /* RESPOSIVE  */
 
@@ -257,122 +371,5 @@
   .black {
     color: #000;
   }
-}
-
-
-                                                    /* vista show */  
-
-
-.artesanosShow  {
-  font-size: 16px; /*1rem = 10px*/
-  border-radius: 10px;
-  background-color: #fff;
-  width: 95%;
-  height: 65rem;
-  margin: 0px auto 50px auto;
-  margin-top: 50px;
-  padding-bottom: 30px;
-  overflow: auto;
-}
-
-
-.artesanosShow h1 {
-  margin-left: 1rem;
-  font-family: sans-serif;
-  color: var(--aguaMarinaMedio);
-}
-
-/* botones*/
-
-
-
-.artesanosShow .volver {
-  text-align: center;
-  margin-top: 5rem;
-  margin-left: 1rem;
-  color: white;
-  width: 20rem;
-  height: 4rem;
-  border: 1px solid var(--aguaMarinaOscuro) ;;
-  border-radius: 6px;
-  padding: 10px;
-  cursor: pointer;
-  background-color: var(--aguaMarinaMedio);
-}
-
-.artesanosShow .volver:active {
-  width: 20rem;
-  height: 4rem;
-  border: 3px solid var(--aguaMarinaClaro);
-  border-radius: 6px;
-  padding: 10px;
-  cursor: pointer;
-  background-color: var(--aguaMarinaFuerte1);
-}
-
-.artesanosShow .volver:hover {
-  background-color: var(--aguaMarinaFuerteHover);
-}
-
-.botonVolver{
-  display: flex;
-  justify-content: center;
-}
-
-
-                                             /* vistas new and edit */
-
-
-/* formulario */
-
-
-.artesanosNew {
-  font-size: 16px; /*1rem = 10px*/
-  border-radius: 10px;
-  background-color: #fff;
-  width: 95%;
-  margin: 0px auto 50px auto;
-  margin-top: 50px;
-  padding-bottom: 30px;
-  overflow: auto;
-}
-
-.artesanosNew h1 {
-  text-align: center;
-  margin-left: 1rem;
-  font-family: sans-serif;
-  color: var(--aguaMarinaMedio)
-}
-
-
-
-
-/* botones  */
-
-
-.crearArtesanos{
-  font-weight: bold;
-  color: #fff;
-  width: 20rem;
-  height: 4rem;
-  border: 1px solid var(--aguaMarinaOscuro);
-  border-radius: 6px;
-  padding: 5px;
-  cursor: pointer;
-  background-color: var(--aguaMarinaMedio);
-}
-
-.crearArtesanos:active {
-  width: 20rem;
-  height: 4rem;
-  border: 3px solid var(--aguaMarinaClaro);
-  border-radius: 6px;
-  padding: 5px;
-  cursor: pointer;
-  background-color: var(--aguaMarinaFuerte1);
-}
-
-.crearArtesanos:hover {
-  background-color: var(--aguaMarinaFuerteHover);
 }
 

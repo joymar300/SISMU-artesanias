@@ -34,12 +34,9 @@ html {
   border-radius: 10px;
   background-color: #fff;
   width: 90%;
-
-
   min-height: 500px;
-
   margin: 0px auto 50px auto;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   padding-bottom: 30px;
   overflow: auto;
 }
@@ -480,7 +477,7 @@ html {
   background-color: #fff;
   width: 95%;
   margin: 0px auto 50px auto;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   padding-bottom: 30px;
   overflow: auto;
 }
@@ -519,7 +516,7 @@ html {
 
 .informacionNew input{
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   border-radius: 10px;
   padding-left: 10px;
   font-family: sans-serif;
