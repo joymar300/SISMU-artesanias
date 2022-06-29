@@ -573,26 +573,4 @@ footer p {
   *:first-child + html .digg_pagination {
     overflow: hidden; } */
 
-
-
-    .alerts {
-      display: flex;
-      justify-content: center;
-    }
-    
-    .notice {
-      margin-top: 6px;
-      color: #2BDC63;
-      border-radius: 5px;
-      height: 20px;
-      padding-top: 10px;
-    }
-    
-    .alert {
-      margin-top: 6px;
-      color: #F90303;
-      border-radius: 5px;
-      height: 20px;
-      padding-top: 10px;
-    }
-    
+  
