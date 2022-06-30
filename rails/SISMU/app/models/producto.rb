@@ -18,7 +18,8 @@ class Producto < ApplicationRecord
 
     def self.search(search)
         if search
-          where( ["referencia_pro LIKE  ? or nombre_pro LIKE ? ", "%#{search}%","%#{search}%"]  )
+         includes(:categories).where( ["referencia_pro LIKE  ? or nombre_pro LIKE ? or tipo_categoria LIKE?", "%#{search}%","%#{search}%","%#{search}%"]).references(:categories)
+          
         else
             unscoped
         end

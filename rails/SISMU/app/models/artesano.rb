@@ -1,8 +1,8 @@
 class Artesano < ApplicationRecord
 
     validates :nombre,:apellido,:id,presence: {:message => "requeridos"}
-    validates :nombre,:apellido,:snombre,:sapellido,format: { with: /\A[a-zA-Z]+\z/, message: "solo se permiten letras" } 
-    validates :id, uniqueness: {:message => "esa cedula está en uso"},length: {  in:7.. 10, :message=>"tiene que contener minimo 7 numeros maximo 10" }
+    validates :nombre,:apellido, format: { with: /\A[a-zA-Z]+\z/, message: "Solo se permiten letras" } 
+    validates :id, uniqueness: {:message => "Este numero de cedula ya se encuentra en uso"},length: {  in:7.. 10, :message=>"Tiene que contener minimo 7 numeros maximo 10" }
     has_many :dproductions, dependent: :destroy
     has_many :production, through: :dproductions
    

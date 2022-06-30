@@ -34,9 +34,14 @@
              <input type="text" value="<%= @client.direccion_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
         </div>
          <div>
-             <label>Segundo Apellido</label>
-             <input type="text" value="<%= @client.apellido2_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
+             <label>Ciudad</label>
+             <input type="text" value="<%= @client.ciudad %>" name="cantidad" id="cantidad" disabled=»disabled» />
         </div>
+         <div>
+             <label>Barrio</label>
+             <input type="text" value="<%= @client.barrio %>" name="cantidad" id="cantidad" disabled=»disabled» />
+        </div>
+        
     </section>
 
     <section class="botonVolver"><%= link_to "Volver", clients_url, class: "volver" %></section>
