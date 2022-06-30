@@ -8,6 +8,11 @@
   padding: 20px;
 }
 
+#h1_perfil {
+  display: inline;
+  margin-left: 38%;
+}
+
 #h2 {
   margin: 10px;
 }
@@ -228,9 +233,12 @@ h6 {
 }
 
 @media screen and (max-width: 900px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
+  .col-25, .col-75 /* input[type=submit] */ {
+    /* width: 100%; */
     margin-top: 0;
+  }
+  #h1_perfil {
+    margin-left: 30%;
   }
   /* IZQUIERDO */
   .perfil_izquierdo {

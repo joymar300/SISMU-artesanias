@@ -287,7 +287,7 @@
 }
 
 
-                                                    /* vista show */                                    
+/* VISTAS SHOW */
 
 
 .clientesShow  {
@@ -297,7 +297,7 @@
   width: 95%;
   /* height: 65rem; */
   margin: 0px auto 50px auto;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   padding-bottom: 30px;
   overflow: auto;
 }
@@ -344,11 +344,11 @@
 }
 
 
-/* botones*/
+/* BOTONES*/
 
 .clientesShow .volver {
   text-align: center;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   margin-left: 1rem;
   color: white;
   width: 20rem;
@@ -382,10 +382,10 @@
 
 
 
-                                              /* vistas new and edit */
+/* VISTAS NEW Y EDIT */
 
 
-/* formulario */
+/* FORMULARIO */
 
 
 .clientesNew {
@@ -394,7 +394,7 @@
   background-color: #fff;
   width: 95%;
   margin: 0px auto 50px auto;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   padding-bottom: 30px;
   overflow: auto;
 }
