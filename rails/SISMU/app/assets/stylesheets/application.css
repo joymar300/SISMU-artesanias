@@ -576,6 +576,8 @@ footer p {
       .alerts {
       display: flex;
       justify-content: center;
+      border: solid 1px red;
+
     }
 
     .notice {
@@ -587,9 +589,9 @@ footer p {
     }
 
     .alert {
-      margin-top: 6px;
       color: #F90303;
-      border-radius: 5px;
-      height: 20px;
-      padding-top: 10px;
+      z-index: 3;
+      display: inline-block;
+      margin-left: 410px;
+      
     }
