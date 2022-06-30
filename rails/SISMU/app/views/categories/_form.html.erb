@@ -1,19 +1,28 @@
 
-<div class="containerPro">
-  <h1 class="containerPro_text" >Crear colors</h1>
-  <div class="formulario">
-      <%= simple_form_for @category do |f| %> <br>
 
-        <%= f.label :tipo_categoria, 'ecriba la categoria: ', class: 'left', required: true %> <br>
-        <%= f.input_field :tipo_categoria %> <br>
-        <% if @category.errors[:tipo_categoria].any? %>
-          <span class="text-danger"><%= @category.errors[:tipo_categoria].first %></span>
-          <br>
-        <% end %>
-        <br>
-        <br>
-        <div><%= f.button :submit, 'Crear', class: "formulario_boton" %></div>
-        <br>
-      <% end %>
-  </div>
-</div>
+<%= simple_form_for @category do |f| %>
+<main class="clientesNew sombra"> 
+
+    <section class="botonVolverNew"><%= link_to "Volver", categories_url, class: "volverNew" %></section>
+    <h1>Registrar Categoria</h1>
+
+    <section class="informacionNew "> 
+        <div>
+            <%= f.label :tipo_categoria, 'Escriba la categoria', required: true %> 
+            <%= f.input_field :tipo_categoria%> 
+            <% if @category.errors[:tipo_categoria].any? %>
+                <p class="text-danger"><%= @category.errors[:tipo_categoria].first %></p>
+            <% end %>
+        </div>
+  
+    </section>
+
+     <section class="botonesNew">
+        <%= f.button :submit,"Crear", class:"crearClientes"%>
+    </section>    
+
+
+</main>
+<% end %>
+
+  
