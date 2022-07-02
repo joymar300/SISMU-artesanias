@@ -49,6 +49,9 @@
         <div>      
             <%= f.label :apellido2_cli,"Segundo Apellido "%> 
             <%= f.input_field :apellido2_cli,class: 'input_clientes2' %>
+            <% if @client.errors[:apellido2_cli].any? %>
+                <p class="text-danger"><%= @client.errors[:apellido2_cli].first %></p>
+            <% end %>
         </div>
     </section>
 

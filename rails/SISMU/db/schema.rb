@@ -152,7 +152,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_30_164319) do
     t.datetime "updated_at", null: false
     t.string "correo"
     t.string "ciudad"
-    t.string "barrio"
   end
 
   create_table "facturas", force: :cascade do |t|

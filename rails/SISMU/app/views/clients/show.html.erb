@@ -1,47 +1,67 @@
 <main class= "clientesShow sombra">
-    <h1>Información Cliente</h1>
+
+     <section class = "botonEliminarShow">
+     <%= button_to  @client, method: :delete, class: "btn_borrar", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do%></section>
+          <button class="eliminar">Eliminar</button>
+     <% end %>
+     </section>
+
+     <h1>Información Cliente</h1>
+   
 
     <section class= "informacionClientes">
-        <div>
-             <label>Cedula</label>
-             <input type="text" value="<%= @client.id %>" name="cantidad" id="cantidad" disabled=»disabled» />
-        </div>
-         <div>
-             <label>Primer Nombre</label>
-             <input type="text" value="<%= @client.nombre_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
-        </div>
-    
-        <div>
-             <label>Telefono</label>
-             <input type="text" value="<%= @client.tel_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
-        </div>
-         <div>
-             <label>Segundo Nombre</label>
-             <input type="text" value="<%= @client.nombre2_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
-        </div>
+          <div>
+               <label>Cedula</label>
+               <input type="text" value="<%= @client.id %>" name="cantidad" id="cantidad" disabled=»disabled» />
+          </div>
+          <div>
+               <label>Primer Nombre</label>
+               <input type="text" value="<%= @client.nombre_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
+          </div>
+     </section>
 
-        <div>
+     <section class="informacionClientes">
+          <div>
+               <label>Telefono</label>
+               <input type="text" value="<%= @client.tel_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
+          </div>
+          <div>
+               <label>Segundo Nombre</label>
+               <input type="text" value="<%= @client.nombre2_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
+          </div>
+     </section>
+
+     <section class="informacionClientes">
+          <div>
              <label>Correo Electronico</label>
              <input type="text" value="<%= @client.correo_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
-        </div>
-         <div>
+          </div>
+          <div>
              <label>Primer Apellido</label>
              <input type="text" value="<%= @client.apellido_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
-        </div>
+          </div>
+     </section>
 
-        <div>
-             <label>Direccion</label>
-             <input type="text" value="<%= @client.direccion_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
-        </div>
-         <div>
+     <section class="informacionClientes">
+          <div>
+               <label>Direccion</label>
+               <input type="text" value="<%= @client.direccion_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
+          </div>
+          <div>
+               <label>Segundo Apellido</label>
+               <input type="text" value="<%= @client.apellido2_cli %>" name="cantidad" id="cantidad" disabled=»disabled» />
+          </div>
+     </section>
+
+     <section  class="informacionClientes">
+          <div>
              <label>Ciudad</label>
              <input type="text" value="<%= @client.ciudad %>" name="cantidad" id="cantidad" disabled=»disabled» />
-        </div>
-         <div>
+          </div>
+          <div>
              <label>Barrio</label>
              <input type="text" value="<%= @client.barrio %>" name="cantidad" id="cantidad" disabled=»disabled» />
-        </div>
-        
+          </div>
     </section>
 
     <section class="botonVolver"><%= link_to "Volver", clients_url, class: "volver" %></section>
