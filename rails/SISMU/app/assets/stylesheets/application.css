@@ -589,12 +589,15 @@ footer p {
     }
 
     .alert {
-      /* margin-top: 6px; */
+      margin-left: -50px;
       color: #F90303;
       border-radius: 5px;
       /* height: 20px;
       padding-top: 10px; */
+      position: relative;
       z-index: 3;
-      display: inline-block;
-      margin-left: 410px;
+      display: block;
+      /* margin-left: 40%; */
+      /* border: 1px solid red; */
+      text-align: center;
     }
