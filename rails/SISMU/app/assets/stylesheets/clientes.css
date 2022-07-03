@@ -343,6 +343,9 @@
   cursor: not-allowed;
 }
 
+.idBloquear{
+  cursor: no-drop;
+}
 
 /* BOTONES*/
 

@@ -7,7 +7,7 @@
     <section class="informacionNew">
         <div>
             <%= f.label :id, "Cedula "%>
-            <%= f.input_field :id, :disabled => true%>
+            <%= f.input_field :id, :disabled => true, class: "idBloquear"%>
             <% if @artesano.errors[:id].any? %>
                 <p class="text-danger"><%= @artesano.errors[:id].first %></p>
             <% end %>

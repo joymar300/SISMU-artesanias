@@ -8,7 +8,7 @@
     <section class="informacionNew">
         <div>
             <%= f.label :id,"Número de Identificación Tributaria(NIT) "%>
-            <%= f.input_field :id, :disabled => true %>
+            <%= f.input_field :id, :disabled => true, class: "idBloquear" %>
             <% if @empresa.errors[:id].any? %>
                 <p class="text-danger"><%= @empresa.errors[:id].first %></p>
             <% end %>
