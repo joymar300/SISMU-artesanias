@@ -5,6 +5,7 @@ class Client < ApplicationRecord
     def nombre_completo
         "#{id}- #{nombre_cli} #{nombre2_cli}"
     end
+
     validates :id, uniqueness: {  :message => "«Este número de identificación  ya se encuentra en uso»" }
     validates :id, :correo_cli, uniqueness: { :message => "«El correo electronico ingresado ya se encuentra en uso»" }
     validates :id, :nombre_cli, :apellido_cli, :tel_cli, :correo_cli, :direccion_cli,:ciudad, presence: { :message => "«Este campo es obligatorio»"  }
