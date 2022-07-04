@@ -1,9 +1,7 @@
 <main class= "clientesShow sombra">
 
      <section class = "botonEliminarShow">
-     <%= button_to  @client, method: :delete, class: "btn_borrar", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do%>
-          <button class="eliminar">Eliminar</button>
-     <% end %>
+          <%= button_to "Eliminar",@client, method: :delete, class: "btn_borrar, eliminar", onclick: "return confirmDestroy('¿Deseas eliminar este cliente?')" %>
      </section>
 
      <h1>Información Cliente</h1>
@@ -73,4 +71,10 @@
 
 
 
-   
+   <script>
+  function confirmDestroy(message) {
+    if(!confirm(message)){
+      return false
+    }
+  }
+</script>

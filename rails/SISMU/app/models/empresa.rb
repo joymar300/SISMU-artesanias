@@ -19,6 +19,9 @@ class Empresa < ApplicationRecord
     def empresa_busqueda
         "#{id}- #{nombre}"
     end
+    def empresa_envio
+      "#{direccion}- #{ciudad}- #{barrio}"
+    end
     def self.search(search)
         if search
           where( ["id LIKE  ? or nombre LIKE ? ", "%#{search}%","%#{search}%"]  )

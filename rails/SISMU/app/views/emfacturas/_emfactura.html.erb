@@ -12,9 +12,16 @@
         <%= link_to emfactura_url(emfactura) do %>
              <button class="ver">Ver</button>
         <% end %>
+        <%= button_to "Eliminar",emfactura_path(emfactura), method: :delete, class: "btn_borrar, eliminar", onclick: "return confirmDestroy('¿Deseas eliminar esta factura?')" %>
 
-         <%= button_to emfactura_path(emfactura), method: :delete, class: "btn_borrar", form: {data: {turbo_confirm: '¿Estás seguro?' }} do %>
-             <button class="eliminar">Eliminar</button>
-        <% end %>
+    
     </td>
 </tr>
+
+<script>
+  function confirmDestroy(message) {
+    if(!confirm(message)){
+      return false
+    }
+  }
+</script>

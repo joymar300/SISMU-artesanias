@@ -18,8 +18,14 @@
         <%= link_to edit_client_url(client) do %>
         <button class="editar">Editar</button>
         <% end %>
-        <%= button_to  client_path(client), method: :delete, class: "btn_borrar", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do%>
-        <button class="eliminar">Eliminar</button>
-        <% end %>
+        <%= button_to "Eliminar",client_path(client), method: :delete, class: "btn_borrar, eliminar", onclick: "return confirmDestroy('¿Deseas eliminar este cliente?')" %>
     </td>
 </tr>
+
+<script>
+  function confirmDestroy(message) {
+    if(!confirm(message)){
+      return false
+    }
+  }
+</script>

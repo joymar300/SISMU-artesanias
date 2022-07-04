@@ -65,8 +65,7 @@
             <% end %>
     </section>
 
-     <%
-=begin%>
+
  <section class="informacionNew">
         <div>       
             <%= f.label :barrio, "Barrio "%>
@@ -75,9 +74,7 @@
                 <p class="text-danger"><%= @empresa.errors[:barrio].first %></p>
             <% end %>
     </section> 
-<%
-=end%>
-    
+
     <section class="botonesNew">
            <%= f.button :submit, 'Crear' , class:"crearEmpresas" %>
     </section> 

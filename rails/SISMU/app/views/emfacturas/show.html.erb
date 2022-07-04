@@ -1,8 +1,6 @@
 <div class="container_facturas_empre">
 	<section class = "botonEliminarShow">
-     <%= button_to  @client, method: :delete, class: "btn_borrar", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do%>
-          <button class="eliminar">Eliminar</button>
-     <% end %>
+		<%= button_to "Eliminar",@emfactura, method: :delete, class: "btn_borrar, eliminar", onclick: "return confirmDestroy('¿Deseas eliminar esta factura?')" %>
     </section>
 
 
@@ -21,7 +19,7 @@
 		<%= @emfactura.empresa.empresa_busqueda %>
 		<br>
     <b>Dirección: </b>
-		<%= @emfactura.empresa.direccion%>
+		<%= @emfactura.empresa.empresa_envio%>
 	</div>
 
 	<div class="formulario_facturas">
@@ -86,3 +84,11 @@
 		</div>
 	</div>
 </div>
+
+<script>
+  function confirmDestroy(message) {
+    if(!confirm(message)){
+      return false
+    }
+  }
+</script>
