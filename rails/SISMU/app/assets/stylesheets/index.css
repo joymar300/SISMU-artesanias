@@ -10,6 +10,13 @@
   /* border: solid 1px red; */
   padding: 10px;
   margin: 20px;
+
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  /* background-color: var(--blanco); */
+  /* padding: 2rem; */
+  border-radius: 1rem;
 }
 
 .panelRegistros {
@@ -21,25 +28,43 @@
   /* border: solid 1px red; */
   padding: 10px;
   margin: 20px;
+
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  /* background-color: var(--blanco); */
+  /* padding: 2rem; */
+  border-radius: 1rem;
 }
 
 .panelContador__elemento {
   background-color: var(--fondo);
   /* border: var(--borde); */
-  /* padding: 20px; */
+  padding: 20px;
   font-size: 30px;
-  text-align: center;
+  /* text-align: center; */
   margin: 20px;
   /* border: 1px solid blue; */
   display: flex;
+  justify-content: space-around;
   align-items: center;
   cursor: pointer;
+}
 
+/* .panerContador_div {
+  border: 1px solid red;
+} */
+
+.panelContador_count {
+  text-align: center;
+  margin: 20px;
+  /* display: flex;
+  flex-direction: column; */
+  color: #fff;
 }
 
 .panelRegistros__elemento {
   background-color: var(--fondo);
-
   padding: 20px;
   /* font-size: 30px; */
   text-align: center;
@@ -52,53 +77,76 @@
   border: 1px solid red;
 } */
 
-.panelContador__icono-producto {
-  width: 100%;
+.panelContador__icono_producto {
+  /* width: 100%; */
+  padding: 20px;
   height: 100%;
   font-size: 15px;
-  /* border: 1px solid purple;  */
- background-color: #49AD09;
+  /* border: 1px solid #0D1EC6;  */
+  background-color: #0D1EC6;
+  border-radius: 50%;
 }
 #pro{
-  border: 1px solid #49AD09;
-}
-
-.panelContador__icono-categoria {
-  width: 100%;
-  height: 100%;
-  font-size: 15px;
-  /* border: 1px solid purple;  */
- background-color: #8b0dc6;
-}
-
-
-.panelContador__icono-cliente {
-  width: 100%;
-  height: 100%;
-  font-size: 15px;
-  /* border: 1px solid purple;  */
- background-color: #0D1EC6;
-}
-#cli{
   border: 1px solid #0D1EC6;
 }
+#pro_fondo{
+  background-color: #0D1EC6;
+}
 
-.panelContador__icono-artesano {
-  width: 100%;
+.panelContador__icono_empresa {
+  /* width: 100%; */
+  padding: 20px;
+  height: 100%;
+  font-size: 15px;
+  /* border: 1px solid purple;  */
+  background-color: #8b0dc6;
+  border-radius: 50%;
+}
+#emp{
+  color: 1px solid #8b0dc6;
+}
+#emp_fondo{
+  background-color: #8b0dc6;
+}
+
+
+.panelContador__icono_cliente {
+  /* width: 100%; */
+  padding: 20px;
+  height: 100%;
+  font-size: 15px;
+  /* border: 1px solid purple;  */
+  background-color: #49AD09;
+  border-radius: 50%;
+}
+#cli{
+  border: 1px solid #49AD09;
+}
+#cli_fondo{
+  background-color: #49AD09;
+}
+
+.panelContador__icono_artesano {
+  /* width: 100%; */
+  padding: 20px;
   height: 100%;
   font-size: 15px;
   /* border: 1px solid purple;  */
   background-color: #DE1E08;
+  border-radius: 50%;
 }
 #art{
   border: 1px solid #DE1E08;
 }
+#art_fondo{
+  background-color: #DE1E08;
+}
 
 .panelContador__contador {
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   font-size: 15px;
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -126,40 +174,20 @@
   width: 100%;
 }
 
-@media (max-width: 1080px) {
+/* @media (max-width: 900px) {
   .panelContador {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(75rem, 1fr));
     background-color: #fff;
-    /* border: solid 1px red; */
     padding: 10px;
     margin: 20px;
-    /* margin-top: -50rem; */
-    
-      -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
-      -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
-      box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
-      /* background-color: var(--blanco); */
-      /* padding: 2rem; */
-      border-radius: 1rem;
-  
   }
   
   .panelRegistros {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(60rem, 1fr));
     background-color: #fff;
-    /* border: solid 1px red; */
     padding: 10px;
     margin: 20px;
-    
-    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
-    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
-    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
-    /* background-color: var(--blanco); */
-    /* padding: 2rem; */
-    border-radius: 1rem;
-
   }
-  
-}
+} */
