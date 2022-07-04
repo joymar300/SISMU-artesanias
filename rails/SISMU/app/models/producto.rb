@@ -8,9 +8,17 @@ class Producto < ApplicationRecord
     has_many :production, through: :productions
     has_many :emdetalles, dependent: :destroy
     has_many :emfactura, through: :emdetalles
-    validates :referencia_pro, :nombre_pro, :precio_pro ,presence: {:message => "Requeridos"}
-    validates :referencia_pro, uniqueness: {:message => "Referencia en uso"}
-    # validates :referencia_pro, :precio_pro ,numericality: {:message => "numericos"}
+
+
+    validates :referencia_pro, :nombre_pro, :precio_pro ,presence: {:message => "«Este campo es obligatorio»"}
+    validates :referencia_pro, uniqueness: {:message => "«Este número de referencia ya se encuentra en uso»"}
+
+     # nuevas validaciones actualizacion version 1.2
+
+    validates :referencia_pro, format: { with: /\A[A-Za-z0-9]{1,15}\z/, :message => "«No se permiten carácteres especiales»"}
+    validates :nombre_pro, format: { with: /\A[A-Za-z\s]+$\z/, :message => "«Se permiten solo letras» (no se permiten carácteres especiales)"  }
+    validates :precio_pro, :numericality => { :greater_than_or_equal_to => 0, :less_than_or_equal_to => 99999999999, :message => "«No se permiten números negativos»"  }
+
 
     def buscar_producto
         "#{referencia_pro}- #{nombre_pro}"

@@ -28,6 +28,9 @@
         <div>
             <%= f.label :id, "Segundo Nombre ", class:"input_artesano" %>
             <%= f.input_field :snombre,class: 'input_artesano' , class:"label_artesano3" %>
+            <% if @artesano.errors[:snombre].any? %>
+                <p class="text-danger"><%= @artesano.errors[:snombre].first %></p>
+            <% end %>
         </div>
     </section>
 
@@ -46,6 +49,9 @@
         <div>
             <%= f.label :id, "Segundo Apellido ", class:"input_artesano" %>
             <%= f.input_field :sapellido, class: 'input_artesano' , class:"label_artesano3" %>
+            <% if @artesano.errors[:sapellido].any? %>
+                <p class="text-danger"><%= @artesano.errors[:sapellido].first %></p>
+            <% end %>
         </div>
     </section>
 
@@ -53,6 +59,9 @@
         <div>
             <%= f.label :id, "Telefono ", class:"input_artesano" %>
             <%= f.input_field :tel, class: 'input_artesano', class:"label_artesano2" %>
+            <% if @artesano.errors[:tel].any? %>
+                <p class="text-danger"><%= @artesano.errors[:tel].first %></p>
+            <% end %>
         </div>
     </section>
         

@@ -3,10 +3,13 @@
 
     <section class="botonVolverNew"><%= link_to "Volver", productions_url, class: "volverNew" %></section>
     <h1 class="containerProds-text">Registrar Producción</h1>
-    <section class="informacionProduccionNew">
+    <section class="informacionNew">
         <div>
             <%= f.label :ref, "Ingresa referencia"%><br>
             <%= f.input_field :ref %>    
+            <% if @production.errors[:ref].any? %>
+                <p class="text-danger"><%= @production.errors[:ref].first %></p>
+            <% end %>
         </div>
     </section>
      <section class="informacionProduccionNew">

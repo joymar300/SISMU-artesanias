@@ -3,6 +3,10 @@ class Dproduction < ApplicationRecord
   belongs_to :producto
   belongs_to :artesano
   validates_associated :production, :producto , :artesano
+
+  validates :cantidad, presence: {:message => "Campo Obligatorio"}
+  validates :cantidad, :numericality => { :greater_than_or_equal_to => 0, :less_than_or_equal_to => 99999999999, :message => "«No se permiten números negativos»"  }
+
   # validates :cantidad, presence: {:message => "inserte una cantidad"}, numericality: { greater_than: 0}
 
 

@@ -383,6 +383,11 @@
   margin: 30px 43%;
 }
 
+.botonEliminarShow {
+  display: flex;
+  justify-content: end;
+}
+
 
 
 /* VISTAS NEW Y EDIT */
