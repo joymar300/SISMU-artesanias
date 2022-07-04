@@ -1,57 +1,98 @@
 <main class="main_index"> 
   <div class="panelContador">
-    <div class="panelContador__elemento sombra">
-      <div class="panelContador__icono-producto">
+    <div class="panerContador_div">
+      <div class="panelContador_count sombra" id="pro_fondo">
         <span class="span_angulo_derecho">
-          <%= image_tag "iconos/lista_blanca", class: "minilogo_grid" %>
+          <h2><%= Producto.count %></h2>
+        </span>
+        <span>
+        <h3>PRODUCTOS</h3>
         </span>
       </div>
-      <div class="panelContador__contador"  id="pro">
-        <span class="span_angulo_derecho">
-          <span><%= Producto.count %></span>
-        </span>
-        <span>Productos</span>
-      </div>
-    </div>
-
-    <div class="panelContador__elemento sombra" >
-      <div class="panelContador__icono-categoria">
-        <span class="span_angulo_derecho">
-          <%= image_tag "iconos/materiaPrima_blanco", class: "minilogo_grid" %>
-        </span>
-      </div>
-      <div class="panelContador__contador" id="cat">
-        <span class="span_angulo_derecho">
-          <span><%= Category.count %></span>
-        </span>
-        <span>Categorias</span>
+      <div class="panelContador__elemento sombra">
+        <div class="panelContador__contador">
+          <span class="span_angulo_derecho">
+            <h2><%= Producto.count %></h2>
+          </span>
+          <span>Nuevos <br> Productos</span>
+        </div>
+        <div class="panelContador__icono_producto">
+          <span class="span_angulo_derecho">
+            <%= image_tag "iconos/lista_blanca", class: "minilogo_grid" %>
+          </span>
+        </div>
       </div>
     </div>
 
-    <div class="panelContador__elemento sombra" >
-      <div class="panelContador__icono-cliente">
+    <div class="panerContador_div">
+      <div class="panelContador_count sombra" id="emp_fondo">
         <span class="span_angulo_derecho">
-          <%= image_tag "iconos/usuarios_blanco", class: "minilogo_grid" %>
+          <h2><%= Empresa.count %></h2>
+        </span>
+        <span>
+        <h3>EMPRESAS</h3>
         </span>
       </div>
-      <div class="panelContador__contador" id="cli">
-        <span class="span_angulo_derecho">
-          <span><%= Client.count %></span>
-        </span>
-        <span>Clientes</span>
+      <div class="panelContador__elemento sombra">
+        <div class="panelContador__contador">
+          <span class="span_angulo_derecho">
+            <h2><%= Empresa.count %></h2>
+          </span>
+          <span>Nuevas <br> Empresas</span>
+        </div>
+        <div class="panelContador__icono_empresa">
+          <span class="span_angulo_derecho">
+            <%= image_tag "iconos/edificio", class: "minilogo_grid" %>
+          </span>
+        </div>
       </div>
     </div>
-    <div class="panelContador__elemento sombra" >
-      <div class="panelContador__icono-artesano">
+
+    <div class="panerContador_div">
+      <div class="panelContador_count sombra" id="cli_fondo">
         <span class="span_angulo_derecho">
-          <%= image_tag "iconos/artesanos_blanco", class: "minilogo_grid" %>
+          <h2><%= Client.count %></h2>
+        </span>
+        <span>
+        <h3>CLIENTES</h3>
         </span>
       </div>
-      <div class="panelContador__contador" id="art">
+      <div class="panelContador__elemento sombra">
+        <div class="panelContador__contador">
+          <span class="span_angulo_derecho">
+            <h2><%= Client.count %></h2>
+          </span>
+          <span>Nuevos <br> Clientes</span>
+        </div>
+        <div class="panelContador__icono_cliente">
+          <span class="span_angulo_derecho">
+            <%= image_tag "iconos/usuarios_blanco", class: "minilogo_grid" %>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="panerContador_div">
+      <div class="panelContador_count sombra" id="art_fondo">
         <span class="span_angulo_derecho">
-          <span><%= Artesano.count %></span>
+          <h2><%= Artesano.count %></h2>
         </span>
-        <span>Artesanos</span>
+        <span>
+        <h3>ARTESANOS</h3>
+        </span>
+      </div>
+      <div class="panelContador__elemento sombra">
+        <div class="panelContador__contador">
+          <span class="span_angulo_derecho">
+            <h2><%= Artesano.count %></h2>
+          </span>
+          <span>Nuevos <br> Artesanos</span>
+        </div>
+        <div class="panelContador__icono_artesano">
+          <span class="span_angulo_derecho">
+            <%= image_tag "iconos/artesanos_blanco", class: "minilogo_grid" %>
+          </span>
+        </div>
       </div>
     </div>
   </div>

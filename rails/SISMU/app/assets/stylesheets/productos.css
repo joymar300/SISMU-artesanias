@@ -25,6 +25,14 @@ html {
   padding: 2rem;
   border-radius: 1rem;
 }
+.sombra2{
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  background-color: var(--blanco);
+  padding: 2rem;
+  /* border-radius: 1rem; */
+}
 
 
 /*TABLA DEL FORMULARIO*/
