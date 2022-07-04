@@ -51,7 +51,7 @@
             <%= f.label :correo, "Correo "%>
             <%= f.email_field :correo%>
             <% if @empresa.errors[:correo].any? %>
-                <p class="text-danger"><%= @empresa.errors[:direccion].first %></p>
+                <p class="text-danger"><%= @empresa.errors[:correo].first %></p>
             <% end %>
         </div>
     </section>
@@ -65,14 +65,18 @@
             <% end %>
     </section>
 
-     <section class="informacionNew">
+     <%
+=begin%>
+ <section class="informacionNew">
         <div>       
             <%= f.label :barrio, "Barrio "%>
-            <%= f.input_field :barrio%> 
+            <%= f.input_field :barrio %> 
             <% if @empresa.errors[:barrio].any? %>
                 <p class="text-danger"><%= @empresa.errors[:barrio].first %></p>
             <% end %>
-    </section>
+    </section> 
+<%
+=end%>
     
     <section class="botonesNew">
            <%= f.button :submit, 'Crear' , class:"crearEmpresas" %>

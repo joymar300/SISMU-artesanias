@@ -343,6 +343,9 @@
   cursor: not-allowed;
 }
 
+.idBloquear{
+  cursor: no-drop;
+}
 
 /* BOTONES*/
 
@@ -378,6 +381,11 @@
   /* display: flex;
   justify-content: center; */
   margin: 30px 43%;
+}
+
+.botonEliminarShow {
+  display: flex;
+  justify-content: end;
 }
 
 

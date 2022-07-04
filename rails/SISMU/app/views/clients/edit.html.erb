@@ -8,7 +8,7 @@
     <section class="informacionNew">
          <div>
             <%= f.label :id, "Cedula"%>
-            <%= f.input_field :id, :disabled => true %>
+            <%= f.input_field :id, :disabled => true, class: "idBloquear" %>
             <% if @client.errors[:id].any? %>
                 <p class="text-danger"><%= @client.errors[:id].first %></p>
              <% end %>
