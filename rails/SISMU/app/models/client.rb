@@ -5,11 +5,13 @@ class Client < ApplicationRecord
     def nombre_completo
         "#{id}- #{nombre_cli} #{nombre2_cli}"
     end
-
+    def cli_envio
+      "#{direccion_cli}- #{ciudad}- #{barrio}"
+    end
     validates :id, uniqueness: {  :message => "«Este número de identificación  ya se encuentra en uso»" }
     validates :id, :correo_cli, uniqueness: { :message => "«El correo electronico ingresado ya se encuentra en uso»" }
     validates :id, :nombre_cli, :apellido_cli, :tel_cli, :correo_cli, :direccion_cli,:ciudad, presence: { :message => "«Este campo es obligatorio»"  }
-    validates :nombre_cli, :apellido_cli, :nombre2_cli, :ciudad, :apellido2_cli, format: { with: /\A[a-zA-ZÀ-ÿ]+\z/, :message => "«Se permiten solo letras» (no se permiten carácteres especiales o espacios)" }
+    validates :nombre_cli, :apellido_cli, :ciudad, format: { with: /\A[a-zA-ZÀ-ÿ]+\z/, :message => "«Se permiten solo letras» (no se permiten carácteres especiales o espacios)" }
     validates :id, length: {  in:7.. 10, :message=>"«Debe contener entre 7 y 10 digitos numéricos»" }
 
     # nuevas validaciones actualizacion version 1.2

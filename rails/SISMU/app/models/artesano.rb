@@ -1,7 +1,7 @@
 class Artesano < ApplicationRecord
 
     validates :nombre, :apellido, :id, :tel, presence: {:message => "«Este campo es obligatorio»"}
-    validates :nombre,:apellido, :snombre, :sapellido, format: { with: /\A[a-zA-ZÀ-ÿ]+\z/, :message => "«Se permiten solo letras» (no se permiten carácteres especiales o espacios)" }
+    validates :nombre,:apellido,  format: { with: /\A[a-zA-ZÀ-ÿ]+\z/, :message => "«Se permiten solo letras» (no se permiten carácteres especiales o espacios)" }
     validates :id, uniqueness: {:message => "«Este número de identificación  ya se encuentra en uso»"},length: {  in:7.. 10, :message=>"«Debe contener entre 7 y 10 digitos numéricos»" }
     
     # nuevas validaciones actualizacion version 1.2

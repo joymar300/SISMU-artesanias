@@ -5,9 +5,7 @@
 <main class="artesanosShow sombra">
 
      <section class = "botonEliminarShow">
-     <%= button_to  @client, method: :delete, class: "btn_borrar", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do%>
-          <button class="eliminar">Eliminar</button>
-     <% end %>
+          <%= button_to "Eliminar",@artesano, method: :delete, class: "btn_borrar, eliminar", onclick: "return confirmDestroy('¿Deseas eliminar este registro?')" %>
      </section>
 
      <h1>Información Artesano</h1>
@@ -50,4 +48,10 @@
     <section class="botonVolver"><%= link_to "Volver", artesanos_url, class: "volver" %></section>
 
 </main>
-    
+<script>
+  function confirmDestroy(message) {
+    if(!confirm(message)){
+      return false
+    }
+  }
+</script>

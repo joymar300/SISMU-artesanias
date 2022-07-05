@@ -17,8 +17,16 @@
        <button class="ver">Ver</button>
     <% end %>
   
-    <%= button_to factura_path(factura), method: :delete, class: "btn_borrar" do%>
-      <button class="eliminar">Eliminar</button>
-    <% end %>
+    <%= button_to "Eliminar",  factura_path(factura), method: :delete, class: "btn_borrar, eliminar", onclick: "return confirmDestroy('¿Deseas eliminar esta factura?')" %>
+
+    
   </td>
 </tr>
+
+<script>
+  function confirmDestroy(message) {
+    if(!confirm(message)){
+      return false
+    }
+  }
+</script>
