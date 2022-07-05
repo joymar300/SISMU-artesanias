@@ -658,6 +658,11 @@ footer p {
   width: 100%;
 }
 
+.div_passw {
+  margin-bottom: 200px;
+  margin-top: 140px;
+}
+
 @media(max-width: 740px){
   #sismu__central {
     display: none;
