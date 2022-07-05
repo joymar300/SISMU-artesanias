@@ -404,7 +404,7 @@ ul>li>ul>li {
 }
 
 #header_select ul {
-  list-style:none;
+  list-style: none;
   position: absolute;
   margin-left: -61px;
   /* margin-top: -20px; */
@@ -415,8 +415,10 @@ ul>li>ul>li {
 #header_select li a {
   display: block;
   /* background-color: var(--hovercolor); */
-  background-color: var(--colorOscuro);
-  color: #fff;
+  /* background-color: var(--colorOscuro); */
+  background-color: var(--blanco);
+  /* color: #fff; */
+  color: var(--colorOscuro);
   text-decoration: none;
   padding: 10px;
   /* background-color: #fff; */
@@ -428,7 +430,7 @@ ul>li>ul>li {
 #header_select li a:hover {
   /* background-color: var(--colorOscuro); */
   background-color: var(--hovercolor);
-  color: #000;
+  color: #fff;
 }
 
 #header_select li{
@@ -441,7 +443,7 @@ ul>li>ul>li {
 }
 
 #header_select li:hover ul {
-  display:block;
+  display: block;
 }
 
 /* ******** */
@@ -602,3 +604,67 @@ footer p {
       /* border: 1px solid red; */
       text-align: center;
     }
+
+.div_conf {
+  margin-bottom: 139px;
+}
+
+.informacionNewConf {
+  margin-top: 5px;
+  /* justify-content: center;
+  display: -ms-flex;
+  display: -webkit-flex; */
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr)); */
+  width: 50%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.informacionNewConf label {
+  font-family: sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  /* border: solid 1px red; */
+}
+
+.informacionNewConf div {
+  width: 100%;
+  padding: 10px;
+}
+
+.informacionNewConf input{
+  margin-top: 1rem;
+  /* margin-bottom: 2rem; */
+  border-radius: 10px;
+  padding-left: 10px;
+  font-family: sans-serif;
+  border: 1px solid #9AA399;
+  color: #424442;
+  height: 5rem;
+  width: 100%;
+}
+
+.informacionNewConf select{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-family: sans-serif;
+  border: 1px solid #9AA399;
+  color: #424442;
+  height: 5rem;
+  /* width: 55rem; */
+  width: 100%;
+}
+
+.div_passw {
+  margin-bottom: 200px;
+  margin-top: 140px;
+}
+
+@media(max-width: 740px){
+  #sismu__central {
+    display: none;
+  }
+}

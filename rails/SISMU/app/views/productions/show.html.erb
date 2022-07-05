@@ -11,12 +11,15 @@
   </div>
 
 	<div class="facturas_izquierdo_prodtns sombra">
-		<h2 id="h2">Datos Empresas</h2>
+		<h2 id="h2" class="centrar">Datos Empresas</h2>
 		<%= simple_form_for [@production, @dproduction] do |f| %>
 		<%= f.association :producto, label_method: :buscar_producto, label: "Nombre del Producto: " %>
+    <br>
 		<%= f.association :artesano, label_method: :nombre_completo, label: "Nombre del Artesano: " %>
+    <br>
 		<%= f.input :cantidad, label: "Cantidad:" , error: "requerido"%>
-		<%= f.button :submit, "Crear" %>
+    <br>
+		<%= f.button :submit, "Crear", class: "produccion__crear centrar" %>
 		<% end %>
 	</div>
 

@@ -13,9 +13,7 @@
                     <p class="text-danger"><%= @producto.errors[:referencia_pro].first %></p>
                 <% end %>
             </div>
-        </section>
 
-         <section class="informacionNew">
             <div>    
                 <%= f.label :nombre_pro,'Nombre del producto: ' %> <br>
                 <%= f.input_field :nombre_pro %> <br>
@@ -23,9 +21,7 @@
                     <p class="text-danger"><%= @producto.errors[:nombre_pro].first %></p>
                 <% end %>
             </div>
-        </section>
 
-        <section class="informacionNew">
             <div>    
                 <%= f.label :precio_pro, 'Precio del producto: ' %> <br>
                 <%= f.input_field :precio_pro %> <br>

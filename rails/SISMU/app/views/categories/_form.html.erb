@@ -1,12 +1,12 @@
 
 
 <%= simple_form_for @category do |f| %>
-<main class="clientesNew sombra"> 
+<main class="clientesNewCat sombra div_conf"> 
 
     <section class="botonVolverNew"><%= link_to "Volver", categories_url, class: "volverNew" %></section>
     <h1>Registrar Categoria</h1>
 
-    <section class="informacionNew "> 
+    <section class="informacionNewConf "> 
         <div>
             <%= f.label :tipo_categoria, 'Escriba la categoria', required: true %> 
             <%= f.input_field :tipo_categoria%> 

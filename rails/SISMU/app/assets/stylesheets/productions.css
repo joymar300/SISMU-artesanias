@@ -117,7 +117,6 @@ html {
   padding: 5px;
   cursor: pointer;
   background-color: #8E58DC;
-  
 }
 
 .produccion__nuevo:active {
@@ -326,7 +325,7 @@ html {
   background-color: #fff;
   width: 95%;
   margin: 0px auto 50px auto;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   padding-bottom: 30px;
   overflow: auto;
 }

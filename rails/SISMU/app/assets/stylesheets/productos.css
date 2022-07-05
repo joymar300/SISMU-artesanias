@@ -500,14 +500,13 @@ html {
 
 .informacionNew {
   margin-top: 5px;
-  justify-content: center;
+  /* justify-content: center;
   display: -ms-flex;
-  display: -webkit-flex;
-  display: flex;
+  display: -webkit-flex; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
   margin-bottom: 1rem;
 }
-
-
 
 .informacionNew label {
   font-family: sans-serif;
@@ -517,11 +516,9 @@ html {
 }
 
 .informacionNew div {
-  width: 50%;
+  width: 100%;
   padding: 10px;
-
 }
-
 
 .informacionNew input{
   margin-top: 1rem;
@@ -532,7 +529,7 @@ html {
   border: 1px solid #9AA399;
   color: #424442;
   height: 5rem;
-  width: 55rem;
+  width: 100%;
 }
 
 .informacionNew select{
@@ -560,6 +557,18 @@ html {
 
 /* selector */
 
+.selectorNew {
+  /* margin-left: 30rem;
+  margin-right: 30rem; */
+  margin-top: 5px;
+  /* display: -ms-flex;
+  display: -webkit-flex;
+  display: flex; */
+  margin-bottom: 3rem;
+  margin: auto;
+  width: 50%;
+}
+
 .selectorNew input{
   padding-left: 5rem;
   margin-top: 1rem;
@@ -576,20 +585,6 @@ html {
   font-weight: 200;
   font-size: 14px;
 }
-
-.selectorNew {
-  margin-left: 30rem;
-  margin-right: 30rem;
-  margin-top: 5px;
-  display: -ms-flex;
-  display: -webkit-flex;
-  display: flex;
-  margin-bottom: 5rem;
-
-}
-
-
-
 
 /* botones */
 

@@ -1,59 +1,53 @@
 <main class="container sombra">
-    <section class="productos">
-        <%# <div class="box">
-            <%= form_tag clients_path, :method => 'get' do 
-            <p>
-              <%= text_field_tag :search, params[:search] 
-              <%= submit_tag "Buscar", :id => nil  
-            </p>
-          <% end 
-        </div> %>
+  <section class="productos">
+    <%# <div class="box">
+        <%= form_tag clients_path, :method => 'get' do 
+        <p>
+          <%= text_field_tag :search, params[:search] 
+          <%= submit_tag "Buscar", :id => nil  
+        </p>
+      <% end 
+    </div> %>
 
-        <div class="buscador_client">
-          <div class="prueba_client">
-            <%= form_tag clients_path, :method => 'get' do %>
-              <%= text_field_tag :search, params[:search], placeholder: "Buscar"%>
-              <div class="btn_buscar_client">
-                <button class="btn_borrar">
-                  <%= image_tag "iconos/buscar_blanco", :referencia_pro => nil, class: "logoBuscar_client" %>
-                </button>
-              </div>
-            <% end %>
+    <div class="buscador_client">
+      <div class="prueba_client">
+        <%= form_tag clients_path, :method => 'get' do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Buscar"%>
+          <div class="btn_buscar_client">
+            <button class="btn_borrar">
+              <%= image_tag "iconos/buscar_blanco", :referencia_pro => nil, class: "logoBuscar_client" %>
+            </button>
           </div>
-        </div>
-
-        <h1 class="clientes__titulo">Clientes</h1>
-          <%= link_to "clients/new" do %>
-            <div class="clientes__nuevo">
-              <p>Nuevo</p>
-            </div>
-          <% end %>
-    </section>
-
-    <section class="clientesTable">
-        <table>
-            <thead>
-                <tr>
-                <th><%= sort_link(@q, :id,"Cedula", default_order: :desc, class:"white") %></th>
-                <th><%= sort_link(@q, :nombre_cli,"Primer Nombre", default_order: :desc, class:"white") %></th>
-                
-                <th><%= sort_link(@q, :apellido_cli,"Primer Apellido", default_order: :desc, class:"white") %></th>
-                
-         
-                
-               
-                <th colspan="3">Acción</th>
-                </tr>
-            </thead>
-            <tbody>
-                <%= render @clients%>
-            </tbody>
-        </table>
-    </section>
-
-
-    <div class="digg_pagination">
-        <%= will_paginate(@productos,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0) %>
+        <% end %>
       </div>
+    </div>
+
+    <h1 class="clientes__titulo">Clientes</h1>
+      <%= link_to "clients/new" do %>
+        <div class="clientes__nuevo">
+          <p>Nuevo</p>
+        </div>
+      <% end %>
+  </section>
+
+  <section class="clientesTable">
+    <table>
+      <thead>
+        <tr>
+          <th><%= sort_link(@q, :id,"Cedula", default_order: :desc, class:"white") %></th>
+          <th><%= sort_link(@q, :nombre_cli,"Primer Nombre", default_order: :desc, class:"white") %></th>
+          <th><%= sort_link(@q, :apellido_cli,"Primer Apellido", default_order: :desc, class:"white") %></th>
+          <th colspan="3">Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @clients%>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="digg_pagination">
+    <%= will_paginate(@productos,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0) %>
+  </div>
 
 </main>
