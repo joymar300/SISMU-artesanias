@@ -12,9 +12,7 @@
                 <p class="text-danger"><%= @artesano.errors[:id].first %></p>
             <% end %>
         </div>
-    </section>
-      
-    <section class="informacionNew">
+
         <div>
             <%= f.label :id, "Nombre " %>
             <%= f.input_field :nombre %>
@@ -22,16 +20,12 @@
                 <p class="text-danger"><%= @artesano.errors[:nombre].first %></p>
             <% end %>
         </div>
-    </section>
-          
-    <section class="informacionNew">
+
         <div>
             <%= f.label :id, "Segundo Nombre "%>
             <%= f.input_field :snombre %>
         </div>
-    </section>
 
-    <section class="informacionNew">
         <div>
             <%= f.label :id, "Apellido "%>
             <%= f.input_field :apellido %>
@@ -39,17 +33,12 @@
                 <p class="text-danger"><%= @artesano.errors[:apellido].first %></p>
             <% end %>
         </div>
-    </section>
 
-
-    <section class="informacionNew">
         <div>
             <%= f.label :id, "Segundo Apellido "%>
             <%= f.input_field :sapellido%>
         </div>
-    </section>
 
-    <section class="informacionNew">
         <div>
             <%= f.label :id, "Telefono " %>
             <%= f.input_field :tel %>

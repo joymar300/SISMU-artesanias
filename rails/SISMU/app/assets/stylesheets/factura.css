@@ -41,9 +41,9 @@
 }
 
 
-.fechaFacturaNew select {
+/* .fechaFacturaNew select {
   margin-left: 1rem;
-}
+} */
 
 .container_facturas {
   /* display: flex;
@@ -89,6 +89,7 @@
   /* display: grid;
   grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr)); */
 }
+
 .facturas_izquierdo_prodtns {
   float: left;
   width: 25%;
@@ -104,6 +105,18 @@
   box-sizing: border-box;
   /* display: grid;
   grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr)); */
+}
+
+.produccion__crear {
+  font-weight: bold;
+  width: 8rem;
+  height: 4rem;
+  border: 1px solid #7647B9;;
+  border-radius: 6px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #8E58DC;
+  color: #fff;
 }
 
 .div_foto_facturas {

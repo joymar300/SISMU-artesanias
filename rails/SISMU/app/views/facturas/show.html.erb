@@ -29,15 +29,15 @@
     <div class="formulario_facturas_1 sombra">
       <h2 id="h2">Datos Producto</h2>
       <%= simple_form_for [@factura, @detalle] do |f| %>
-          <%= f.association :producto, label_method: :buscar_producto, label: "nombre del producto: " %>
-          <%= f.input :cantidad, label: "cantidad:" %>
+          <%= f.association :producto, label_method: :buscar_producto, label: "Nombre del producto: " %>
+          <%= f.input :cantidad, label: "Cantidad:" %>
               <% if @detalle.errors[:cantidad].any? %>
                 <span class="text-danger"><%= @detalle.errors[:cantidad].first %></span>
                 <br>
               <% end %>
-          <%= f.association :colors,as: :check_boxes, label_method: :tipo, label: "colores: " %>
+          <%= f.association :colors,as: :check_boxes, label_method: :tipo, label: "Colores: " %>
 
-          <%= f.button :submit %>
+          <%= f.button :submit, "Añadir", class: "clientes__nuevo" %>
           
       <% end %>
     </div>
@@ -46,7 +46,7 @@
       <table>
           <thead>
               <tr>
-                  <th> fecha de entrega</th>
+                  <th> Fecha de entrega</th>
                   <td colspan="5"><%= @factura.fechafin %></td>
               </tr>
               <tr>

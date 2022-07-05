@@ -16,11 +16,13 @@
           </span>
           <span>Nuevos <br> Productos</span>
         </div>
-        <div class="panelContador__icono_producto">
-          <span class="span_angulo_derecho">
-            <%= image_tag "iconos/lista_blanca", class: "minilogo_grid" %>
-          </span>
-        </div>
+        <%= link_to productos_url do %>
+          <div class="panelContador__icono_producto">
+            <span class="span_angulo_derecho">
+              <%= image_tag "iconos/lista_blanca", class: "minilogo_grid" %>
+            </span>
+          </div>
+        <% end %>
       </div>
     </div>
 
@@ -40,11 +42,13 @@
           </span>
           <span>Nuevas <br> Empresas</span>
         </div>
-        <div class="panelContador__icono_empresa">
-          <span class="span_angulo_derecho">
-            <%= image_tag "iconos/edificio", class: "minilogo_grid" %>
-          </span>
-        </div>
+        <%= link_to empresas_url do %>
+          <div class="panelContador__icono_empresa">
+            <span class="span_angulo_derecho">
+              <%= image_tag "iconos/edificio", class: "minilogo_grid" %>
+            </span>
+          </div>
+        <% end %>
       </div>
     </div>
 
@@ -64,11 +68,13 @@
           </span>
           <span>Nuevos <br> Clientes</span>
         </div>
-        <div class="panelContador__icono_cliente">
-          <span class="span_angulo_derecho">
-            <%= image_tag "iconos/usuarios_blanco", class: "minilogo_grid" %>
-          </span>
-        </div>
+        <%= link_to clients_url do %>
+          <div class="panelContador__icono_cliente">
+            <span class="span_angulo_derecho">
+              <%= image_tag "iconos/usuarios_blanco", class: "minilogo_grid" %>
+            </span>
+          </div>
+        <% end %>
       </div>
     </div>
 
@@ -88,11 +94,13 @@
           </span>
           <span>Nuevos <br> Artesanos</span>
         </div>
-        <div class="panelContador__icono_artesano">
-          <span class="span_angulo_derecho">
-            <%= image_tag "iconos/artesanos_blanco", class: "minilogo_grid" %>
-          </span>
-        </div>
+        <%= link_to artesanos_url do %>
+          <div class="panelContador__icono_artesano">
+            <span class="span_angulo_derecho">
+              <%= image_tag "iconos/manos", class: "minilogo_grid" %>
+            </span>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
@@ -105,69 +113,84 @@
    
   </p>
   <div class="panelRegistros">
-    <div class="panelRegistros__elemento sombra" id="pro">
-      <h4>Productos Añadidos Recientemente</h4>
+    <div class="panelRegistros__elemento sombra productosTable" id="pro">
+      <h4 id="h4_home">Productos Añadidos Recientemente</h4>
       <table>
           <thead>
               <tr >
                   <th>Referencia</th>
-                  <th>Nombre del producto</th>
+                  <th>Nombre producto</th>
                   <th>Precio</th>
               </tr>
           </thead>
           <tbody>
             <% @productos.each do |producto| %>
               <tr>
-                  <td><%= producto.referencia_pro %></td>
-                  <td><%= producto.nombre_pro %></td>
-                  <td><%= number_to_currency producto.precio_pro%></td>
+                <td data-label="Referencia", class="centrar blue">
+                  <%= producto.referencia_pro %>
+                </td>
+                <td data-label="Nombre del producto" class="centrar blue">
+                  <%= producto.nombre_pro %>
+                </td>
+                <td data-label= "Precio" class="blue">
+                  <%= number_to_currency producto.precio_pro%>
+                </td>
               </tr>
             <% end %>
           </tbody>
       </table>
     </div>
-    <div class="panelRegistros__elemento sombra" id="cli">
-      <h4>Clientes Añadidos Recientemente</h4>
+    <div class="panelRegistros__elemento sombra clientesTable" id="cli">
+      <h4 id="h4_home">Clientes Añadidos Recientemente</h4>
       <table>
         <thead>
           <tr>
             <th>Cedula</th>
             <th>Primer Nombre</th>
-            <th>Primer Apelldio</th>
+            <th>Primer Apellido</th>
           </tr>
         </thead>
         <tbody>
           <% @clients.each do |client| %>
               <tr>
-                <td><%= client.id %> </td> 
-                <td><%= client.nombre_cli %></td> 
-                <td><%= client.apellido_cli %></td> 
+                <td data-label="Cedula" class="centrar red">
+                  <%= client.id %>
+                </td> 
+                <td data-label="Primer Nombre" class="centrar red">
+                  <%= client.nombre_cli %>
+                </td> 
+                <td data-label="Primer Apellido" class="centrar red">
+                  <%= client.apellido_cli %>
+                </td> 
               </tr>
             <% end %>
-         
         </tbody>
       </table>
     </div>
-    <div class="panelRegistros__elemento sombra" id="art">
-      <h4>Artesanos Añadidos Recientemente</h4>
+    <div class="panelRegistros__elemento sombra artesanosTable" id="art">
+      <h4 id="h4_home">Artesanos Añadidos Recientemente</h4>
       <table>
         <thead>
           <tr>
             <th>Cedula</th>
             <th>Primer Nombre</th>
-            <th>Primer Apelldio</th>
-       
+            <th>Primer Apellido</th>
           </tr>
         </thead>
         <tbody>
           <% @artesanos.each do |artesano| %>
               <tr>
-                <td><%= artesano.id %></td> 
-                <td><%= artesano.nombre %></td> 
-                <td><%= artesano.apellido %></td> 
+                <td data-label="Cedula" class="centrar seaWater">
+                  <%= artesano.id %>
+                </td> 
+                <td data-label="Primer Nombre" class="centrar seaWater">
+                  <%= artesano.nombre %>
+                </td> 
+                <td data-label="Primer Apellido" class="centrar seaWater">
+                  <%= artesano.apellido %>
+                </td> 
               </tr>
             <% end %>
-         
         </tbody>
       </table>
     </div> 

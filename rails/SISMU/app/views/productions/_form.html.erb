@@ -3,7 +3,7 @@
 
     <section class="botonVolverNew"><%= link_to "Volver", productions_url, class: "volverNew" %></section>
     <h1 class="containerProds-text">Registrar Producción</h1>
-    <section class="informacionNew">
+    <section class="informacionNewConf">
         <div>
             <%= f.label :ref, "Ingresa referencia"%><br>
             <%= f.input_field :ref %>    
@@ -12,7 +12,7 @@
             <% end %>
         </div>
     </section>
-     <section class="informacionProduccionNew">
+    <section class="informacionProduccionNew">
         <div>
             <%= f.label :created_at, "Fecha en que se ingresaron los productos"%><br>
             <%= f.input_field :created_at %>    

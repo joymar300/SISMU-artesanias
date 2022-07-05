@@ -2,13 +2,13 @@
 
 
 <%= simple_form_for @color do |f| %> <br>
-<main class="productosNew sombra">
+<main class="productosNew sombra div_conf">
   <section class="botonVolverNew"><%= link_to "Volver", colors_url, class: "volverNew" %></section>
   <h1>Crear color</h1>
 
-   <section  class="informacionNew">
+   <section  class="informacionNewConf">
       <div>
-           <%= f.label :tipo,  'escriba el color', required: true %>
+           <%= f.label :tipo, 'Escriba el color', required: true %>
            <%= f.input_field :tipo %> 
             <% if @color.errors[:tipo].any? %>
             <p class="text-danger"><%= @color.errors[:tipo].first %> </p>
