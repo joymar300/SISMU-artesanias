@@ -72,6 +72,13 @@ body {
   /* margin-top: -5%; */
 }
 
+.is-required:after {
+  content: '*';
+  margin-left: 3px;
+  color: red;
+  font-weight: bold;
+}
+
 a {
   text-decoration: none;
 }

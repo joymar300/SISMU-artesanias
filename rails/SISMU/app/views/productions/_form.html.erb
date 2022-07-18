@@ -5,7 +5,7 @@
     <h1 class="containerProds-text">Registrar Producción</h1>
     <section class="informacionNewConf">
         <div>
-            <%= f.label :ref, "Ingresa referencia"%><br>
+            <%= f.label :ref, "Ingresa referencia", class: 'is-required' %><br>
             <%= f.input_field :ref %>    
             <% if @production.errors[:ref].any? %>
                 <p class="text-danger"><%= @production.errors[:ref].first %></p>

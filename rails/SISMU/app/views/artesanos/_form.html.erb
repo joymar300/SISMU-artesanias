@@ -6,7 +6,7 @@
 
     <section class="informacionNew">
         <div>
-            <%= f.label :id, "Cedula ", class:"input_artesano" %>
+            <%= f.label :id, "Cedula ", class:"input_artesano is-required" %>
             <%= f.input_field :id, class: 'input_artesano' , class:"label_artesano1" %>
             <% if @artesano.errors[:id].any? %>
                 <p class="text-danger"><%= @artesano.errors[:id].first %></p>
@@ -14,7 +14,7 @@
         </div>
 
         <div>
-            <%= f.label :id, "Nombre ", class:"input_artesano" %>
+            <%= f.label :id, "Nombre ", class:"input_artesano is-required" %>
             <%= f.input_field :nombre, class: 'input_artesano' , class:"label_artesano2" %>
             <% if @artesano.errors[:nombre].any? %>
                 <p class="text-danger"><%= @artesano.errors[:nombre].first %></p>
@@ -30,7 +30,7 @@
         </div>
 
         <div>
-            <%= f.label :id, "Apellido ", class:"input_artesano" %>
+            <%= f.label :id, "Apellido ", class:"input_artesano is-required" %>
             <%= f.input_field :apellido, class: 'input_artesano' , class:"label_artesano2" %>
             <% if @artesano.errors[:apellido].any? %>
                 <p class="text-danger"><%= @artesano.errors[:apellido].first %></p>
@@ -46,7 +46,7 @@
         </div>
 
         <div>
-            <%= f.label :id, "Telefono ", class:"input_artesano" %>
+            <%= f.label :id, "Telefono ", class:"input_artesano is-required" %>
             <%= f.input_field :tel, class: 'input_artesano', class:"label_artesano2" %>
             <% if @artesano.errors[:tel].any? %>
                 <p class="text-danger"><%= @artesano.errors[:tel].first %></p>
