@@ -5,7 +5,7 @@
 
     <section class="informacionNewConf">
       <div class="errorShow">
-        <%= f.label :client, "Cliente" %>
+        <%= f.label :client, "Cliente", class: 'is-required' %>
         <%= f.association :client, label_html: { hidden: true }, label_method: :nombre_completo, error: "Seleccionar" %>
       </div>
 

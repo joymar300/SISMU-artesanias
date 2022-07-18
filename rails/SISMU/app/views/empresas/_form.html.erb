@@ -5,7 +5,7 @@
 
     <section class="informacionNew">
       <div>
-        <%= f.label :id,"Número de Identificación Tributaria(NIT)"%>
+        <%= f.label :id,"Número de Identificación Tributaria(NIT)", class: 'is-required' %>
         <%= f.input_field :id %>
         <% if @empresa.errors[:id].any? %>
           <p class="text-danger"><%= @empresa.errors[:id].first %></p>
@@ -13,7 +13,7 @@
       </div>
 
       <div>
-        <%= f.label :nombre, "Nombre "%>
+        <%= f.label :nombre, "Nombre ", class: 'is-required' %>
         <%= f.input_field :nombre  %>
         <% if @empresa.errors[:nombre].any? %>
           <p class="text-danger"><%= @empresa.errors[:nombre].first %></p>
@@ -21,7 +21,7 @@
       </div>
 
       <div>
-        <%= f.label :tel, "Télefono " %>
+        <%= f.label :tel, "Télefono ", class: 'is-required' %>
         <%= f.input_field :tel  %>
         <% if @empresa.errors[:tel].any? %>
           <p class="text-danger"><%= @empresa.errors[:tel].first %></p>
@@ -29,7 +29,7 @@
       </div>
 
       <div>
-        <%= f.label :direccion, "Dirección "%>
+        <%= f.label :direccion, "Dirección ", class: 'is-required' %>
         <%= f.input_field :direccion  %>
         <% if @empresa.errors[:direccion].any? %>
           <p class="text-danger"><%= @empresa.errors[:direccion].first %></p>
@@ -37,7 +37,7 @@
       </div>
 
       <div>
-        <%= f.label :correo, "Correo "%>
+        <%= f.label :correo, "Correo ", class: 'is-required' %>
         <%= f.email_field :correo%>
         <% if @empresa.errors[:correo].any? %>
           <p class="text-danger"><%= @empresa.errors[:correo].first %></p>
@@ -45,7 +45,7 @@
       </div>
 
       <div>       
-        <%= f.label :ciudad, "Ciudad "%>
+        <%= f.label :ciudad, "Ciudad ", class: 'is-required' %>
         <%= f.input_field :ciudad%> 
         <% if @empresa.errors[:ciudad].any? %>
           <p class="text-danger"><%= @empresa.errors[:ciudad].first %></p>

@@ -8,7 +8,7 @@
         
     <section class="informacionNew">
       <div>
-        <%= f.label :referencia_pro, 'Referencia ', class: 'left', required: true %> <br>
+        <%= f.label :referencia_pro, 'Referencia ', class: 'left is-required', required: true %> <br>
         <%= f.input_field :referencia_pro %> <br>
         <% if @producto.errors[:referencia_pro].any? %>
           <p class="text-danger"><%= @producto.errors[:referencia_pro].first %> </p>
@@ -16,7 +16,7 @@
       </div>
 
       <div>
-        <%= f.label :nombre_pro,'Nombre Del Producto ' %>
+        <%= f.label :nombre_pro,'Nombre Del Producto ', class: 'is-required' %>
         <%= f.input_field :nombre_pro %>
         <% if @producto.errors[:nombre_pro].any? %>
           <p class="text-danger"><%= @producto.errors[:nombre_pro].first %> </p>
@@ -24,7 +24,7 @@
       </div>
 
       <div>
-        <%= f.label :precio_pro, 'Precio Del Producto ' %>
+        <%= f.label :precio_pro, 'Precio Del Producto ', class: 'is-required' %>
         <%= f.input_field :precio_pro %> <br>
         <% if @producto.errors[:precio_pro].any? %>
           <p class="text-danger"><%= @producto.errors[:precio_pro].first %> </p>
