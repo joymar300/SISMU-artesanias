@@ -1,10 +1,10 @@
 :root {
-  --rojoOscuro: #9E0C0C;
-  --rojoOscuroHover: #9E0B0B;
-  --rojoFuerte1: #D00909;
-  --rojoFuerte2: #C11D1D;
-  --rojoMedio: #C11D1D;
-  --rojoClaro: #C82727;
+  --rojoOscuro: #9e0c0c;
+  --rojoOscuroHover: #9e0b0b;
+  --rojoFuerte1: #d00909;
+  --rojoFuerte2: #c11d1d;
+  --rojoMedio: #c11d1d;
+  --rojoClaro: #c82727;
 }
 
 /* .container_clientes{
@@ -58,15 +58,13 @@
   margin-left:10px;
 } */
 
-
 /* nuevos estilos v2 */
-.clientes__titulo{
+.clientes__titulo {
   color: var(--rojoFuerte1);
-  font-size: 3.2rem; 
+  font-size: 3.2rem;
   width: 200px;
   margin-left: -150px;
 }
-
 
 /* TABLA */
 
@@ -75,8 +73,6 @@
   /* margin: 0; */
   padding: 2rem;
   font-family: sans-serif;
-  
-  
 }
 
 .clientesTable table {
@@ -88,10 +84,11 @@
   width: 100%; */
 }
 
-.clientesTable th, td {
+.clientesTable th,
+td {
   border: 1px solid #ddd;
   padding: 12px 15px;
-  
+
   text-align: center;
   /* padding: 5.5px;
   border: none; */
@@ -108,23 +105,22 @@
   border: 1px solid #ddd;
 }
 
-.clientesTable tr:nth-child(even){
-  background-color: #F5F5F5;
+.clientesTable tr:nth-child(even) {
+  background-color: #f5f5f5;
 }
 
 /* TABLA SHOW  */
 
-
 /* BOTONES  */
-
 
 .clientes__nuevo {
   font-weight: bold;
   width: 8rem;
   height: 4rem;
-  border: 1px solid var(--rojoOscuro);;
+  border: 1px solid var(--rojoOscuro);
   border-radius: 6px;
   padding: 5px;
+  color: #fff;
   cursor: pointer;
   background-color: var(--rojoFuerte2);
 }
@@ -133,7 +129,7 @@
   font-weight: bold;
   width: 8rem;
   height: 4rem;
-  border: 3px solid var(--rojoClaro);
+  border: 1px solid var(--rojoClaro);
   border-radius: 6px;
   padding: 5px;
   cursor: pointer;
@@ -168,14 +164,13 @@
   border-radius: 50px;
   font-size: 20px;
   border: 1px solid var(--rojoFuerte1);
-  transition: all .7s ease;
+  transition: all 0.7s ease;
   float: left;
   margin-top: 10px;
 }
 
 .prueba_client::placeholder {
   color: gray;
-
 }
 
 .btn_buscar_client {
@@ -200,14 +195,14 @@
   margin-top: 1.5rem;
   font-size: 25px;
   line-height: 80px;
-  transition: all .7s ease;
+  transition: all 0.7s ease;
 }
 
 .prueba_client:hover input {
   width: 78%;
-} 
+}
 
-.prueba_client:hover .logoBuscar_client{
+.prueba_client:hover .logoBuscar_client {
   transform: rotate(-360deg);
 }
 
@@ -220,8 +215,7 @@
 
 /* VISTAS SHOW */
 
-
-.clientesShow  {
+.clientesShow {
   font-size: 16px; /*1rem = 10px*/
   border-radius: 10px;
   background-color: #fff;
@@ -233,11 +227,10 @@
   overflow: auto;
 }
 
-
 .clientesShow h1 {
   margin-left: 1rem;
   font-family: sans-serif;
-  color: var(--rojoMedio)
+  color: var(--rojoMedio);
 }
 
 .informacionClientes {
@@ -257,24 +250,22 @@
 .informacionClientes div {
   width: 50%;
   padding: 10px;
-
 }
 
-
-.informacionClientes input{
+.informacionClientes input {
   margin-top: 1rem;
   border-radius: 10px;
   padding-left: 10px;
   font-family: sans-serif;
-  border: 1px solid rgb(241, 241, 241);;
+  border: 1px solid rgb(241, 241, 241);
   background-color: rgb(241, 241, 241);
-  color: #9AA399;
+  color: #9aa399;
   height: 5rem;
   width: 100%;
   cursor: not-allowed;
 }
 
-.idBloquear{
+.idBloquear {
   cursor: no-drop;
 }
 
@@ -308,7 +299,7 @@
   background-color: var(--rojoOscuroHover);
 }
 
-.botonVolver{
+.botonVolver {
   /* display: flex;
   justify-content: center; */
   margin: 30px 43%;
@@ -319,10 +310,7 @@
   justify-content: end;
 }
 
-
-
 /* VISTAS NEW Y EDIT */
-
 
 /* FORMULARIO */
 
@@ -341,7 +329,7 @@
   text-align: center;
   margin-left: 1rem;
   font-family: sans-serif;
-  color: var(--rojoFuerte1)
+  color: var(--rojoFuerte1);
 }
 
 /* CATEGORIAS */
@@ -361,15 +349,10 @@
   text-align: center;
   margin-left: 1rem;
   font-family: sans-serif;
-  color: var(--rojoFuerte1)
+  color: var(--rojoFuerte1);
 }
 
-
-
-
 /* botones  */
-
-
 
 .crearClientes {
   font-weight: bold;
@@ -399,8 +382,8 @@
 
 /* RESPONSIVE  */
 
-@media(max-width: 740px){
-  .clientes__titulo{
+@media (max-width: 740px) {
+  .clientes__titulo {
     margin-left: 0px;
   }
 
@@ -417,7 +400,11 @@
     display: none;
   }
 
-  .clientesTable table, tbody, tr, td, th {
+  .clientesTable table,
+  tbody,
+  tr,
+  td,
+  th {
     display: block;
     width: 100%;
   }
@@ -442,7 +429,6 @@
     font-size: 15px;
     font-weight: bold;
     text-align: left;
-
   }
 
   .clientesTable tr:hover td {
@@ -450,9 +436,9 @@
     color: #000;
   }
 
-  .clientesTable tr:nth-child(even){
+  .clientesTable tr:nth-child(even) {
     /* background-color: #EFEFEF; */
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
   }
 
   .red {
@@ -476,6 +462,5 @@
   .informacionClientes div {
     width: 100%;
     padding: 10px;
-  
   }
 }

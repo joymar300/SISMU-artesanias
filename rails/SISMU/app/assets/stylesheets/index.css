@@ -43,7 +43,7 @@
   flex-direction: column; */
   color: #fff;
 }
-.panelContador_count>.span_angulo_derecho:hover {
+.panelContador_count > .span_angulo_derecho:hover {
   transform: scale(1.1);
 }
 
@@ -55,30 +55,24 @@
   margin: 20px;
 }
 
-
-/* .panelRegistros__elemento > table,thead,tbody,tr,td {
-
-  border: 1px solid red;
-} */
-
 .panelContador__icono_producto {
   /* width: 100%; */
   padding: 20px;
   height: 100%;
   font-size: 15px;
   /* border: 1px solid #0D1EC6;  */
-  background-color: #0D1EC6;
+  background-color: #0d1ec6;
   border-radius: 50%;
   cursor: pointer;
 }
 .panelContador__icono_producto:hover {
   transform: scale(1.1);
 }
-#pro{
-  border: 1px solid #0D1EC6;
+#pro {
+  border: 1px solid #0d1ec6;
 }
-#pro_fondo{
-  background-color: #0D1EC6;
+#pro_fondo {
+  background-color: #0d1ec6;
 }
 
 .panelContador__icono_empresa {
@@ -87,20 +81,19 @@
   height: 100%;
   font-size: 15px;
   /* border: 1px solid purple;  */
-  background-color: #49AD09;
+  background-color: #49ad09;
   border-radius: 50%;
   cursor: pointer;
 }
 .panelContador__icono_empresa:hover {
   transform: scale(1.1);
 }
-#emp{
-  color: 1px solid #49AD09;
+#emp {
+  color: 1px solid #49ad09;
 }
-#emp_fondo{
-  background-color: #49AD09;
+#emp_fondo {
+  background-color: #49ad09;
 }
-
 
 .panelContador__icono_cliente {
   /* width: 100%; */
@@ -108,18 +101,18 @@
   height: 100%;
   font-size: 15px;
   /* border: 1px solid purple;  */
-  background-color: #DE1E08;
+  background-color: #de1e08;
   border-radius: 50%;
   cursor: pointer;
 }
 .panelContador__icono_cliente:hover {
   transform: scale(1.1);
 }
-#cli{
-  border: 1px solid #DE1E08;
+#cli {
+  border: 1px solid #de1e08;
 }
-#cli_fondo{
-  background-color: #DE1E08;
+#cli_fondo {
+  background-color: #de1e08;
 }
 
 .panelContador__icono_artesano {
@@ -128,18 +121,18 @@
   height: 100%;
   font-size: 15px;
   /* border: 1px solid purple;  */
-  background-color: #04B7A4;
+  background-color: #04b7a4;
   border-radius: 50%;
   cursor: pointer;
 }
 .panelContador__icono_artesano:hover {
   transform: scale(1.1);
 }
-#art{
-  border: 1px solid #04B7A4;
+#art {
+  border: 1px solid #04b7a4;
 }
-#art_fondo{
-  background-color: #04B7A4;
+#art_fondo {
+  background-color: #04b7a4;
 }
 
 .panelContador__contador {
@@ -168,12 +161,14 @@
   padding: 10px;
 }
 
-.panelRegistros__elemento>table,th,td {
+.panelRegistros__elemento > table,
+th,
+td {
   border: 1px solid black;
   border-spacing: 0;
 }
 
-.panelRegistros__elemento>table {
+.panelRegistros__elemento > table {
   margin: auto;
   width: 100%;
 }
@@ -182,8 +177,18 @@
   .panelContador {
     grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
   }
-  
+
   .panelRegistros {
     grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+  }
+}
+
+@media (min-width: 1490px) {
+  .panelContador {
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  }
+
+  .panelRegistros {
+    grid-template-columns: repeat(auto-fill, minmax(33.33%, 1fr));
   }
 }
