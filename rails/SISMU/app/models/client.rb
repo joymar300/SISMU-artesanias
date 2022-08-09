@@ -19,7 +19,7 @@ class Client < ApplicationRecord
     validates :tel_cli, length: { is: 10, message: "«Introduzca un numero de telefono válido» (El número de telefono solo puede tener 10 digitos)" }
     validates :id, :tel_cli, :numericality => { :greater_than_or_equal_to => 0, :less_than_or_equal_to => 99999999999, :message => "«No se permiten números negativos»"  }
     validates :correo_cli, format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i, :message => "«Introduzca una dirección de correo electrónico válida»"  }
-    validates :barrio,  format: { with: /\A[A-Za-z\s]+$\z/, :message => "«Se permiten solo letras» (no se permiten carácteres especiales)" }
+    validates :barrio,  format: { with: /\A[a-zA-ZÀ-ÿ\s]+$\z/, :message => "«Se permiten solo letras» (no se permiten carácteres especiales)" }
 
     
     def self.search(search)
