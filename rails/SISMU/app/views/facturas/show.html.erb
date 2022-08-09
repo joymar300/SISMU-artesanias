@@ -6,57 +6,60 @@
 
   <div class="volver_facturas">
     <button class="btn_back">
-      <%= link_to "volver" , facturas_url %>
+      <%= link_to "Volver" , facturas_url %>
     </button>
   </div>
 
-  <div class="facturas_izquierdo sombra">
-    <h2 id="h2">Datos Cliente</h2>
-    <b>Id: </b>
-    <%= @factura.id %>
-    <br>
-    <b>Nombre: </b>
-    <%= @factura.client.nombre_completo %>
-    <br>
-    <b>Correo: </b>
-    <%= @factura.client.correo_cli %>
-    <br>
-    <b>Dirección: </b>
-    <%= @factura.client.cli_envio%>
-  </div>
-
-  <div class="formulario_facturas">
-    <div class="formulario_facturas_1 sombra">
-      <h2 id="h2">Datos Producto</h2>
-      <%= simple_form_for [@factura, @detalle] do |f| %>
-          <%= f.association :producto, label_method: :buscar_producto, label: "Nombre del producto: " %>
-          <%= f.input :cantidad, label: "Cantidad:" %>
-              <% if @detalle.errors[:cantidad].any? %>
-                <span class="text-danger"><%= @detalle.errors[:cantidad].first %></span>
-                <br>
-              <% end %>
-          <%= f.association :colors,as: :check_boxes, label_method: :tipo, label: "Colores: " %>
-
-          <%= f.button :submit, "Añadir", class: "clientes__nuevo" %>
-          
-      <% end %>
+  <div class="facturas_grid">
+    <div class="facturas_cliente sombra">
+      <h2 id="titulo_factura">Datos Cliente</h2>
+      <b>Id: </b>
+      <%= @factura.id %>
+      <br>
+      <b>Nombre: </b>
+      <%= @factura.client.nombre_completo %>
+      <br>
+      <b>Correo: </b>
+      <%= @factura.client.correo_cli %>
+      <br>
+      <b>Dirección: </b>
+      <%= @factura.client.cli_envio%>
     </div>
 
-    <div class="formulario_facturas_1 sombra">
+      <div class="formulario_facturas_productos sombra selectFacturas">
+        <h2 id="titulo_factura">Datos Producto</h2>
+        <%= simple_form_for [@factura, @detalle] do |f| %>
+            <%= f.association :producto, label_method: :buscar_producto, label: "Nombre del producto: " %>
+            <%= f.label :cantidad, "Cantidad:", label: "Cantidad:", class: "inputCantidad" %>
+            <%= f.input_field :cantidad, class: "inputCantidad" %>
+                <% if @detalle.errors[:cantidad].any? %>
+                  <span class="text-danger"><%= @detalle.errors[:cantidad].first %></span>
+                  <br>
+                <% end %>
+            <%= f.association :colors,as: :check_boxes, label_method: :tipo, label: "Colores: ", class: "colorSelect" %>
+
+            <%= f.button :submit, "Añadir", class: "factura_nuevo" %>
+            
+        <% end %>
+      </div>
+  </div>
+
+    <div class="formulario_facturas_facturas sombra productosTable">
+      <h2 id="titulo_factura">Factura del Cliente</h2>
       <table>
           <thead>
               <tr>
                   <th> Fecha de entrega</th>
-                  <td colspan="5"><%= @factura.fechafin %></td>
+                  <td colspan="6"><%= @factura.fechafin %></td>
               </tr>
               <tr>
                   <th>Ref</th>
                   <th>Producto</th>
                   <th>Precio uni.</th>
-                  <th>color</th>
-                  <th>cantidad</th>
+                  <th>Color</th>
+                  <th>Cantidad</th>
                   <th>Precio total</th>
-                  
+                  <th>Acción</th>
               </tr>        
           </thead>    
           <tbody>
@@ -74,28 +77,28 @@
                   </td> 
                   <td><%= detalle.cantidad %></td>
                   <td><%= number_to_currency detalle.valor %></td>
-                  <td><%= button_to image_tag("iconos/borrar", class:"icon_accion"), factura_detalle_path(@factura, detalle), method: :delete %></td>
+                  <td><%= button_to "Eliminar", factura_detalle_path(@factura, detalle), method: :delete, class: "btn_borrar, eliminar" %></td>
               </tr>
           <% end %>
           <tr>
-              <th >precio subtotal: </th>
-              <td colspan="5"><%=number_to_currency @factura.final %></td>   
+              <th >Precio subtotal: </th>
+              <td colspan="6"><%=number_to_currency @factura.final %></td>   
           </tr>
               <tr>
               <th >Impuesto por iva: </th>
-              <td colspan="5"><%=number_to_currency @factura.iva %></td>   
+              <td colspan="6"><%=number_to_currency @factura.iva %></td>   
           </tr>
               <tr>
-              <th >precio final: </th>
-              <td colspan="5"><%=number_to_currency @factura.final_total %></td>   
+              <th >Precio final: </th>
+              <td colspan="6"><%=number_to_currency @factura.final_total %></td>   
           </tr>
 
 
           </tbody>
       </table>
     </div>
-  </div>
 </div>
+
 <script>
   function confirmDestroy(message) {
     if(!confirm(message)){
