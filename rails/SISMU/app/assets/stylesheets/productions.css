@@ -1,44 +1,14 @@
-/* 
-.containerProds{
-  text-align: center;
-  margin: -700px auto 50px auto;
-
-}
-
-.formularioProds{
-  background-color: #fff;
-  border-radius: 10px;
-  width: 280px;
-  min-height: 100px;
-  margin: auto;
-  padding: 10px;
-  box-shadow: 3px 3px goldenrod, -1em 0 0.4em goldenrod;
-  box-shadow: 60px -16px #F5B041;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-}
-
-.containerProds_text{
-  color: #F5B041;
-}
-
-.input_produccion {
-  margin: 10px;
-} */
-
-
-
 /* principales  */
 
 :root {
   --blanco: #fff;
-  --moradoOscuro: #7647B9;
-  --moradoOscuroHover: #7E50C1;
-  --moradoFuerte1: #7D4AC6;
-  --moradoFuerte2: #8E58DC;
-  --moradoMedio: #7C59B0;
-  --moradoClaro: #A78DCD;
+  --moradoOscuro: #7647b9;
+  --moradoOscuroHover: #7e50c1;
+  --moradoFuerte1: #7d4ac6;
+  --moradoFuerte2: #8e58dc;
+  --moradoMedio: #7c59b0;
+  --moradoClaro: #a78dcd;
 }
-
 
 * {
   box-sizing: border-box;
@@ -46,30 +16,37 @@
 
 html {
   font-size: 62.5%; /*Para utilizar rem*/
-  
 }
 
-.sombra{
-  -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
-  -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
-  box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+.sombra {
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.48);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.48);
+  box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.48);
   background-color: var(--blanco);
   padding: 2rem;
   border-radius: 1rem;
 }
 
-
-
 /* nuevos estilos v2 */
 
+.facturas_izquierdo_prodtns {
+  /* float: left; */
+  width: 500px;
+  /* max-width: 35%; */
+  min-height: 300px;
+  border: none;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
 
 .produccionTable {
   font-size: 16px; /*1rem = 10px*/
   margin: 0;
   padding: 2rem;
   font-family: sans-serif;
-  
-  
 }
 
 .produccionTable table {
@@ -77,20 +54,21 @@ html {
   border-collapse: collapse;
 }
 
-.produccionTable th, td {
+.produccionTable th,
+td {
   border: 1px solid #ddd;
-  padding: 12px 15px; 
+  padding: 12px 15px;
   text-align: center;
 }
 
 .produccionTable th {
-  border: 1px solid #AD83EA;
-  background-color: #7D4AC6;
+  border: 1px solid #ad83ea;
+  background-color: #7d4ac6;
   color: #fff;
 }
 
-.produccion__titulo{
-  color: #7D4AC6;
+.produccion__titulo {
+  color: #7d4ac6;
   font-size: 3.2rem;
   width: 300px;
   margin-left: -150px;
@@ -101,10 +79,9 @@ html {
   border: 1px solid #ddd;
 }
 
-.produccionTable tr:nth-child(even){
-  background-color: #F5F5F5;
+.produccionTable tr:nth-child(even) {
+  background-color: #f5f5f5;
 }
-
 
 /* BOTONES  */
 
@@ -112,32 +89,30 @@ html {
   font-weight: bold;
   width: 8rem;
   height: 4rem;
-  border: 1px solid #7647B9;;
+  border: 1px solid #7647b9;
   border-radius: 6px;
   padding: 5px;
   cursor: pointer;
-  background-color: #8E58DC;
+  background-color: #8e58dc;
 }
 
 .produccion__nuevo:active {
   font-weight: bold;
   width: 8rem;
   height: 4rem;
-  border: 3px solid #A78DCD;
+  border: 3px solid #a78dcd;
   border-radius: 6px;
   padding: 5px;
   cursor: pointer;
-  background-color: #7C59B0;
+  background-color: #7c59b0;
 }
 
 .produccion__nuevo:hover {
-  background-color: #7E50C1;
+  background-color: #7e50c1;
 }
 /* ******** */
 
 /* BUSCADOR  */
-
-
 
 .buscador_productions {
   /* height: 10rem; */
@@ -160,7 +135,7 @@ html {
   border-radius: 50px;
   font-size: 20px;
   border: 1px solid var(--moradoFuerte1);
-  transition: all .7s ease;
+  transition: all 0.7s ease;
   float: left;
   margin-top: 10px;
 }
@@ -191,14 +166,14 @@ html {
   margin-top: 1.5rem;
   font-size: 25px;
   line-height: 80px;
-  transition: all .7s ease;
+  transition: all 0.7s ease;
 }
 
 .prueba_productions:hover input {
   width: 78%;
-} 
+}
 
-.prueba_productions:hover .logoBuscar_productions{
+.prueba_productions:hover .logoBuscar_productions {
   transform: rotate(-360deg);
 }
 
@@ -207,13 +182,17 @@ html {
   background-color: var(--moradoOscuroHover);
 }
 
-/* ******* */
+.btn_center {
+  margin: auto;
+  display: flex;
+}
 
+/* ******* */
 
 /* RESPONSIVE  */
 
-@media(max-width: 740px){
-  .produccion__titulo{
+@media (max-width: 740px) {
+  .produccion__titulo {
     margin-left: 0px;
     max-width: 200px;
   }
@@ -231,7 +210,11 @@ html {
     display: none;
   }
 
-  .produccionTable table, tbody, tr, td, th {
+  .produccionTable table,
+  tbody,
+  tr,
+  td,
+  th {
     display: block;
     width: 100%;
   }
@@ -256,7 +239,6 @@ html {
     font-size: 15px;
     font-weight: bold;
     text-align: left;
-
   }
 
   .produccionTable tr:hover td {
@@ -264,13 +246,13 @@ html {
     color: #000;
   }
 
-  .produccionTable tr:nth-child(even){
+  .produccionTable tr:nth-child(even) {
     /* background-color: #EFEFEF; */
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
   }
 
   .pupple {
-    color: #7C59B0;
+    color: #7c59b0;
   }
 
   .black {
@@ -278,9 +260,7 @@ html {
   }
 }
 
-
-                                              /* vistas new and edit */
-
+/* vistas new and edit */
 
 /* formulario */
 
@@ -293,7 +273,6 @@ html {
   margin-bottom: 1rem;
 }
 
-
 .informacionProduccionNew label {
   font-family: sans-serif;
   font-weight: 200;
@@ -303,17 +282,15 @@ html {
 .informacionProduccionNew div {
   width: 50%;
   padding: 10px;
-
 }
 
-
-.informacionProduccionNew select{
+.informacionProduccionNew select {
   margin-top: 1rem;
   margin-bottom: 2rem;
   border-radius: 10px;
   padding-left: 10px;
   font-family: sans-serif;
-  border: 1px solid #9AA399;
+  border: 1px solid #9aa399;
   color: #424442;
   height: 5rem;
   width: 10rem;
@@ -337,20 +314,16 @@ html {
   color: var(--moradoFuerte1);
 }
 
-
-
-
 .crearProduccion {
   font-weight: bold;
   color: #fff;
   width: 20rem;
   height: 4rem;
-  border: 1px solid #7647B9;;
+  border: 1px solid #7647b9;
   border-radius: 6px;
   padding: 5px;
   cursor: pointer;
-  background-color: #8E58DC;
-  
+  background-color: #8e58dc;
 }
 
 .crearProduccion:active {
@@ -358,13 +331,13 @@ html {
   color: #fff;
   width: 20rem;
   height: 4rem;
-  border: 3px solid #A78DCD;
+  border: 3px solid #a78dcd;
   border-radius: 6px;
   padding: 5px;
   cursor: pointer;
-  background-color: #7C59B0;
+  background-color: #7c59b0;
 }
 
 .crearProduccion:hover {
-  background-color: #7E50C1;
+  background-color: #7e50c1;
 }

@@ -1,7 +1,6 @@
 class Empresa < ApplicationRecord
     has_many :emfacturas, dependent: :destroy
 
-
     validates :id, :nombre, :direccion, :ciudad, :tel, :correo, presence: {:message => "«Este campo es obligatorio»"}
     validates :id, uniqueness: {:message => "«Este número de NIT ya se encuentra en uso»"}
     validates :id, numericality: { only_integer: true }

@@ -14,14 +14,12 @@
  *= require_self
  */
 
-
 /* ESTILOS GENERALES: APPLICATION */
 
 :root {
-
   /* COLORES MODO DARK */
 
-/*   --width: 200px;
+  /*   --width: 200px;
   --padding: 10px;
   --bgcolor: rgb(52, 52, 52);
   --hovercolor: rgb(23, 23, 23);
@@ -29,21 +27,21 @@
   --color: #fff; 
 
     /* COLORES MODO LIGHT */
-    --width: 200px;
-    --padding: 10px;
-    /* --bgcolor: rgb(235, 235, 235); */
-    --bgcolor: #303030;
-    --hovercolor: #F5B041;
-    --width-collapsed: 50px;
-    /* --colorOscuro: #c40505; */
-    --fondoMain: #EBF0F4;
-    /* --fondoMainNocturno: #2A3A47; */
-    --colorOscuro: #eb7f26;
-    --colorMedio: #fabc0b;
-    --colorBajo: #ffb109;
-    --color-black: #000;
+  --width: 200px;
+  --padding: 10px;
+  /* --bgcolor: rgb(235, 235, 235); */
+  --bgcolor: #303030;
+  --hovercolor: #f5b041;
+  --width-collapsed: 50px;
+  /* --colorOscuro: #c40505; */
+  --fondoMain: #ebf0f4;
+  /* --fondoMainNocturno: #2A3A47; */
+  --colorOscuro: #eb7f26;
+  --colorMedio: #fabc0b;
+  --colorBajo: #ffb109;
+  --color-black: #000;
 
-    --fuentePrincipal: 'Open Sans';
+  --fuentePrincipal: "Open Sans";
 }
 
 body {
@@ -51,13 +49,15 @@ body {
   background-color: var(--fondoMain);
   font-family: var(--fuentePrincipal);
   font-size: 18px;
-  position: absolute;
+  position: relative;
+  padding-bottom: 20px;
+  min-height: 100vh;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   margin-left: var(--width-collapsed);
-  
+
   /* display: flex;
   flex-direction: column;
   justify-content: space-between; */
@@ -67,13 +67,13 @@ body {
   /* max-height: 100%; */
   /* border: 1px solid green;  */
   margin-top: 0%;
-  
+
   /* margin: -50px auto 50px auto; */
   /* margin-top: -5%; */
 }
 
 .is-required:after {
-  content: '*';
+  content: "*";
   margin-left: 3px;
   color: red;
   font-weight: bold;
@@ -129,7 +129,6 @@ a {
   text-decoration: none;
 }
 
-
 /* NAV */
 
 nav {
@@ -151,7 +150,7 @@ nav {
 
 #sismu__central {
   color: #eb7f26;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 25px;
 }
 
@@ -194,7 +193,6 @@ nav {
   margin: 5px 0;
 }
 
-
 /* PERFIL_MENU LATERAL */
 
 #sidemenu #perfil_menu {
@@ -216,7 +214,6 @@ nav {
   border-radius: 10px;
   border: 1px solid var(--hovercolor);
 }
-
 
 /* ITEM_MENU LATERAL */
 
@@ -268,7 +265,6 @@ nav {
   border-bottom: solid 1px var(--hovercolor);
   margin: 5px 0;
 }
-
 
 /* MENU EXPANDED LATERAL */
 
@@ -380,16 +376,16 @@ li.active a {
   /* border: 1px solid red; */
 }
 
- /* ESTILOS DEL MENU PERFÍL */
- * {
-  margin:0px;
-  padding:0px;
+/* ESTILOS DEL MENU PERFÍL */
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
 #header_select {
   margin-top: -40px;
   border: 1px solid red;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* SELECT PERFIL */
@@ -405,7 +401,7 @@ li.active a {
   transform: scale(1.1);
 }
 
-ul>li>ul>li {
+ul > li > ul > li {
   border: 1px solid #000;
   border-bottom-left-radius: 5px;
 }
@@ -415,7 +411,7 @@ ul>li>ul>li {
   position: absolute;
   margin-left: -61px;
   /* margin-top: -20px; */
-/*   margin: 0;
+  /*   margin: 0;
   padding: 0; */
 }
 
@@ -440,12 +436,12 @@ ul>li>ul>li {
   color: #fff;
 }
 
-#header_select li{
+#header_select li {
   /* float: left; */
-  text-align:center
+  text-align: center;
 }
 
-#header_select li ul{
+#header_select li ul {
   display: none;
 }
 
@@ -469,7 +465,9 @@ ul>li>ul>li {
   border: 1px solid #000;
 }
 
-.btn__login:hover {background-color: rgb(173, 166, 166)}
+.btn__login:hover {
+  background-color: rgb(173, 166, 166);
+}
 
 .btn__login:active {
   background-color: rgb(224, 201, 201);
@@ -484,7 +482,9 @@ ul>li>ul>li {
   border: 1px solid #000;
 }
 
-.btn__salir:hover {background-color: rgb(172, 13, 13)}
+.btn__salir:hover {
+  background-color: rgb(172, 13, 13);
+}
 
 .btn__salir:active {
   background-color: red;
@@ -496,7 +496,6 @@ ul>li>ul>li {
   color: #000;
 }
 
-
 /* FOOTER */
 
 footer {
@@ -505,32 +504,16 @@ footer {
   width: 100%;
   height: 40px;
   text-align: center;
-  bottom: 0; 
+  bottom: 0;
   padding: 10px;
-  /* position: absolute; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: end; */
+  position: absolute;
 }
-
-/* body>footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-} */
 
 footer p {
   color: var(--fondoMain);
 }
 
-/* @media (max-width: 1080px) {
-  footer {
-    height: 70px;
-  }
-} */
-
 /* .... */
-
 
 /* estilos del paginate */
 
@@ -539,78 +522,64 @@ footer p {
   cursor: default;
   margin-left: 50px;
   margin-top: 30px;
-  }
-  .digg_pagination a, .digg_pagination span, .digg_pagination em {
-    padding: 0.2em 0.5em;
-    display: block;
-    float: left;
-    margin-right: 1px; }
-  .digg_pagination .disabled {
-    color: #999999;
-    border: 1px solid #dddddd; }
-  .digg_pagination .current {
-    font-style: normal;
-    font-weight: bold;
-    background: #2e6ab1;
-    color: white;
-    border: 1px solid #2e6ab1; }
-  .digg_pagination a {
-    text-decoration: none;
-    color: #105cb6;
-    border: 1px solid #9aafe5; }
-    .digg_pagination a:hover, .digg_pagination a:focus {
-      color: #000033;
-      border-color: #000033; }
-  /* .digg_pagination .page_info {
-    background: #2e6ab1;
-    color: white;
-    padding: 0.4em 0.6em;
-    width: 22em;
-    margin-bottom: 0.3em;
-    text-align: center; }
-    .digg_pagination .page_info b {
-      color: #000033;
-      background: #6aa6ed;
-      padding: 0.1em 0.25em; }
-  .digg_pagination:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden; }
-  * html .digg_pagination {
-    height: 1%; }
-  *:first-child + html .digg_pagination {
-    overflow: hidden; } */
+}
+.digg_pagination a,
+.digg_pagination span,
+.digg_pagination em {
+  padding: 0.2em 0.5em;
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+.digg_pagination .disabled {
+  color: #999999;
+  border: 1px solid #dddddd;
+}
+.digg_pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background: #2e6ab1;
+  color: white;
+  border: 1px solid #2e6ab1;
+}
+.digg_pagination a {
+  text-decoration: none;
+  color: #105cb6;
+  border: 1px solid #9aafe5;
+}
+.digg_pagination a:hover,
+.digg_pagination a:focus {
+  color: #000033;
+  border-color: #000033;
+}
 
-      .alerts {
-      display: flex;
-      justify-content: center;
-      border: solid 1px red;
+.alerts {
+  display: flex;
+  justify-content: center;
+  border: solid 1px red;
+}
 
-    }
+.notice {
+  margin-top: 6px;
+  color: #2bdc63;
+  border-radius: 5px;
+  /* height: 20px; */
+  padding-top: 10px;
+}
 
-    .notice {
-      margin-top: 6px;
-      color: #2BDC63;
-      border-radius: 5px;
-      /* height: 20px; */
-      padding-top: 10px;
-    }
-
-    .alert {
-      margin-left: -50px;
-      color: #F90303;
-      border-radius: 5px;
-      /* height: 20px;
+.alert {
+  margin-left: -50px;
+  color: #f90303;
+  border-radius: 5px;
+  /* height: 20px;
       padding-top: 10px; */
-      position: relative;
-      z-index: 3;
-      display: block;
-      /* margin-left: 40%; */
-      /* border: 1px solid red; */
-      text-align: center;
-    }
+  position: relative;
+  z-index: 3;
+  display: block;
+  /* margin-left: 40%; */
+  /* border: 1px solid red; */
+  text-align: center;
+}
 
 .div_conf {
   margin-bottom: 139px;
@@ -640,25 +609,25 @@ footer p {
   padding: 10px;
 }
 
-.informacionNewConf input{
+.informacionNewConf input {
   margin-top: 1rem;
   /* margin-bottom: 2rem; */
   border-radius: 10px;
   padding-left: 10px;
   font-family: sans-serif;
-  border: 1px solid #9AA399;
+  border: 1px solid #9aa399;
   color: #424442;
   height: 5rem;
   width: 100%;
 }
 
-.informacionNewConf select{
+.informacionNewConf select {
   margin-top: 1rem;
   margin-bottom: 2rem;
   border-radius: 10px;
   padding-left: 10px;
   font-family: sans-serif;
-  border: 1px solid #9AA399;
+  border: 1px solid #9aa399;
   color: #424442;
   height: 5rem;
   /* width: 55rem; */
@@ -670,7 +639,7 @@ footer p {
   margin-top: 140px;
 }
 
-@media(max-width: 740px){
+@media (max-width: 740px) {
   #sismu__central {
     display: none;
   }
