@@ -1,8 +1,7 @@
 <div class="container_facturas">
   <section class = "botonEliminarShow">
-    <%= button_to "Eliminar",  @factura, method: :delete, class: "btn_borrar, eliminar", onclick: "return confirmDestroy('¿Deseas eliminar esta factura?')" %>
+    <%= button_to "Eliminar factura",  @factura, method: :delete, class: "btn_borrar, eliminar_fac", onclick: "return confirmDestroy('¿Deseas eliminar esta factura?')" %>
   </section>
-
 
   <div class="volver_facturas">
     <button class="btn_back">
@@ -45,6 +44,10 @@
   </div>
 
     <div class="formulario_facturas_facturas sombra productosTable">
+      <section class = "botonEliminarShow">
+        <%= link_to "Imprimir PDF" ,factura_url(@factura, :format => :pdf) %>
+   
+      </section>
       <h2 id="titulo_factura">Factura del Cliente</h2>
       <table>
           <thead>

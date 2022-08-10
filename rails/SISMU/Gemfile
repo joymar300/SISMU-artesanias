@@ -79,4 +79,5 @@ gem 'webpacker', '~> 5.4', '>= 5.4.3'
 gem 'jquery-rails', '~> 4.4'
 gem 'will_paginate', '~> 3.3'
 gem 'ransack'
-
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'

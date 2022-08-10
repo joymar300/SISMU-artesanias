@@ -322,6 +322,17 @@ h6 {
   text-decoration: none;
 }
 
+.eliminar_fac {
+  border-radius: 3px;
+  height: 6rem;
+  width: 9rem;
+  cursor: pointer;
+  color: #fff;
+  /* background-color: #E01B34; para el hover */
+  background-color: #f92e48;
+  border: 1px solid #eb233c;
+}
+
 .btn_back:hover {
   background-color: rgb(165, 33, 33);
 }
