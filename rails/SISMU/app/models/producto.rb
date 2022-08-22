@@ -16,7 +16,7 @@ class Producto < ApplicationRecord
      # nuevas validaciones actualizacion version 1.2
 
     validates :referencia_pro, format: { with: /\A[A-Za-z0-9]{1,15}\z/, :message => "«No se permiten carácteres especiales»"}
-    validates :nombre_pro, format: { with: /\A[A-Za-z\s]+$\z/, :message => "«Se permiten solo letras» (no se permiten carácteres especiales)"  }
+    validates :nombre_pro, format: { with: /\A[a-zA-ZÀ-ÿ\s]+$\z/, :message => "«Se permiten solo letras» (no se permiten carácteres especiales)"  }
     validates :precio_pro, :numericality => { :greater_than_or_equal_to => 0, :less_than_or_equal_to => 99999999999, :message => "«No se permiten números negativos»"  }
 
 

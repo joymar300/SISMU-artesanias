@@ -12,6 +12,12 @@ class EmfacturasController < ApplicationController
     authorize @emfactura
     @emdetalle = Emdetalle.new
     @total = @emfactura.emdetalles.sum(:valor)
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render template: "emfacturas/factura", pdf: "factura" ,layout:"pdf" # Excluding ".pdf" extension.
+      end
+    end
   end
 
   def edit

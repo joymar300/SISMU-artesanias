@@ -13,6 +13,12 @@ class FacturasController < ApplicationController
     @detalle = Detalle.new
     @color = Color.new
     @total = @factura.detalles.sum(:valor)
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render template: "facturas/factura", pdf: "factura" ,layout:"pdf" # Excluding ".pdf" extension.
+      end
+    end
   end
 
   def edit

@@ -1,0 +1,92 @@
+ 
+<div class="mt-6 border" >
+  <div class="container">
+    
+  <div class="card border-0 pt-5 " style="height: 18rem; ">
+      <%= image_tag wicked_pdf_asset_base64('logo_completo_sandra_munoz.png'), class:" po  " %>
+      <h2 class="card_title">DATOS DEL CLIENTE</h2>
+
+  
+          <div class ="card_body" >
+            <b>Ref factura: </b>
+            <%= @factura.id %>
+            <br>
+            <b>Nombre: </b>
+            <%= @factura.client.nombre_completo %>
+            <br>
+            <b>Correo: </b>
+            <%= @factura.client.correo_cli %>
+            <br>
+            <b>Dirección: </b>
+            <%= @factura.client.cli_envio%>
+          </div>
+          
+
+  </div>
+</div>
+ 
+
+</div>
+  <br>
+    <div class="mt-5">
+      <h2 >DATOS DE LOS PRODUCTOS</h2>
+      <table class="table table-striped table-bordered ">
+          <thead class="">
+              <tr class="">
+                  <th> Fecha de entrega</th>
+                  <td colspan="6"><%= @factura.fechafin %></td>
+              </tr>
+              <tr class="">
+                  <th>Ref</th>
+                  <th>Producto</th>
+                  <th>Precio uni.</th>
+                  <th>Color</th>
+                  <th>Cantidad</th>
+                  <th>Precio total</th>
+
+              </tr>        
+          </thead>    
+          <tbody class="">
+
+          <% @detalles.each do |detalle| %>
+
+              <tr class="">
+                  <td><%= detalle.producto.referencia_pro %></td>
+                  <td><%= detalle.producto.nombre_pro %></td>
+                  <td><%= number_to_currency detalle.precio%></td>
+                  <td >
+                      <% detalle.colors.each do |d| %>
+                          <%= d.tipo%>
+                      <%end%>
+                  </td> 
+                  <td><%= detalle.cantidad %></td>
+                  <td><%= number_to_currency detalle.valor %></td>
+              </tr>
+          <% end %>
+          <tr>
+              <th >Precio subtotal: </th>
+              <td colspan="6"><%=number_to_currency @factura.final %></td>   
+          </tr>
+              <tr>
+              <th >Impuesto por iva: </th>
+              <td colspan="6"><%=number_to_currency @factura.iva %></td>   
+          </tr>
+              <tr>
+              <th class="bg-warning" >Precio final: </th>
+              <td colspan="6"><%=number_to_currency @factura.final_total %></td>   
+          </tr>
+
+
+          </tbody>
+      </table>
+
+    </div>
+
+
+<style>
+  .po{
+    position: absolute;
+     top: 6%%;
+    left: 70%%;
+  }
+</style>
