@@ -21,4 +21,5 @@ class Emfactura < ApplicationRecord
         unscoped
     end
   end
+
 end

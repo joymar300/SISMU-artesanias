@@ -37,13 +37,8 @@ class EmfacturasController < ApplicationController
   end
 
   def index
-   if current_user.has_role? :admin
+    
     @emfacturas = Emfactura.all()
-    
-  elsif current_user.has_role? :perla
-    
-    @emfacturas = Emfactura.joins(:empresa).where('empresa.nombre = ?', '4 perlas')
-   end
 
     authorize @emfacturas
 
