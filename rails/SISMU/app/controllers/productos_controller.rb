@@ -9,8 +9,7 @@ class ProductosController < ApplicationController
     @productos = if params[:q]
       @productos = @q.result(distinct: true).paginate(:per_page => 20, :page => params[:page])  
       else
-        
-      @productos = Producto.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
+        @productos = Producto.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
       end
 
    end

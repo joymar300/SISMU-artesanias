@@ -15,7 +15,7 @@ class EmfacturasController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf do
-        render template: "emfacturas/factura", pdf: "factura" ,layout:"pdf" # Excluding ".pdf" extension.
+        render template: "emfacturas/factura", pdf: "factura empresas-#{@emfactura.id}" ,layout:"pdf" # Excluding ".pdf" extension.
       end
     end
   end
@@ -37,17 +37,22 @@ class EmfacturasController < ApplicationController
   end
 
   def index
-
-
+   if current_user.has_role? :admin
     @emfacturas = Emfactura.all()
+    
+  elsif current_user.has_role? :perla
+    
+    @emfacturas = Emfactura.joins(:empresa).where('empresa.nombre = ?', '4 perlas')
+   end
 
     authorize @emfacturas
+
     @q = Emfactura.ransack(params[:q])
     
     @emfacturas = if params[:q]
-       @q.result(distinct: true).paginate(:per_page => 20, :page => params[:page])  
+        @emfacturas= @q.result(distinct: true).paginate(:per_page => 20, :page => params[:page])  
       else
-        Emfactura.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
+        @emfacturas = Emfactura.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
       end
 
   end

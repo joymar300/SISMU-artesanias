@@ -3,7 +3,7 @@ class CreateEmpresas < ActiveRecord::Migration[7.0]
     create_table :empresas do |t|
       t.string :nombre
       t.string :direccion
-      t.integer :tel
+      t.integer :tel, limit: 8
 
       t.timestamps
     end

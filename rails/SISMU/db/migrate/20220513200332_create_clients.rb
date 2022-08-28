@@ -5,7 +5,7 @@ class CreateClients < ActiveRecord::Migration[7.0]
       t.string :nombre2_cli
       t.string :apellido_cli
       t.string :apellido2_cli
-      t.integer :tel_cli
+      t.integer :tel_cli, limit: 8
       t.string :correo_cli
       t.string :direccion_cli
       t.integer :cedula_cli

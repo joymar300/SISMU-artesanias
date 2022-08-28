@@ -5,8 +5,8 @@ class CreateArtesanos < ActiveRecord::Migration[7.0]
       t.string :snombre
       t.string :apellido
       t.string :sapellido
-      t.integer :cedula
-      t.integer :tel
+      t.integer :cedula, limit: 8
+      t.integer :tel, limit: 8
 
       t.timestamps
     end

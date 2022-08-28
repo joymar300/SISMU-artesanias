@@ -15,7 +15,8 @@ class Emfactura < ApplicationRecord
   end
   def self.search(search)
     if search
-      where( ["id LIKE  ? ", "%#{search}%"]  )
+      
+      includes(:empresa).where( ["id LIKE  ? or nombre LIKE?","%#{search}%","%#{search}%"]).references(:empresa)
     else
         unscoped
     end

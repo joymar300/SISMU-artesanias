@@ -1,7 +1,7 @@
 class CreateEmdetalles < ActiveRecord::Migration[7.0]
   def change
     create_table :emdetalles do |t|
-      t.integer :cantidad
+      t.integer :cantidad, limit: 8
       t.decimal :valor
       t.decimal :precio
       t.references :emfactura, null: false, foreign_key: true
