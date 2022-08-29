@@ -34,7 +34,7 @@
     <table>
       <thead>
         <tr>
-          <th><%= sort_link(@q, :id,"N° Factura ", default_order: :desc, class:"white") %></th>
+          <th><%= sort_link(@q, :fref,"N° Factura ", default_order: :desc, class:"white") %></th>
           <th><%= sort_link(@q, :client_nombre_cli," Nombre", default_order: :desc, class:"white") %></th>
           <th><%= sort_link(@q, :client_correo_cli,"Correo", default_order: :desc, class:"white") %></th>
           <th><%= sort_link(@q, :created_at,"Fecha de creación", default_order: :desc, class:"white")%></th>

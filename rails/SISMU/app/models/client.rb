@@ -3,7 +3,7 @@ class Client < ApplicationRecord
     has_many :facturas, dependent: :destroy
 
     def nombre_completo
-        "#{id}- #{nombre_cli} #{nombre2_cli}"
+        "#{id}- #{nombre_cli} #{apellido_cli}"
     end
     def cli_envio
       "#{direccion_cli}- #{ciudad}- #{barrio}"

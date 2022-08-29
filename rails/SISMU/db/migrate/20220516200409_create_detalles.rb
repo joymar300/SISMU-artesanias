@@ -7,6 +7,7 @@ class CreateDetalles < ActiveRecord::Migration[7.0]
       t.decimal :valor, precision: 8, scale: 2 
       t.decimal :precio,precision: 8, scale: 2
       t.date :fechafin
+      t.string :extra
       t.timestamps
     end
   end

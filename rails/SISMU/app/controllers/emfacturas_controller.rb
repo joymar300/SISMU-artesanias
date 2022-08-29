@@ -37,18 +37,26 @@ class EmfacturasController < ApplicationController
   end
 
   def index
-    
-    @emfacturas = Emfactura.all()
+    if current_user.has_role? :admin
+      @emfacturas = Emfactura.all()
+        @q = @emfacturas.ransack(params[:q])
+      
+        @emfacturas = if params[:q]
+          @emfacturas= @q.result(distinct: true).paginate(:per_page => 20, :page => params[:page])  
+          else
+            @emfacturas = Emfactura.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
+          end
+          
+        elsif current_user.has_role? :perla
+          @emfacturas = Emfactura.joins(:empresa).where("nombre = '4 perlas'")
+          @q = @emfacturas.ransack(params[:q])
+          @emfacturas= @q.result(distinct: true).paginate(:per_page => 20, :page => params[:page])  
+
+     
+    end
 
     authorize @emfacturas
 
-    @q = Emfactura.ransack(params[:q])
-    
-    @emfacturas = if params[:q]
-        @emfacturas= @q.result(distinct: true).paginate(:per_page => 20, :page => params[:page])  
-      else
-        @emfacturas = Emfactura.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
-      end
 
   end
 
@@ -68,7 +76,7 @@ end
   private
 
   def emfactura_params
-    params.require(:emfactura).permit(:empresa_id, :fechafin)
+    params.require(:emfactura).permit(:empresa_id, :fechafin, :emfref)
   end
 
   def set_emfactura
