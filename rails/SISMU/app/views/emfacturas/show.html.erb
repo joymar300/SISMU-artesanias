@@ -28,6 +28,10 @@
 					<%= f.association :producto, label_method: :buscar_producto, label: "Nombre del producto: " %>
 					<%= f.label :cantidad, "Cantidad:" %>
 					<%= f.input_field :cantidad %>
+					<div>
+						<%= f.label :extra, "detalles extras:", label: "detalles:"%>
+						<%= f.input_field :extra, class: 'input_clientes' %>
+                	</div>
 					<%= f.association :colors, as: :check_boxes, label_method: :tipo, label: "Colores: " %>
 					<%= f.button :submit, "Añadir", class: "factura_nuevo" %>
 			<% end %>
@@ -43,13 +47,14 @@
 				<thead>
 						<tr>
 								<th> fecha de entrega</th>
-								<td colspan="6"><%= @emfactura.fechafin %></td>
+								<td colspan="7"><%= @emfactura.fechafin %></td>
 						</tr>
 						<tr>
 								<th>Ref</th>
 								<th>Producto</th>
 								<th>Color</th>
 								<th>Precio uni.</th>
+								<th>Detalles</th>
 								<th>Cantidad</th>
 								<th>Precio total</th>
 								<th>Acción</th>
@@ -67,6 +72,7 @@
 											<%end%>
 									</td>
 									<td><%= number_to_currency emdetalle.precio%></td>
+									<td><%= emdetalle.extra %></td>
 									<td><%= emdetalle.cantidad %></td>
 									<td><%= number_to_currency emdetalle.valor %></td>
 									<td><%= button_to "Eliminar", emfactura_emdetalle_path(@emfactura, emdetalle), method: :delete, class: "btn_borrar, eliminar" %></td>
@@ -74,15 +80,15 @@
 					<% end %>
 					<tr>
 							<th >Precio subtotal: </th>
-							<td colspan="6"><%=number_to_currency @emfactura.final%></td>   
+							<td colspan="7"><%=number_to_currency @emfactura.final%></td>   
 					</tr>
 					<tr>
 							<th >Impuesto por iva: </th>
-							<td colspan="6"><%=number_to_currency @emfactura.iva %></td>   
+							<td colspan="7"><%=number_to_currency @emfactura.iva %></td>   
 					</tr>
 							<tr>
 							<th >Precio final: </th>
-							<td colspan="6"><%=number_to_currency @emfactura.final_total %></td>   
+							<td colspan="7"><%=number_to_currency @emfactura.final_total %></td>   
 					</tr>
 				</tbody>
 		</table>

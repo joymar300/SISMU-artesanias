@@ -15,7 +15,7 @@ class Emfacturas::EmdetallesController < ApplicationController
   private
 
   def emdetalle_params
-      params.require(:emdetalle).permit(:producto_id, :cantidad, :valor , :fechafin, color_ids: [] )
+      params.require(:emdetalle).permit(:producto_id, :cantidad, :valor ,:extra, :fechafin, color_ids: []  )
   end
 
   def set_emfactura

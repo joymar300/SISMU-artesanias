@@ -1,4 +1,5 @@
-<div class="mt-6 " >
+
+<div class="mt-6 border" >
   <div class="container">
     
     <div class="card border-0  pt-5" style="height: 18rem; ">
@@ -27,13 +28,14 @@
             <thead>
                 <tr>
                     <th> fecha de entrega</th>
-                    <td colspan="6"><%= @emfactura.fechafin %></td>
+                    <td colspan="7"><%= @emfactura.fechafin %></td>
                 </tr>
                 <tr>
                     <th>Ref</th>
                     <th>Producto</th>
                     <th>Color</th>
                     <th>Precio uni.</th>
+                    <th>Detalles</th>
                     <th>Cantidad</th>
                     <th>Precio total</th>
                 </tr>        
@@ -50,6 +52,7 @@
                         <%end%>
                     </td>
                     <td><%= number_to_currency emdetalle.precio%></td>
+                    <td><%= emdetalle.extra %></td>
                     <td><%= emdetalle.cantidad %></td>
                     <td><%= number_to_currency emdetalle.valor %></td>
 
@@ -57,15 +60,15 @@
                 <% end %>
                 <tr >
                     <th >Precio subtotal: </th>
-                    <td colspan="6"><%=number_to_currency @emfactura.final%></td>   
+                    <td colspan="7"><%=number_to_currency @emfactura.final%></td>   
                 </tr>
                 <tr>
                     <th >Impuesto por iva: </th>
-                    <td colspan="6"><%=number_to_currency @emfactura.iva %></td>   
+                    <td colspan="7"><%=number_to_currency @emfactura.iva %></td>   
                 </tr>
                     <tr>
                     <th class="bg-warning" >Precio final: </th>
-                    <td colspan="6"><%=number_to_currency @emfactura.final_total %></td>   
+                    <td colspan="7"><%=number_to_currency @emfactura.final_total %></td>   
                 </tr>
             </tbody>
 		</table>

@@ -41,6 +41,7 @@
                   <th>Producto</th>
                   <th>Precio uni.</th>
                   <th>Color</th>
+                  <th>detalles</th>
                   <th>Cantidad</th>
                   <th>Precio total</th>
 
@@ -59,6 +60,7 @@
                           <%= d.tipo%>
                       <%end%>
                   </td> 
+                  <td><%= detalle.extra %></td>
                   <td><%= detalle.cantidad %></td>
                   <td><%= number_to_currency detalle.valor %></td>
               </tr>

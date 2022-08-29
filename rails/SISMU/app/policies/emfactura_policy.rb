@@ -13,19 +13,19 @@ class EmfacturaPolicy < ApplicationPolicy
   end
 
   def index?
-    @user.has_any_role? :admin, :perla
+    @user.has_any_role? :admin, :perla, :mito, :kate, :aida
 
   end
   def new?
-    @user.has_any_role? :admin, :perla
+    @user.has_any_role? :admin, :perla, :mito, :kate, :aida
   
   end
   def edit?
-    @user.has_any_role? :admin, :perla
+    @user.has_any_role? :admin, :perla, :mito, :kate, :aida
    
   end
   def show?
-    @user.has_any_role? :admin, :perla
+    @user.has_any_role? :admin, :perla, :mito, :kate, :aida
  
   end
 end
