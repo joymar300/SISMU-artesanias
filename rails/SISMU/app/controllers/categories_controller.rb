@@ -2,13 +2,16 @@ class CategoriesController < ApplicationController
   before_action :authenticate_user!
   def index
     @categories = Category.all()
+    authorize @categories
   end
   def show
     @category = Category.find(params[:id])
+
   end
   
   def new
     @category = Category.new
+    authorize @category
   end
 
   def create

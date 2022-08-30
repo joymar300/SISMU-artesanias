@@ -5,11 +5,7 @@
       </button>
       <h1 id="h1_perfil">Perfíl</h1>
     </div>
-  <div class="perfil_izquierdo sombra">
-    <h2 id="h2">Imagen</h2>
-    <div class="div_foto_perfil">
-      <%= image_tag(resource.avatar_thumbnail, class: "foto_perfil") if resource.avatar.attached? %>
-    </div>
+
     <div class="centrar_nombre_perfil">
       <h3>
         <%= @user.primernombre %>
@@ -20,9 +16,13 @@
     </div>
     <%# INICIO FORMULARIO %>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-      <div class="div_select_foto">
+      <%
+=begin%>
+ <div class="div_select_foto">
         <%= f.file_field :avatar, class: "select_foto" %><br />
-      </div>
+      </div> 
+<%
+=end%>
   </div>
 
   <div class="formulario_perfil">

@@ -2,13 +2,16 @@ class ColorsController < ApplicationController
   before_action :authenticate_user!
   def index
     @colors = Color.all
+    authorize @colors
    end
   def show
     @color = Color.find(params[:id])
+    authorize @color
   end
   
   def new
     @color = Color.new
+    authorize @color
   end
 
   def create
