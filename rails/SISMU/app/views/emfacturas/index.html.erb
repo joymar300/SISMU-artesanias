@@ -8,22 +8,24 @@
                 </p>
             <% end %
         </div> %>
-
-        <div class="buscador_empresas">
-          <div class="prueba_empresas">
-            <%= form_tag empresas_path, :method => 'get' do %>
-              <%= text_field_tag :search, params[:search], placeholder: "Buscar"%>
-              <div class="btn_buscar_empresas">
-                <button class="btn_borrar">
-                  <%= image_tag "iconos/buscar_blanco", :referencia_pro => nil, class: "logoBuscar_empresas" %>
-                </button>
-              </div>
-            <% end %>
+        <% if current_user.has_role? :admin %>
+          <div class="buscador_empresas">
+            <div class="prueba_empresas">
+              <%= form_tag emfacturas_path, :method => 'get' do %>
+                <%= text_field_tag :search, params[:search], placeholder: "Buscar"%>
+                <div class="btn_buscar_empresas">
+                  <button class="btn_borrar">
+                    <%= image_tag "iconos/buscar_blanco", :referencia_pro => nil, class: "logoBuscar_empresas" %>
+                  </button>
+                </div>
+              <% end %>
+            </div>
           </div>
-        </div>
+          
+        <% end %>
 
         <h1 class="emfacturas__titulo">Facturas de las empresas</h1>
-          <%= link_to "emfacturas/new" do %>
+          <%= link_to new_emfactura_url do %>
             <div class="empresas__nuevo">
                 <p>Nuevo</p>
             </div>
@@ -34,7 +36,7 @@
             <table>
                 <thead>
                     <tr>
-                    <th><%= sort_link(@q, :id,"N° Factura ", default_order: :desc, class:"white") %></th>
+                    <th><%= sort_link(@q, :emfref,"N° Factura ", default_order: :desc, class:"white") %></th>
                     <th><%= sort_link(@q, :empresas_nombre,"Nombre", default_order: :desc, class:"white") %></th>
                     <th><%= sort_link(@q, :created_at, "Fecha de creación ", default_order: :desc, class:"white")%></th>
                     <th colspan="3">Acción</th>

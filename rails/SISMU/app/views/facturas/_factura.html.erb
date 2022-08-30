@@ -1,6 +1,6 @@
 <tr>
   <td data-label="N° Factura" class="centrar red">
-    <%= factura.id %>
+    <%= factura.fref %>
   </td>
   <td data-label="Nombre" class="centrar red">
     <%= factura.client.nombre_completo %>
@@ -18,7 +18,7 @@
     <% end %>
   
     <%= button_to "Eliminar",  factura_path(factura), method: :delete, class: "btn_borrar, eliminar", onclick: "return confirmDestroy('¿Deseas eliminar esta factura?')" %>
-
+    <%= button_to "PDF" ,factura_url(factura.id, :format => :pdf), class:"btn_pdf", method: :get %>
     
   </td>
 </tr>

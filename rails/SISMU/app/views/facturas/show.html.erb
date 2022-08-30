@@ -13,7 +13,7 @@
     <div class="facturas_cliente sombra">
       <h2 id="titulo_factura">Datos Cliente</h2>
       <b>Id: </b>
-      <%= @factura.id %>
+      <%= @factura.fref %>
       <br>
       <b>Nombre: </b>
       <%= @factura.client.nombre_completo %>
@@ -35,8 +35,13 @@
                   <span class="text-danger"><%= @detalle.errors[:cantidad].first %></span>
                   <br>
                 <% end %>
+                <div>
+                
+                  <%= f.label :extra, "detalles extras:", label: "detalles:"%>
+                  <%= f.input_field :extra, class: 'input_clientes' %>
+                </div>
             <%= f.association :colors,as: :check_boxes, label_method: :tipo, label: "Colores: ", class: "colorSelect" %>
-
+          
             <%= f.button :submit, "Añadir", class: "factura_nuevo" %>
             
         <% end %>
@@ -53,13 +58,14 @@
           <thead>
               <tr>
                   <th> Fecha de entrega</th>
-                  <td colspan="6"><%= @factura.fechafin %></td>
+                  <td colspan="7"><%= @factura.fechafin %></td>
               </tr>
               <tr>
                   <th>Ref</th>
                   <th>Producto</th>
                   <th>Precio uni.</th>
                   <th>Color</th>
+                  <th>detalles</th>
                   <th>Cantidad</th>
                   <th>Precio total</th>
                   <th>Acción</th>
@@ -78,6 +84,7 @@
                           <%= d.tipo%>
                       <%end%>
                   </td> 
+                  <td><%= detalle.extra %></td>
                   <td><%= detalle.cantidad %></td>
                   <td><%= number_to_currency detalle.valor %></td>
                   <td><%= button_to "Eliminar", factura_detalle_path(@factura, detalle), method: :delete, class: "btn_borrar, eliminar" %></td>
@@ -85,15 +92,15 @@
           <% end %>
           <tr>
               <th >Precio subtotal: </th>
-              <td colspan="6"><%=number_to_currency @factura.final %></td>   
+              <td colspan="7"><%=number_to_currency @factura.final %></td>   
           </tr>
               <tr>
               <th >Impuesto por iva: </th>
-              <td colspan="6"><%=number_to_currency @factura.iva %></td>   
+              <td colspan="7"><%=number_to_currency @factura.iva %></td>   
           </tr>
               <tr>
               <th >Precio final: </th>
-              <td colspan="6"><%=number_to_currency @factura.final_total %></td>   
+              <td colspan="7"><%=number_to_currency @factura.final_total %></td>   
           </tr>
 
 

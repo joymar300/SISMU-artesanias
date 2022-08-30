@@ -317,6 +317,17 @@ h6 {
   margin-bottom: 10px;
   /* float: left; */
 }
+.btn_pdf {
+  /* border: 1px solid red; */
+  background-color: rgb(253, 211, 24);
+  color: white;
+  padding: 6px ;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  /* float: left; */
+}
 .btn_back > a {
   color: white;
   text-decoration: none;

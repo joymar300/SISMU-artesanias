@@ -16,7 +16,7 @@ class FacturasController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf do
-        render template: "facturas/factura", pdf: "factura" ,layout:"pdf" # Excluding ".pdf" extension.
+        render template: "facturas/factura", pdf: "factura-cliente -#{@factura.id}" ,layout:"pdf" # Excluding ".pdf" extension.
       end
     end
   end
@@ -67,7 +67,7 @@ end
   private
 
   def factura_params
-    params.require(:factura).permit(:client_id, :fechafin)
+    params.require(:factura).permit(:client_id, :fechafin, :fref)
   end
 
   def set_factura

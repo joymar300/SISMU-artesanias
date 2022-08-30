@@ -4,6 +4,14 @@
     <h1>Registrar Factura Para Empresa</h1>
 
     <section class="informacionNewConf">
+      <div>
+        <%= f.label :emfref, "Ref. factura",class: 'is-required'  %>
+        <%= f.input_field :emfref, class: 'input_clientes'%>
+      
+      </div>
+          <% if @emfactura.errors[:emfref].any? %>
+            <p class="text-danger"><%= @emfactura.errors[:emfref].first %></p>
+          <% end %>
         <%= f.association :empresa, label_method: :empresa_busqueda %><br>
         <%= f.input :fechafin, label: "Fecha de entrega"%><br>
         <% if @emfactura.errors[:fechafin].any? %>

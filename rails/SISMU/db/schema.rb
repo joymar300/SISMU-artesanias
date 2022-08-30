@@ -44,8 +44,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_30_164319) do
     t.string "snombre"
     t.string "apellido"
     t.string "sapellido"
-    t.integer "cedula"
-    t.integer "tel"
+    t.integer "cedula", limit: 8
+    t.integer "tel", limit: 8
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -68,7 +68,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_30_164319) do
     t.string "nombre2_cli"
     t.string "apellido_cli"
     t.string "apellido2_cli"
-    t.integer "tel_cli"
+    t.integer "tel_cli", limit: 8
     t.string "correo_cli"
     t.string "direccion_cli"
     t.integer "cedula_cli"
@@ -101,10 +101,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_30_164319) do
   create_table "detalles", force: :cascade do |t|
     t.integer "factura_id", null: false
     t.integer "producto_id", null: false
-    t.integer "cantidad"
+    t.integer "cantidad", limit: 8
     t.decimal "valor", precision: 8, scale: 2
     t.decimal "precio", precision: 8, scale: 2
     t.date "fechafin"
+    t.string "extra"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["factura_id"], name: "index_detalles_on_factura_id"
@@ -124,11 +125,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_30_164319) do
   end
 
   create_table "emdetalles", force: :cascade do |t|
-    t.integer "cantidad"
+    t.integer "cantidad", limit: 8
     t.decimal "valor"
     t.decimal "precio"
     t.integer "emfactura_id", null: false
     t.integer "producto_id", null: false
+    t.string "extra"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["emfactura_id"], name: "index_emdetalles_on_emfactura_id"
@@ -136,6 +138,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_30_164319) do
   end
 
   create_table "emfacturas", force: :cascade do |t|
+    t.string "emfref"
     t.decimal "total"
     t.integer "empresa_id", null: false
     t.date "fechafin"
@@ -147,7 +150,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_30_164319) do
   create_table "empresas", force: :cascade do |t|
     t.string "nombre"
     t.string "direccion"
-    t.integer "tel"
+    t.integer "tel", limit: 8
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "correo"
@@ -156,6 +159,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_30_164319) do
   end
 
   create_table "facturas", force: :cascade do |t|
+    t.string "fref"
     t.integer "client_id", null: false
     t.decimal "total", precision: 8, scale: 2
     t.date "fechafin"

@@ -24,7 +24,7 @@
 
         <h1 class="clientes__titulo">Facturas</h1>
         <div class="clientes__nuevo">
-            <%= link_to "facturas/new" do %>
+            <%= link_to new_factura_url do %>
                 <p>Nuevo</p>
             <% end %>
         </div>
@@ -34,7 +34,7 @@
     <table>
       <thead>
         <tr>
-          <th><%= sort_link(@q, :id,"N° Factura ", default_order: :desc, class:"white") %></th>
+          <th><%= sort_link(@q, :fref,"N° Factura ", default_order: :desc, class:"white") %></th>
           <th><%= sort_link(@q, :client_nombre_cli," Nombre", default_order: :desc, class:"white") %></th>
           <th><%= sort_link(@q, :client_correo_cli,"Correo", default_order: :desc, class:"white") %></th>
           <th><%= sort_link(@q, :created_at,"Fecha de creación", default_order: :desc, class:"white")%></th>

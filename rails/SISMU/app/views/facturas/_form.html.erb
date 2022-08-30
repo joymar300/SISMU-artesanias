@@ -4,6 +4,14 @@
     <h1>Registrar Factura</h1>
 
     <section class="informacionNewConf">
+      <div>
+        <%= f.label :fref, "Ref. factura",class: 'is-required'  %>
+        <%= f.input_field :fref, class: 'input_clientes'%>
+      
+      </div>
+          <% if @factura.errors[:fref].any? %>
+            <p class="text-danger"><%= @factura.errors[:fref].first %></p>
+          <% end %>
       <div class="errorShow">
         <%= f.label :client, "Cliente", class: 'is-required' %>
         <%= f.association :client, label_html: { hidden: true }, label_method: :nombre_completo, error: "Seleccionar" %>

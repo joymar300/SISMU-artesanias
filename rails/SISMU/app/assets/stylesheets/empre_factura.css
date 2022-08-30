@@ -2,7 +2,7 @@
   color: #0EC002;
   font-size: 3.2rem;
   width: 500px;
-  margin-left: -150px;
+  word-break: break-word
 }
 
 /* .text_factura-empresa{

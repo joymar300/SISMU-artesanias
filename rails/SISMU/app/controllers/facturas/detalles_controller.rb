@@ -15,7 +15,7 @@ class Facturas::DetallesController < ApplicationController
     private
 
     def detalle_params
-        params.require(:detalle).permit(:producto_id, :cantidad, :valor,:fechafin, color_ids: [] )
+        params.require(:detalle).permit(:producto_id, :cantidad,:extra, :valor,:fechafin, color_ids: []  )
     end
 
     def set_factura
